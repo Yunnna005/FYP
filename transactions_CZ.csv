@@ -1,0 +1,4 @@
+id,accountId,date,description,amount,currency,status,type,providerTransactionId
+cf4bc855b27244258c1b18c98aa981ca,db6f3eab8d36401ab29fe42bdf3280ef,2023-10-02,Transaction 3,3000.0,CZK,BOOKED,DEFAULT,1001
+69634767c4e14ddbb32e1893fea63046,db6f3eab8d36401ab29fe42bdf3280ef,2023-10-01,Transaction 2,-50.0,CZK,BOOKED,DEFAULT,1002
+b0df6502d5e14085a8c8344fde839ac2,db6f3eab8d36401ab29fe42bdf3280ef,2023-10-01,Transaction 1,100.0,CZK,BOOKED,DEFAULT,1003
