@@ -1,0 +1,21 @@
+const SANDBOX_INSTITUTIONS = [
+  'ins_109508', // First Platypus Bank
+  'ins_109509', // First Gingham Credit Union
+  //'ins_109512', // Houndstooth Bank
+  //'ins_109510',
+  'ins_109511',
+  'ins_43',
+  //'ins_116834',
+  'ins_117650',
+  'ins_127287',
+  'ins_132241',
+  'ins_117181',
+  //'ins_135858',
+  //'ins_132363',
+  //'ins_132361',
+  //'ins_133402',
+  //'ins_133502',
+  //'ins_133503'
+];
+
+const PRODUCTS = ['transactions', 'auth', 'identity', 'assets']; 
