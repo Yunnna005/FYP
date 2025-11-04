@@ -1,0 +1,61 @@
+institution_id,account_id,name,official_name,subtype,type,mask,balances_current,balances_available,balances_limit,iso_currency_code
+ins_109512,Wjvndjx55pfLel7mqdKdI1jqAkoKkEs6QADdw,Plaid Checking,Plaid Gold Standard 0% Interest Checking,checking,depository,0000,110,100,,USD
+ins_109512,AA8XeAPRR4IdgLbMXaQaHyPpwvjQvBF9xKdbo,Plaid Saving,Plaid Silver Standard 0.1% Interest Saving,savings,depository,1111,210,200,,USD
+ins_109512,G9vXp9M55Rf7kywpbeReIr6pabe3bgf67rQV8,Plaid CD,Plaid Bronze Standard 0.2% Interest CD,cd,depository,2222,1000,,,USD
+ins_109512,nladKlrzzbtkBNE7RbrbspvnjxRPxmtAMpnaZ,Plaid Credit Card,Plaid Diamond 12.5% APR Interest Credit Card,credit card,credit,3333,410,,2000,USD
+ins_109512,bkvn1kMJJwfPMmzJj171Sz6wZrjlrnCm6ydRB,Plaid Money Market,Plaid Platinum Standard 1.85% Interest Money Market,money market,depository,4444,43200,43200,,USD
+ins_109512,mRdxqRKkkaFz5m7wAbKbcWRPDvAGv9HgQwWGk,Plaid IRA,,ira,investment,5555,320.76,,,USD
+ins_109512,yNL1jN7eeDivZV5A1pzpIKaLzDgVDli48LlJp,Plaid 401k,,401k,investment,6666,23631.9805,,,USD
+ins_109512,91QXx1zAA5TlE6Dm9q1qckzKyEGpEli49b57J,Plaid Student Loan,,student,loan,7777,65262,,,USD
+ins_109512,vdZQ4dNPP3tjDaqQn7R7hW5LMZVwZaHqZ4EL4,Plaid Mortgage,,mortgage,loan,8888,56302.06,,,USD
+ins_109512,RdvnrdK55ZtJGWDkwrPrH7Zrjoe4oJSaorB66,Plaid HSA,Plaid Cares Health Savings Account,hsa,depository,9001,6009,6009,,USD
+ins_109512,6QjDzQq88Ls5yV4zn8Z8seq47d9wd8H8PMyEV,Plaid Cash Management,Plaid Growth Cash Management,cash management,depository,9002,12060,12060,,USD
+ins_109512,X7vJa7d55QtBKewvRmEmTw3ogEGvEBhbvz37o,Plaid Business Credit Card,Plaid Platinum Small Business Credit Card,credit card,credit,9999,5020,4980,10000,USD
+ins_132363,jEN6PyxmJ3h97Grk641KTWRZoXnNP1CQ4W4wj,Plaid Checking,Plaid Gold Standard 0% Interest Checking,checking,depository,0000,110,100,,USD
+ins_132363,7qmNlZw5avtvAlzbekophxKm6Nz4REFwQJQjz,Plaid Saving,Plaid Silver Standard 0.1% Interest Saving,savings,depository,1111,210,200,,USD
+ins_132363,eE3D1AKxP4hGPr6QXBlwsXM79AvkDefxD9DEy,Plaid CD,Plaid Bronze Standard 0.2% Interest CD,cd,depository,2222,1000,,,USD
+ins_132363,QB6Amx8GXQSex7bZkLrwUjmvQwBrdLijomozk,Plaid Credit Card,Plaid Diamond 12.5% APR Interest Credit Card,credit card,credit,3333,410,,2000,USD
+ins_132363,Z76AeQ9y8wHkQzrWgdpjsgGrynVPbQsxLqLzg,Plaid Money Market,Plaid Platinum Standard 1.85% Interest Money Market,money market,depository,4444,43200,43200,,USD
+ins_132363,Mq6VorLNj9t9r7doKAzeTaGKeo9VNBUmx6xzL,Plaid IRA,,ira,investment,5555,320.76,,,USD
+ins_132363,1Z5BmNvM4rs7or3mVR6bhrZd9n5vBqiD7j73q,Plaid 401k,,401k,investment,6666,23631.9805,,,USD
+ins_132363,Ll6woK1N4GHbKya4AkXrTdjyWBbZPVi38j8ol,Plaid Student Loan,,student,loan,7777,65262,,,USD
+ins_132363,pwZm9KjRPbUEkG16vKgwh5aEoeb8m1TXgogkK,Plaid Mortgage,,mortgage,loan,8888,56302.06,,,USD
+ins_132363,oEQo9qPmJZhGkjyDaq9QsNxkGWLq1auv9q9rr,Plaid HSA,Plaid Cares Health Savings Account,hsa,depository,9001,6009,6009,,USD
+ins_132363,dEB98Wq3DehklGNdMzK3sPJDEZrqy7FXNENGl,Plaid Cash Management,Plaid Growth Cash Management,cash management,depository,9002,12060,12060,,USD
+ins_132363,apKG9gwrBJUKdQPZkqp9sWw1Z4lP8gCX454PX,Plaid Business Credit Card,Plaid Platinum Small Business Credit Card,credit card,credit,9999,5020,4980,10000,USD
+ins_132361,oQ8pdvvMJmH5zbnGEJ39hNjopRpnNri19KZ1l,Plaid Checking,Plaid Gold Standard 0% Interest Checking,checking,depository,0000,110,100,,USD
+ins_132361,gdQjloo4Paiq3wQEn19yHmGqdadkmbtPDM6Pb,Plaid Saving,Plaid Silver Standard 0.1% Interest Saving,savings,depository,1111,210,200,,USD
+ins_132361,8AaBygglDjFVplbwJQXLIvbxG7GDveigarXgn,Plaid CD,Plaid Bronze Standard 0.2% Interest CD,cd,depository,2222,1000,,,USD
+ins_132361,EboMlJJjwBuglj3kxZP7hqab939dqwUrQEBrB,Plaid Credit Card,Plaid Diamond 12.5% APR Interest Credit Card,credit card,credit,3333,410,,2000,USD
+ins_132361,WVl6q33mLyCzgdykxeL8c1K4gxga1dIXM4bX9,Plaid Money Market,Plaid Platinum Standard 1.85% Interest Money Market,money market,depository,4444,43200,43200,,USD
+ins_132361,A6M7yJJaxkuwVaDKrgd5HyQR5o5zyEcawopaw,Plaid IRA,,ira,investment,5555,320.76,,,USD
+ins_132361,GA8LKJJeyxF6mevK9k7zHr3zZEZjrqiq9npqv,Plaid 401k,,401k,investment,6666,23631.9805,,,USD
+ins_132361,negLxvvZMQF1obeGyBkXTpP8M5MNpDcZkG5Z4,Plaid Student Loan,,student,loan,7777,65262,,,USD
+ins_132361,brNdPZZB6zuoR1XGEMPZSzlLgagAzVuEL3kEJ,Plaid Mortgage,,mortgage,loan,8888,56302.06,,,USD
+ins_132361,m7o13vvQgXcLGbpEo5zZSWGqBrBnWVS9jAo9K,Plaid HSA,Plaid Cares Health Savings Account,hsa,depository,9001,6009,6009,,USD
+ins_132361,yyvmJwwGMWC6ap49EZv7HKVn545AKWfodDaok,Plaid Cash Management,Plaid Growth Cash Management,cash management,depository,9002,12060,12060,,USD
+ins_132361,9D43yJJqdMF8vq4N7EleHkp17r7gkdFk8Evkl,Plaid Business Credit Card,Plaid Platinum Small Business Credit Card,credit card,credit,9999,5020,4980,10000,USD
+ins_133502,qKlp7jRgaMimKK6Pzvw4HBEbNBvQLjigzbe5r,Plaid Checking,Plaid Gold Standard 0% Interest Checking,checking,depository,0000,110,100,,USD
+ins_133502,KbR9MVn8r6SK33WNGVjLIx6oMxlNXGFRxwljX,Plaid Saving,Plaid Silver Standard 0.1% Interest Saving,savings,depository,1111,210,200,,USD
+ins_133502,rrqye5J841UgrrmPMVEoSgQxagWABlC7eKrXe,Plaid CD,Plaid Bronze Standard 0.2% Interest CD,cd,depository,2222,1000,,,USD
+ins_133502,JnkRZbEgK6SJnnBNQyPxU35pb5BpK3UBD7lGL,Plaid Credit Card,Plaid Diamond 12.5% APR Interest Credit Card,credit card,credit,3333,410,,2000,USD
+ins_133502,knwjdmyZrPSaJJpk7vEAI49Eo9bER4CLlP43V,Plaid Money Market,Plaid Platinum Standard 1.85% Interest Money Market,money market,depository,4444,43200,43200,,USD
+ins_133502,lb75a1ZMzjS1JJ7bN8EmU14MK4rM91FpV9K5y,Plaid IRA,,ira,investment,5555,320.76,,,USD
+ins_133502,qKlp7jRgaMimKK6Pzvw4HBE6wEq6RBcgzbe5E,Plaid 401k,,401k,investment,6666,23631.9805,,,USD
+ins_133502,KbR9MVn8r6SK33WNGVjLIx6kw6WkJxuRxwlj9,Plaid Student Loan,,student,loan,7777,65262,,,USD
+ins_133502,rrqye5J841UgrrmPMVEoSgQzNQqzkgf7eKrXP,Plaid Mortgage,,mortgage,loan,8888,56302.06,,,USD
+ins_133502,zNJxg5myEVT6NNLJ4Qbdun9j39ojwnfl5PAKa,Plaid HSA,Plaid Cares Health Savings Account,hsa,depository,9001,6009,6009,,USD
+ins_133502,Bpwda5RegASgppw65DzqSMbEZbwEnMu4be91E,Plaid Cash Management,Plaid Growth Cash Management,cash management,depository,9002,12060,12060,,USD
+ins_133502,33Pw6vKlDosVLLjaW3driEJVNJdVZEfZDo7Lx,Plaid Business Credit Card,Plaid Platinum Small Business Credit Card,credit card,credit,9999,5020,4980,10000,USD
+ins_133503,vN5QqWXG5vig39w63bKvIWwWmG1vvaiwx6mxk,Plaid Checking,Plaid Gold Standard 0% Interest Checking,checking,depository,0000,110,100,,USD
+ins_133503,RKVn8y3mVqC7ZxLyZqdoU747DpyAAJhZjpyj4,Plaid Saving,Plaid Silver Standard 0.1% Interest Saving,savings,depository,1111,210,200,,USD
+ins_133503,6qmDgblrmpIp1xG71DAasewePLamm8izJDZJe,Plaid CD,Plaid Bronze Standard 0.2% Interest CD,cd,depository,2222,1000,,,USD
+ins_133503,Xd1J8VPX1xcL3rk53x7Giwvwzem99BcDgKZgv,Plaid Credit Card,Plaid Diamond 12.5% APR Interest Credit Card,credit card,credit,3333,410,,2000,USD
+ins_133503,DeRX8z7ZRJtlAjngAJb4ilLlMbm99NCZeWDeN,Plaid Money Market,Plaid Platinum Standard 1.85% Interest Money Market,money market,depository,4444,43200,43200,,USD
+ins_133503,V31JWy4R1BCMZbvzZ8PqHMKMeE6ggBCDkg1ky,Plaid IRA,,ira,investment,5555,320.76,,,USD
+ins_133503,wPAZKXEnAvFl3KB83Ayvinpnz9188jfQ9Zw9Z,Plaid 401k,,401k,investment,6666,23631.9805,,,USD
+ins_133503,5lx8oMpKxkF893Qj9pAduBAB1MazzRC6VKlVr,Plaid Student Loan,,student,loan,7777,65262,,,USD
+ins_133503,JpaXENLgaJF3bzWabqlyI353P6Vzzdinj63jD,Plaid Mortgage,,mortgage,loan,8888,56302.06,,,USD
+ins_133503,klbByQEZbvFXn8RjngMvi494N1JggBimE6nEb,Plaid HSA,Plaid Cares Health Savings Account,hsa,depository,9001,6009,6009,,USD
+ins_133503,lkW3ZQEMW6SWreyZrBD8I1418DxeeXHMWoQWX,Plaid Cash Management,Plaid Growth Cash Management,cash management,depository,9002,12060,12060,,USD
+ins_133503,q3XkR1wgXvC9pVylpZovHBEBnGJQQ4CQWrGWa,Plaid Business Credit Card,Plaid Platinum Small Business Credit Card,credit card,credit,9999,5020,4980,10000,USD
