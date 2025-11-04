@@ -1,2 +1,0 @@
-id,accountId,date,description,amount,currency,status,type,providerTransactionId
-8539ac941a03401db2609f545929871e,edb7ed6c075646948c8fb81b63b5ba75,2025-10-22,Example 1,-256.67,EUR,BOOKED,DEFAULT,1234567
