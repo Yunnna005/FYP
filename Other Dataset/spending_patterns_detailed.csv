@@ -1,4 +1,4 @@
-Customer ID,Category,Item,Quantity,Price Per Unit,Total Spent,Payment Method,Location,Transaction Date
+Customer_ID,Category,Item,Quantity,Price Per Unit,Total Spent,Payment Method,Location,Transaction Date
 CUST_0159,Groceries,Milk,1,1.28,1.28,Debit Card,Mobile App,13/11/2024
 CUST_0017,Friend Activities,Dinner with Friends,2,74.69,149.39,Debit Card,In-store,04/05/2023
 CUST_0094,Housing and Utilities,Water Bill,1,76.06,76.06,Digital Wallet,Mobile App,16/12/2023
