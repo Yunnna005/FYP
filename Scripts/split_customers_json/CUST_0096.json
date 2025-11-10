@@ -1,0 +1,415 @@
+{
+    "Customer_ID": "CUST_0096",
+    "Transactions": [
+        {
+            "Category": "Food",
+            "Item": "Coffee",
+            "Quantity": 4,
+            "Price Per Unit": 6.49,
+            "Total Spent": 25.96,
+            "Payment Method": "Cash",
+            "Location": "Mobile App",
+            "Transaction Date": "22/04/2023"
+        },
+        {
+            "Category": "Subscriptions",
+            "Item": "Streaming Service",
+            "Quantity": 1,
+            "Price Per Unit": 9.4,
+            "Total Spent": 9.4,
+            "Payment Method": "Digital Wallet",
+            "Location": "Mobile App",
+            "Transaction Date": "09/11/2023"
+        },
+        {
+            "Category": "Transportation",
+            "Item": "Public Transit",
+            "Quantity": 1,
+            "Price Per Unit": 5.07,
+            "Total Spent": 5.07,
+            "Payment Method": "Digital Wallet",
+            "Location": "Online",
+            "Transaction Date": "03/09/2024"
+        },
+        {
+            "Category": "Housing and Utilities",
+            "Item": "Gas Bill",
+            "Quantity": 1,
+            "Price Per Unit": 115.73,
+            "Total Spent": 115.73,
+            "Payment Method": "Cash",
+            "Location": "In-store",
+            "Transaction Date": "25/10/2023"
+        },
+        {
+            "Category": "Travel",
+            "Item": "Plane Ticket",
+            "Quantity": 1,
+            "Price Per Unit": 1143.36,
+            "Total Spent": 1143.36,
+            "Payment Method": "Credit Card",
+            "Location": "Online",
+            "Transaction Date": "26/02/2023"
+        },
+        {
+            "Category": "Fitness",
+            "Item": "Yoga Class",
+            "Quantity": 4,
+            "Price Per Unit": 17.32,
+            "Total Spent": 69.29,
+            "Payment Method": "Digital Wallet",
+            "Location": "In-store",
+            "Transaction Date": "06/06/2023"
+        },
+        {
+            "Category": "Subscriptions",
+            "Item": "Streaming Service",
+            "Quantity": 1,
+            "Price Per Unit": 15.15,
+            "Total Spent": 15.15,
+            "Payment Method": "Cash",
+            "Location": "Online",
+            "Transaction Date": "12/02/2024"
+        },
+        {
+            "Category": "Subscriptions",
+            "Item": "Gym Membership",
+            "Quantity": 1,
+            "Price Per Unit": 50.12,
+            "Total Spent": 50.12,
+            "Payment Method": "Cash",
+            "Location": "In-store",
+            "Transaction Date": "18/05/2024"
+        },
+        {
+            "Category": "Subscriptions",
+            "Item": "Gym Membership",
+            "Quantity": 1,
+            "Price Per Unit": 40.63,
+            "Total Spent": 40.63,
+            "Payment Method": "Digital Wallet",
+            "Location": "In-store",
+            "Transaction Date": "16/12/2023"
+        },
+        {
+            "Category": "Fitness",
+            "Item": "Personal Trainer",
+            "Quantity": 3,
+            "Price Per Unit": 95.38,
+            "Total Spent": 286.15,
+            "Payment Method": "Debit Card",
+            "Location": "Online",
+            "Transaction Date": "13/02/2023"
+        },
+        {
+            "Category": "Travel",
+            "Item": "Plane Ticket",
+            "Quantity": 1,
+            "Price Per Unit": 1371.22,
+            "Total Spent": 1371.22,
+            "Payment Method": "Debit Card",
+            "Location": "Mobile App",
+            "Transaction Date": "06/10/2023"
+        },
+        {
+            "Category": "Friend Activities",
+            "Item": "Movie Tickets",
+            "Quantity": 5,
+            "Price Per Unit": 5.69,
+            "Total Spent": 28.43,
+            "Payment Method": "Credit Card",
+            "Location": "Online",
+            "Transaction Date": "13/09/2024"
+        },
+        {
+            "Category": "Food",
+            "Item": "Restaurant Meal",
+            "Quantity": 2,
+            "Price Per Unit": 95.86,
+            "Total Spent": 191.73,
+            "Payment Method": "Cash",
+            "Location": "Mobile App",
+            "Transaction Date": "24/11/2023"
+        },
+        {
+            "Category": "Housing and Utilities",
+            "Item": "Rent",
+            "Quantity": 1,
+            "Price Per Unit": 6999.0,
+            "Total Spent": 6999.0,
+            "Payment Method": "Digital Wallet",
+            "Location": "Online",
+            "Transaction Date": "17/06/2024"
+        },
+        {
+            "Category": "Housing and Utilities",
+            "Item": "Gas Bill",
+            "Quantity": 1,
+            "Price Per Unit": 112.7,
+            "Total Spent": 112.7,
+            "Payment Method": "Digital Wallet",
+            "Location": "Online",
+            "Transaction Date": "14/01/2023"
+        },
+        {
+            "Category": "Shopping",
+            "Item": "Clothes",
+            "Quantity": 2,
+            "Price Per Unit": 148.1,
+            "Total Spent": 296.2,
+            "Payment Method": "Credit Card",
+            "Location": "In-store",
+            "Transaction Date": "07/01/2025"
+        },
+        {
+            "Category": "Friend Activities",
+            "Item": "Dinner with Friends",
+            "Quantity": 4,
+            "Price Per Unit": 79.68,
+            "Total Spent": 318.73,
+            "Payment Method": "Credit Card",
+            "Location": "Online",
+            "Transaction Date": "15/03/2024"
+        },
+        {
+            "Category": "Travel",
+            "Item": "Plane Ticket",
+            "Quantity": 1,
+            "Price Per Unit": 430.23,
+            "Total Spent": 430.23,
+            "Payment Method": "Credit Card",
+            "Location": "In-store",
+            "Transaction Date": "20/07/2024"
+        },
+        {
+            "Category": "Shopping",
+            "Item": "Shoes",
+            "Quantity": 1,
+            "Price Per Unit": 178.35,
+            "Total Spent": 178.35,
+            "Payment Method": "Cash",
+            "Location": "Online",
+            "Transaction Date": "24/02/2023"
+        },
+        {
+            "Category": "Fitness",
+            "Item": "Personal Trainer",
+            "Quantity": 5,
+            "Price Per Unit": 74.26,
+            "Total Spent": 371.29,
+            "Payment Method": "Credit Card",
+            "Location": "Mobile App",
+            "Transaction Date": "30/05/2023"
+        },
+        {
+            "Category": "Food",
+            "Item": "Fast Food",
+            "Quantity": 4,
+            "Price Per Unit": 19.27,
+            "Total Spent": 77.09,
+            "Payment Method": "Digital Wallet",
+            "Location": "Mobile App",
+            "Transaction Date": "19/11/2023"
+        },
+        {
+            "Category": "Medical/Dental",
+            "Item": "Medicine",
+            "Quantity": 1,
+            "Price Per Unit": 51.18,
+            "Total Spent": 51.18,
+            "Payment Method": "Cash",
+            "Location": "Online",
+            "Transaction Date": "24/10/2024"
+        },
+        {
+            "Category": "Travel",
+            "Item": "Plane Ticket",
+            "Quantity": 1,
+            "Price Per Unit": 278.39,
+            "Total Spent": 278.39,
+            "Payment Method": "Debit Card",
+            "Location": "Online",
+            "Transaction Date": "20/12/2023"
+        },
+        {
+            "Category": "Groceries",
+            "Item": "Bread",
+            "Quantity": 4,
+            "Price Per Unit": 2.71,
+            "Total Spent": 10.85,
+            "Payment Method": "Debit Card",
+            "Location": "Mobile App",
+            "Transaction Date": "13/10/2024"
+        },
+        {
+            "Category": "Personal Hygiene",
+            "Item": "Soap",
+            "Quantity": 1,
+            "Price Per Unit": 6.56,
+            "Total Spent": 6.56,
+            "Payment Method": "Credit Card",
+            "Location": "Online",
+            "Transaction Date": "04/06/2023"
+        },
+        {
+            "Category": "Housing and Utilities",
+            "Item": "Water Bill",
+            "Quantity": 1,
+            "Price Per Unit": 21.92,
+            "Total Spent": 21.92,
+            "Payment Method": "Cash",
+            "Location": "Online",
+            "Transaction Date": "30/09/2023"
+        },
+        {
+            "Category": "Subscriptions",
+            "Item": "Streaming Service",
+            "Quantity": 1,
+            "Price Per Unit": 8.02,
+            "Total Spent": 8.02,
+            "Payment Method": "Debit Card",
+            "Location": "In-store",
+            "Transaction Date": "17/07/2023"
+        },
+        {
+            "Category": "Fitness",
+            "Item": "Workout Equipment",
+            "Quantity": 2,
+            "Price Per Unit": 141.07,
+            "Total Spent": 282.14,
+            "Payment Method": "Cash",
+            "Location": "Online",
+            "Transaction Date": "30/09/2024"
+        },
+        {
+            "Category": "Transportation",
+            "Item": "Public Transit",
+            "Quantity": 1,
+            "Price Per Unit": 4.09,
+            "Total Spent": 4.09,
+            "Payment Method": "Debit Card",
+            "Location": "In-store",
+            "Transaction Date": "17/04/2024"
+        },
+        {
+            "Category": "Groceries",
+            "Item": "Vegetables",
+            "Quantity": 5,
+            "Price Per Unit": 5.98,
+            "Total Spent": 29.88,
+            "Payment Method": "Debit Card",
+            "Location": "Online",
+            "Transaction Date": "08/04/2023"
+        },
+        {
+            "Category": "Food",
+            "Item": "Coffee",
+            "Quantity": 3,
+            "Price Per Unit": 7.26,
+            "Total Spent": 21.78,
+            "Payment Method": "Debit Card",
+            "Location": "Online",
+            "Transaction Date": "18/07/2023"
+        },
+        {
+            "Category": "Friend Activities",
+            "Item": "Concert Tickets",
+            "Quantity": 4,
+            "Price Per Unit": 186.81,
+            "Total Spent": 747.24,
+            "Payment Method": "Credit Card",
+            "Location": "In-store",
+            "Transaction Date": "14/12/2023"
+        },
+        {
+            "Category": "Groceries",
+            "Item": "Fruits",
+            "Quantity": 4,
+            "Price Per Unit": 5.0,
+            "Total Spent": 20.0,
+            "Payment Method": "Cash",
+            "Location": "In-store",
+            "Transaction Date": "17/10/2024"
+        },
+        {
+            "Category": "Housing and Utilities",
+            "Item": "Water Bill",
+            "Quantity": 1,
+            "Price Per Unit": 60.24,
+            "Total Spent": 60.24,
+            "Payment Method": "Credit Card",
+            "Location": "Mobile App",
+            "Transaction Date": "06/05/2023"
+        },
+        {
+            "Category": "Friend Activities",
+            "Item": "Concert Tickets",
+            "Quantity": 1,
+            "Price Per Unit": 118.41,
+            "Total Spent": 118.41,
+            "Payment Method": "Cash",
+            "Location": "Online",
+            "Transaction Date": "12/04/2023"
+        },
+        {
+            "Category": "Subscriptions",
+            "Item": "Gym Membership",
+            "Quantity": 1,
+            "Price Per Unit": 45.0,
+            "Total Spent": 45.0,
+            "Payment Method": "Debit Card",
+            "Location": "Online",
+            "Transaction Date": "15/04/2023"
+        },
+        {
+            "Category": "Transportation",
+            "Item": "Public Transit",
+            "Quantity": 1,
+            "Price Per Unit": 8.42,
+            "Total Spent": 8.42,
+            "Payment Method": "Debit Card",
+            "Location": "Mobile App",
+            "Transaction Date": "07/06/2023"
+        },
+        {
+            "Category": "Gifts",
+            "Item": "Flowers",
+            "Quantity": 1,
+            "Price Per Unit": 46.33,
+            "Total Spent": 46.33,
+            "Payment Method": "Credit Card",
+            "Location": "Mobile App",
+            "Transaction Date": "18/03/2024"
+        },
+        {
+            "Category": "Friend Activities",
+            "Item": "Dinner with Friends",
+            "Quantity": 5,
+            "Price Per Unit": 74.14,
+            "Total Spent": 370.72,
+            "Payment Method": "Debit Card",
+            "Location": "In-store",
+            "Transaction Date": "22/02/2023"
+        },
+        {
+            "Category": "Hobbies",
+            "Item": "Art Supplies",
+            "Quantity": 4,
+            "Price Per Unit": 58.14,
+            "Total Spent": 232.56,
+            "Payment Method": "Debit Card",
+            "Location": "Online",
+            "Transaction Date": "11/05/2024"
+        },
+        {
+            "Category": "Transportation",
+            "Item": "Car Repair",
+            "Quantity": 1,
+            "Price Per Unit": 391.68,
+            "Total Spent": 391.68,
+            "Payment Method": "Digital Wallet",
+            "Location": "Mobile App",
+            "Transaction Date": "20/02/2023"
+        }
+    ]
+}

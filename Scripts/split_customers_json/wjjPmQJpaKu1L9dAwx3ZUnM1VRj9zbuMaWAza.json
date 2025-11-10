@@ -1,0 +1,18 @@
+{
+    "account_id": "wjjPmQJpaKu1L9dAwx3ZUnM1VRj9zbuMaWAza",
+    "Transactions": [
+        {
+            "institution_id": "ins_117181",
+            "transaction_id": "bJJMWPglkxCAnR9gjW8ZSzQyXjDGoyumblEpl",
+            "amount": 1000.0,
+            "date": "15/09/2025",
+            "pending": false,
+            "merchant_name": "NaN",
+            "name": "CD DEPOSIT .INITIAL.",
+            "category": "NaN",
+            "transaction_type": "special",
+            "payment_channel": "in store",
+            "pending_transaction_id": "NaN"
+        }
+    ]
+}

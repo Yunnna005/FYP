@@ -1,21 +1,36 @@
 import pandas as pd
 import os
+import json
 
-input_file = "../Other Dataset/spending_patterns_detailed.csv"
+# Input CSV file
+input_file = "../Plaid Dataset/transactions2.csv"
 
-output_folder = "split_accounts"
+# Output folder for JSON files
+output_folder = "split_customers_json"
 os.makedirs(output_folder, exist_ok=True)
 
+# Read the CSV file
 df = pd.read_csv(input_file)
 
-account_column = "Customer_ID"
+# Column identifying customers
+account_column = "account_id"
 
-unique_accounts = df[account_column].unique()
+# Group by each customer
+for customer_id, group in df.groupby(account_column):
+    # Convert this customer's transactions into a list of dictionaries
+    transactions = group.drop(columns=[account_column]).to_dict(orient="records")
 
-for i, account in enumerate(unique_accounts, start=1):
-    account_data = df[df[account_column] == account]
-    output_file = os.path.join(output_folder, f"custom_{i}.csv")
-    account_data.to_csv(output_file, index=False)
-    print(f"Saved {output_file} for account {account}")
+    # Create the customer JSON structure
+    customer_data = {
+        "account_id": customer_id,
+        "Transactions": transactions
+    }
 
-print("All files have been created successfully!")
+    # Save to JSON file named after the customer
+    output_file = os.path.join(output_folder, f"{customer_id}.json")
+    with open(output_file, "w", encoding="utf-8") as f:
+        json.dump(customer_data, f, indent=4)
+
+    print(f"Saved {output_file}")
+
+print("✅ All customer JSON files created successfully!")

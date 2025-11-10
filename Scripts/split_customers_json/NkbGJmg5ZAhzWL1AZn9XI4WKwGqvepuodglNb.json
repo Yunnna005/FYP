@@ -1,0 +1,96 @@
+{
+    "account_id": "NkbGJmg5ZAhzWL1AZn9XI4WKwGqvepuodglNb",
+    "Transactions": [
+        {
+            "institution_id": "ins_117650",
+            "transaction_id": "5KGrk36gALIA7M4xpJBeUBgq96Dr1Rt5KvgLK",
+            "amount": 500.0,
+            "date": "01/10/2025",
+            "pending": false,
+            "merchant_name": "Ryanair",
+            "name": "Ryanair",
+            "category": "NaN",
+            "transaction_type": "special",
+            "payment_channel": "in store",
+            "pending_transaction_id": "NaN"
+        },
+        {
+            "institution_id": "ins_117650",
+            "transaction_id": "JgR8JA95j1tlPNpXq87nu3aA8lJRPdtB6AZN8",
+            "amount": 500.0,
+            "date": "26/09/2025",
+            "pending": false,
+            "merchant_name": "Burberry",
+            "name": "Burberry",
+            "category": "NaN",
+            "transaction_type": "place",
+            "payment_channel": "in store",
+            "pending_transaction_id": "NaN"
+        },
+        {
+            "institution_id": "ins_117650",
+            "transaction_id": "qgpBvW9xZNtowPEkZXgKSBLeXPM7n4tgrEoXD",
+            "amount": 2078.5,
+            "date": "25/09/2025",
+            "pending": false,
+            "merchant_name": "NaN",
+            "name": "AUTOMATIC PAYMENT - THANK",
+            "category": "NaN",
+            "transaction_type": "special",
+            "payment_channel": "in store",
+            "pending_transaction_id": "NaN"
+        },
+        {
+            "institution_id": "ins_117650",
+            "transaction_id": "lM5l6pdKPqSDEbjoBxMJu17lagdJ8XUpo4JAv",
+            "amount": 500.0,
+            "date": "25/09/2025",
+            "pending": false,
+            "merchant_name": "Alfies Fish & Chips",
+            "name": "Alfies Fish & Chips",
+            "category": "NaN",
+            "transaction_type": "place",
+            "payment_channel": "in store",
+            "pending_transaction_id": "NaN"
+        },
+        {
+            "institution_id": "ins_117650",
+            "transaction_id": "kZjGvLkqNJhMEkWzgGVJT4MQdDakNBcL69wRl",
+            "amount": 500.0,
+            "date": "25/09/2025",
+            "pending": false,
+            "merchant_name": "NaN",
+            "name": "JD Sports",
+            "category": "NaN",
+            "transaction_type": "place",
+            "payment_channel": "in store",
+            "pending_transaction_id": "NaN"
+        },
+        {
+            "institution_id": "ins_117650",
+            "transaction_id": "VRGxBVr5ElIPApRE8w3GcMRX9pVNeBF9gaRAQ",
+            "amount": 25.0,
+            "date": "16/09/2025",
+            "pending": false,
+            "merchant_name": "NaN",
+            "name": "CREDIT CARD 3333 PAYMENT *//",
+            "category": "NaN",
+            "transaction_type": "special",
+            "payment_channel": "in store",
+            "pending_transaction_id": "NaN"
+        },
+        {
+            "institution_id": "ins_117650",
+            "transaction_id": "wn9NvyJjkgSyoMrNAxnLHnLKmkJozjfPZGLdR",
+            "amount": 25.0,
+            "date": "16/09/2025",
+            "pending": true,
+            "merchant_name": "Amazon",
+            "name": "amazon.co.uk",
+            "category": "NaN",
+            "transaction_type": "digital",
+            "payment_channel": "online",
+            "pending_transaction_id": "NaN"
+        }
+    ]
+}
