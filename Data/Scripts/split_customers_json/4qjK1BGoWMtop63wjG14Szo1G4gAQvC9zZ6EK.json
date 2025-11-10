@@ -1,0 +1,18 @@
+{
+    "account_id": "4qjK1BGoWMtop63wjG14Szo1G4gAQvC9zZ6EK",
+    "Transactions": [
+        {
+            "institution_id": "ins_117650",
+            "transaction_id": "DZjMJpV5kxhbWv6yJXoZcl8vy4PdMNf3W1npL",
+            "amount": -4.22,
+            "date": "11/10/2025",
+            "pending": false,
+            "merchant_name": "NaN",
+            "name": "INTRST PYMNT",
+            "category": "NaN",
+            "transaction_type": "special",
+            "payment_channel": "other",
+            "pending_transaction_id": "NaN"
+        }
+    ]
+}
