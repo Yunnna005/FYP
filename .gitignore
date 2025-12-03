@@ -31,3 +31,4 @@ Data/Real Dataset/*
 coverage/
 .next/
 /build
+.env

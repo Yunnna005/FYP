@@ -1,4 +1,4 @@
-import Card from "../componenets/Card";
+import PlaidButton from "../componenets/PlaidButton";
 
 export default function Login() {
     return <>
@@ -9,7 +9,7 @@ export default function Login() {
         <p className="mb-10">
             AI-powered expenses tracker with banking API integration
         </p>
-        <Card title="Connect your card" description="Track your expenses easily and securely." buttonText="Connect"></Card>
+        <PlaidButton />
         </div>
     </div>
     </div>;
