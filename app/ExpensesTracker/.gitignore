@@ -22,12 +22,3 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
-
-#Data
-Data/Real Dataset/*
-
-
-/node_modules/
-coverage/
-.next/
-/build
