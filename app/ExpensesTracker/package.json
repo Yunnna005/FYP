@@ -12,9 +12,15 @@
   "dependencies": {
     "@tailwindcss/postcss": "^4.1.17",
     "@tailwindcss/vite": "^4.1.17",
+    "body-parser": "^2.2.1",
+    "cors": "^2.8.5",
     "daisyui": "^5.5.7",
+    "dotenv": "^17.2.3",
+    "express": "^5.2.1",
+    "plaid": "^40.0.0",
     "react": "^19.2.0",
     "react-dom": "^19.2.0",
+    "react-plaid-link": "^4.1.1",
     "react-router-dom": "^7.10.0"
   },
   "devDependencies": {
