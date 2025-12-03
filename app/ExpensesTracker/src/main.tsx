@@ -1,10 +1,13 @@
 import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
 import './index.css'
-import Login from './pages/Login.tsx'
+import Dashboard from './pages/Dashboard.tsx'
+import Template from './templates/Template.tsx'
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
-    <Login />
+    <Template >
+      <Dashboard />
+    </Template>
   </StrictMode>,
 )
