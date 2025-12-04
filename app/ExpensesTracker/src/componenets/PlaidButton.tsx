@@ -1,8 +1,10 @@
 import { useEffect, useState } from "react";
 import { usePlaidLink } from "react-plaid-link";
+import { useNavigate } from "react-router-dom";
 
 export default function Card(){
     const [linkToken, setLinkToken] = useState(null);
+    const navigate = useNavigate();
 
       useEffect(() => {
     fetch("http://localhost:8000/link/token/create", {
@@ -22,6 +24,8 @@ export default function Card(){
       })
         .then((res) => res.json())
         .then((data) => console.log("access_token:", data.access_token));
+
+        navigate("/dashboard");
     },
   });
 
