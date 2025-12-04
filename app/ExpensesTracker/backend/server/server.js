@@ -5,14 +5,12 @@ import { Configuration, PlaidApi, PlaidEnvironments } from "plaid";
 
 dotenv.config();
 
-console.log("PLAID_CLIENT_ID:", process.env.PLAID_CLIENT_ID);
-console.log("PLAID_SECRET:", process.env.PLAID_SECRET);
-
 const app = express();
 app.use(cors());
 app.use(express.json());
 
-// Plaid client
+let ACCESS_TOKEN = null;
+
 const config = new Configuration({
   basePath: PlaidEnvironments.sandbox,
   baseOptions: {
@@ -24,7 +22,6 @@ const config = new Configuration({
 });
 const client = new PlaidApi(config);
 
-// Create Link Token
 app.post("/link/token/create", async (req, res) => {
   try {
     const response = await client.linkTokenCreate({
@@ -44,11 +41,51 @@ app.post("/link/token/create", async (req, res) => {
   }
 });
 
-// Exchange public_token for access_token
 app.post("/item/public_token/exchange", async (req, res) => {
   const { public_token } = req.body;
+  
   const response = await client.itemPublicTokenExchange({ public_token });
-  res.json(response.data);
+  ACCESS_TOKEN = response.data.access_token;
+  
+  console.log("Stored access token:", ACCESS_TOKEN);
+
+  res.json({ access_token: ACCESS_TOKEN });
+});
+
+app.get("/accounts", async (req, res) => {
+  try {
+    if (!ACCESS_TOKEN) {
+      return res.status(400).json({ error: "No access token saved" });
+    }
+
+    const response = await client.accountsGet({
+      access_token: ACCESS_TOKEN,
+    });
+
+    res.json({ accounts: response.data.accounts });
+  } catch (error) {
+    console.error("Error fetching accounts:", error.response?.data);
+    res.status(500).json({ error: "Failed to fetch accounts" });
+  }
+});
+
+app.get("/transactions", async (req, res) => {
+  try {
+    if (!ACCESS_TOKEN) {
+      return res.status(400).json({ error: "No access token saved" });
+    }
+
+    const response = await client.transactionsGet({
+      access_token: ACCESS_TOKEN,
+      start_date: "2024-01-01",
+      end_date: "2025-12-31",
+    });
+
+    res.json({ transactions: response.data.transactions });
+  } catch (error) {
+    console.error("Error fetching transactions:", error.response?.data);
+    res.status(500).json({ error: "Failed to fetch transactions" });
+  }
 });
 
 app.listen(8000, () => console.log("Server running on 8000"));
