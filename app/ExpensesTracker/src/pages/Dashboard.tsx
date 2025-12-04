@@ -70,7 +70,8 @@ export default function Dashboard() {
                             <div className="bg-white shadow-lg p-6 rounded-lg ">
                                 <h2 className="text-xl font-bold mb-4">Recent Transactions</h2>
 
-                                <table className="table w-full">
+                                <div className="overflow-x-auto rounded-box border border-base-content/5 bg-base-100">
+                                    <table className="table">
                                     <thead>
                                         <tr>
                                             <th>Date</th>
@@ -95,10 +96,13 @@ export default function Dashboard() {
                                         ))}
                                         </>
                                         ) : (
-                                            <span>No transactions found</span>
+                                            <tr>
+                                                <td colSpan={4}>No transactions found</td>
+                                            </tr>
                                         )}
                                     </tbody>
                                 </table>
+                                </div>
                             </div>
                         </>
                     )}
