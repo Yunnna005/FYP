@@ -1,15 +1,14 @@
 {
-  "version": 2,
-  "seed": "my-test-user-1",
   "override_accounts": [
     {
       "type": "depository",
       "subtype": "checking",
-      "starting_balance": "46.88",
-      "currency": "EUR",
+      "starting_balance": 46.88,
+      "currency": "USD",
       "meta": {
         "name": "Basic Checking Account",
-        "official_name": "Basic Checking Account"
+        "official_name": "Basic Checking Account",
+        "mask": "0001"
       },
       "numbers": {
         "account": "00000001",
@@ -19,1402 +18,1402 @@
         {
           "date_transacted": "2023-11-07",
           "date_posted": "2023-11-07",
-          "amount": "-95.00",
+          "amount": -95.0,
           "description": "VDP-IT TRALEE SERV",
-          "currency": "EUR"
+          "currency": "USD"
         },
         {
           "date_transacted": "2023-11-15",
           "date_posted": "2023-11-15",
-          "amount": "1150.00",
+          "amount": 1150.0,
           "description": "T00000022: SCHOLARSHIP",
-          "currency": "EUR"
+          "currency": "USD"
         },
         {
           "date_transacted": "2023-11-17",
           "date_posted": "2023-11-17",
-          "amount": "-2.00",
+          "amount": -2.0,
           "description": "VDP-PEPCO 1624",
-          "currency": "EUR"
+          "currency": "USD"
         },
         {
           "date_transacted": "2023-11-20",
           "date_posted": "2023-11-20",
-          "amount": "-1000.00",
+          "amount": -1000.0,
           "description": "ATM TRALEE   B: 18NOV23 TIME 15:22",
-          "currency": "EUR"
+          "currency": "USD"
         },
         {
           "date_transacted": "2023-11-20",
           "date_posted": "2023-11-20",
-          "amount": "-4.38",
+          "amount": -4.38,
           "description": "VDP-GARVEYS SUPERV",
-          "currency": "EUR"
+          "currency": "USD"
         },
         {
           "date_transacted": "2023-11-20",
           "date_posted": "2023-11-20",
-          "amount": "-20.00",
+          "amount": -20.0,
           "description": "*MOBI  TOP-UP: 000000007",
-          "currency": "EUR"
+          "currency": "USD"
         },
         {
           "date_transacted": "2023-11-21",
           "date_posted": "2023-11-21",
-          "amount": "-3.00",
+          "amount": -3.0,
           "description": "VDP-PEPCO 1624",
-          "currency": "EUR"
+          "currency": "USD"
         },
         {
           "date_transacted": "2023-11-22",
           "date_posted": "2023-11-22",
-          "amount": "-2.18",
+          "amount": -2.18,
           "description": "VDP-LIDL IRELAND L",
-          "currency": "EUR"
+          "currency": "USD"
         },
         {
           "date_transacted": "2023-11-27",
           "date_posted": "2023-11-27",
-          "amount": "-39.78",
+          "amount": -39.78,
           "description": "VDP-shein.com",
-          "currency": "EUR"
+          "currency": "USD"
         },
         {
           "date_transacted": "2023-11-27",
           "date_posted": "2023-11-27",
-          "amount": "-5.99",
+          "amount": -5.99,
           "description": "VDP-Spotify P276F6",
-          "currency": "EUR"
+          "currency": "USD"
         },
         {
           "date_transacted": "2023-11-28",
           "date_posted": "2023-11-28",
-          "amount": "-3.00",
+          "amount": -3.0,
           "description": "VDP-PEPCO 1624",
-          "currency": "EUR"
+          "currency": "USD"
         },
         {
           "date_transacted": "2023-11-30",
           "date_posted": "2023-11-30",
-          "amount": "-2.10",
+          "amount": -2.1,
           "description": "VDP-PAYPAL *IDONAT",
-          "currency": "EUR"
+          "currency": "USD"
         },
         {
           "date_transacted": "2023-12-01",
           "date_posted": "2023-12-01",
-          "amount": "-15.00",
+          "amount": -15.0,
           "description": "VDP-COMPLETESAVE.I",
-          "currency": "EUR"
+          "currency": "USD"
         },
         {
           "date_transacted": "2023-12-04",
           "date_posted": "2023-12-04",
-          "amount": "-7.57",
+          "amount": -7.57,
           "description": "VDC-LIDL IRELAND L",
-          "currency": "EUR"
+          "currency": "USD"
         },
         {
           "date_transacted": "2023-12-04",
           "date_posted": "2023-12-04",
-          "amount": "-8.10",
+          "amount": -8.1,
           "description": "VDC-NORTH SOUTH",
-          "currency": "EUR"
+          "currency": "USD"
         },
         {
           "date_transacted": "2023-12-04",
           "date_posted": "2023-12-04",
-          "amount": "-3.00",
+          "amount": -3.0,
           "description": "VDC-PEPCO 1624",
-          "currency": "EUR"
+          "currency": "USD"
         },
         {
           "date_transacted": "2023-12-05",
           "date_posted": "2023-12-05",
-          "amount": "-2.50",
+          "amount": -2.5,
           "description": "VDC-IT TRALEE NORT",
-          "currency": "EUR"
+          "currency": "USD"
         },
         {
           "date_transacted": "2023-12-05",
           "date_posted": "2023-12-05",
-          "amount": "-4.40",
+          "amount": -4.4,
           "description": "VDC-PENNEYS TRALEE",
-          "currency": "EUR"
+          "currency": "USD"
         },
         {
           "date_transacted": "2023-12-06",
           "date_posted": "2023-12-06",
-          "amount": "1150.00",
+          "amount": 1150.0,
           "description": "T00000022: SCHOLARSHIP",
-          "currency": "EUR"
+          "currency": "USD"
         },
         {
           "date_transacted": "2023-12-06",
           "date_posted": "2023-12-06",
-          "amount": "-34.76",
+          "amount": -34.76,
           "description": "VDP-RYANAIR     PL",
-          "currency": "EUR"
+          "currency": "USD"
         },
         {
           "date_transacted": "2023-12-06",
           "date_posted": "2023-12-06",
-          "amount": "-2.50",
+          "amount": -2.5,
           "description": "VDC-IT TRALEE NORT",
-          "currency": "EUR"
+          "currency": "USD"
         },
         {
           "date_transacted": "2023-12-06",
           "date_posted": "2023-12-06",
-          "amount": "-1.49",
+          "amount": -1.49,
           "description": "VDC-LIDL IRELAND L",
-          "currency": "EUR"
+          "currency": "USD"
         },
         {
           "date_transacted": "2023-12-07",
           "date_posted": "2023-12-07",
-          "amount": "-500.00",
+          "amount": -500.0,
           "description": "ATM TRALEE   B: 07DEC23 TIME 15:25",
-          "currency": "EUR"
+          "currency": "USD"
         },
         {
           "date_transacted": "2023-12-11",
           "date_posted": "2023-12-11",
-          "amount": "172.50",
+          "amount": 172.5,
           "description": "*MOBI CURRENT - ST",
-          "currency": "EUR"
+          "currency": "USD"
         },
         {
           "date_transacted": "2023-12-11",
           "date_posted": "2023-12-11",
-          "amount": "-348.20",
+          "amount": -348.2,
           "description": "VDP-Hotel at Booki",
-          "currency": "EUR"
+          "currency": "USD"
         },
         {
           "date_transacted": "2023-12-11",
           "date_posted": "2023-12-11",
-          "amount": "-1.40",
+          "amount": -1.4,
           "description": "VDC-LIDL IRELAND L",
-          "currency": "EUR"
+          "currency": "USD"
         },
         {
           "date_transacted": "2023-12-11",
           "date_posted": "2023-12-11",
-          "amount": "-8.10",
+          "amount": -8.1,
           "description": "VDC-NORTH SOUTH",
-          "currency": "EUR"
+          "currency": "USD"
         },
         {
           "date_transacted": "2023-12-11",
           "date_posted": "2023-12-11",
-          "amount": "-3.50",
+          "amount": -3.5,
           "description": "VDC-SQ *LOVE AND F",
-          "currency": "EUR"
+          "currency": "USD"
         },
         {
           "date_transacted": "2023-12-11",
           "date_posted": "2023-12-11",
-          "amount": "-7.00",
+          "amount": -7.0,
           "description": "VDC-SQ *LOVE AND F",
-          "currency": "EUR"
+          "currency": "USD"
         },
         {
           "date_transacted": "2023-12-11",
           "date_posted": "2023-12-11",
-          "amount": "-5.00",
+          "amount": -5.0,
           "description": "VDC-SUMUP  *UGLY M",
-          "currency": "EUR"
+          "currency": "USD"
         },
         {
           "date_transacted": "2023-12-12",
           "date_posted": "2023-12-12",
-          "amount": "-4.20",
+          "amount": -4.2,
           "description": "VDC-IT TRALEE NORT",
-          "currency": "EUR"
+          "currency": "USD"
         },
         {
           "date_transacted": "2023-12-15",
           "date_posted": "2023-12-15",
-          "amount": "-5.04",
+          "amount": -5.04,
           "description": "VDC-LIDL IRELAND L",
-          "currency": "EUR"
+          "currency": "USD"
         },
         {
           "date_transacted": "2023-12-15",
           "date_posted": "2023-12-15",
-          "amount": "-9.00",
+          "amount": -9.0,
           "description": "VDC-OSULLIVANS PHA",
-          "currency": "EUR"
+          "currency": "USD"
         },
         {
           "date_transacted": "2023-12-18",
           "date_posted": "2023-12-18",
-          "amount": "-27.57",
+          "amount": -27.57,
           "description": "VDP-shein.com",
-          "currency": "EUR"
+          "currency": "USD"
         },
         {
           "date_transacted": "2023-12-18",
           "date_posted": "2023-12-18",
-          "amount": "-21.99",
+          "amount": -21.99,
           "description": "VDC-BOOTS RETAIL17",
-          "currency": "EUR"
+          "currency": "USD"
         },
         {
           "date_transacted": "2023-12-18",
           "date_posted": "2023-12-18",
-          "amount": "-21.59",
+          "amount": -21.59,
           "description": "VDC-DUNNES TRALEE",
-          "currency": "EUR"
+          "currency": "USD"
         },
         {
           "date_transacted": "2023-12-18",
           "date_posted": "2023-12-18",
-          "amount": "-1.85",
+          "amount": -1.85,
           "description": "VDC-PEPCO 1624",
-          "currency": "EUR"
+          "currency": "USD"
         },
         {
           "date_transacted": "2023-12-19",
           "date_posted": "2023-12-19",
-          "amount": "-1.69",
+          "amount": -1.69,
           "description": "VDC-GARVEYS SUPERV",
-          "currency": "EUR"
+          "currency": "USD"
         },
         {
           "date_transacted": "2023-12-19",
           "date_posted": "2023-12-19",
-          "amount": "-1.70",
+          "amount": -1.7,
           "description": "VDC-IT TRALEE NORT",
-          "currency": "EUR"
+          "currency": "USD"
         },
         {
           "date_transacted": "2023-12-19",
           "date_posted": "2023-12-19",
-          "amount": "-4.50",
+          "amount": -4.5,
           "description": "VDC-SQ *MADDENS",
-          "currency": "EUR"
+          "currency": "USD"
         },
         {
           "date_transacted": "2023-12-21",
           "date_posted": "2023-12-21",
-          "amount": "-2.50",
+          "amount": -2.5,
           "description": "VDC-IT TRALEE NORT",
-          "currency": "EUR"
+          "currency": "USD"
         },
         {
           "date_transacted": "2023-12-21",
           "date_posted": "2023-12-21",
-          "amount": "-0.89",
+          "amount": -0.89,
           "description": "VDC-LIDL IRELAND L",
-          "currency": "EUR"
+          "currency": "USD"
         },
         {
           "date_transacted": "2023-12-28",
           "date_posted": "2023-12-28",
-          "amount": "15.20",
+          "amount": 15.2,
           "description": "FEES REFUNDED: Account Number: 000000 - 00000002",
-          "currency": "EUR"
+          "currency": "USD"
         },
         {
           "date_transacted": "2023-12-28",
           "date_posted": "2023-12-28",
-          "amount": "-27.98",
+          "amount": -27.98,
           "description": "VDP-ROI ECOMM",
-          "currency": "EUR"
+          "currency": "USD"
         },
         {
           "date_transacted": "2023-12-28",
           "date_posted": "2023-12-28",
-          "amount": "-5.99",
+          "amount": -5.99,
           "description": "VDP-Spotify P283AE",
-          "currency": "EUR"
+          "currency": "USD"
         },
         {
           "date_transacted": "2023-12-28",
           "date_posted": "2023-12-28",
-          "amount": "-20.00",
+          "amount": -20.0,
           "description": "*MOBI  TOP-UP: 000000007",
-          "currency": "EUR"
+          "currency": "USD"
         },
         {
           "date_transacted": "2023-12-28",
           "date_posted": "2023-12-28",
-          "amount": "-15.20",
+          "amount": -15.2,
           "description": "FEE-QTR TO 24NOV23: Account Number: 000000 - 00000002",
-          "currency": "EUR"
+          "currency": "USD"
         },
         {
           "date_transacted": "2023-12-28",
           "date_posted": "2023-12-28",
-          "amount": "-15.50",
+          "amount": -15.5,
           "description": "VDC-C.H.CHEMISTS",
-          "currency": "EUR"
+          "currency": "USD"
         },
         {
           "date_transacted": "2023-12-28",
           "date_posted": "2023-12-28",
-          "amount": "-4.99",
+          "amount": -4.99,
           "description": "VDC-EASON",
-          "currency": "EUR"
+          "currency": "USD"
         },
         {
           "date_transacted": "2023-12-28",
           "date_posted": "2023-12-28",
-          "amount": "-0.89",
+          "amount": -0.89,
           "description": "VDC-LIDL IRELAND L",
-          "currency": "EUR"
+          "currency": "USD"
         },
         {
           "date_transacted": "2023-12-28",
           "date_posted": "2023-12-28",
-          "amount": "-2.49",
+          "amount": -2.49,
           "description": "VDC-LIDL IRELAND L",
-          "currency": "EUR"
+          "currency": "USD"
         },
         {
           "date_transacted": "2023-12-28",
           "date_posted": "2023-12-28",
-          "amount": "-9.10",
+          "amount": -9.1,
           "description": "VDC-PENNEYS TRALEE",
-          "currency": "EUR"
+          "currency": "USD"
         },
         {
           "date_transacted": "2023-12-28",
           "date_posted": "2023-12-28",
-          "amount": "-2.00",
+          "amount": -2.0,
           "description": "VDC-PEPCO 1624",
-          "currency": "EUR"
+          "currency": "USD"
         },
         {
           "date_transacted": "2023-12-29",
           "date_posted": "2023-12-29",
-          "amount": "-17.00",
+          "amount": -17.0,
           "description": "VDC-BOOTS RETAIL17",
-          "currency": "EUR"
+          "currency": "USD"
         },
         {
           "date_transacted": "2023-12-29",
           "date_posted": "2023-12-29",
-          "amount": "-3.50",
+          "amount": -3.5,
           "description": "VDC-C.H.CHEMISTS",
-          "currency": "EUR"
+          "currency": "USD"
         },
         {
           "date_transacted": "2023-12-29",
           "date_posted": "2023-12-29",
-          "amount": "-18.62",
+          "amount": -18.62,
           "description": "VDC-C.H.CHEMISTS",
-          "currency": "EUR"
+          "currency": "USD"
         },
         {
           "date_transacted": "2023-12-29",
           "date_posted": "2023-12-29",
-          "amount": "-4.25",
+          "amount": -4.25,
           "description": "VDC-COSTA",
-          "currency": "EUR"
+          "currency": "USD"
         },
         {
           "date_transacted": "2023-12-29",
           "date_posted": "2023-12-29",
-          "amount": "-12.00",
+          "amount": -12.0,
           "description": "VDC-PENNEYS TRALEE",
-          "currency": "EUR"
+          "currency": "USD"
         },
         {
           "date_transacted": "2024-01-02",
           "date_posted": "2024-01-02",
-          "amount": "-15.00",
+          "amount": -15.0,
           "description": "VDP-COMPLETESAVE.I",
-          "currency": "EUR"
+          "currency": "USD"
         },
         {
           "date_transacted": "2024-01-02",
           "date_posted": "2024-01-02",
-          "amount": "-17.00",
+          "amount": -17.0,
           "description": "VDC-DUNNES TRALEE",
-          "currency": "EUR"
+          "currency": "USD"
         },
         {
           "date_transacted": "2024-01-02",
           "date_posted": "2024-01-02",
-          "amount": "-2.99",
+          "amount": -2.99,
           "description": "VDC-EASON",
-          "currency": "EUR"
+          "currency": "USD"
         },
         {
           "date_transacted": "2024-01-02",
           "date_posted": "2024-01-02",
-          "amount": "-2.00",
+          "amount": -2.0,
           "description": "VDC-GARVEYS SUPERV",
-          "currency": "EUR"
+          "currency": "USD"
         },
         {
           "date_transacted": "2024-01-02",
           "date_posted": "2024-01-02",
-          "amount": "-2.98",
+          "amount": -2.98,
           "description": "VDC-MR PRICE",
-          "currency": "EUR"
+          "currency": "USD"
         },
         {
           "date_transacted": "2024-01-02",
           "date_posted": "2024-01-02",
-          "amount": "-10.00",
+          "amount": -10.0,
           "description": "VDC-Sean Ogs Bar a",
-          "currency": "EUR"
+          "currency": "USD"
         },
         {
           "date_transacted": "2024-01-02",
           "date_posted": "2024-01-02",
-          "amount": "-10.99",
+          "amount": -10.99,
           "description": "VDC-SMYTHS TOYS TR",
-          "currency": "EUR"
+          "currency": "USD"
         },
         {
           "date_transacted": "2024-01-02",
           "date_posted": "2024-01-02",
-          "amount": "-24.99",
+          "amount": -24.99,
           "description": "VDC-T K MAXX",
-          "currency": "EUR"
+          "currency": "USD"
         },
         {
           "date_transacted": "2024-01-02",
           "date_posted": "2024-01-02",
-          "amount": "-31.55",
+          "amount": -31.55,
           "description": "VDC-TESCO STORES 3",
-          "currency": "EUR"
+          "currency": "USD"
         },
         {
           "date_transacted": "2024-01-02",
           "date_posted": "2024-01-02",
-          "amount": "-18.92",
+          "amount": -18.92,
           "description": "VDC-THE RANGE",
-          "currency": "EUR"
+          "currency": "USD"
         },
         {
           "date_transacted": "2024-01-03",
           "date_posted": "2024-01-03",
-          "amount": "18.00",
+          "amount": 18.0,
           "description": "*MOBI CURRENT - ST",
-          "currency": "EUR"
+          "currency": "USD"
         },
         {
           "date_transacted": "2024-01-03",
           "date_posted": "2024-01-03",
-          "amount": "-7.34",
+          "amount": -7.34,
           "description": "VDC-LIDL IRELAND L",
-          "currency": "EUR"
+          "currency": "USD"
         },
         {
           "date_transacted": "2024-01-04",
           "date_posted": "2024-01-04",
-          "amount": "-26.40",
+          "amount": -26.4,
           "description": "VDC-NORTH SOUTH",
-          "currency": "EUR"
+          "currency": "USD"
         },
         {
           "date_transacted": "2024-01-04",
           "date_posted": "2024-01-04",
-          "amount": "-1.00",
+          "amount": -1.0,
           "description": "VDC-PENNEYS TRALEE",
-          "currency": "EUR"
+          "currency": "USD"
         },
         {
           "date_transacted": "2024-01-08",
           "date_posted": "2024-01-08",
-          "amount": "450.00",
+          "amount": 450.0,
           "description": "*ATMLDG TRALEE   D: Card ending: 6180",
-          "currency": "EUR"
+          "currency": "USD"
         },
         {
           "date_transacted": "2024-01-08",
           "date_posted": "2024-01-08",
-          "amount": "-5.00",
+          "amount": -5.0,
           "description": "VDP-AIRCOACH WEB E",
-          "currency": "EUR"
+          "currency": "USD"
         },
         {
           "date_transacted": "2024-01-08",
           "date_posted": "2024-01-08",
-          "amount": "-17.99",
+          "amount": -17.99,
           "description": "VDP-APPLE.COM/BILL",
-          "currency": "EUR"
+          "currency": "USD"
         },
         {
           "date_transacted": "2024-01-08",
           "date_posted": "2024-01-08",
-          "amount": "-12.99",
+          "amount": -12.99,
           "description": "VDP-IRISH RAIL 679",
-          "currency": "EUR"
+          "currency": "USD"
         },
         {
           "date_transacted": "2024-01-08",
           "date_posted": "2024-01-08",
-          "amount": "-5.00",
+          "amount": -5.0,
           "description": "VDP-LEAP CARD APP",
-          "currency": "EUR"
+          "currency": "USD"
         },
         {
           "date_transacted": "2024-01-09",
           "date_posted": "2024-01-09",
-          "amount": "-16.00",
+          "amount": -16.0,
           "description": "*MOBI 00000000",
-          "currency": "EUR"
+          "currency": "USD"
         },
         {
           "date_transacted": "2024-01-09",
           "date_posted": "2024-01-09",
-          "amount": "-9.66",
+          "amount": -9.66,
           "description": "VDC-PEWEX",
-          "currency": "EUR"
+          "currency": "USD"
         },
         {
           "date_transacted": "2024-01-09",
           "date_posted": "2024-01-09",
-          "amount": "-1.50",
+          "amount": -1.5,
           "description": "VDC-THE KIOSK RAIL",
-          "currency": "EUR"
+          "currency": "USD"
         },
         {
           "date_transacted": "2024-01-10",
           "date_posted": "2024-01-10",
-          "amount": "15.00",
+          "amount": 15.0,
           "description": "*MOBI CURRENT - ST",
-          "currency": "EUR"
+          "currency": "USD"
         },
         {
           "date_transacted": "2024-01-10",
           "date_posted": "2024-01-10",
-          "amount": "20.00",
+          "amount": 20.0,
           "description": "*MOBI CURRENT - ST",
-          "currency": "EUR"
+          "currency": "USD"
         },
         {
           "date_transacted": "2024-01-10",
           "date_posted": "2024-01-10",
-          "amount": "-33.00",
+          "amount": -33.0,
           "description": "*MOBI 00000000",
-          "currency": "EUR"
+          "currency": "USD"
         },
         {
           "date_transacted": "2024-01-10",
           "date_posted": "2024-01-10",
-          "amount": "-1.50",
+          "amount": -1.5,
           "description": "VDC-BUTLERS CHOCOL",
-          "currency": "EUR"
+          "currency": "USD"
         },
         {
           "date_transacted": "2024-01-10",
           "date_posted": "2024-01-10",
-          "amount": "-5.00",
+          "amount": -5.0,
           "description": "VDC-BUTLERS CHOCOL",
-          "currency": "EUR"
+          "currency": "USD"
         },
         {
           "date_transacted": "2024-01-10",
           "date_posted": "2024-01-10",
-          "amount": "-31.00",
+          "amount": -31.0,
           "description": "VDC-HOTEL BARCELON",
-          "currency": "EUR"
+          "currency": "USD"
         },
         {
           "date_transacted": "2024-01-10",
           "date_posted": "2024-01-10",
-          "amount": "-6.16",
+          "amount": -6.16,
           "description": "VDC-MDONALDS PARAL",
-          "currency": "EUR"
+          "currency": "USD"
         },
         {
           "date_transacted": "2024-01-10",
           "date_posted": "2024-01-10",
-          "amount": "-4.25",
+          "amount": -4.25,
           "description": "VDC-MERCADONA C.C.",
-          "currency": "EUR"
+          "currency": "USD"
         },
         {
           "date_transacted": "2024-01-10",
           "date_posted": "2024-01-10",
-          "amount": "-6.75",
+          "amount": -6.75,
           "description": "VDC-MONBUS",
-          "currency": "EUR"
+          "currency": "USD"
         },
         {
           "date_transacted": "2024-01-11",
           "date_posted": "2024-01-11",
-          "amount": "-40.00",
+          "amount": -40.0,
           "description": "VDC-CITEES BARCELO",
-          "currency": "EUR"
+          "currency": "USD"
         },
         {
           "date_transacted": "2024-01-11",
           "date_posted": "2024-01-11",
-          "amount": "-65.15",
+          "amount": -65.15,
           "description": "VDC-CORCHO NATURAL",
-          "currency": "EUR"
+          "currency": "USD"
         },
         {
           "date_transacted": "2024-01-11",
           "date_posted": "2024-01-11",
-          "amount": "-36.08",
+          "amount": -36.08,
           "description": "VDC-HM Pg. Gracia",
-          "currency": "EUR"
+          "currency": "USD"
         },
         {
           "date_transacted": "2024-01-11",
           "date_posted": "2024-01-11",
-          "amount": "-42.06",
+          "amount": -42.06,
           "description": "VDC-KIKO",
-          "currency": "EUR"
+          "currency": "USD"
         },
         {
           "date_transacted": "2024-01-11",
           "date_posted": "2024-01-11",
-          "amount": "-25.98",
+          "amount": -25.98,
           "description": "VDC-STRADIVARIUS",
-          "currency": "EUR"
+          "currency": "USD"
         },
         {
           "date_transacted": "2024-01-11",
           "date_posted": "2024-01-11",
-          "amount": "-17.90",
+          "amount": -17.9,
           "description": "VDC-TAPAS 2254",
-          "currency": "EUR"
+          "currency": "USD"
         },
         {
           "date_transacted": "2024-01-11",
           "date_posted": "2024-01-11",
-          "amount": "-66.16",
+          "amount": -66.16,
           "description": "VDC-TEZENIS PORTAL",
-          "currency": "EUR"
+          "currency": "USD"
         },
         {
           "date_transacted": "2024-01-11",
           "date_posted": "2024-01-11",
-          "amount": "-15.15",
+          "amount": -15.15,
           "description": "VDC-TIENDA PORTAL",
-          "currency": "EUR"
+          "currency": "USD"
         },
         {
           "date_transacted": "2024-01-11",
           "date_posted": "2024-01-11",
-          "amount": "-5.35",
+          "amount": -5.35,
           "description": "VDC-365",
-          "currency": "EUR"
+          "currency": "USD"
         },
         {
           "date_transacted": "2024-01-12",
           "date_posted": "2024-01-12",
-          "amount": "-15.00",
+          "amount": -15.0,
           "description": "VDC-MUSEU PICASSO",
-          "currency": "EUR"
+          "currency": "USD"
         },
         {
           "date_transacted": "2024-01-15",
           "date_posted": "2024-01-15",
-          "amount": "-15.00",
+          "amount": -15.0,
           "description": "VDP-CITI BUS MOBIL",
-          "currency": "EUR"
+          "currency": "USD"
         },
         {
           "date_transacted": "2024-01-15",
           "date_posted": "2024-01-15",
-          "amount": "-4.80",
+          "amount": -4.8,
           "description": "VDP-METRO BARCELON",
-          "currency": "EUR"
+          "currency": "USD"
         },
         {
           "date_transacted": "2024-01-15",
           "date_posted": "2024-01-15",
-          "amount": "-5.15",
+          "amount": -5.15,
           "description": "VDP-METRO BARCELON",
-          "currency": "EUR"
+          "currency": "USD"
         },
         {
           "date_transacted": "2024-01-15",
           "date_posted": "2024-01-15",
-          "amount": "-2.00",
+          "amount": -2.0,
           "description": "VDC-ARBITRADE AE B",
-          "currency": "EUR"
+          "currency": "USD"
         },
         {
           "date_transacted": "2024-01-15",
           "date_posted": "2024-01-15",
-          "amount": "-49.00",
+          "amount": -49.0,
           "description": "VDC-HOTEL BCN UNIV",
-          "currency": "EUR"
+          "currency": "USD"
         },
         {
           "date_transacted": "2024-01-15",
           "date_posted": "2024-01-15",
-          "amount": "-2.25",
+          "amount": -2.25,
           "description": "VDC-JOMIDAR BAZAR",
-          "currency": "EUR"
+          "currency": "USD"
         },
         {
           "date_transacted": "2024-01-15",
           "date_posted": "2024-01-15",
-          "amount": "-2.51",
+          "amount": -2.51,
           "description": "VDC-MDONALDS PARAL",
-          "currency": "EUR"
+          "currency": "USD"
         },
         {
           "date_transacted": "2024-01-15",
           "date_posted": "2024-01-15",
-          "amount": "-4.75",
+          "amount": -4.75,
           "description": "VDC-MDONALDS PARAL",
-          "currency": "EUR"
+          "currency": "USD"
         },
         {
           "date_transacted": "2024-01-15",
           "date_posted": "2024-01-15",
-          "amount": "-5.45",
+          "amount": -5.45,
           "description": "VDC-TRIGO RAVAL",
-          "currency": "EUR"
+          "currency": "USD"
         },
         {
           "date_transacted": "2024-01-15",
           "date_posted": "2024-01-15",
-          "amount": "-3.75",
+          "amount": -3.75,
           "description": "VDC-WH Smith Dubli",
-          "currency": "EUR"
+          "currency": "USD"
         },
         {
           "date_transacted": "2024-01-15",
           "date_posted": "2024-01-15",
-          "amount": "-15.10",
+          "amount": -15.1,
           "description": "VDC-624 - EA AER B",
-          "currency": "EUR"
+          "currency": "USD"
         },
         {
           "date_transacted": "2024-01-16",
           "date_posted": "2024-01-16",
-          "amount": "-2.30",
+          "amount": -2.3,
           "description": "VDC-DUNNES TRALEE",
-          "currency": "EUR"
+          "currency": "USD"
         },
         {
           "date_transacted": "2024-01-16",
           "date_posted": "2024-01-16",
-          "amount": "-2.30",
+          "amount": -2.3,
           "description": "VDC-IT TRALEE NORT",
-          "currency": "EUR"
+          "currency": "USD"
         },
         {
           "date_transacted": "2024-01-16",
           "date_posted": "2024-01-16",
-          "amount": "-2.50",
+          "amount": -2.5,
           "description": "VDC-IT TRALEE NORT",
-          "currency": "EUR"
+          "currency": "USD"
         },
         {
           "date_transacted": "2024-01-16",
           "date_posted": "2024-01-16",
-          "amount": "-2.38",
+          "amount": -2.38,
           "description": "VDC-LIDL IRELAND L",
-          "currency": "EUR"
+          "currency": "USD"
         },
         {
           "date_transacted": "2024-01-17",
           "date_posted": "2024-01-17",
-          "amount": "-43.90",
+          "amount": -43.9,
           "description": "VDP-Zara.com",
-          "currency": "EUR"
+          "currency": "USD"
         },
         {
           "date_transacted": "2024-01-17",
           "date_posted": "2024-01-17",
-          "amount": "-1.65",
+          "amount": -1.65,
           "description": "VDC-IT TRALEE NORT",
-          "currency": "EUR"
+          "currency": "USD"
         },
         {
           "date_transacted": "2024-01-17",
           "date_posted": "2024-01-17",
-          "amount": "-2.50",
+          "amount": -2.5,
           "description": "VDC-IT TRALEE NORT",
-          "currency": "EUR"
+          "currency": "USD"
         },
         {
           "date_transacted": "2024-01-17",
           "date_posted": "2024-01-17",
-          "amount": "-2.50",
+          "amount": -2.5,
           "description": "VDC-IT TRALEE NORT",
-          "currency": "EUR"
+          "currency": "USD"
         },
         {
           "date_transacted": "2024-01-17",
           "date_posted": "2024-01-17",
-          "amount": "-3.49",
+          "amount": -3.49,
           "description": "VDC-LIDL IRELAND L",
-          "currency": "EUR"
+          "currency": "USD"
         },
         {
           "date_transacted": "2024-01-18",
           "date_posted": "2024-01-18",
-          "amount": "170.00",
+          "amount": 170.0,
           "description": "*ATMLDG TRELEE: Card ending: 6180",
-          "currency": "EUR"
+          "currency": "USD"
         },
         {
           "date_transacted": "2024-01-18",
           "date_posted": "2024-01-18",
-          "amount": "-0.69",
+          "amount": -0.69,
           "description": "VDC-LIDL IRELAND L",
-          "currency": "EUR"
+          "currency": "USD"
         },
         {
           "date_transacted": "2024-01-18",
           "date_posted": "2024-01-18",
-          "amount": "-8.50",
+          "amount": -8.5,
           "description": "VDC-SQ *MADDENS",
-          "currency": "EUR"
+          "currency": "USD"
         },
         {
           "date_transacted": "2024-01-19",
           "date_posted": "2024-01-19",
-          "amount": "-2.50",
+          "amount": -2.5,
           "description": "VDC-IT TRALEE NORT",
-          "currency": "EUR"
+          "currency": "USD"
         },
         {
           "date_transacted": "2024-01-22",
           "date_posted": "2024-01-22",
-          "amount": "-130.00",
+          "amount": -130.0,
           "description": "VDP-LACOSTE COM",
-          "currency": "EUR"
+          "currency": "USD"
         },
         {
           "date_transacted": "2024-01-22",
           "date_posted": "2024-01-22",
-          "amount": "-3.90",
+          "amount": -3.9,
           "description": "VDC-IT TRALEE NORT",
-          "currency": "EUR"
+          "currency": "USD"
         },
         {
           "date_transacted": "2024-01-23",
           "date_posted": "2024-01-23",
-          "amount": "-22.83",
+          "amount": -22.83,
           "description": "VDP-SHEIN.COM",
-          "currency": "EUR"
+          "currency": "USD"
         },
         {
           "date_transacted": "2024-01-23",
           "date_posted": "2024-01-23",
-          "amount": "-1.40",
+          "amount": -1.4,
           "description": "VDC-IT TRALEE NORT",
-          "currency": "EUR"
+          "currency": "USD"
         },
         {
           "date_transacted": "2024-01-23",
           "date_posted": "2024-01-23",
-          "amount": "-3.10",
+          "amount": -3.1,
           "description": "VDC-IT TRALEE NORT",
-          "currency": "EUR"
+          "currency": "USD"
         },
         {
           "date_transacted": "2024-01-23",
           "date_posted": "2024-01-23",
-          "amount": "-0.49",
+          "amount": -0.49,
           "description": "VDC-LIDL IRELAND L",
-          "currency": "EUR"
+          "currency": "USD"
         },
         {
           "date_transacted": "2024-01-24",
           "date_posted": "2024-01-24",
-          "amount": "50.00",
+          "amount": 50.0,
           "description": "*ATMLDG TRELEE: Card ending: 6180",
-          "currency": "EUR"
+          "currency": "USD"
         },
         {
           "date_transacted": "2024-01-25",
           "date_posted": "2024-01-25",
-          "amount": "1150.00",
+          "amount": 1150.0,
           "description": "T00000022: SCHOLARSHIP",
-          "currency": "EUR"
+          "currency": "USD"
         },
         {
           "date_transacted": "2024-01-25",
           "date_posted": "2024-01-25",
-          "amount": "-20.00",
+          "amount": -20.0,
           "description": "MOBI TOP UP",
-          "currency": "EUR"
+          "currency": "USD"
         },
         {
           "date_transacted": "2024-01-25",
           "date_posted": "2024-01-25",
-          "amount": "-1.56",
+          "amount": -1.56,
           "description": "STAMP DUTY 6180",
-          "currency": "EUR"
+          "currency": "USD"
         },
         {
           "date_transacted": "2024-01-26",
           "date_posted": "2024-01-26",
-          "amount": "-5.99",
+          "amount": -5.99,
           "description": "VDP-Spotify P29605",
-          "currency": "EUR"
+          "currency": "USD"
         },
         {
           "date_transacted": "2024-01-26",
           "date_posted": "2024-01-26",
-          "amount": "-1.70",
+          "amount": -1.7,
           "description": "VDC-IT TRALEE NORT",
-          "currency": "EUR"
+          "currency": "USD"
         },
         {
           "date_transacted": "2024-01-26",
           "date_posted": "2024-01-26",
-          "amount": "-2.50",
+          "amount": -2.5,
           "description": "VDC-IT TRALEE NORT",
-          "currency": "EUR"
+          "currency": "USD"
         },
         {
           "date_transacted": "2024-01-29",
           "date_posted": "2024-01-29",
-          "amount": "-2.50",
+          "amount": -2.5,
           "description": "VDC-IT TRALEE NORT",
-          "currency": "EUR"
+          "currency": "USD"
         },
         {
           "date_transacted": "2024-01-29",
           "date_posted": "2024-01-29",
-          "amount": "-12.14",
+          "amount": -12.14,
           "description": "VDC-LIDL IRELAND L",
-          "currency": "EUR"
+          "currency": "USD"
         },
         {
           "date_transacted": "2024-01-30",
           "date_posted": "2024-01-30",
-          "amount": "-2.30",
+          "amount": -2.3,
           "description": "VDC-IT TRALEE NORT",
-          "currency": "EUR"
+          "currency": "USD"
         },
         {
           "date_transacted": "2024-01-30",
           "date_posted": "2024-01-30",
-          "amount": "-2.50",
+          "amount": -2.5,
           "description": "VDC-IT TRALEE NORT",
-          "currency": "EUR"
+          "currency": "USD"
         },
         {
           "date_transacted": "2024-01-31",
           "date_posted": "2024-01-31",
-          "amount": "-1000.00",
+          "amount": -1000.0,
           "description": "ATM TRALEE   B: 31JAN24 TIME 12:26",
-          "currency": "EUR"
+          "currency": "USD"
         },
         {
           "date_transacted": "2024-01-31",
           "date_posted": "2024-01-31",
-          "amount": "-15.00",
+          "amount": -15.0,
           "description": "VDP-COMPLETESAVE.I",
-          "currency": "EUR"
+          "currency": "USD"
         },
         {
           "date_transacted": "2024-01-31",
           "date_posted": "2024-01-31",
-          "amount": "-2.50",
+          "amount": -2.5,
           "description": "VDC-IT TRALEE NORT",
-          "currency": "EUR"
+          "currency": "USD"
         },
         {
           "date_transacted": "2024-02-01",
           "date_posted": "2024-02-01",
-          "amount": "-2.50",
+          "amount": -2.5,
           "description": "VDC-IT TRALEE NORT",
-          "currency": "EUR"
+          "currency": "USD"
         },
         {
           "date_transacted": "2024-02-02",
           "date_posted": "2024-02-02",
-          "amount": "200.00",
+          "amount": 200.0,
           "description": "*MOBI CURRENT-030",
-          "currency": "EUR"
+          "currency": "USD"
         },
         {
           "date_transacted": "2024-02-02",
           "date_posted": "2024-02-02",
-          "amount": "-4.90",
+          "amount": -4.9,
           "description": "VDC-IT TRALEE NORT",
-          "currency": "EUR"
+          "currency": "USD"
         },
         {
           "date_transacted": "2024-02-06",
           "date_posted": "2024-02-06",
-          "amount": "30.00",
+          "amount": 30.0,
           "description": "*MOBI CURRENT-030",
-          "currency": "EUR"
+          "currency": "USD"
         },
         {
           "date_transacted": "2024-02-06",
           "date_posted": "2024-02-06",
-          "amount": "-92.52",
+          "amount": -92.52,
           "description": "VDP-RYANAIR     TK",
-          "currency": "EUR"
+          "currency": "USD"
         },
         {
           "date_transacted": "2024-02-06",
           "date_posted": "2024-02-06",
-          "amount": "-96.88",
+          "amount": -96.88,
           "description": "VDP-RYANAIR     UH",
-          "currency": "EUR"
+          "currency": "USD"
         },
         {
           "date_transacted": "2024-02-06",
           "date_posted": "2024-02-06",
-          "amount": "-3.00",
+          "amount": -3.0,
           "description": "VDC-EUROGIANT TRAL",
-          "currency": "EUR"
+          "currency": "USD"
         },
         {
           "date_transacted": "2024-02-06",
           "date_posted": "2024-02-06",
-          "amount": "-2.50",
+          "amount": -2.5,
           "description": "VDC-IT TRALEE NORT",
-          "currency": "EUR"
+          "currency": "USD"
         },
         {
           "date_transacted": "2024-02-06",
           "date_posted": "2024-02-06",
-          "amount": "-6.09",
+          "amount": -6.09,
           "description": "VDC-LIDL IRELAND L",
-          "currency": "EUR"
+          "currency": "USD"
         },
         {
           "date_transacted": "2024-02-06",
           "date_posted": "2024-02-06",
-          "amount": "-6.09",
+          "amount": -6.09,
           "description": "VDC-LIDL IRELAND L",
-          "currency": "EUR"
+          "currency": "USD"
         },
         {
           "date_transacted": "2024-02-06",
           "date_posted": "2024-02-06",
-          "amount": "-5.00",
+          "amount": -5.0,
           "description": "VDC-MCDONALDS TRAL",
-          "currency": "EUR"
+          "currency": "USD"
         },
         {
           "date_transacted": "2024-02-06",
           "date_posted": "2024-02-06",
-          "amount": "-5.00",
+          "amount": -5.0,
           "description": "VDC-MCDONALDS TRAL",
-          "currency": "EUR"
+          "currency": "USD"
         },
         {
           "date_transacted": "2024-02-06",
           "date_posted": "2024-02-06",
-          "amount": "-4.90",
+          "amount": -4.9,
           "description": "VDC-PENNEYS TRALEE",
-          "currency": "EUR"
+          "currency": "USD"
         },
         {
           "date_transacted": "2024-02-06",
           "date_posted": "2024-02-06",
-          "amount": "-3.50",
+          "amount": -3.5,
           "description": "VDC-SumUp  *Yusuf",
-          "currency": "EUR"
+          "currency": "USD"
         },
         {
           "date_transacted": "2024-02-06",
           "date_posted": "2024-02-06",
-          "amount": "-22.98",
+          "amount": -22.98,
           "description": "VDC-T K MAXX",
-          "currency": "EUR"
+          "currency": "USD"
         },
         {
           "date_transacted": "2024-02-06",
           "date_posted": "2024-02-06",
-          "amount": "-3.25",
+          "amount": -3.25,
           "description": "VDC-THE RANGE",
-          "currency": "EUR"
+          "currency": "USD"
         },
         {
           "date_transacted": "2024-02-07",
           "date_posted": "2024-02-07",
-          "amount": "-2.50",
+          "amount": -2.5,
           "description": "VDC-IT TRALEE NORT",
-          "currency": "EUR"
+          "currency": "USD"
         },
         {
           "date_transacted": "2024-02-07",
           "date_posted": "2024-02-07",
-          "amount": "-4.23",
+          "amount": -4.23,
           "description": "VDC-LIDL IRELAND L",
-          "currency": "EUR"
+          "currency": "USD"
         },
         {
           "date_transacted": "2024-02-08",
           "date_posted": "2024-02-08",
-          "amount": "-4.50",
+          "amount": -4.5,
           "description": "VDC-EUROGIANT TRAL",
-          "currency": "EUR"
+          "currency": "USD"
         },
         {
           "date_transacted": "2024-02-08",
           "date_posted": "2024-02-08",
-          "amount": "-2.14",
+          "amount": -2.14,
           "description": "VDC-LIDL IRELAND L",
-          "currency": "EUR"
+          "currency": "USD"
         },
         {
           "date_transacted": "2024-02-09",
           "date_posted": "2024-02-09",
-          "amount": "-1.40",
+          "amount": -1.4,
           "description": "VDC-IT TRALEE NORT",
-          "currency": "EUR"
+          "currency": "USD"
         },
         {
           "date_transacted": "2024-02-09",
           "date_posted": "2024-02-09",
-          "amount": "-1.15",
+          "amount": -1.15,
           "description": "VDC-TOP OIL CROAGH",
-          "currency": "EUR"
+          "currency": "USD"
         },
         {
           "date_transacted": "2024-02-09",
           "date_posted": "2024-02-09",
-          "amount": "-2.60",
+          "amount": -2.6,
           "description": "VDC-TOP OIL CROAGH",
-          "currency": "EUR"
+          "currency": "USD"
         },
         {
           "date_transacted": "2024-02-12",
           "date_posted": "2024-02-12",
-          "amount": "-6.50",
+          "amount": -6.5,
           "description": "VDC-DUNNES TRALEE",
-          "currency": "EUR"
+          "currency": "USD"
         },
         {
           "date_transacted": "2024-02-12",
           "date_posted": "2024-02-12",
-          "amount": "-2.50",
+          "amount": -2.5,
           "description": "VDC-IT TRALEE NORT",
-          "currency": "EUR"
+          "currency": "USD"
         },
         {
           "date_transacted": "2024-02-12",
           "date_posted": "2024-02-12",
-          "amount": "-3.11",
+          "amount": -3.11,
           "description": "VDC-LIDL IRELAND L",
-          "currency": "EUR"
+          "currency": "USD"
         },
         {
           "date_transacted": "2024-02-12",
           "date_posted": "2024-02-12",
-          "amount": "-3.75",
+          "amount": -3.75,
           "description": "VDC-PENNEYS TRALEE",
-          "currency": "EUR"
+          "currency": "USD"
         },
         {
           "date_transacted": "2024-02-14",
           "date_posted": "2024-02-14",
-          "amount": "-11.66",
+          "amount": -11.66,
           "description": "VDP-ALIEXPRESS.COM",
-          "currency": "EUR"
+          "currency": "USD"
         },
         {
           "date_transacted": "2024-02-16",
           "date_posted": "2024-02-16",
-          "amount": "-1.00",
+          "amount": -1.0,
           "description": "VDC-DUNNES TRALEE",
-          "currency": "EUR"
+          "currency": "USD"
         },
         {
           "date_transacted": "2024-02-16",
           "date_posted": "2024-02-16",
-          "amount": "-26.87",
+          "amount": -26.87,
           "description": "VDC-LIDL IRELAND L",
-          "currency": "EUR"
+          "currency": "USD"
         },
         {
           "date_transacted": "2024-02-16",
           "date_posted": "2024-02-16",
-          "amount": "-8.40",
+          "amount": -8.4,
           "description": "VDC-SQ *MADDENS",
-          "currency": "EUR"
+          "currency": "USD"
         },
         {
           "date_transacted": "2024-02-19",
           "date_posted": "2024-02-19",
-          "amount": "-7.99",
+          "amount": -7.99,
           "description": "VDC-CARRYOUT OFF L",
-          "currency": "EUR"
+          "currency": "USD"
         },
         {
           "date_transacted": "2024-02-19",
           "date_posted": "2024-02-19",
-          "amount": "-7.00",
+          "amount": -7.0,
           "description": "VDC-SQ *BRIO BRUNC",
-          "currency": "EUR"
+          "currency": "USD"
         },
         {
           "date_transacted": "2024-02-20",
           "date_posted": "2024-02-20",
-          "amount": "20.00",
+          "amount": 20.0,
           "description": "*ATMLDG TRALEE   D: Card ending: 6180",
-          "currency": "EUR"
+          "currency": "USD"
         },
         {
           "date_transacted": "2024-02-20",
           "date_posted": "2024-02-20",
-          "amount": "-4.10",
+          "amount": -4.1,
           "description": "VDC-IT TRALEE NORT",
-          "currency": "EUR"
+          "currency": "USD"
         },
         {
           "date_transacted": "2024-02-20",
           "date_posted": "2024-02-20",
-          "amount": "-0.99",
+          "amount": -0.99,
           "description": "VDC-LIDL IRELAND L",
-          "currency": "EUR"
+          "currency": "USD"
         },
         {
           "date_transacted": "2024-02-21",
           "date_posted": "2024-02-21",
-          "amount": "1150.00",
+          "amount": 1150.0,
           "description": "T00000022: SCHOLARSHIP",
-          "currency": "EUR"
+          "currency": "USD"
         },
         {
           "date_transacted": "2024-02-21",
           "date_posted": "2024-02-21",
-          "amount": "-1000.00",
+          "amount": -1000.0,
           "description": "ATM TRALEE   B: 21FEB24 TIME 14:24",
-          "currency": "EUR"
+          "currency": "USD"
         },
         {
           "date_transacted": "2024-02-21",
           "date_posted": "2024-02-21",
-          "amount": "-20.00",
+          "amount": -20.0,
           "description": "*MOBI  TOP-UP: 000000007",
-          "currency": "EUR"
+          "currency": "USD"
         },
         {
           "date_transacted": "2024-02-21",
           "date_posted": "2024-02-21",
-          "amount": "-2.30",
+          "amount": -2.3,
           "description": "VDC-IT TRALEE NORT",
-          "currency": "EUR"
+          "currency": "USD"
         },
         {
           "date_transacted": "2024-02-22",
           "date_posted": "2024-02-22",
-          "amount": "-1.60",
+          "amount": -1.6,
           "description": "VDC-IT TRALEE NORT",
-          "currency": "EUR"
+          "currency": "USD"
         },
         {
           "date_transacted": "2024-02-23",
           "date_posted": "2024-02-23",
-          "amount": "-1.70",
+          "amount": -1.7,
           "description": "VDC-IT TRALEE NORT",
-          "currency": "EUR"
+          "currency": "USD"
         },
         {
           "date_transacted": "2024-02-23",
           "date_posted": "2024-02-23",
-          "amount": "-3.90",
+          "amount": -3.9,
           "description": "VDC-IT TRALEE NORT",
-          "currency": "EUR"
+          "currency": "USD"
         },
         {
           "date_transacted": "2024-02-23",
           "date_posted": "2024-02-23",
-          "amount": "-16.55",
+          "amount": -16.55,
           "description": "VDC-PENNEYS TRALEE",
-          "currency": "EUR"
+          "currency": "USD"
         },
         {
           "date_transacted": "2024-02-23",
           "date_posted": "2024-02-23",
-          "amount": "-18.00",
+          "amount": -18.0,
           "description": "VDC-PENNEYS TRALEE",
-          "currency": "EUR"
+          "currency": "USD"
         },
         {
           "date_transacted": "2024-02-26",
           "date_posted": "2024-02-26",
-          "amount": "-5.99",
+          "amount": -5.99,
           "description": "VDP-Spotify P2A198",
-          "currency": "EUR"
+          "currency": "USD"
         },
         {
           "date_transacted": "2024-02-26",
           "date_posted": "2024-02-26",
-          "amount": "-10.01",
+          "amount": -10.01,
           "description": "VDC-ALDI 105 873",
-          "currency": "EUR"
+          "currency": "USD"
         },
         {
           "date_transacted": "2024-02-26",
           "date_posted": "2024-02-26",
-          "amount": "-13.97",
+          "amount": -13.97,
           "description": "VDC-LIDL IRELAND L",
-          "currency": "EUR"
+          "currency": "USD"
         },
         {
           "date_transacted": "2024-02-26",
           "date_posted": "2024-02-26",
-          "amount": "-10.99",
+          "amount": -10.99,
           "description": "VDC-T K MAXX",
-          "currency": "EUR"
+          "currency": "USD"
         },
         {
           "date_transacted": "2024-02-26",
           "date_posted": "2024-02-26",
-          "amount": "-5.15",
+          "amount": -5.15,
           "description": "VDC-TESCO STORES 3",
-          "currency": "EUR"
+          "currency": "USD"
         },
         {
           "date_transacted": "2024-02-26",
           "date_posted": "2024-02-26",
-          "amount": "-5.95",
+          "amount": -5.95,
           "description": "VDC-THE RANGE",
-          "currency": "EUR"
+          "currency": "USD"
         },
         {
           "date_transacted": "2024-02-27",
           "date_posted": "2024-02-27",
-          "amount": "-1.40",
+          "amount": -1.4,
           "description": "VDC-IT TRALEE NORT",
-          "currency": "EUR"
+          "currency": "USD"
         },
         {
           "date_transacted": "2024-02-27",
           "date_posted": "2024-02-27",
-          "amount": "-1.50",
+          "amount": -1.5,
           "description": "VDC-IT TRALEE NORT",
-          "currency": "EUR"
+          "currency": "USD"
         },
         {
           "date_transacted": "2024-02-27",
           "date_posted": "2024-02-27",
-          "amount": "-2.98",
+          "amount": -2.98,
           "description": "VDC-LIDL IRELAND L",
-          "currency": "EUR"
+          "currency": "USD"
         },
         {
           "date_transacted": "2024-02-28",
           "date_posted": "2024-02-28",
-          "amount": "-3.10",
+          "amount": -3.1,
           "description": "VDC-IT TRALEE NORT",
-          "currency": "EUR"
+          "currency": "USD"
         },
         {
           "date_transacted": "2024-02-28",
           "date_posted": "2024-02-28",
-          "amount": "-3.50",
+          "amount": -3.5,
           "description": "VDC-SumUp  *Yusuf",
-          "currency": "EUR"
+          "currency": "USD"
         },
         {
           "date_transacted": "2024-02-29",
           "date_posted": "2024-02-29",
-          "amount": "-3.00",
+          "amount": -3.0,
           "description": "VDP-UNHCR Refugee",
-          "currency": "EUR"
+          "currency": "USD"
         }
       ],
       "identity": {
@@ -1423,7 +1422,7 @@
         ],
         "phone_numbers": [
           {
-            "data": "+353896448376",
+            "data": "+353872132335",
             "primary": true,
             "type": "mobile"
           }
@@ -1432,7 +1431,7 @@
           {
             "data": "allison.hill@example.com",
             "primary": true,
-            "type": "personal"
+            "type": "primary"
           }
         ],
         "addresses": [
@@ -1442,7 +1441,7 @@
               "region": "Utah",
               "street": "600 Jeffery Parkways",
               "postal_code": "79408",
-              "country": "Anguilla"
+              "country": "US"
             },
             "primary": true
           }

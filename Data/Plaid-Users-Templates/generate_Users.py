@@ -7,7 +7,7 @@ import os
 from faker import Faker
 
 
-fake = Faker()
+fake = Faker('en_US')
 Faker.seed(42)
 
 # -----------------------------
@@ -17,7 +17,7 @@ INPUT_FILE = "../Real Dataset/Transactions_Anna_AIB2324.csv"
 MAX_TRANSACTIONS = 200
 SEED_PREFIX = "my-test-user-"
 ACH_ROUTING = "322271627"
-CURRENCY = "EUR"
+CURRENCY = "USD"
 
 
 # -----------------------------
@@ -52,7 +52,7 @@ def generate_random_address():
         "region": fake.state(),
         "street": fake.street_address(),
         "postal_code": fake.postcode(),
-        "country": fake.country()
+        "country": "US"
     }
 
 
@@ -128,9 +128,9 @@ def transform_transactions(user_df):
         transactions.append({
             "date_transacted": date,
             "date_posted": date,
-            "amount": f"{amount:.2f}",
+            "amount": round(amount, 2),
             "description": description,
-            "currency": row.get("posted_currency", "EUR")
+            "currency": "USD"
         })
 
     # max 200 transactions
@@ -151,17 +151,16 @@ def build_user(user_id, user_df):
     address = generate_random_address()
 
     return {
-        "version": 2,
-        "seed": f"{SEED_PREFIX}{user_id}",
         "override_accounts": [
             {
                 "type": "depository",
                 "subtype": "checking",
-                "starting_balance": f"{last_balance:.2f}",
+                "starting_balance": round(last_balance, 2),
                 "currency": CURRENCY,
                 "meta": {
                     "name": "Basic Checking Account",
-                    "official_name": "Basic Checking Account"
+                    "official_name": "Basic Checking Account",
+                    "mask": str(user_id).zfill(8)[-4:]
                 },
                 "numbers": {
                     "account": str(user_id).zfill(8),
@@ -181,7 +180,7 @@ def build_user(user_id, user_df):
                         {
                             "data": email,
                             "primary": True,
-                            "type": "personal"
+                            "type": "primary"
                         }
                     ],
                     "addresses": [
@@ -214,7 +213,7 @@ def generate_users(df):
         with open(file_path, "w", encoding="utf-8") as f:
             json.dump(payload, f, indent=2)
 
-        print(f"✔ Saved {filename}")
+        print(f"Saved {filename}")
         user_id += 1
 
 generate_users(df)
