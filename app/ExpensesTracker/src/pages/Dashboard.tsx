@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import Template from "../templates/Template";
+import ThreeDCard from "../componenets/3DCard";
 
 export default function Dashboard() {
     const [accounts, setAccounts] = useState([]);
@@ -38,11 +39,9 @@ export default function Dashboard() {
                         <p className="text-lg">Loading your financial data...</p>
                     ) : (
                         <>
-                            {/* USER ACCOUNT DETAILS */}
                             <div className="mb-10 bg-white shadow-lg p-6 rounded-lg">
                                 <h2 className="text-xl font-bold mb-4">Account Details</h2>
-                                
-                                
+                                <ThreeDCard bankName={"Bank of America"} cardNumber={"**** **** **** 1234"} cardHolder={"JOHN DOE"} expiryDate={"12/24"} />
                                 {accounts?.length > 0 ? (
                                     <>
                                         {/* eslint-disable-next-line @typescript-eslint/no-explicit-any */}
@@ -59,6 +58,7 @@ export default function Dashboard() {
                                     <p>No accounts found</p>
                                 )}
                             </div>
+                            <ThreeDCard bankName={"Bank of America"} cardNumber={""} cardHolder={""} expiryDate={""} />
                         </>
                     )}
                 </div>

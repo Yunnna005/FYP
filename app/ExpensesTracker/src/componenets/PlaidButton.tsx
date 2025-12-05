@@ -18,7 +18,7 @@ export default function Card() {
   const { open, ready } = usePlaidLink({
     token: linkToken,
     onSuccess: (public_token) => {
-      setLoading(true); // Show overlay when starting the exchange
+      setLoading(true); 
       fetch("http://localhost:8000/item/public_token/exchange", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
@@ -29,7 +29,7 @@ export default function Card() {
           console.log("access_token:", data.access_token);
           navigate("/dashboard");
         })
-        .finally(() => setLoading(false)); // Hide overlay just in case of error
+        .finally(() => setLoading(false));
     },
   });
 
@@ -43,7 +43,7 @@ export default function Card() {
           <div className="card-actions justify-center">
             <button
               onClick={() => open()}
-              disabled={!ready || loading} // disable button when loading
+              disabled={!ready || loading} 
               className="btn btn-outline btn-info"
             >
               Connect
