@@ -29,7 +29,6 @@ app.post("/link/token/create", async (req, res) => {
       client_name: "Your App",
       products: ["transactions", "identity"],
       language: "en",
-      webhook: null,
       redirect_uri: null,
       country_codes: ["US"],
     });
@@ -66,25 +65,6 @@ app.get("/accounts", async (req, res) => {
   } catch (error) {
     console.error("Error fetching accounts:", error.response?.data);
     res.status(500).json({ error: "Failed to fetch accounts" });
-  }
-});
-
-app.get("/transactions", async (req, res) => {
-  try {
-    if (!ACCESS_TOKEN) {
-      return res.status(400).json({ error: "No access token saved" });
-    }
-
-    const response = await client.transactionsGet({
-      access_token: ACCESS_TOKEN,
-      start_date: "2024-01-01",
-      end_date: "2025-12-31",
-    });
-
-    res.json({ transactions: response.data.transactions });
-  } catch (error) {
-    console.error("Error fetching transactions:", error.response?.data);
-    res.status(500).json({ error: "Failed to fetch transactions" });
   }
 });
 

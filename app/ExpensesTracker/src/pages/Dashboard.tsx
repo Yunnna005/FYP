@@ -1,9 +1,9 @@
 import { useEffect, useState } from "react";
 import Template from "../templates/Template";
+import ThreeDCard from "../componenets/3DCard";
 
 export default function Dashboard() {
     const [accounts, setAccounts] = useState([]);
-    const [transactions, setTransactions] = useState([]);
     const [loading, setLoading] = useState(true);
 
     useEffect(() => {
@@ -13,11 +13,6 @@ export default function Dashboard() {
                 const accRes = await fetch("http://localhost:8000/accounts");
                 const accData = await accRes.json();
                 setAccounts(accData.accounts || []);
-
-                // Fetch transactions
-                const txRes = await fetch("http://localhost:8000/transactions");
-                const txData = await txRes.json();
-                setTransactions(txData.transactions);
 
                 setLoading(false);
             } catch (error) {
@@ -44,11 +39,9 @@ export default function Dashboard() {
                         <p className="text-lg">Loading your financial data...</p>
                     ) : (
                         <>
-                            {/* USER ACCOUNT DETAILS */}
                             <div className="mb-10 bg-white shadow-lg p-6 rounded-lg">
                                 <h2 className="text-xl font-bold mb-4">Account Details</h2>
-                                
-                                
+                                <ThreeDCard bankName={"Bank of America"} cardNumber={"**** **** **** 1234"} cardHolder={"JOHN DOE"} expiryDate={"12/24"} />
                                 {accounts?.length > 0 ? (
                                     <>
                                         {/* eslint-disable-next-line @typescript-eslint/no-explicit-any */}
@@ -65,45 +58,7 @@ export default function Dashboard() {
                                     <p>No accounts found</p>
                                 )}
                             </div>
-
-                            {/* TRANSACTIONS TABLE */}
-                            <div className="bg-white shadow-lg p-6 rounded-lg ">
-                                <h2 className="text-xl font-bold mb-4">Recent Transactions</h2>
-
-                                <div className="overflow-x-auto rounded-box border border-base-content/5 bg-base-100">
-                                    <table className="table">
-                                    <thead>
-                                        <tr>
-                                            <th>Date</th>
-                                            <th>Name</th>
-                                            <th>Amount</th>
-                                            <th>Category</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-
-                                    {transactions?.length > 0 ? (
-                                        <>
-                                        {/* eslint-disable-next-line @typescript-eslint/no-explicit-any */}
-                                        {transactions.map((tx: any) => (
-                                            <tr key={tx.transaction_id}>
-                                                <td>{tx.date}</td>
-                                                <td>{tx.name}</td>
-                                                <td>€{tx.amount}</td>
-                                                <td>{tx.category?.join(", ")}</td>
-                                            </tr>
-                                            
-                                        ))}
-                                        </>
-                                        ) : (
-                                            <tr>
-                                                <td colSpan={4}>No transactions found</td>
-                                            </tr>
-                                        )}
-                                    </tbody>
-                                </table>
-                                </div>
-                            </div>
+                            <ThreeDCard bankName={"Bank of America"} cardNumber={""} cardHolder={""} expiryDate={""} />
                         </>
                     )}
                 </div>

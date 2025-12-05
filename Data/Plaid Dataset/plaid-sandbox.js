@@ -8,8 +8,8 @@ const clientConfig = new Configuration({
   basePath: PlaidEnvironments[process.env.PLAID_ENV || 'sandbox'],
   baseOptions: {
     headers: {
-      'PLAID-CLIENT-ID': "68ea9fa469e22e0023275c81",
-      'PLAID-SECRET': "eb890b23eb0f37920ea15659c4a3ab"
+      'PLAID-CLIENT-ID': "",
+      'PLAID-SECRET': ""
     },
   },
 });
