@@ -1,0 +1,60 @@
+{
+  "version": 2,
+  "seed": "my-test-user-",
+  "override_accounts": [
+    {
+      "type": "depository",
+      "subtype": "checking",
+      "starting_balance": null,
+      "currency": "EUR",
+      "meta": {
+        "name": "null",
+        "official_name": "null"
+      },
+      "numbers": {
+        "account": "null",
+        "ach_routing": "322271627"
+      },
+      "transactions": [
+        {
+          "date_transacted": "null",
+          "date_posted": "null",
+          "amount": "null",
+          "description": "null",
+          "currency": "EUR"
+        }
+      ],
+      "identity": {
+        "names": [
+          null
+        ],
+        "phone_numbers": [
+          {
+            "data": null,
+            "primary": null,
+            "type": null
+          }
+        ],
+        "emails": [
+          {
+            "data": null,
+            "primary": null,
+            "type": null
+          }
+        ],
+        "addresses": [
+          {
+            "data": {
+              "city": null,
+              "region": null,
+              "street": null,
+              "postal_code": null,
+              "country": null
+            },
+            "primary": null
+          }
+        ]
+      }
+    }
+  ]
+}
