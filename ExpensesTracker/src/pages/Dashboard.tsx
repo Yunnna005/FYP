@@ -1,26 +1,31 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import { useEffect, useState } from "react";
 import Template from "../templates/Template";
 
 export default function Dashboard() {
     const [accounts, setAccounts] = useState([]);
     const [loading, setLoading] = useState(true);
+    const [identity, setIdentity] = useState([]);
 
     useEffect(() => {
-        async function loadData() {
-            try {
-                // Fetch accounts
-                const accRes = await fetch("http://localhost:8000/accounts");
-                const accData = await accRes.json();
-                setAccounts(accData.accounts || []);
+    async function loadData() {
+        try {
+            const accRes = await fetch("http://localhost:8000/accounts");
+            const accData = await accRes.json();
+            setAccounts(accData.accounts || []);
 
-                setLoading(false);
-            } catch (error) {
-                console.error("Error loading Plaid data:", error);
-            }
+            const idRes = await fetch("http://localhost:8000/identity");
+            const idData = await idRes.json();
+            setIdentity(idData.identity || []);
+
+            setLoading(false);
+        } catch (error) {
+            console.error("Error loading Plaid data:", error);
         }
+    }
 
-        loadData();
-    }, []);
+    loadData();
+}, []);
 
     return (
         <Template>
@@ -39,10 +44,9 @@ export default function Dashboard() {
                     ) : (
                         <>
                             <div className="mb-10 bg-white shadow-lg p-6 rounded-lg">
-                                <h2 className="text-xl font-bold mb-4">Account Details</h2>
+                                <h2 className="text-xl font-bold mb-1">Account Details</h2>
                                 {accounts?.length > 0 ? (
                                     <>
-                                        {/* eslint-disable-next-line @typescript-eslint/no-explicit-any */}
                                         {accounts.map((acc: any) => (
                                             <div key={acc.account_id} className="mb-4 p-4 border rounded-lg">
                                                 <p><strong>Name:</strong> {acc.name}</p>
@@ -55,6 +59,33 @@ export default function Dashboard() {
                                 ) : (
                                     <p>No accounts found</p>
                                 )}
+                            </div>
+
+                            <div className="mb-10 bg-white shadow-lg p-6 rounded-lg">
+                                <h2 className="text-xl font-bold mb-1">Identity Details</h2>
+
+                    {identity.length > 0 ? (
+                        identity.map((acc: any) => (
+                            <div key={acc.account_id} className="mb-4 p-4 border rounded-lg">
+                                {acc.owners?.map((owner: any, i: number) => (
+                                    <div key={i} className="mt-3">
+                                        <p><strong>Full Name:</strong> {owner.names?.join(", ")}</p>
+                                        <p><strong>Emails:</strong> {owner.emails?.map((e: { data: any; }) => e.data).join(", ")}</p>
+                                        <p><strong>Phone Numbers:</strong> {owner.phone_numbers?.map((p: { data: any; }) => p.data).join(", ")}</p>
+                                        <p><strong>Addresses:</strong></p>
+                                        {owner.addresses?.map((a: any, j: number) => (
+                                            <div key={j} className="ml-4">
+                                                <p>{a.data.street} {a.data.city} {a.data.region}</p>
+                                                <p>{a.data.postal_code}</p>
+                                            </div>
+                                        ))}
+                                    </div>
+                                ))}
+                            </div>
+                        ))
+                    ) : (
+                        <p>No identity information found</p>
+                    )}
                             </div>
                         </>
                     )}

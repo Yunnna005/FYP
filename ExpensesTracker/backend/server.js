@@ -68,4 +68,22 @@ app.get("/accounts", async (req, res) => {
   }
 });
 
+app.get("/identity", async (req, res) => {
+  try {
+    if (!ACCESS_TOKEN) {
+      return res.status(400).json({ error: "No access token saved" });
+    }
+
+    const response = await client.identityGet({
+      access_token: ACCESS_TOKEN,
+    });
+
+    res.json({ identity: response.data.accounts });
+  } catch (error) {
+    console.error("Error fetching identity:", error.response?.data || error);
+    res.status(500).json({ error: "Failed to fetch identity" });
+  }
+});
+
+
 app.listen(8000, () => console.log("Server running on 8000"));
