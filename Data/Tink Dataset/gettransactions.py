@@ -28,7 +28,7 @@ with open("accounts_SE.csv", "w", newline="") as csvfile:
             "lastRefreshed": acc.get("dates", {}).get("lastRefreshed")
         })
 
-# Fetch and save transactions (unchanged)
+# Fetch and save transactions
 transactions_url = "https://api.tink.com/data/v2/transactions"
 tx_resp = requests.get(transactions_url, headers=headers)
 tx_data = tx_resp.json()
