@@ -1,14 +1,17 @@
+from pathlib import Path
 import pandas as pd
 import uuid
 
-df = pd.read_csv("FYP/Data/Other Dataset/spending_patterns_detailed.csv")
+df = pd.read_csv("/workspaces/python/FYP/Data/Other_Dataset/Raw/spending_patterns_detailed.csv")
 
-normalized = pd.DataFrame({
+OUT_TRANSACTIONS = Path("/workspaces/python/FYP/Data/Other_Dataset/Normalized")
+
+normalizedTransactions = pd.DataFrame({
     "transaction_id": [str(uuid.uuid4()) for _ in range(len(df))],
     "account_id": df["Customer_ID"].astype(str),
     "category_id": df["Category"].fillna("none"),
-    "date": pd.to_datetime(df["Transaction Date"], format="%d/%m/%Y"),
-    "merchant_name": df["Location"],
+    "date": pd.to_datetime(df["Transaction Date"], format="%d/%m/%Y", errors='coerce'),
+    "merchant_name": df["Location"].fillna("Unknown Merchant"),
     "description": df["Item"],
     "amount": df["Total Spent"].astype(float),
     "currency_code": "USD",
@@ -16,4 +19,4 @@ normalized = pd.DataFrame({
     "pending": False,
 })
 
-normalized.to_csv("normalized_transactions3.csv", index=False)
+normalizedTransactions.to_csv(OUT_TRANSACTIONS / "normalized_transactions.csv", index=False)
