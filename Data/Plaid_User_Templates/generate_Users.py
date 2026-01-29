@@ -10,9 +10,6 @@ from faker import Faker
 fake = Faker('en_US')
 Faker.seed(42)
 
-# -----------------------------
-# CONFIG
-# -----------------------------
 INPUT_FILE = "../Real Dataset/Transactions_Anna_AIB2324.csv"
 MAX_TRANSACTIONS = 200
 SEED_PREFIX = "my-test-user-"
@@ -20,9 +17,6 @@ ACH_ROUTING = "322271627"
 CURRENCY = "USD"
 
 
-# -----------------------------
-# LOAD DATA
-# -----------------------------
 def load_dataset(file_path):
     if file_path.endswith(".csv"):
         return pd.read_csv(file_path)
@@ -34,9 +28,7 @@ def load_dataset(file_path):
 
 df = load_dataset(INPUT_FILE)
 
-# -----------------------------
-# RANDOM GENERATORS
-# -----------------------------
+
 def generate_random_name():
     return fake.name()
 
@@ -55,10 +47,7 @@ def generate_random_address():
         "country": "US"
     }
 
-
-# -----------------------------
-# TRANSACTIONS
-# -----------------------------
+# Transactions
 def formatStringToFloat(value):
     if value is None:
         return 0.0
@@ -85,14 +74,12 @@ def format_date(value):
     if s == "":
         return ""
 
-    # Try multiple common date formats
     for fmt in ("%Y-%m-%d", "%d/%m/%Y", "%m/%d/%Y", "%d-%m-%Y", "%m-%d-%Y"):
         try:
             return datetime.strptime(s, fmt).strftime("%Y-%m-%d")
         except ValueError:
             pass
 
-    # As a last fallback, try pandas parser
     try:
         return pd.to_datetime(s).strftime("%Y-%m-%d")
     except:
@@ -133,13 +120,10 @@ def transform_transactions(user_df):
             "currency": "USD"
         })
 
-    # max 200 transactions
     return transactions[:200]
 
 
-# -----------------------------
-# USER PAYLOAD BUILDER
-# -----------------------------
+# Users
 def build_user(user_id, user_df):
     transactions = transform_transactions(user_df)
     last_row = user_df.iloc[-1]
@@ -194,10 +178,6 @@ def build_user(user_id, user_df):
         ]
     }
 
-
-# -----------------------------
-# EXPORT JSON FILES
-# -----------------------------
 def generate_users(df):
     script_dir = os.path.dirname(os.path.abspath(__file__))
 
@@ -217,4 +197,4 @@ def generate_users(df):
         user_id += 1
 
 generate_users(df)
-print("All users generated!")
+print("All users generated")
