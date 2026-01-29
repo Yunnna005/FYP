@@ -1,0 +1,145 @@
+account_id,user_id,name,type,mask,balances_current,balances_available,currency_code
+7BD8PmlNy9S5vXPvqbgWTxzwMGkp9EcdbMK8o,USR868bT,Plaid Checking,checking depository,0,110.0,100.0,USD
+eoWb631DemtnG5MGWQJKtXvGPo6adeirv7law,USR408Tm,Plaid Saving,savings depository,1111,210.0,200.0,USD
+QKD9z6mAP3ugeqEeWZvyTjBa1y4n9LfwP3WG8,USR604Uu,Plaid CD,cd depository,2222,1000.0,,USD
+ZNWdb6eAzmsEk4akbWvMTgVx3Z1ARQuearDJ5,USR486Di,Plaid Credit Card,credit card credit,3333,410.0,,USD
+MADEl6oVdKtk9W49Lo3xsa9JLEjRwBULXe84K,USR008ng,Plaid Money Market,money market depository,4444,43200.0,43200.0,USD
+1GEPJ5mB79tl7eM7DmLnfr5m8wEGXqCp9ZGqk,USR621RH,Plaid IRA,ira investment,5555,320.76,,USD
+LWDgM6owxqtZbnNb14BvTdbAXxRMkVik6lyeQ,USR213tx,Plaid 401k,401k investment,6666,23631.9805,,USD
+pznagZ9mkWhbEVMEx6ANu5brjnBzx1uplENJg,USR426Te,Plaid Student Loan,student loan,7777,65262.0,,USD
+ornxbQ9odwhLGEPG3DmMTNLMKyVrbaioQknpD,USR802Iq,Plaid Mortgage,mortgage loan,8888,56302.06,,USD
+g8Wvpdk6lmTGEnME9rAgsmy9wBQbVDUEN4QLJ,USR337ev,Plaid HSA,hsa depository,9001,6009.0,6009.0,USD
+83EW6AqPy9tZwJkwXo9aTvjkayNedQiW7KVZR,USR676pC,Plaid Cash Management,cash management depository,9002,12060.0,12060.0,USD
+E1Da7bvWlkFJkxokPQApfqZmXPQwy6T489PgA,USR974Sk,Plaid Business Credit Card,credit card credit,9999,5020.0,4980.0,USD
+83rVqGRwKGh7BEQrErMNSvjLKd1WXAuW1ZvRr,USR680qN,Plaid Checking,checking depository,0,110.0,100.0,USD
+E1QEv4rNe4tBEvZGvGLaIqZRgyGejrt4RgZMV,USR363XI,Plaid Saving,savings depository,1111,210.0,200.0,USD
+LWkyoZbjlZhxaARKAKwGFdbypNjJn8tkQegmq,USR159rs,Plaid CD,cd depository,2222,1000.0,,USD
+pzBp9VXLwVIo1v9kvk48S5bEdKakRZhprJ9qX,USR182NR,Plaid Credit Card,credit card credit,3333,410.0,,USD
+orzN9VLXEVTpyaJkak48UNLkpBxAmdCoMp4PA,USR082JU,Plaid Money Market,money market depository,4444,43200.0,43200.0,USD
+g8gZkVJA9VIjzm1NmNdVHmy4dZ7JNosEVLjGd,USR685fg,Plaid IRA,ira investment,5555,320.76,,USD
+83rVqGRwKGh7BEQrErMNSvjqGKVmPJCW1ZvRE,USR803Wj,Plaid 401k,401k investment,6666,23631.9805,,USD
+E1QEv4rNe4tBEvZGvGLaIqZx9gApDBC4RgZMv,USR664GK,Plaid Student Loan,student loan,7777,65262.0,,USD
+WdxgzG48NGhZn7e676bXS1WMgwjrvAt69Po5d,USR861Zg,Plaid Mortgage,mortgage loan,8888,56302.06,,USD
+AePbp39QN3ixvbgAbAmlFyAN5aPG3wF9j4Rkn,USR003HC,Plaid HSA,hsa depository,9001,6009.0,6009.0,USD
+GpMBoPk3ZPInGwkMwM8dCrK5Zy61JaC6BGJLD,USR694zK,Plaid Cash Management,cash management depository,9002,12060.0,12060.0,USD
+nKr1wVJpEVsLjEB8E8QvSpdKM7vL3jfAe3PXx,USR345Xn,Plaid Business Credit Card,credit card credit,9999,5020.0,4980.0,USD
+DWz3rdP35Bi5klxAKN9Vsl8N6JmZegCdmdeBo,USR719jC,Plaid Checking,checking depository,0,110.0,100.0,USD
+VQy8XNb85qF5JMjZDX1gsMRBn164kQIlblkXm,USR478wi,Plaid Saving,savings depository,1111,210.0,200.0,USD
+wpXBz8WBjqSVPlg3579ZunLjxB1Qb4CMAM9x9,USR748MK,Plaid CD,cd depository,2222,1000.0,,USD
+5NMZw9vZg5IEo8l9PLzmSBgRe7aEdoiJzJVAl,USR867HJ,Plaid Credit Card,credit card credit,3333,410.0,,USD
+AgkrlBarRKfZLznP7dV5uyqBJ56Lw7uMRMwlm,USR762vZ,Plaid Money Market,money market depository,4444,43200.0,43200.0,USD
+GqxaGNea5du5yrxWQ7mzsrxglZmQaPuwJw9XL,USR996id,Plaid IRA,ira investment,5555,320.76,,USD
+nPQoX8ZozASKN56JzkoXHp4mAMyZjEFDPDkN7,USR891ed,Plaid 401k,401k investment,6666,23631.9805,,USD
+blz4amB4JyU4m538BPRZHzynBg8PZKFPgPL1g,USR657vP,Plaid Student Loan,student loan,7777,65262.0,,USD
+mNXpe8QpkAIqmrDjkzGZHW497Bb3DNHkRkjn7,USR289pj,Plaid Mortgage,mortgage loan,8888,56302.06,,USD
+ygWxa8GxerfjV8Xr3va7uK8lR5E6zdCMkMdby,USR637Bn,Plaid HSA,hsa depository,9001,6009.0,6009.0,USD
+9eMpv9qpA6Ia6znZolveSkQlD7b9yLiBzB8w4,USR468fp,Plaid Cash Management,cash management depository,9002,12060.0,12060.0,USD
+GqxaGNea5du5yrxWQ7mzsrxgyAlBMaiwJw9XG,USR381Zt,Plaid Business Credit Card,credit card credit,9999,5020.0,4980.0,USD
+y4zENX7nR7UXKB76ZznycK8re41kjZH43qJnp,USR116YG,Plaid Checking,checking depository,0,110.0,100.0,CAD
+9PNm1azEjzSnKAe8E1gyHkQNer64Xjh4GW7yJ,USR805ox,Plaid Saving,savings depository,1111,210.0,200.0,CAD
+vx9odwNnJNsXWKylDRepcWJ39gml8Gtqz3Le4,USR234Rs,Plaid CD,cd depository,2222,1000.0,,CAD
+RzXpdaKDAKT6XdpVGPNzt7MmxKDQGpsalv6k6,USR388Os,Plaid Credit Card,credit card credit,3333,410.0,,CAD
+6aNGQ3qE4qUPgAlJyZ6kce3lG1PEQLu89oEKV,USR627JW,Plaid Money Market,money market depository,4444,43200.0,43200.0,CAD
+X4EA7edWRdUdo78QKEZ4cw5JbRzrKeHb6W7jo,USR782mP,Plaid TFSA,tfsa investment,5555,320.76,,CAD
+DgjkbLeDGeCxGbVdaremfl8DEkMydbc3wPARy,USR911Mo,Plaid RRSP,rrsp investment,6666,23631.9805,,CAD
+VdGEPj3Dm3SjrPgaNoedfMR8P5e9NEu9m8jgK,USR203Ye,Plaid Student Loan,student loan,7777,65262.0,,CAD
+wd9kaGPm1PSgqyZR6D1EHnL3Mdzmo9fPN74Zk,USR802nB,Plaid Mortgage,mortgage loan,8888,56302.06,,CAD
+5dGAeBlmalSlGAmV1WnbuBgQvn19rMf5wPaK9,USR089Do,Plaid HSA,hsa depository,9001,6009.0,6009.0,CAD
+JnRjlqpDWpHxJlm6Rgref3aLmnP8R6iB4rl69,USR472Qg,Plaid Cash Management,cash management depository,9002,12060.0,12060.0,CAD
+knjN96lWolHAaMdmblxQh4MAWXNdk1iLQV46e,USR181DG,Plaid Business Credit Card,credit card credit,9999,5020.0,4980.0,CAD
+axyMQ495qoHdAEr9mlx1HWgnm3Bp7DFowzjGM,USR845rh,Plaid Current Account,checking depository,0,110.0,100.0,GBP
+4qjK1BGoWMtop63wjG14Szo1G4gAQvC9zZ6EK,USR496hC,Plaid Saving,savings depository,1111,210.0,200.0,GBP
+jQXAv1Pl4wt7yxaKBdQLSW1BDkV76AFxdBNby,USR309fe,Plaid Business Current Account,checking depository,2222,1205.0,1100.0,GBP
+NkbGJmg5ZAhzWL1AZn9XI4WKwGqvepuodglNb,USR810wW,Plaid Credit Card,credit card credit,3333,410.0,,GBP
+PnXqJ9o51mS3ldKqve6zsPMqgx981pt8a9xmE,USR222Bm,Plaid Mortgage,mortgage loan,8888,56302.06,,GBP
+7z3BodlEn8UAXPLpm5KVUxEoyGJnMBF6PmEVg,USR605KK,Plaid Business Credit Card,credit card credit,9999,5020.0,4980.0,GBP
+bKb6gqA5xvha7zrXERewszywp9ZJjZfmbE3Bp,USR595ch,Plaid Checking,checking depository,0,110.0,100.0,USD
+mjlgbPz45dFBK74poGMPhW4PeKDxADugy9ArD,USR689Vc,Plaid Saving,savings depository,1111,210.0,200.0,USD
+yEPM5pQoVLCgz5D4EaylsK8L1pzqgzI46oDgQ,USR596ay,Plaid CD,cd depository,2222,1000.0,,USD
+9mbdKZLl8QtW1DG47vydTkQK6PyvGyU4xkEKW,USR473zw,Plaid Credit Card,credit card credit,3333,410.0,,USD
+voaMAkj1qZFwRqrx15pLhWJLm4MvVMuq6gXwj,USR522sb,Plaid Money Market,money market depository,4444,43200.0,43200.0,USD
+Rp7Qo9NE8vuLPDe9Kvzgs7MrDkjAejhapwGZ9,USR377Bs,Plaid IRA,ira investment,5555,320.76,,USD
+6GAed7ZVgjCGZ4RWbmkNHe34Pz7m97S8Dmxzl,USR964Ch,Plaid 401k,401k investment,6666,23631.9805,,USD
+XALgB9Zm8vTkEwP9Az4yHw5ozAg9GghbK9xD6,USR873Vi,Plaid Student Loan,student loan,7777,65262.0,,USD
+Dkl1VvmN8AFnr17qW9myCl87M1e95ef3W7XZe,USR159OV,Plaid Mortgage,mortgage loan,8888,56302.06,,USD
+VEMar9enWvCvoB6QA1dECMRaezkgDki9gonD1,USR651OO,Plaid HSA,hsa depository,9001,6009.0,6009.0,USD
+wk4bJo7LKMFBDzbjo9ENhnLNzyb8wbtPZ3lQ8,USR394jX,Plaid Cash Management,cash management depository,9002,12060.0,12060.0,USD
+5AW46jQDoPTQWyXN7zbxhBgw1Wdz3dc5Kbp6E,USR139Jb,Plaid Business Credit Card,credit card credit,9999,5020.0,4980.0,USD
+xlJDNAq6NotDawz9vPjZUDvBjwm8N3fQzjpRJ,USR021lk,Plaid Checking,checking depository,0,110.0,100.0,USD
+dErMyxXRyKTBXjlmwW8VHP7AeLyNvMiXbK5x6,USR530zE,Plaid Saving,savings depository,1111,210.0,200.0,USD
+apl6nzXRnAuGrmdBJveVUWgGEz8Qp5HXEwlxP,USR179qB,Plaid CD,cd depository,2222,1000.0,,USD
+4LPnE9bAE4uv3joBQExXizor3e76ARcmvzNw9,USR247JG,Plaid Credit Card,credit card credit,3333,410.0,,USD
+NK984oNL4dHd1Zzva5KbH4WNx3DbvZFVGdBqV,USR277iE,Plaid Money Market,money market depository,4444,43200.0,43200.0,USD
+PzwkP8WLP4tRKv3Bw5JyhPMmwZj48diKeaBrj,USR501Kd,Plaid IRA,ira investment,5555,320.76,,USD
+jEaLDj5RDdTWaB7jmA5vIW1gb9Pv7EHQ7dz8l,USR454bg,Plaid 401k,401k investment,6666,23631.9805,,USD
+7qeRG6bgGjtJLmAaBEZ4cxEbpWRdnrfw5PAKV,USR874iE,Plaid Student Loan,student loan,7777,65262.0,,USD
+eEzM9dXR9rTERkPxqjyVUXenamDxp3txbQRlR,USR141Il,Plaid Mortgage,mortgage loan,8888,56302.06,,USD
+QBkpjEMRjNfV48x1D5dXhjLAnVdX8oFjgX4WN,USR450xa,Plaid HSA,hsa depository,9001,6009.0,6009.0,USD
+Z7JEovMkoLsBDwQ5NK1VHgQkAabmvLfxEpADd,USR206qg,Plaid Cash Management,cash management depository,9002,12060.0,12060.0,USD
+Mqmgap4naxt8vnryB56wCaBZRzNMdxImWvw8a,USR403pU,Plaid Business Credit Card,credit card credit,9999,5020.0,4980.0,USD
+688qEydPQgC6LmwDnX1lUeGaNr8LP7ikqdjQ9,USR532Ci,Plaid Current Account,checking depository,0,110.0,100.0,GBP
+X55dWKBM78hZNz6xRV38Hwbma7BezgUJrepkg,USR543ia,Plaid Saving,savings depository,1111,210.0,200.0,GBP
+wjjPmQJpaKu1L9dAwx3ZUnM1VRj9zbuMaWAza,USR168yi,Plaid Business Current Account,checking depository,2222,1205.0,1100.0,GBP
+D55eDyVWb8heZ9pJ3XAVUlEmrqNbMefdr6mND,USR033wW,Plaid Credit Card,credit card credit,3333,410.0,,GBP
+V553DkrQPWheG1487wZgUMP6ryBEekclvKbQr,USR682eL,Plaid Mortgage,mortgage loan,8888,56302.06,,GBP
+5gglmy6NeoFnez6p5J9mcBva8pRM1dFJENzX4,USR287eO,Plaid Business Credit Card,credit card credit,9999,5020.0,4980.0,GBP
+Wjvndjx55pfLel7mqdKdI1jqAkoKkEs6QADdw,USR477Wx,Plaid Checking,checking depository,0,110.0,100.0,USD
+AA8XeAPRR4IdgLbMXaQaHyPpwvjQvBF9xKdbo,USR942gC,Plaid Saving,savings depository,1111,210.0,200.0,USD
+G9vXp9M55Rf7kywpbeReIr6pabe3bgf67rQV8,USR735MU,Plaid CD,cd depository,2222,1000.0,,USD
+nladKlrzzbtkBNE7RbrbspvnjxRPxmtAMpnaZ,USR055Zh,Plaid Credit Card,credit card credit,3333,410.0,,USD
+bkvn1kMJJwfPMmzJj171Sz6wZrjlrnCm6ydRB,USR956tF,Plaid Money Market,money market depository,4444,43200.0,43200.0,USD
+mRdxqRKkkaFz5m7wAbKbcWRPDvAGv9HgQwWGk,USR659Ki,Plaid IRA,ira investment,5555,320.76,,USD
+yNL1jN7eeDivZV5A1pzpIKaLzDgVDli48LlJp,USR257uh,Plaid 401k,401k investment,6666,23631.9805,,USD
+91QXx1zAA5TlE6Dm9q1qckzKyEGpEli49b57J,USR571iI,Plaid Student Loan,student loan,7777,65262.0,,USD
+vdZQ4dNPP3tjDaqQn7R7hW5LMZVwZaHqZ4EL4,USR725rp,Plaid Mortgage,mortgage loan,8888,56302.06,,USD
+RdvnrdK55ZtJGWDkwrPrH7Zrjoe4oJSaorB66,USR692eH,Plaid HSA,hsa depository,9001,6009.0,6009.0,USD
+6QjDzQq88Ls5yV4zn8Z8seq47d9wd8H8PMyEV,USR163lN,Plaid Cash Management,cash management depository,9002,12060.0,12060.0,USD
+X7vJa7d55QtBKewvRmEmTw3ogEGvEBhbvz37o,USR695ip,Plaid Business Credit Card,credit card credit,9999,5020.0,4980.0,USD
+jEN6PyxmJ3h97Grk641KTWRZoXnNP1CQ4W4wj,USR551Kb,Plaid Checking,checking depository,0,110.0,100.0,USD
+7qmNlZw5avtvAlzbekophxKm6Nz4REFwQJQjz,USR577hl,Plaid Saving,savings depository,1111,210.0,200.0,USD
+eE3D1AKxP4hGPr6QXBlwsXM79AvkDefxD9DEy,USR084UJ,Plaid CD,cd depository,2222,1000.0,,USD
+QB6Amx8GXQSex7bZkLrwUjmvQwBrdLijomozk,USR691YA,Plaid Credit Card,credit card credit,3333,410.0,,USD
+Z76AeQ9y8wHkQzrWgdpjsgGrynVPbQsxLqLzg,USR222fN,Plaid Money Market,money market depository,4444,43200.0,43200.0,USD
+Mq6VorLNj9t9r7doKAzeTaGKeo9VNBUmx6xzL,USR973wh,Plaid IRA,ira investment,5555,320.76,,USD
+1Z5BmNvM4rs7or3mVR6bhrZd9n5vBqiD7j73q,USR859pp,Plaid 401k,401k investment,6666,23631.9805,,USD
+Ll6woK1N4GHbKya4AkXrTdjyWBbZPVi38j8ol,USR509Sc,Plaid Student Loan,student loan,7777,65262.0,,USD
+pwZm9KjRPbUEkG16vKgwh5aEoeb8m1TXgogkK,USR841qW,Plaid Mortgage,mortgage loan,8888,56302.06,,USD
+oEQo9qPmJZhGkjyDaq9QsNxkGWLq1auv9q9rr,USR463WD,Plaid HSA,hsa depository,9001,6009.0,6009.0,USD
+dEB98Wq3DehklGNdMzK3sPJDEZrqy7FXNENGl,USR941zC,Plaid Cash Management,cash management depository,9002,12060.0,12060.0,USD
+apKG9gwrBJUKdQPZkqp9sWw1Z4lP8gCX454PX,USR121hV,Plaid Business Credit Card,credit card credit,9999,5020.0,4980.0,USD
+oQ8pdvvMJmH5zbnGEJ39hNjopRpnNri19KZ1l,USR888yj,Plaid Checking,checking depository,0,110.0,100.0,USD
+gdQjloo4Paiq3wQEn19yHmGqdadkmbtPDM6Pb,USR202nI,Plaid Saving,savings depository,1111,210.0,200.0,USD
+8AaBygglDjFVplbwJQXLIvbxG7GDveigarXgn,USR780UI,Plaid CD,cd depository,2222,1000.0,,USD
+EboMlJJjwBuglj3kxZP7hqab939dqwUrQEBrB,USR304jW,Plaid Credit Card,credit card credit,3333,410.0,,USD
+WVl6q33mLyCzgdykxeL8c1K4gxga1dIXM4bX9,USR309Tj,Plaid Money Market,money market depository,4444,43200.0,43200.0,USD
+A6M7yJJaxkuwVaDKrgd5HyQR5o5zyEcawopaw,USR796Zi,Plaid IRA,ira investment,5555,320.76,,USD
+GA8LKJJeyxF6mevK9k7zHr3zZEZjrqiq9npqv,USR368pg,Plaid 401k,401k investment,6666,23631.9805,,USD
+negLxvvZMQF1obeGyBkXTpP8M5MNpDcZkG5Z4,USR751Ol,Plaid Student Loan,student loan,7777,65262.0,,USD
+brNdPZZB6zuoR1XGEMPZSzlLgagAzVuEL3kEJ,USR402LB,Plaid Mortgage,mortgage loan,8888,56302.06,,USD
+m7o13vvQgXcLGbpEo5zZSWGqBrBnWVS9jAo9K,USR004ak,Plaid HSA,hsa depository,9001,6009.0,6009.0,USD
+yyvmJwwGMWC6ap49EZv7HKVn545AKWfodDaok,USR924Wk,Plaid Cash Management,cash management depository,9002,12060.0,12060.0,USD
+9D43yJJqdMF8vq4N7EleHkp17r7gkdFk8Evkl,USR059LD,Plaid Business Credit Card,credit card credit,9999,5020.0,4980.0,USD
+qKlp7jRgaMimKK6Pzvw4HBEbNBvQLjigzbe5r,USR186OB,Plaid Checking,checking depository,0,110.0,100.0,USD
+KbR9MVn8r6SK33WNGVjLIx6oMxlNXGFRxwljX,USR336xX,Plaid Saving,savings depository,1111,210.0,200.0,USD
+rrqye5J841UgrrmPMVEoSgQxagWABlC7eKrXe,USR155oI,Plaid CD,cd depository,2222,1000.0,,USD
+JnkRZbEgK6SJnnBNQyPxU35pb5BpK3UBD7lGL,USR281ZD,Plaid Credit Card,credit card credit,3333,410.0,,USD
+knwjdmyZrPSaJJpk7vEAI49Eo9bER4CLlP43V,USR512gr,Plaid Money Market,money market depository,4444,43200.0,43200.0,USD
+lb75a1ZMzjS1JJ7bN8EmU14MK4rM91FpV9K5y,USR576KK,Plaid IRA,ira investment,5555,320.76,,USD
+qKlp7jRgaMimKK6Pzvw4HBE6wEq6RBcgzbe5E,USR191YO,Plaid 401k,401k investment,6666,23631.9805,,USD
+KbR9MVn8r6SK33WNGVjLIx6kw6WkJxuRxwlj9,USR086ro,Plaid Student Loan,student loan,7777,65262.0,,USD
+rrqye5J841UgrrmPMVEoSgQzNQqzkgf7eKrXP,USR838xa,Plaid Mortgage,mortgage loan,8888,56302.06,,USD
+zNJxg5myEVT6NNLJ4Qbdun9j39ojwnfl5PAKa,USR973hX,Plaid HSA,hsa depository,9001,6009.0,6009.0,USD
+Bpwda5RegASgppw65DzqSMbEZbwEnMu4be91E,USR973ai,Plaid Cash Management,cash management depository,9002,12060.0,12060.0,USD
+33Pw6vKlDosVLLjaW3driEJVNJdVZEfZDo7Lx,USR074nb,Plaid Business Credit Card,credit card credit,9999,5020.0,4980.0,USD
+vN5QqWXG5vig39w63bKvIWwWmG1vvaiwx6mxk,USR093cz,Plaid Checking,checking depository,0,110.0,100.0,USD
+RKVn8y3mVqC7ZxLyZqdoU747DpyAAJhZjpyj4,USR871Vr,Plaid Saving,savings depository,1111,210.0,200.0,USD
+6qmDgblrmpIp1xG71DAasewePLamm8izJDZJe,USR874QD,Plaid CD,cd depository,2222,1000.0,,USD
+Xd1J8VPX1xcL3rk53x7Giwvwzem99BcDgKZgv,USR002rB,Plaid Credit Card,credit card credit,3333,410.0,,USD
+DeRX8z7ZRJtlAjngAJb4ilLlMbm99NCZeWDeN,USR358vk,Plaid Money Market,money market depository,4444,43200.0,43200.0,USD
+V31JWy4R1BCMZbvzZ8PqHMKMeE6ggBCDkg1ky,USR908MK,Plaid IRA,ira investment,5555,320.76,,USD
+wPAZKXEnAvFl3KB83Ayvinpnz9188jfQ9Zw9Z,USR318gx,Plaid 401k,401k investment,6666,23631.9805,,USD
+5lx8oMpKxkF893Qj9pAduBAB1MazzRC6VKlVr,USR151jJ,Plaid Student Loan,student loan,7777,65262.0,,USD
+JpaXENLgaJF3bzWabqlyI353P6Vzzdinj63jD,USR593Uf,Plaid Mortgage,mortgage loan,8888,56302.06,,USD
+klbByQEZbvFXn8RjngMvi494N1JggBimE6nEb,USR290CO,Plaid HSA,hsa depository,9001,6009.0,6009.0,USD
+lkW3ZQEMW6SWreyZrBD8I1418DxeeXHMWoQWX,USR218xT,Plaid Cash Management,cash management depository,9002,12060.0,12060.0,USD
+q3XkR1wgXvC9pVylpZovHBEBnGJQQ4CQWrGWa,USR318RY,Plaid Business Credit Card,credit card credit,9999,5020.0,4980.0,USD
