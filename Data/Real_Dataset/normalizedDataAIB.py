@@ -2,7 +2,9 @@ import pandas as pd
 from pathlib import Path
 import uuid
 
-DATA_DIR = Path("/workspaces/python/FYP/Data/Real_Dataset")
+DATA_DIR = Path("/workspaces/python/FYP/Data/Real_Dataset/Transactions/Raw")
+
+OUT_TRANSACTIONS = Path("/workspaces/python/FYP/Data/Real_Dataset/Transactions/Normalized")
 
 def normalize_dataset(df):
     df["debit_amount"] = pd.to_numeric(df["debit_amount"], errors="coerce")
@@ -30,10 +32,8 @@ for file in DATA_DIR.glob("Transactions_*.csv"):
 
 final_df = pd.concat(normalized_frames, ignore_index=True)
 
-final_df = final_df.dropna(
-    subset=["transaction_id", "account_id", "amount", "date"]
-)
+final_df = final_df.dropna(subset=["transaction_id", "account_id", "amount", "date"])
 
 final_df = final_df.sort_values("date")
 
-final_df.to_csv("normalized_transactions5.csv", index=False)
+final_df.to_csv(OUT_TRANSACTIONS / "normalized_transactions.csv", index=False)
