@@ -14,9 +14,9 @@ def normalized_transactions(df):
     return pd.DataFrame({
         "transaction_id": df["transaction_id"],
         "account_id": df["account_id"],
-        "category_id": df["category"],
-        "date": pd.to_datetime(df["date"], format="%d/%m/%Y"),
-        "merchant_name": df["merchant_name"],
+        "category_id": df["category"].fillna("none"),
+        "date": pd.to_datetime(df["date"], format="%d/%m/%Y", errors='coerce'),
+        "merchant_name": df["merchant_name"].fillna("Unknown Merchant"),
         "description": df["name"],
         "amount": df["amount"].astype(float),
         "currency_code": "USD",
