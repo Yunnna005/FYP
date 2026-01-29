@@ -1,9 +1,13 @@
 import pandas as pd
 import uuid
+from pathlib import Path
 
-df = pd.read_csv("FYP/Data/Real_Dataset/Transactions_Adrian.csv")
+DATA_DIR = Path("/workspaces/python/FYP/Data/Real_Dataset/Transactions/Raw")
 
-normalized = pd.DataFrame({
+OUT_TRANSACTIONS = Path("/workspaces/python/FYP/Data/Real_Dataset/Transactions/Normalized")
+
+def normalize_transactions(df):
+    return pd.DataFrame({
     "transaction_id": [str(uuid.uuid4()) for _ in range(len(df))],
     "account_id": "11111111",
     "category_id": "none",
@@ -16,4 +20,17 @@ normalized = pd.DataFrame({
     "pending": df["State"].str.lower().ne("complete"),
 })
 
-normalized.to_csv("normalized_transactions4.csv", index=False)
+normalized_frames = []
+
+for file in DATA_DIR.glob("Transactions_Revolut_*.csv"):
+    df = pd.read_csv(file)
+    normalized = normalize_transactions(df)
+    normalized_frames.append(normalized)
+
+final_df = pd.concat(normalized_frames, ignore_index=True)
+
+final_df = final_df.dropna(subset=["transaction_id", "account_id", "amount", "date"])
+
+final_df = final_df.sort_values("date")
+
+final_df.to_csv(OUT_TRANSACTIONS / "normalized_transactions_revolut.csv", index=False)
