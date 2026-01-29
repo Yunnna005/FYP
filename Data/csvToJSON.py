@@ -2,7 +2,7 @@ import pandas as pd
 import os
 import json
 
-input_file = "../Plaid Dataset/transactions2.csv"
+input_file = "../Data/Plaid_Dataset/Transactions/Raw_csv/transactions2.csv"
 
 output_folder = "split_customers_json"
 os.makedirs(output_folder, exist_ok=True)
