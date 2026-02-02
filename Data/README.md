@@ -18,3 +18,5 @@ ins_133503
 
 Products used:
 'transactions', 'auth', 'identity'
+
+Faker Python to generate data: https://faker.readthedocs.io/en/stable/index.html
