@@ -1,0 +1,5 @@
+account_id,user_id,name,type,mask,balances_current,balances_available,currency_code
+000000 - 00000111,USR549FP,Maestro,Savings,5558,7324.92,7324.92,USD
+000000 - 00000001,USR096cy,VISA 16 digit,Savings,1245,6758.08,6758.08,USD
+000000 - 00000011,USR088ID,JCB 15 digit,Checking,2907,3097.82,3097.82,USD
+11111111,USR712kn,VISA 13 digit,Savings,3272,9935.29,9935.29,USD
