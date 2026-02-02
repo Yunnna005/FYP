@@ -1,0 +1,50 @@
+{
+  "override_accounts": [
+    {
+      "type": "depository",
+      "subtype": "checking",
+      "starting_balance": 156.84,
+      "currency": "USD",
+      "meta": {
+        "name": "Basic Checking Account",
+        "official_name": "Basic Checking Account",
+        "mask": "0002"
+      },
+      "numbers": {
+        "account": "00000002",
+        "ach_routing": "322271627"
+      },
+      "identity": {
+        "names": [
+          "Cristian Santos"
+        ],
+        "phone_numbers": [
+          {
+            "data": "+353833755304",
+            "primary": true,
+            "type": "mobile"
+          }
+        ],
+        "emails": [
+          {
+            "data": "cristian.santos@example.com",
+            "primary": true,
+            "type": "primary"
+          }
+        ],
+        "addresses": [
+          {
+            "data": {
+              "city": "Robinsonshire",
+              "region": "Louisiana",
+              "street": "65423 Garcia Light",
+              "postal_code": "13177",
+              "country": "US"
+            },
+            "primary": true
+          }
+        ]
+      }
+    }
+  ]
+}

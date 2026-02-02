@@ -1,0 +1,50 @@
+{
+  "override_accounts": [
+    {
+      "type": "depository",
+      "subtype": "checking",
+      "starting_balance": 525.12,
+      "currency": "USD",
+      "meta": {
+        "name": "Basic Checking Account",
+        "official_name": "Basic Checking Account",
+        "mask": "0003"
+      },
+      "numbers": {
+        "account": "00000003",
+        "ach_routing": "322271627"
+      },
+      "identity": {
+        "names": [
+          "Gregory Baker"
+        ],
+        "phone_numbers": [
+          {
+            "data": "+353839900315",
+            "primary": true,
+            "type": "mobile"
+          }
+        ],
+        "emails": [
+          {
+            "data": "gregory.baker@example.com",
+            "primary": true,
+            "type": "primary"
+          }
+        ],
+        "addresses": [
+          {
+            "data": {
+              "city": "Lake Stephenville",
+              "region": "Missouri",
+              "street": "495 Janet Cape",
+              "postal_code": "87174",
+              "country": "US"
+            },
+            "primary": true
+          }
+        ]
+      }
+    }
+  ]
+}
