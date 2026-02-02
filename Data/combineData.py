@@ -1,12 +1,12 @@
 import pandas as pd
 from pathlib import Path
 
-FILE_1 = Path("/workspaces/python/FYP/Data/Other_Dataset/Accounts/generated_accounts.csv")
-FILE_2 = Path("/workspaces/python/FYP/Data/Plaid_Dataset/Accounts/Normalized/normalized_accounts.csv")
-FILE_3 = Path("/workspaces/python/FYP/Data/Real_Dataset/Accounts/generated_accounts.csv")
-FILE_4 = Path("/workspaces/python/FYP/Data/Tink_Dataset/Accounts/Normalized/normalized_accounts.csv")
+FILE_1 = Path("/workspaces/python/FYP/Data/Other_Dataset/Transactions/Normalized/normalized_transactions.csv")
+FILE_2 = Path("/workspaces/python/FYP/Data/Plaid_Dataset/Transactions/Normalized/normalized_transactions.csv")
+FILE_3 = Path("/workspaces/python/FYP/Data/Real_Dataset/Transactions/Normalized/normalized_transactions.csv")
+FILE_4 = Path("/workspaces/python/FYP/Data/Tink_Dataset/Transactions/Normalized/normalized_transactions.csv")
 
-OUT_FILE = Path("accounts.csv")
+OUT_FILE = Path("transactions.csv")
 
 OUT_DIR = Path("/workspaces/python/FYP/Data/Final")
 
