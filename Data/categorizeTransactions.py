@@ -4,7 +4,7 @@ from pathlib import Path
 
 DATA_DIR = Path("/workspaces/python/FYP/Data/Final/transactions.csv") 
 
-OUT_FILE = "categorized_transactions.csv"
+OUT_FILE = "transactions_uncategorized.csv"
 
 OUT_DIR = Path("/workspaces/python/FYP/Data/Final")
 
