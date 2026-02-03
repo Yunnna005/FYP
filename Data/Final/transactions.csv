@@ -18169,7 +18169,7 @@ d32eeff9-945c-4222-af8d-831af65f8ce9,11111111,Personal Hygiene,2023-08-30,Google
 eb65d9e2-9427-4aaa-91dd-c584ea1ecc8d,11111111,Other,2023-08-31,RATP,no description,-4.2,EUR,other,True
 b297330f-4741-4793-b7f1-eef4cf5d380e,11111111,Finance,2023-08-31,Pocket Withdrawal,no description,-100.0,EUR,other,True
 948a27a6-28ae-437e-8fee-bdc03d58232a,11111111,Other,2023-08-31,Ace Mart,no description,-7.1,EUR,online,True
-3b560faf-9a99-451d-8afe-20ce3b1f7530,11111111,Other,2023-08-31,Kodawari Ramen (YokochÅ),no description,-33.5,EUR,in store,True
+3b560faf-9a99-451d-8afe-20ce3b1f7530,11111111,Other,2023-08-31,Kodawari Ramen,no description,-33.5,EUR,in store,True
 2c7ae808-71c0-4c0d-a73a-a0fe7b41b460,11111111,Finance,2023-08-31,Pocket Withdrawal,no description,100.0,EUR,online,True
 fff9c9a6-69e0-4f37-837b-51a73cc9774f,11111111,Finance,2023-08-31,To pocket EUR Savings from EUR,no description,-100.0,EUR,in store,True
 ef7ab9df-3be7-4831-87ac-c520a7e31adf,11111111,Finance,2023-08-31,To pocket EUR Savings from EUR,no description,100.0,EUR,online,True
@@ -20905,7 +20905,7 @@ c2daa9f9b5904dfea5761e0439448f3a,ca0e28e500584f8ba9a0197c04959318,Other,2025-08-
 46e1a104c6334edf87bceed0259c9387,8c1950bbf34d4de6adcf81d97399d701,Other,2025-08-25,Senukai,no description,-10.96,EUR,online,False
 d2b99b271f8c47178ce0282d7baefd2f,00140a6c17ce4d3a9dd455073c5cac0a,Other,2025-08-26,Eesti Gaas,no description,-34.0,EUR,online,False
 b2339131f055484eab05f3e471aceb20,8c1950bbf34d4de6adcf81d97399d701,Other,2025-08-26,Ignitis,no description,-38.08,EUR,online,False
-16e7e371bfe34edea5ad9374d6ad0c63,7372a72bc03c4ab49492a481c2cfc7f5,Other,2025-08-26,Latvijas Gāze,no description,-38.08,EUR,online,False
+16e7e371bfe34edea5ad9374d6ad0c63,7372a72bc03c4ab49492a481c2cfc7f5,Other,2025-08-26,Latvijas Gaze,no description,-38.08,EUR,online,False
 f47367e50cc34a88b74c2a713d4c4540,3288ff86901143b4a34e39d56b72f0c9,Other,2025-08-26,Decathlon,no description,-97.71,EUR,online,False
 28b212fc10904e4293cb23dd11f16232,3288ff86901143b4a34e39d56b72f0c9,Other,2025-08-26,Edp,no description,-34.0,EUR,online,False
 48b1110d5d0d49f392273f999aa5bd58,d8e85133189140ceb38926ca37c44c8d,Other,2025-08-26,British Gas,no description,-34.0,GBP,online,False
@@ -20919,7 +20919,7 @@ b166753dce6d42f0a678c860b3fa0d2c,8c1950bbf34d4de6adcf81d97399d701,Food and Dinin
 3b32f62177284907b036ab665ed9148f,41e035480df54e979ecd6234c2010921,Food and Dining,2025-08-28,McDonald's,no description,-5.69,EUR,online,False
 35846906f4564e45a4805d6c95ad46fb,fb9a593b6b0c448d968616bb8aae9a60,Other,2025-08-28,Bislett Kebab,no description,-56.900000000000006,NOK,online,False
 ba29a5eb73c54f84a49e56e7dd05f4fa,ad3b198a7f624730a942384dd064f051,Other,2025-08-28,Fastweb,no description,-23.99,EUR,online,False
-30047698c3c64d5ab38fd7d3122ce1ca,ad3b198a7f624730a942384dd064f051,Shopping,2025-08-28,Illycaffè,no description,-2.49,EUR,online,False
+30047698c3c64d5ab38fd7d3122ce1ca,ad3b198a7f624730a942384dd064f051,Shopping,2025-08-28,Illycaffe,no description,-2.49,EUR,online,False
 6029f3e3b4744e0d8d9040f219d5bd37,d8e85133189140ceb38926ca37c44c8d,Housing and Utilities,2025-08-28,Bt Broadband,no description,-23.99,GBP,online,False
 9d9f64a2c58e4d02a725d8286635c461,d8e85133189140ceb38926ca37c44c8d,Food and Dining,2025-08-28,Mcdonalds,no description,-5.69,GBP,online,False
 44a62c64f5054c5490c0e5a3be4ff7e4,ca0e28e500584f8ba9a0197c04959318,Other,2025-08-28,Green Caffè Nero,no description,-7.48,PLN,online,False
@@ -20951,7 +20951,7 @@ ebcb914726a5412a8aae6c379293f5af,f37690212445419c9e5d0fbbda82abc2,Food and Dinin
 004878522a0c421ab6c5ea32a1412eed,00140a6c17ce4d3a9dd455073c5cac0a,Food and Dining,2025-08-28,Mcdonald's,no description,-5.69,EUR,online,False
 02a50baea357443c90cb5b808e7adc26,7372a72bc03c4ab49492a481c2cfc7f5,Housing and Utilities,2025-08-28,Lattelecom,no description,-26.87,EUR,online,False
 14f9635c6fe742f1b6c4e57f1d82ff2e,41e035480df54e979ecd6234c2010921,Food and Dining,2025-08-29,Bridge Cafe,no description,-4.97,EUR,online,False
-0db00755091641a9a9a73fbb2548bd3a,fb9a593b6b0c448d968616bb8aae9a60,Other,2025-08-29,Godt Brød,no description,-37.9,NOK,online,False
+0db00755091641a9a9a73fbb2548bd3a,fb9a593b6b0c448d968616bb8aae9a60,Other,2025-08-29,Godt Brod,no description,-37.9,NOK,online,False
 8e246ed9ae124c9c9b574dc85e69fcd4,ada3d0f52c0848b985022952fef7031f,Other,2025-08-29,Segafredo,no description,-3.79,EUR,online,False
 c7bd8c337ecd484389f5b33624938d9d,8c1950bbf34d4de6adcf81d97399d701,Food and Dining,2025-08-29,Vero Cafe,no description,-5.57,EUR,online,False
 fdb7320699a345bd809aa58d12c252b4,ca0e28e500584f8ba9a0197c04959318,Other,2025-08-29,Chleb I Wino,no description,-24.95,PLN,online,False
@@ -20982,16 +20982,16 @@ aa82e8bfcff546a9b0f505a5eefde491,00140a6c17ce4d3a9dd455073c5cac0a,Other,2025-09-
 e160956689ce426eb0195f22161ca73a,2901b5ccd9d84760926e25640dbb70cd,Food and Dining,2025-09-01,Kotipizza,no description,-17.990000000000002,EUR,online,False
 30c48ebb87db49bdb73b451a545d72f1,00140a6c17ce4d3a9dd455073c5cac0a,Other,2025-09-01,Elron,no description,-27.9,EUR,online,False
 6c20bc3ecf2146b78aff068c72b234a3,fb9a593b6b0c448d968616bb8aae9a60,Housing and Utilities,2025-09-01,Opptjente Renter,no description,37.2,NOK,online,False
-33b7eda77ec949119d21428d55b81248,ff109f0c99a146e9bb9e30ccfac01582,Other,2025-09-01,Versement D'intérêts,no description,3.72,EUR,online,False
+33b7eda77ec949119d21428d55b81248,ff109f0c99a146e9bb9e30ccfac01582,Other,2025-09-01,Versement D'interets,no description,3.72,EUR,online,False
 4b9b11842f264400a6bf61401ec0d77a,d8e85133189140ceb38926ca37c44c8d,Food and Dining,2025-09-01,Dominos Pizza,no description,-17.990000000000002,GBP,online,False
 7c085644caef422f8dbea966eddcb6e5,8c1950bbf34d4de6adcf81d97399d701,Other,2025-09-01,Wolt,no description,-33.58,EUR,online,False
-858203c2f8f84260bd44375b3c871aa6,8c1950bbf34d4de6adcf81d97399d701,Other,2025-09-01,Palūkanos,no description,4.17,EUR,online,False
-ca47f8a864314213997f5201d0cdff2b,8c1950bbf34d4de6adcf81d97399d701,Shopping,2025-09-01,Čili Pica,no description,-20.15,EUR,online,False
+858203c2f8f84260bd44375b3c871aa6,8c1950bbf34d4de6adcf81d97399d701,Other,2025-09-01,Palukanos,no description,4.17,EUR,online,False
+ca47f8a864314213997f5201d0cdff2b,8c1950bbf34d4de6adcf81d97399d701,Shopping,2025-09-01,cili Pica,no description,-20.15,EUR,online,False
 e7354a6d7dad453ea76046e21852a648,8c1950bbf34d4de6adcf81d97399d701,Shopping,2025-09-01,Circle K,no description,-44.8,EUR,online,False
-fdcf57d97583405cbde496be0cfc8ad2,8c1950bbf34d4de6adcf81d97399d701,Other,2025-09-01,Lietuvos Geležinkeliai,no description,-31.24,EUR,online,False
+fdcf57d97583405cbde496be0cfc8ad2,8c1950bbf34d4de6adcf81d97399d701,Other,2025-09-01,Lietuvos Gelezinkeliai,no description,-31.24,EUR,online,False
 19066df0afea4d06a208f2a0a5ed9419,ada3d0f52c0848b985022952fef7031f,Other,2025-09-01,Bp,no description,-40.0,EUR,online,False
 f79cee94e90b4ff48d3cb543e4e4ed71,0c47e3c72eec4c2286f2d2f04c5e8433,Food and Dining,2025-09-01,Burger King,no description,-17.990000000000002,EUR,online,False
-9bc1a302b0db4e8a8a8f3ff5e557d2b2,0c47e3c72eec4c2286f2d2f04c5e8433,Other,2025-09-01,Zinserträge,no description,3.72,EUR,online,False
+9bc1a302b0db4e8a8a8f3ff5e557d2b2,0c47e3c72eec4c2286f2d2f04c5e8433,Other,2025-09-01,Zinsertrage,no description,3.72,EUR,online,False
 9288a4aa456d4d0b87285db127110446,0c47e3c72eec4c2286f2d2f04c5e8433,Other,2025-09-01,Jet Tankstelle,no description,-40.0,EUR,online,False
 421d4d935a9940819aa7e8804521dcae,0c47e3c72eec4c2286f2d2f04c5e8433,Other,2025-09-01,Edeka,no description,-29.99,EUR,online,False
 03bad56330df4d238d5af049271ea372,0c47e3c72eec4c2286f2d2f04c5e8433,Transportation,2025-09-01,Flixbus,no description,-27.9,EUR,online,False
@@ -21013,7 +21013,7 @@ bd2db74de3474f82bad197bc03d6f5e0,ca0e28e500584f8ba9a0197c04959318,Other,2025-09-
 c938e6293a8f470fa72b2712c342b7d2,ca0e28e500584f8ba9a0197c04959318,Other,2025-09-01,Pyszne.pl,no description,-150.44,PLN,online,False
 68987b6d6d214241816be76b102965e7,d8e85133189140ceb38926ca37c44c8d,Transportation,2025-09-01,Tfl Rail,no description,-27.9,GBP,online,False
 ca69dd96233f43e0bdf1268c9cb857af,ada3d0f52c0848b985022952fef7031f,Other,2025-09-01,Café Du Commerce,no description,-17.990000000000002,EUR,online,False
-f2b91ab6a7a64719a9d7166c10f79676,4fd04cb6bfc247ddb3f42419a347e9bc,Other,2025-09-01,Liquidación Interés,no description,3.72,EUR,online,False
+f2b91ab6a7a64719a9d7166c10f79676,4fd04cb6bfc247ddb3f42419a347e9bc,Other,2025-09-01,Liquidación Interes,no description,3.72,EUR,online,False
 54f4f59dc37e43bfaac88e32f02a7c2f,2901b5ccd9d84760926e25640dbb70cd,Other,2025-09-01,HSL,no description,-27.9,EUR,online,False
 ab7ceb36ee9a4591ad8ecbb6f68e7819,4fd04cb6bfc247ddb3f42419a347e9bc,Transportation,2025-09-01,Metro Madrid,no description,-27.9,EUR,online,False
 25b85505f9da4382a5b1f8eca1411cc4,7372a72bc03c4ab49492a481c2cfc7f5,Other,2025-09-01,Wolt,no description,-33.58,EUR,online,False
@@ -21032,7 +21032,7 @@ d6a3a95f770e4c3bbaab6053a58a2065,3288ff86901143b4a34e39d56b72f0c9,Other,2025-09-
 4f4f9bd0330b48a498f6f520ccbd05f8,3288ff86901143b4a34e39d56b72f0c9,Other,2025-09-01,Repso,no description,-40.0,EUR,online,False
 517aadab082e4ab99b436ba415761eab,ad3b198a7f624730a942384dd064f051,Other,2025-09-01,Esselunga,no description,-29.99,EUR,online,False
 c5ce2940196543638eae8777009165fd,4fd04cb6bfc247ddb3f42419a347e9bc,Food and Dining,2025-09-01,Telepizza,no description,-17.990000000000002,EUR,online,False
-16db20b13c39452a9676312a40caf7e4,7f516dc6ddf5450f86f30b9fe0ba67ea,Finance,2025-09-01,Renteindægter,no description,37.2,DKK,online,False
+16db20b13c39452a9676312a40caf7e4,7f516dc6ddf5450f86f30b9fe0ba67ea,Finance,2025-09-01,Renteindagter,no description,37.2,DKK,online,False
 e8d9db83c11740129eb846a72ff040bc,41e035480df54e979ecd6234c2010921,Food and Dining,2025-09-01,Dominos Pizza,no description,-17.990000000000002,EUR,online,False
 c8525f919d8441f1b8cd50038095ca1a,41e035480df54e979ecd6234c2010921,Finance,2025-09-01,Interest Earned,no description,-3.72,EUR,online,False
 53e2edcf061f46c38f10daf4f5e31dd4,41e035480df54e979ecd6234c2010921,Groceries,2025-09-01,Tesco Store,no description,-29.99,EUR,online,False
@@ -21049,7 +21049,7 @@ d59c6e26ee2143df8f788c6d42906e26,7372a72bc03c4ab49492a481c2cfc7f5,Other,2025-09-
 976658c85d7b4551bef0dec3acb0f2fa,f37690212445419c9e5d0fbbda82abc2,Other,2025-09-01,Ns Treinen,no description,-31.24,EUR,online,False
 22c17f5c1cc94bb0802aed36602186e3,4fd04cb6bfc247ddb3f42419a347e9bc,Other,2025-09-01,Repsol,no description,-40.0,EUR,online,False
 398b07fc29b746ac9f33765982737bec,c933b12ce50c48dcb4208e2d5fe59c4e,Other,2025-09-01,Ica,no description,-299.90000000000003,SEK,online,False
-89947f6ea7434d19bfa9eddf02669de3,c933b12ce50c48dcb4208e2d5fe59c4e,Other,2025-09-01,Ränta,no description,-37.2,SEK,online,False
+89947f6ea7434d19bfa9eddf02669de3,c933b12ce50c48dcb4208e2d5fe59c4e,Other,2025-09-01,Ranta,no description,-37.2,SEK,online,False
 8d1e7f862b4f4c8195e6c93c2d193cc2,c933b12ce50c48dcb4208e2d5fe59c4e,Other,2025-09-01,Vapiano,no description,-179.9,SEK,online,False
 687ee3e942ae4b96a79c02c6ce1f24a9,4fd04cb6bfc247ddb3f42419a347e9bc,Other,2025-09-01,Dia,no description,-29.99,EUR,online,False
 65a7bae0ca8146a6bad881adef1c10c5,7372a72bc03c4ab49492a481c2cfc7f5,Shopping,2025-09-01,Circle K,no description,-44.8,EUR,online,False
@@ -21061,7 +21061,7 @@ b8a3ff675d0b4a5e830488628f2af504,8c1950bbf34d4de6adcf81d97399d701,Other,2025-09-
 c62b9a46cc7e47218128428fb9c0e452,ad3b198a7f624730a942384dd064f051,Other,2025-09-02,Stipendio,no description,1887.03,EUR,online,False
 9ed1a11a0f324961bc76acf6ec69ff6d,f37690212445419c9e5d0fbbda82abc2,Other,2025-09-02,Pearle Opticiens,no description,-33.58,EUR,online,False
 fe5b07208b7f4796b4d4944424eb48c3,0c47e3c72eec4c2286f2d2f04c5e8433,Other,2025-09-02,Fielmann,no description,-29.99,EUR,online,False
-5c50a13e95d24766bd483c803c8fa57d,3288ff86901143b4a34e39d56b72f0c9,Other,2025-09-02,Salário,no description,1887.03,EUR,online,False
+5c50a13e95d24766bd483c803c8fa57d,3288ff86901143b4a34e39d56b72f0c9,Other,2025-09-02,Salario,no description,1887.03,EUR,online,False
 059262a72d6e4c0498d8c01aba4a357c,ff109f0c99a146e9bb9e30ccfac01582,Other,2025-09-02,Be Optic,no description,-29.99,EUR,online,False
 d8da8feafada4dd88e8ecb6aaf390a4b,ff109f0c99a146e9bb9e30ccfac01582,Other,2025-09-02,Salaire,no description,1887.03,EUR,online,False
 f133a27cba7845fa9ca3d2e2845661b7,ca0e28e500584f8ba9a0197c04959318,Other,2025-09-02,Vision Express,no description,-150.44,PLN,online,False
@@ -21076,16 +21076,16 @@ dfb208b3796d4576aead7cb12ed2c4d2,ad3b198a7f624730a942384dd064f051,Other,2025-09-
 1c59e363b02e46f7bc3accd849e7997b,d8e85133189140ceb38926ca37c44c8d,Other,2025-09-02,Specsavers,no description,-29.99,GBP,online,False
 e3abf122d2634dc1bdf047ed08c71e77,00140a6c17ce4d3a9dd455073c5cac0a,Other,2025-09-02,Palk,no description,1887.03,EUR,online,False
 6bd036e04a8d4885bfe0ab11d3d51232,00140a6c17ce4d3a9dd455073c5cac0a,Other,2025-09-02,Instrumentarium,no description,-29.99,EUR,online,False
-2b67ef864fb341be803830a58dd263dc,fb9a593b6b0c448d968616bb8aae9a60,Other,2025-09-02,Lønnsbetaling,no description,19870.300000000003,NOK,online,False
+2b67ef864fb341be803830a58dd263dc,fb9a593b6b0c448d968616bb8aae9a60,Other,2025-09-02,Lonnsbetaling,no description,19870.300000000003,NOK,online,False
 26f1e7e57c514fcd84497f407eea06d1,2901b5ccd9d84760926e25640dbb70cd,Other,2025-09-02,Specsavers,no description,-29.99,EUR,online,False
-d5e573089bb048cdaed79a1dfd8d9a53,7f516dc6ddf5450f86f30b9fe0ba67ea,Other,2025-09-02,Løn-Udbetaling,no description,18870.3,DKK,online,False
+d5e573089bb048cdaed79a1dfd8d9a53,7f516dc6ddf5450f86f30b9fe0ba67ea,Other,2025-09-02,Lon-Udbetaling,no description,18870.3,DKK,online,False
 4bec833611fc4e2a8ffe8679a0b1bf98,fb9a593b6b0c448d968616bb8aae9a60,Shopping,2025-09-02,Brilleland,no description,-299.90000000000003,NOK,online,False
 9527648f5fa04d01b0d436642481cec7,c933b12ce50c48dcb4208e2d5fe59c4e,Other,2025-09-02,Specsavers,no description,-299.90000000000003,SEK,online,False
-debc2aea67554c88b72a24d124cb302b,c933b12ce50c48dcb4208e2d5fe59c4e,Other,2025-09-02,Lön,no description,18870.3,SEK,online,False
+debc2aea67554c88b72a24d124cb302b,c933b12ce50c48dcb4208e2d5fe59c4e,Other,2025-09-02,Lon,no description,18870.3,SEK,online,False
 e8143ed146c74b6e9e41b3130fea320e,2901b5ccd9d84760926e25640dbb70cd,Finance,2025-09-02,Salary,no description,1887.03,EUR,online,False
 4666ed6f2a364692a886af397b022238,4fd04cb6bfc247ddb3f42419a347e9bc,Other,2025-09-02,Multiopticas,no description,-29.99,EUR,online,False
 9dec06bfe55045f198c696c8f52245cb,d8e85133189140ceb38926ca37c44c8d,Finance,2025-09-02,Salary,no description,1887.03,GBP,online,False
-04bf1fce7ad64cb49e49d1913c2a13fb,4fd04cb6bfc247ddb3f42419a347e9bc,Other,2025-09-02,Nómina,no description,1887.03,EUR,online,False
+04bf1fce7ad64cb49e49d1913c2a13fb,4fd04cb6bfc247ddb3f42419a347e9bc,Other,2025-09-02,Nomina,no description,1887.03,EUR,online,False
 c7e2ff7ab66e443b8a500d8286def08f,7f516dc6ddf5450f86f30b9fe0ba67ea,Other,2025-09-02,Synoptik,no description,-299.90000000000003,DKK,online,False
 d1c11ec0acd346e59c51c777a9e4112e,2901b5ccd9d84760926e25640dbb70cd,Other,2025-09-03,Vuokra,no description,-650.0,EUR,online,False
 022da74b844941789041e094c35a4278,ff109f0c99a146e9bb9e30ccfac01582,Other,2025-09-03,Ad Delhaize,no description,-27.66,EUR,online,False
@@ -21111,7 +21111,7 @@ c0c2a4215ffb4feab9c9a0981a89056d,0c47e3c72eec4c2286f2d2f04c5e8433,Groceries,2025
 ce285ab0c0e24d8b8b2068255c52d5b1,3288ff86901143b4a34e39d56b72f0c9,Other,2025-09-03,Renda,no description,-650.0,EUR,online,False
 501be4f3d80d42e488204cb68e14c07d,00140a6c17ce4d3a9dd455073c5cac0a,Other,2025-09-03,Selver,no description,-27.66,EUR,online,False
 0e7377de921846bc846b1bc669617e5b,3288ff86901143b4a34e39d56b72f0c9,Other,2025-09-03,Continente,no description,-27.66,EUR,online,False
-d35e7da3b3784ef1a40db42cb541739c,00140a6c17ce4d3a9dd455073c5cac0a,Other,2025-09-03,Üür,no description,-650.0,EUR,online,False
+d35e7da3b3784ef1a40db42cb541739c,00140a6c17ce4d3a9dd455073c5cac0a,Other,2025-09-03,Uur,no description,-650.0,EUR,online,False
 2aa2d74932c547b49eef407b8874d944,7f516dc6ddf5450f86f30b9fe0ba67ea,Other,2025-09-03,Netto,no description,-276.6,DKK,online,False
 84d4ebd6645843768d6859d85362d09b,d8e85133189140ceb38926ca37c44c8d,Groceries,2025-09-03,Tesco Store,no description,-27.66,GBP,online,False
 007b5fbc090245b5be5945b66a91264b,7f516dc6ddf5450f86f30b9fe0ba67ea,Other,2025-09-03,Husleje,no description,-6500.0,DKK,online,False
@@ -21119,18 +21119,18 @@ d35e7da3b3784ef1a40db42cb541739c,00140a6c17ce4d3a9dd455073c5cac0a,Other,2025-09-
 3269ca62d9934713a50404dec9cb0962,ad3b198a7f624730a942384dd064f051,Other,2025-09-03,Conad,no description,-27.66,EUR,online,False
 172e406fa94242bfbe317f06589ce2d3,ad3b198a7f624730a942384dd064f051,Other,2025-09-03,Affitto,no description,-650.0,EUR,online,False
 104adc140cc84adb8f6db7c3f785ff07,7372a72bc03c4ab49492a481c2cfc7f5,Other,2025-09-03,Maxima,no description,-30.99,EUR,online,False
-10c1f003e17645c2b79c34de338e6b41,7372a72bc03c4ab49492a481c2cfc7f5,Other,2025-09-03,Īre,no description,-728.0,EUR,online,False
+10c1f003e17645c2b79c34de338e6b41,7372a72bc03c4ab49492a481c2cfc7f5,Other,2025-09-03,Ire,no description,-728.0,EUR,online,False
 dafcd7ce23444a6cbad960b6b384de2e,fb9a593b6b0c448d968616bb8aae9a60,Other,2025-09-03,Coop,no description,-276.6,NOK,online,False
 83273ccd5076492591ac709f1a802c69,c933b12ce50c48dcb4208e2d5fe59c4e,Shopping,2025-09-04,The Bishops Arms,no description,-86.80000000000001,SEK,online,False
 c8e7435618be45f6a2940f6a61333e25,d8e85133189140ceb38926ca37c44c8d,Food and Dining,2025-09-04,Red Lion Pub,no description,-8.68,GBP,online,False
-4d72e6e8a67143a68ff1f88c1a206b63,ad3b198a7f624730a942384dd064f051,Shopping,2025-09-04,Illycaffè,no description,-2.49,EUR,online,False
+4d72e6e8a67143a68ff1f88c1a206b63,ad3b198a7f624730a942384dd064f051,Shopping,2025-09-04,Illycaffe,no description,-2.49,EUR,online,False
 11d34a1c525d4e30a2a4c0fbebbdeef4,ad3b198a7f624730a942384dd064f051,Other,2025-09-04,La Vineria,no description,-8.68,EUR,online,False
 e7a28f3dddef424ebc872bda38f03860,8c1950bbf34d4de6adcf81d97399d701,Food and Dining,2025-09-04,Vero Cafe,no description,-1.67,EUR,online,False
 7781b40695e94646b5a5f5c3ec5dbfba,d8e85133189140ceb38926ca37c44c8d,Food and Dining,2025-09-04,Pret,no description,-1.49,GBP,online,False
 e25c7fc8ceb64af5b78ddcc461b917aa,41e035480df54e979ecd6234c2010921,Food and Dining,2025-09-04,Starbucks,no description,-2.49,EUR,online,False
 47b78171b5e54ed4a31b0c59456ecb04,2901b5ccd9d84760926e25640dbb70cd,Other,2025-09-04,Molly Malone's,no description,-8.68,EUR,online,False
 355f2172281745c381fa4fc66c6bcfcd,ada3d0f52c0848b985022952fef7031f,Food and Dining,2025-09-04,Bar De La Marine,no description,-8.68,EUR,online,False
-61225e40e7d04d9592a99eaa84cfc6cc,ca0e28e500584f8ba9a0197c04959318,Other,2025-09-04,Green Caffè Nero,no description,-7.48,PLN,online,False
+61225e40e7d04d9592a99eaa84cfc6cc,ca0e28e500584f8ba9a0197c04959318,Other,2025-09-04,Green Caffe Nero,no description,-7.48,PLN,online,False
 29c579feb46247f0b97393368f119251,ca0e28e500584f8ba9a0197c04959318,Food and Dining,2025-09-04,Pub Barka,no description,-43.53,PLN,online,False
 98376708da784859b63ec8ca9f083f64,ada3d0f52c0848b985022952fef7031f,Food and Dining,2025-09-04,Starbucks,no description,-2.49,EUR,online,False
 d7e2abf0f97845ec89401caf718ac8c8,00140a6c17ce4d3a9dd455073c5cac0a,Food and Dining,2025-09-04,Reval Cafe,no description,-1.49,EUR,online,False
@@ -21138,12 +21138,12 @@ cc81a6bac0c04b78961d21a82d6f2e93,c933b12ce50c48dcb4208e2d5fe59c4e,Finance,2025-0
 2180d5479c804b78b70a8fbe0b97ef9f,ff109f0c99a146e9bb9e30ccfac01582,Other,2025-09-04,Hof Van Cleve,no description,-8.68,EUR,online,False
 6dac9710bf484129bd9d2a416551a35a,ff109f0c99a146e9bb9e30ccfac01582,Food and Dining,2025-09-04,Starbucks,no description,-2.49,EUR,online,False
 ebdcd95fb3734728830ed632741bca22,41e035480df54e979ecd6234c2010921,Food and Dining,2025-09-04,Red Lion Pub,no description,-8.68,EUR,online,False
-28e91cfd2cd44cab919ede68d38399e8,7f516dc6ddf5450f86f30b9fe0ba67ea,Other,2025-09-04,Jensens Bøfhus,no description,-86.80000000000001,DKK,online,False
+28e91cfd2cd44cab919ede68d38399e8,7f516dc6ddf5450f86f30b9fe0ba67ea,Other,2025-09-04,Jensens Bofhus,no description,-86.80000000000001,DKK,online,False
 222cea41914c474da6a2168fb5f08e91,7f516dc6ddf5450f86f30b9fe0ba67ea,Food and Dining,2025-09-04,Baresso,no description,-24.9,DKK,online,False
 1597562e3d314498b4b75af92bce9790,2901b5ccd9d84760926e25640dbb70cd,Food and Dining,2025-09-04,Starbucks,no description,-2.49,EUR,online,False
 070e68f3f1f3474891fe82a561aba60c,7372a72bc03c4ab49492a481c2cfc7f5,Other,2025-09-04,Folkklubs Ala Pagrabs,no description,-9.72,EUR,online,False
 76cc87505ab34b4fad60e07ea4b3708a,7372a72bc03c4ab49492a481c2cfc7f5,Finance,2025-09-04,Costa Coffee,no description,-1.67,EUR,online,False
-d0d620070ea64873a94b4495503f7efa,00140a6c17ce4d3a9dd455073c5cac0a,Food and Dining,2025-09-04,Põrgu Pub,no description,-8.68,EUR,online,False
+d0d620070ea64873a94b4495503f7efa,00140a6c17ce4d3a9dd455073c5cac0a,Food and Dining,2025-09-04,Porgu Pub,no description,-8.68,EUR,online,False
 628f5fdd11ce405e83d555dad2542db8,8c1950bbf34d4de6adcf81d97399d701,Other,2025-09-04,Gringo,no description,-9.72,EUR,online,False
 75d69c3136de4e878bfc159525e2e359,f37690212445419c9e5d0fbbda82abc2,Other,2025-09-04,De Drie Gezusters,no description,-9.72,EUR,online,False
 d436536e3e684977978f76351bff2378,fb9a593b6b0c448d968616bb8aae9a60,Other,2025-09-04,Kaffebrenneriet,no description,-24.9,NOK,online,False
@@ -21243,20 +21243,20 @@ c335c60b2f294a40ac1e6137cfc9b865,193ffb34e92f4926a2b1f166dd9c3ac8,Finance,2025-0
 9fac8f04b21443a28562ce4c86ca5938,7f516dc6ddf5450f86f30b9fe0ba67ea,Other,2025-09-10,Overførsel,no description,-2000.0,DKK,online,False
 47f1725bd9714cd48ea0045eb0767c2a,ca0e28e500584f8ba9a0197c04959318,Other,2025-09-10,Przelew Na Konto Oszczędnościowe,no description,-1000.0,PLN,online,False
 9e26ed81ca974011802b19f6dd5bd4cc,c52dcb1d472c4252b1be25e1e35826fd,Other,2025-09-10,Przelew Na Konto Oszczędnościowe,no description,1000.0,PLN,online,False
-5bbabd1e5c7741f0b72ddbd722944ec8,7372a72bc03c4ab49492a481c2cfc7f5,Other,2025-09-10,Krājumu Pārskaitījums,no description,-230.0,EUR,online,False
-c3d68fc73774454cbc5b3a0e7335401d,82e4bce631ce4afcace0ca4d36cc4958,Other,2025-09-10,Krājumu Pārskaitījums,no description,230.0,EUR,online,False
+5bbabd1e5c7741f0b72ddbd722944ec8,7372a72bc03c4ab49492a481c2cfc7f5,Other,2025-09-10,Krajumu Parskaitijums,no description,-230.0,EUR,online,False
+c3d68fc73774454cbc5b3a0e7335401d,82e4bce631ce4afcace0ca4d36cc4958,Other,2025-09-10,Krajumu Parskaitijums,no description,230.0,EUR,online,False
 f2b77396112446ef919737813792cb55,41e035480df54e979ecd6234c2010921,Finance,2025-09-10,Savings Transfer,no description,-200.0,EUR,online,False
 01a52a2aecd3457ca1a8dba25d351885,ada3d0f52c0848b985022952fef7031f,Other,2025-09-10,Virement,no description,-200.0,EUR,online,False
 10e086cf0a004c069f497224bac8e25d,0b938997d88247d69ef5234ff5bf653b,Other,2025-09-10,Virement,no description,200.0,EUR,online,False
 576d63fa4e9846f69031ca9159ce9f10,ca93c6e29cd64c288aa462e85c634c88,Other,2025-09-10,Spaarrekening Overboeking,no description,230.0,EUR,online,False
 dafbdcf83a59482e8a000ab101c5340f,ad3b198a7f624730a942384dd064f051,Other,2025-09-10,Giroconto,no description,-200.0,EUR,online,False
 2811c54a68d74577ada8bb07b03dfe37,6729b669f9e2456a9fbdee4e94d641c8,Finance,2025-09-10,Savings Transfer,no description,200.0,EUR,online,False
-db3fdd41f688471e884862a6da821324,084611e2c55c45a0a153ff24e2b5cb50,Other,2025-09-10,Übertrag,no description,200.0,EUR,online,False
-6487d8e016924ccdbebf389d058f552b,0c47e3c72eec4c2286f2d2f04c5e8433,Other,2025-09-10,Übertrag,no description,-200.0,EUR,online,False
+db3fdd41f688471e884862a6da821324,084611e2c55c45a0a153ff24e2b5cb50,Other,2025-09-10,Ubertrag,no description,200.0,EUR,online,False
+6487d8e016924ccdbebf389d058f552b,0c47e3c72eec4c2286f2d2f04c5e8433,Other,2025-09-10,Ubertrag,no description,-200.0,EUR,online,False
 f091ee7e81334d338530220cfcf828f6,5078c8ead42c4f0c90ec882910bcc75c,Other,2025-09-10,Giroconto,no description,200.0,EUR,online,False
 935d34cce2a64663b15a69d0ca0e9200,8c1950bbf34d4de6adcf81d97399d701,Other,2025-09-10,Taupymo Pervedimas,no description,-230.0,EUR,online,False
-34772a8a09a3402680989a1d54034497,ac7a2d64f01d4638a1534bd543f7a8bc,Other,2025-09-10,Overføring,no description,2000.0,NOK,online,False
-e42c665c7ed84179ac9999102666b5b0,fb9a593b6b0c448d968616bb8aae9a60,Other,2025-09-10,Overføring,no description,-2000.0,NOK,online,False
+34772a8a09a3402680989a1d54034497,ac7a2d64f01d4638a1534bd543f7a8bc,Other,2025-09-10,Overforing,no description,2000.0,NOK,online,False
+e42c665c7ed84179ac9999102666b5b0,fb9a593b6b0c448d968616bb8aae9a60,Other,2025-09-10,Overforing,no description,-2000.0,NOK,online,False
 3bafbbd6e0564f059669ceac29a7e9e6,d8e85133189140ceb38926ca37c44c8d,Finance,2025-09-10,Savings Transfer,no description,-200.0,GBP,online,False
 c2da3c2ece7c4b46a4576eaa47c9f732,4fd04cb6bfc247ddb3f42419a347e9bc,Food and Dining,2025-09-11,Starbucks,no description,-2.49,EUR,online,False
 c78200d3c495476fb892439fe5b3fcff,d8e85133189140ceb38926ca37c44c8d,Food and Dining,2025-09-11,Pret,no description,-1.49,GBP,online,False
@@ -21384,7 +21384,7 @@ cd0405985da44256a840d379f83411e7,fb9a593b6b0c448d968616bb8aae9a60,Other,2025-09-
 00a3dd39a0054e5185eae47e5eddacf2,ada3d0f52c0848b985022952fef7031f,Groceries,2025-09-15,Carrefour,no description,-29.99,EUR,online,False
 1ddbec9e179b4b8e9364079fbde867c3,ada3d0f52c0848b985022952fef7031f,Other,2025-09-15,Eurostar,no description,-27.9,EUR,online,False
 43de606fba614261ba427683e1147cba,ada3d0f52c0848b985022952fef7031f,Other,2025-09-15,Bp,no description,-40.0,EUR,online,False
-c44f0ea9446b4c1f8987ba9264706505,ada3d0f52c0848b985022952fef7031f,Other,2025-09-15,Intermarché,no description,-17.330000000000002,EUR,online,False
+c44f0ea9446b4c1f8987ba9264706505,ada3d0f52c0848b985022952fef7031f,Other,2025-09-15,Intermarche,no description,-17.330000000000002,EUR,online,False
 917d0ebf34144ff1b16d0604f92514ca,ad3b198a7f624730a942384dd064f051,Other,2025-09-15,Coop,no description,-17.330000000000002,EUR,online,False
 6d55bbc85b1a4572bbfcdf27b2e1351f,ad3b198a7f624730a942384dd064f051,Other,2025-09-15,Esso,no description,-40.0,EUR,online,False
 6052b12f56394d6c84fda9b4b58b23f5,ad3b198a7f624730a942384dd064f051,Other,2025-09-15,Esselunga,no description,-29.99,EUR,online,False
@@ -21395,7 +21395,7 @@ da0f381fde8d452a81a8c0b6975ef6e8,c933b12ce50c48dcb4208e2d5fe59c4e,Other,2025-09-
 684b94341d13471b92895da38022fcd9,0c47e3c72eec4c2286f2d2f04c5e8433,Other,2025-09-15,Jet Tankstelle,no description,-40.0,EUR,online,False
 281ef52118354b64bad553f9cec5effa,c933b12ce50c48dcb4208e2d5fe59c4e,Shopping,2025-09-15,Shell,no description,-400.0,SEK,online,False
 96160c7420c5446a92f1ed7317da2d87,ff109f0c99a146e9bb9e30ccfac01582,Other,2025-09-15,Sncb,no description,-27.9,EUR,online,False
-4145c50d0bfd4191b242eedefd55ec48,00140a6c17ce4d3a9dd455073c5cac0a,Other,2025-09-15,Säästumarket,no description,-17.330000000000002,EUR,online,False
+4145c50d0bfd4191b242eedefd55ec48,00140a6c17ce4d3a9dd455073c5cac0a,Other,2025-09-15,Sastumarket,no description,-17.330000000000002,EUR,online,False
 7057740e29bd4a9b8f2a98a37229bcdc,00140a6c17ce4d3a9dd455073c5cac0a,Other,2025-09-15,Alexela,no description,-40.0,EUR,online,False
 cc16717d95914b219edc13fcd272ab60,00140a6c17ce4d3a9dd455073c5cac0a,Transportation,2025-09-15,Bolt Food,no description,-29.99,EUR,online,False
 fe869e79b4d54e08bc68bdb70e24dc65,00140a6c17ce4d3a9dd455073c5cac0a,Other,2025-09-15,Elron,no description,-27.9,EUR,online,False
@@ -21418,7 +21418,7 @@ dcd8821337b84a14af241293901059db,ff109f0c99a146e9bb9e30ccfac01582,Other,2025-09-
 697e3925da794626bed7e6f821a6eca4,7372a72bc03c4ab49492a481c2cfc7f5,Housing and Utilities,2025-09-16,Rd Electronics,no description,-145.59,EUR,online,False
 cf00cd75ef564d36baa05e08f88934e3,0c47e3c72eec4c2286f2d2f04c5e8433,Other,2025-09-16,Mediamarkt,no description,-129.99,EUR,online,False
 263e0d9d69a1458482813e9cf3d1a6f2,3288ff86901143b4a34e39d56b72f0c9,Other,2025-09-16,Worten,no description,-129.99,EUR,online,False
-232679372e1945c8bf6409490b6cc0a7,fb9a593b6b0c448d968616bb8aae9a60,Other,2025-09-16,Elkjøp,no description,-1299.9,NOK,online,False
+232679372e1945c8bf6409490b6cc0a7,fb9a593b6b0c448d968616bb8aae9a60,Other,2025-09-16,Elkjop,no description,-1299.9,NOK,online,False
 b7753ce5e78f4831b7189e386c415afc,d8e85133189140ceb38926ca37c44c8d,Food and Dining,2025-09-16,Currys Pc World,no description,-129.99,GBP,online,False
 3485d96df8ac431a8aa6ff1f3e7133e6,ada3d0f52c0848b985022952fef7031f,Other,2025-09-16,Darty,no description,-129.99,EUR,online,False
 00f72cb7b46046938d68329d7a9a0cad,8c1950bbf34d4de6adcf81d97399d701,Other,2025-09-16,Topo Centras,no description,-145.59,EUR,online,False
@@ -21434,7 +21434,7 @@ d320c3df0ddc40e48fa8cf11754fd571,4fd04cb6bfc247ddb3f42419a347e9bc,Other,2025-09-
 72c3b5ded9f54a4ab22c937fbec17903,ad3b198a7f624730a942384dd064f051,Other,2025-09-17,Farmacie Apoteca Natura,no description,-3.79,EUR,online,False
 0139da0cfb5c47179a3f14c4461c6e34,d8e85133189140ceb38926ca37c44c8d,Entertainment,2025-09-17,Netflix,no description,-11.99,GBP,online,False
 2f93390ae78c421d99c11f4f609c054f,f37690212445419c9e5d0fbbda82abc2,Entertainment,2025-09-17,Netflix,no description,-13.43,EUR,online,False
-bdd0cdce1b6f488891387542cdc60594,c933b12ce50c48dcb4208e2d5fe59c4e,Other,2025-09-17,Apoteket Hjärtat,no description,-37.9,SEK,online,False
+bdd0cdce1b6f488891387542cdc60594,c933b12ce50c48dcb4208e2d5fe59c4e,Other,2025-09-17,Apoteket Hjartat,no description,-37.9,SEK,online,False
 faaf3ad486904dc1b4a897565e609a56,c933b12ce50c48dcb4208e2d5fe59c4e,Entertainment,2025-09-17,Netflix,no description,-139.9,SEK,online,False
 288d8ec2aaea4783bea612ea64b1dfca,ada3d0f52c0848b985022952fef7031f,Shopping,2025-09-17,Pharmacie Des Champs Elysees,no description,-3.79,EUR,online,False
 76cb5d3fae824bc0868772ade2fd2f92,4fd04cb6bfc247ddb3f42419a347e9bc,Other,2025-09-17,Farmacia,no description,-3.79,EUR,online,False
@@ -21670,8 +21670,8 @@ f062a7a9837d4a5ebc86ca01f8671602,00140a6c17ce4d3a9dd455073c5cac0a,Other,2025-09-
 14112ad4bf7242a383fae4df7d6583c3,ca0e28e500584f8ba9a0197c04959318,Other,2025-09-26,Pgnig,no description,-170.68,PLN,online,False
 78996cc29c544631b6191ee76369d5b7,ff109f0c99a146e9bb9e30ccfac01582,Other,2025-09-26,Luminus,no description,-34.0,EUR,online,False
 19538257d706413ea927d203679c02ba,7372a72bc03c4ab49492a481c2cfc7f5,Finance,2025-09-26,Double Coffee,no description,-5.57,EUR,online,False
-1c1ce0b5b51c4f429d6c9cb611742e96,7372a72bc03c4ab49492a481c2cfc7f5,Other,2025-09-26,Latvijas Gāze,no description,-38.08,EUR,online,False
-b88a1ee3118f46e6a635cda40bcd3631,fb9a593b6b0c448d968616bb8aae9a60,Other,2025-09-26,Godt Brød,no description,-37.9,NOK,online,False
+1c1ce0b5b51c4f429d6c9cb611742e96,7372a72bc03c4ab49492a481c2cfc7f5,Other,2025-09-26,Latvijas Gaze,no description,-38.08,EUR,online,False
+b88a1ee3118f46e6a635cda40bcd3631,fb9a593b6b0c448d968616bb8aae9a60,Other,2025-09-26,Godt Brod,no description,-37.9,NOK,online,False
 9d1d21be3e5e4477932738368c40f978,fb9a593b6b0c448d968616bb8aae9a60,Other,2025-09-26,Dustin.no,no description,-977.1,NOK,online,False
 268753ed42c245599a3e33a883d5cd6a,2901b5ccd9d84760926e25640dbb70cd,Other,2025-09-26,Espresso House,no description,-3.79,EUR,online,False
 2e51dd1d9bf246d4865c5a0a67728739,2901b5ccd9d84760926e25640dbb70cd,Transportation,2025-09-26,Xxl Sports & Outdoor,no description,-97.71,EUR,online,False
@@ -21690,7 +21690,7 @@ b612ba3ade714201add59271717a2b7a,41e035480df54e979ecd6234c2010921,Other,2025-09-
 16276a0bd4184815afff4423c471996f,41e035480df54e979ecd6234c2010921,Food and Dining,2025-09-26,Bridge Cafe,no description,-4.97,EUR,online,False
 087425be035447d9b4cb960287de6973,41e035480df54e979ecd6234c2010921,Other,2025-09-26,Bord Gáis Energy,no description,-34.0,EUR,online,False
 cf7fdea4b5864c07b8b2117971fcd62b,ff109f0c99a146e9bb9e30ccfac01582,Other,2025-09-26,Décathlon,no description,-97.71,EUR,online,False
-3be1c223ec8e4fd6aeed0dfc22b34e1b,3288ff86901143b4a34e39d56b72f0c9,Other,2025-09-28,Cabovisão,no description,-23.99,EUR,online,False
+3be1c223ec8e4fd6aeed0dfc22b34e1b,3288ff86901143b4a34e39d56b72f0c9,Other,2025-09-28,Cabovisao,no description,-23.99,EUR,online,False
 a11dfd1c120042588aa9e673f528fcbc,7372a72bc03c4ab49492a481c2cfc7f5,Food and Dining,2025-09-28,Mcdonald's,no description,-6.37,EUR,online,False
 e57a320feaf04df8b1338bc725854af6,0c47e3c72eec4c2286f2d2f04c5e8433,Other,2025-09-28,Telekom,no description,-23.99,EUR,online,False
 58eea3d4f66b49d69856736144cb42dd,0c47e3c72eec4c2286f2d2f04c5e8433,Food and Dining,2025-09-28,Mcdonalds,no description,-5.69,EUR,online,False
@@ -21730,7 +21730,7 @@ bbad413ec48442e597bf197dcc501f0c,ff109f0c99a146e9bb9e30ccfac01582,Other,2025-09-
 97aa952cfc524a629965e85b6ed1f288,f37690212445419c9e5d0fbbda82abc2,Groceries,2025-09-29,Hellofresh,no description,-33.58,EUR,online,False
 74975f9b536e42b0a9200e23d904a8b9,fb9a593b6b0c448d968616bb8aae9a60,Shopping,2025-09-29,Shell,no description,-400.0,NOK,online,False
 8edd3eaa8bba40698eed3f97a1a42a6d,f37690212445419c9e5d0fbbda82abc2,Other,2025-09-29,Ns Treinen,no description,-31.24,EUR,online,False
-56f2bb7d61034fd18716ea1530360aad,8c1950bbf34d4de6adcf81d97399d701,Other,2025-09-29,Lietuvos Geležinkeliai,no description,-31.24,EUR,online,False
+56f2bb7d61034fd18716ea1530360aad,8c1950bbf34d4de6adcf81d97399d701,Other,2025-09-29,Lietuvos Gelezinkeliai,no description,-31.24,EUR,online,False
 2e1def735dcc462387c321887d193275,7372a72bc03c4ab49492a481c2cfc7f5,Other,2025-09-29,Wolt,no description,-33.58,EUR,online,False
 5c57f9ba3e0549969e3278c5b5872072,7372a72bc03c4ab49492a481c2cfc7f5,Shopping,2025-09-29,Circle K,no description,-44.8,EUR,online,False
 89daac639eda4da39bbbb0a5c32a0ab4,7372a72bc03c4ab49492a481c2cfc7f5,Shopping,2025-09-29,Pasažieru Vilciens,no description,-31.24,EUR,online,False
@@ -21779,26 +21779,26 @@ c7fd944f50f7404da89dcc9ec2254e38,ad3b198a7f624730a942384dd064f051,Other,2025-10-
 35b00f531c6e41e9b5897c4598a4c55c,ad3b198a7f624730a942384dd064f051,Other,2025-10-01,Rosso Pomodoro,no description,-17.990000000000002,EUR,online,False
 7ff81af173d94d0bbcafb5b0a56efd5a,2901b5ccd9d84760926e25640dbb70cd,Other,2025-10-01,Korkotulo,no description,3.72,EUR,online,False
 0e78056d4bac409f9c14048f1c2a3da7,41e035480df54e979ecd6234c2010921,Food and Dining,2025-10-01,Dominos Pizza,no description,-17.990000000000002,EUR,online,False
-548e621a87604a8fa55c06550470cced,c933b12ce50c48dcb4208e2d5fe59c4e,Other,2025-10-01,Ränta,no description,-37.2,SEK,online,False
+548e621a87604a8fa55c06550470cced,c933b12ce50c48dcb4208e2d5fe59c4e,Other,2025-10-01,Ranta,no description,-37.2,SEK,online,False
 b1aa471e6e974ca58fe3ee84641378d4,41e035480df54e979ecd6234c2010921,Finance,2025-10-01,Interest Earned,no description,-3.72,EUR,online,False
-0a74aa618df7494385983427ab50b4f1,ff109f0c99a146e9bb9e30ccfac01582,Other,2025-10-01,Versement D'intérêts,no description,3.72,EUR,online,False
+0a74aa618df7494385983427ab50b4f1,ff109f0c99a146e9bb9e30ccfac01582,Other,2025-10-01,Versement D'interets,no description,3.72,EUR,online,False
 922a0e217fe24a85870452e5c7f7d45c,ff109f0c99a146e9bb9e30ccfac01582,Food and Dining,2025-10-01,Kaffabar,no description,-17.990000000000002,EUR,online,False
 6352dd499bcd43fc87e0bca1d4ffc508,d8e85133189140ceb38926ca37c44c8d,Food and Dining,2025-10-01,Dominos Pizza,no description,-17.990000000000002,GBP,online,False
 f758333595cc4f39a69a26a85c0a4be4,7372a72bc03c4ab49492a481c2cfc7f5,Other,2025-10-01,Procenti,no description,4.17,EUR,online,False
-cf55887590ad4869863e4ab8df5010db,7372a72bc03c4ab49492a481c2cfc7f5,Food and Dining,2025-10-01,Pica Lulū,no description,-20.15,EUR,online,False
+cf55887590ad4869863e4ab8df5010db,7372a72bc03c4ab49492a481c2cfc7f5,Food and Dining,2025-10-01,Pica Lulu,no description,-20.15,EUR,online,False
 c45ccf0bf1ef4932a202aec77940e6ac,fb9a593b6b0c448d968616bb8aae9a60,Food and Dining,2025-10-01,Peppes Pizza,no description,-179.9,NOK,online,False
 75ead64b516f4e408fac9ec07898e16f,fb9a593b6b0c448d968616bb8aae9a60,Housing and Utilities,2025-10-01,Opptjente Renter,no description,37.2,NOK,online,False
 eeb94c40bab4497c93cbcaded41bc2d1,2901b5ccd9d84760926e25640dbb70cd,Food and Dining,2025-10-01,Kotipizza,no description,-17.990000000000002,EUR,online,False
 595707ca39d0402c8dec0c638a2b0f6a,f37690212445419c9e5d0fbbda82abc2,Food and Dining,2025-10-01,New York Pizza,no description,-20.15,EUR,online,False
 1f0ed193142a4253aa8e3f7db44f78e9,00140a6c17ce4d3a9dd455073c5cac0a,Food and Dining,2025-10-01,Dodo Pizza,no description,-17.990000000000002,EUR,online,False
 706cc959ae8f4819b7c4fae5d576641f,7f516dc6ddf5450f86f30b9fe0ba67ea,Food and Dining,2025-10-01,Domino's Pizza,no description,-179.9,DKK,online,False
-fb0d3515c3264c46aa581fb26cbe463d,ada3d0f52c0848b985022952fef7031f,Other,2025-10-01,Versement D'intérêts,no description,3.72,EUR,online,False
+fb0d3515c3264c46aa581fb26cbe463d,ada3d0f52c0848b985022952fef7031f,Other,2025-10-01,Versement D'interets,no description,3.72,EUR,online,False
 6db77f7e72ed45f2a2a112f5b3e2b31b,4bb60c8682f543e8939a659d14a20124,Finance,2025-10-01,Amazon Salary,no description,5000.0,EUR,online,False
 56c1291323514bcdafc6af2d1f9be6f8,3288ff86901143b4a34e39d56b72f0c9,Other,2025-10-01,Juros Recebidos,no description,3.72,EUR,online,False
 eeda41580e4347399370e378eed18e8f,00140a6c17ce4d3a9dd455073c5cac0a,Other,2025-10-01,Intressitulu,no description,3.72,EUR,online,False
 bc4d96f87c8145a99dea5da56c981c41,0c47e3c72eec4c2286f2d2f04c5e8433,Food and Dining,2025-10-01,Burger King,no description,-17.990000000000002,EUR,online,False
-a7b79113022b40028f742d7f2ee768f4,0c47e3c72eec4c2286f2d2f04c5e8433,Other,2025-10-01,Zinserträge,no description,3.72,EUR,online,False
-07f5b0c56b7e4d5aa0f0cdc7a4a4e2a0,7f516dc6ddf5450f86f30b9fe0ba67ea,Finance,2025-10-01,Renteindægter,no description,37.2,DKK,online,False
+a7b79113022b40028f742d7f2ee768f4,0c47e3c72eec4c2286f2d2f04c5e8433,Other,2025-10-01,Zinsertrage,no description,3.72,EUR,online,False
+07f5b0c56b7e4d5aa0f0cdc7a4a4e2a0,7f516dc6ddf5450f86f30b9fe0ba67ea,Finance,2025-10-01,Renteindegter,no description,37.2,DKK,online,False
 3aef7e5ea7334600a30c59073e62f62d,f37690212445419c9e5d0fbbda82abc2,Housing and Utilities,2025-10-01,Rente-Inkomsten,no description,4.17,EUR,online,False
 2d4db41d8d5846ed9dc9fee66ffb563b,4fd04cb6bfc247ddb3f42419a347e9bc,Food and Dining,2025-10-01,Telepizza,no description,-17.990000000000002,EUR,online,False
 bd9832ba9a5f481e961da8a857a3f22b,ca0e28e500584f8ba9a0197c04959318,Other,2025-10-01,Odsetki,no description,18.67,PLN,online,False
@@ -21832,7 +21832,7 @@ d757979e0a644392bba78b8c1d929fa8,d8e85133189140ceb38926ca37c44c8d,Other,2025-10-
 51dd3d41ad2f4916aead3916fe647ae2,7372a72bc03c4ab49492a481c2cfc7f5,Other,2025-10-02,Folkklubs Ala Pagrabs,no description,-9.72,EUR,online,False
 3d2c46f75f1c4070b790bb2d24b078f7,7372a72bc03c4ab49492a481c2cfc7f5,Other,2025-10-02,Vision Express,no description,-33.58,EUR,online,False
 7ee3c007ae4f4c1b8d6f49958a88a862,3288ff86901143b4a34e39d56b72f0c9,Other,2025-10-02,Salário,no description,1887.03,EUR,online,False
-1c3b57c0354b46f7ab21ba9a37538c5b,fb9a593b6b0c448d968616bb8aae9a60,Other,2025-10-02,Lønnsbetaling,no description,19870.300000000003,NOK,online,False
+1c3b57c0354b46f7ab21ba9a37538c5b,fb9a593b6b0c448d968616bb8aae9a60,Other,2025-10-02,Lonnsbetaling,no description,19870.300000000003,NOK,online,False
 3ae34181f2a341f2bea95fbe017c4f92,ca0e28e500584f8ba9a0197c04959318,Other,2025-10-02,Vision Express,no description,-150.44,PLN,online,False
 46ef4cf431d843adb17b9694e6cb171c,4fd04cb6bfc247ddb3f42419a347e9bc,Other,2025-10-02,Multiopticas,no description,-29.99,EUR,online,False
 700701d804854565aedcc402efd80b5b,ff109f0c99a146e9bb9e30ccfac01582,Other,2025-10-02,Be Optic,no description,-29.99,EUR,online,False
@@ -21840,13 +21840,13 @@ bf6ecc75df7e4fc4b7f716b7b98e9f20,ad3b198a7f624730a942384dd064f051,Other,2025-10-
 c49c10616adc48fdbacfdc3e88729f8f,0c47e3c72eec4c2286f2d2f04c5e8433,Food and Dining,2025-10-02,Bar Celona,no description,-8.68,EUR,online,False
 c1aff580e9b1425f987aff5abf1655ae,00140a6c17ce4d3a9dd455073c5cac0a,Other,2025-10-02,Palk,no description,1887.03,EUR,online,False
 b5e10880803249728c8e8354b528dd53,00140a6c17ce4d3a9dd455073c5cac0a,Food and Dining,2025-10-02,Reval Cafe,no description,-1.49,EUR,online,False
-b3a6d5ba480443218b95763b6b9466bc,00140a6c17ce4d3a9dd455073c5cac0a,Food and Dining,2025-10-02,Põrgu Pub,no description,-8.68,EUR,online,False
+b3a6d5ba480443218b95763b6b9466bc,00140a6c17ce4d3a9dd455073c5cac0a,Food and Dining,2025-10-02,Porgu Pub,no description,-8.68,EUR,online,False
 6176de4a8a534ceaa99c0a54c4297eed,00140a6c17ce4d3a9dd455073c5cac0a,Other,2025-10-02,Instrumentarium,no description,-29.99,EUR,online,False
 5bcfa0d10ed24a4fb056a75e430f2a1f,ada3d0f52c0848b985022952fef7031f,Food and Dining,2025-10-02,Starbucks,no description,-2.49,EUR,online,False
 8a4197ee336a44d3be76c14081f0cb0a,ada3d0f52c0848b985022952fef7031f,Food and Dining,2025-10-02,Bar De La Marine,no description,-8.68,EUR,online,False
 6cd7ad0012d4404780a87149d00bdd09,7f516dc6ddf5450f86f30b9fe0ba67ea,Food and Dining,2025-10-02,Baresso,no description,-24.9,DKK,online,False
 6a6d4cb41ad54612a2cfb7468b1defed,7f516dc6ddf5450f86f30b9fe0ba67ea,Other,2025-10-02,Jensens Bøfhus,no description,-86.80000000000001,DKK,online,False
-4ae7d35360de4c57bfe0b78d6bf70c3b,7f516dc6ddf5450f86f30b9fe0ba67ea,Other,2025-10-02,Løn-Udbetaling,no description,18870.3,DKK,online,False
+4ae7d35360de4c57bfe0b78d6bf70c3b,7f516dc6ddf5450f86f30b9fe0ba67ea,Other,2025-10-02,Lon-Udbetaling,no description,18870.3,DKK,online,False
 1cfa068ff53c4886b4ef81f5e8fd72d7,7f516dc6ddf5450f86f30b9fe0ba67ea,Other,2025-10-02,Synoptik,no description,-299.90000000000003,DKK,online,False
 8b77273bbbea4039a46418fe27139400,ada3d0f52c0848b985022952fef7031f,Other,2025-10-02,Optic,no description,-29.99,EUR,online,False
 ac609b73ab5d43f28726e1421b420816,0c47e3c72eec4c2286f2d2f04c5e8433,Finance,2025-10-02,Coffee Fellows,no description,-2.49,EUR,online,False
@@ -21854,13 +21854,13 @@ ac609b73ab5d43f28726e1421b420816,0c47e3c72eec4c2286f2d2f04c5e8433,Finance,2025-1
 47492f9399a74d50a7a1787f5ea32d8a,0c47e3c72eec4c2286f2d2f04c5e8433,Finance,2025-10-02,Salary,no description,1887.03,EUR,online,False
 8f035294824645fc9d0416c0384bb75d,ada3d0f52c0848b985022952fef7031f,Other,2025-10-02,Salaire,no description,1887.03,EUR,online,False
 2af6ad76f5734071b9ba1d3ee022ed1e,ad3b198a7f624730a942384dd064f051,Other,2025-10-02,Stipendio,no description,1887.03,EUR,online,False
-5256b683685e42939a5e100bda297835,ad3b198a7f624730a942384dd064f051,Shopping,2025-10-02,Illycaffè,no description,-2.49,EUR,online,False
+5256b683685e42939a5e100bda297835,ad3b198a7f624730a942384dd064f051,Shopping,2025-10-02,Illycaffe,no description,-2.49,EUR,online,False
 a7f182aa44cc447194c3a861f0f94ad6,ad3b198a7f624730a942384dd064f051,Other,2025-10-02,Visionottica,no description,-29.99,EUR,online,False
 db7f5c4a86814dedb6f6185142e5fa1d,ff109f0c99a146e9bb9e30ccfac01582,Other,2025-10-02,Salaire,no description,1887.03,EUR,online,False
 ed7e7ef2269044fe88b4ed68b60bdc0d,ff109f0c99a146e9bb9e30ccfac01582,Food and Dining,2025-10-02,Starbucks,no description,-2.49,EUR,online,False
 690b4f05ca634f339c6c704c8e2e70b7,ff109f0c99a146e9bb9e30ccfac01582,Other,2025-10-02,Hof Van Cleve,no description,-8.68,EUR,online,False
-c86b450a6660470cb01f9e67f239889d,ca0e28e500584f8ba9a0197c04959318,Other,2025-10-02,Green Caffè Nero,no description,-7.48,PLN,online,False
-dfa7c231aea04e3c8d0d1ad2115e6ff0,4fd04cb6bfc247ddb3f42419a347e9bc,Other,2025-10-02,Nómina,no description,1887.03,EUR,online,False
+c86b450a6660470cb01f9e67f239889d,ca0e28e500584f8ba9a0197c04959318,Other,2025-10-02,Green Caffe Nero,no description,-7.48,PLN,online,False
+dfa7c231aea04e3c8d0d1ad2115e6ff0,4fd04cb6bfc247ddb3f42419a347e9bc,Other,2025-10-02,Nomina,no description,1887.03,EUR,online,False
 110f5cad24184404900aa506641cb83b,4fd04cb6bfc247ddb3f42419a347e9bc,Food and Dining,2025-10-02,Starbucks,no description,-2.49,EUR,online,False
 93e268dac348458da622b5a57f306472,41e035480df54e979ecd6234c2010921,Food and Dining,2025-10-02,Red Lion Pub,no description,-8.68,EUR,online,False
 8e8232bdd1c6424593ca6e69276426da,41e035480df54e979ecd6234c2010921,Food and Dining,2025-10-02,Starbucks,no description,-2.49,EUR,online,False
@@ -21882,7 +21882,7 @@ f6d4e83abe8d4767bf6d02fe88551376,4fd04cb6bfc247ddb3f42419a347e9bc,Other,2025-10-
 f149afbf355c4f4894070582c4a95ad3,4fd04cb6bfc247ddb3f42419a347e9bc,Shopping,2025-10-03,Alquiler,no description,-650.0,EUR,online,False
 4f6c078bd63646b7bb35438635bbd7c5,0c47e3c72eec4c2286f2d2f04c5e8433,Groceries,2025-10-03,Aldi,no description,-27.66,EUR,online,False
 e1538fb0d00b44bbb0de44ec9814d811,0c47e3c72eec4c2286f2d2f04c5e8433,Other,2025-10-03,Miete,no description,-650.0,EUR,online,False
-db570c40b82d48bcb4a5e98ec198fc47,7372a72bc03c4ab49492a481c2cfc7f5,Other,2025-10-03,Īre,no description,-728.0,EUR,online,False
+db570c40b82d48bcb4a5e98ec198fc47,7372a72bc03c4ab49492a481c2cfc7f5,Other,2025-10-03,Ire,no description,-728.0,EUR,online,False
 055a5eb2f72d4578905e28d1f9ccb042,d6cc56bc402a4685829f0de347af4c63,Food and Dining,2025-10-03,Starbucks,no description,-1.87,GBP,online,False
 73fefe220f5a417a8326565d8f8579f0,41e035480df54e979ecd6234c2010921,Groceries,2025-10-03,Supervalu,no description,-27.66,EUR,online,False
 b4d1d938ee7b4ee8828d14d223cebbc4,41e035480df54e979ecd6234c2010921,Housing and Utilities,2025-10-03,Rent,no description,-650.0,EUR,online,False
@@ -21893,7 +21893,7 @@ a9bd1ea5cdaa482dbb0b75ff144b0d81,ca0e28e500584f8ba9a0197c04959318,Other,2025-10-
 75c83662d5374bb784da758c25e68aeb,7372a72bc03c4ab49492a481c2cfc7f5,Other,2025-10-03,Maxima,no description,-30.99,EUR,online,False
 b8b733e43d3f4fa9b358d8a5b1fdccc6,ca0e28e500584f8ba9a0197c04959318,Other,2025-10-03,Biedronka,no description,-138.79,PLN,online,False
 e804b456bbd84907be485e5a8fd3ef47,3288ff86901143b4a34e39d56b72f0c9,Other,2025-10-03,Continente,no description,-27.66,EUR,online,False
-96142ecbb2d74fafa144c2d0d2c4d4d3,00140a6c17ce4d3a9dd455073c5cac0a,Other,2025-10-03,Üür,no description,-650.0,EUR,online,False
+96142ecbb2d74fafa144c2d0d2c4d4d3,00140a6c17ce4d3a9dd455073c5cac0a,Other,2025-10-03,UUr,no description,-650.0,EUR,online,False
 c7046da3dbd042aba1d0fea27ec06fd8,d8e85133189140ceb38926ca37c44c8d,Groceries,2025-10-03,Tesco Store,no description,-27.66,GBP,online,False
 f843880947664fe0a8acd0e2b8c570f2,d8e85133189140ceb38926ca37c44c8d,Housing and Utilities,2025-10-03,Rent,no description,-650.0,GBP,online,False
 5e0c47854bed4bb18490b41cf7932ea1,8c1950bbf34d4de6adcf81d97399d701,Other,2025-10-03,Nuoma,no description,-728.0,EUR,online,False
@@ -21935,8 +21935,8 @@ afe1cbd8fcb043aa84c95337d7b096fe,d8e85133189140ceb38926ca37c44c8d,Transportation
 f18bea2a132e434a8c9f5210a428417c,2901b5ccd9d84760926e25640dbb70cd,Other,2025-10-06,K-Citymarket,no description,-29.99,EUR,online,False
 7dceff3507b54c0488178658919932cf,2901b5ccd9d84760926e25640dbb70cd,Other,2025-10-06,HSL,no description,-27.9,EUR,online,False
 26485d12ef214de7baab12e54abd3003,8c1950bbf34d4de6adcf81d97399d701,Other,2025-10-06,Wolt,no description,-33.58,EUR,online,False
-3442b66b7e52447ea77983b42773f839,8c1950bbf34d4de6adcf81d97399d701,Other,2025-10-06,Lietuvos Geležinkeliai,no description,-31.24,EUR,online,False
-e7191231178f4720aaf5d352890afd91,7372a72bc03c4ab49492a481c2cfc7f5,Shopping,2025-10-06,Pasažieru Vilciens,no description,-31.24,EUR,online,False
+3442b66b7e52447ea77983b42773f839,8c1950bbf34d4de6adcf81d97399d701,Other,2025-10-06,Lietuvos Gelezinkeliai,no description,-31.24,EUR,online,False
+e7191231178f4720aaf5d352890afd91,7372a72bc03c4ab49492a481c2cfc7f5,Shopping,2025-10-06,Pasazieru Vilciens,no description,-31.24,EUR,online,False
 a1d97e5217a143bb8d568e08d219bcd2,7372a72bc03c4ab49492a481c2cfc7f5,Other,2025-10-06,Wolt,no description,-33.58,EUR,online,False
 48a8acaf64184b45ad70e4fd38bd0402,c933b12ce50c48dcb4208e2d5fe59c4e,Medical/Dental,2025-10-06,Storstockholms Lokaltrafik,no description,-279.0,SEK,online,False
 49af680024c949f49f0f801b9e4b0173,4fd04cb6bfc247ddb3f42419a347e9bc,Other,2025-10-06,Dia,no description,-29.99,EUR,online,False
@@ -21998,10 +21998,10 @@ fb70e42318314a40a2b95c295bd0ded4,7372a72bc03c4ab49492a481c2cfc7f5,Shopping,2025-
 685309647bb9484e8c087df6b5fe5d1f,7f516dc6ddf5450f86f30b9fe0ba67ea,Other,2025-10-09,Nemlig.com,no description,-569.8000000000001,DKK,online,False
 1b1f7a5ca5364b19b40e6701c0954e41,d8e85133189140ceb38926ca37c44c8d,Shopping,2025-10-09,Amazon,no description,-56.98,GBP,online,False
 f3924a86907d41f2823dee8507dc1235,ad3b198a7f624730a942384dd064f051,Other,2025-10-10,Giroconto,no description,-200.0,EUR,online,False
-785eff11655247718d95b1f7a2f5cb8c,e012264a41a44d28b32f66f40200bb8e,Other,2025-10-10,Overførsel,no description,2000.0,DKK,online,False
-c09aa783e4354aaf9e9d18e78793e042,fb9a593b6b0c448d968616bb8aae9a60,Other,2025-10-10,Overføring,no description,-2000.0,NOK,online,False
-321e09d9cfc74c0f954f026c6b9d67ba,7f516dc6ddf5450f86f30b9fe0ba67ea,Other,2025-10-10,Overførsel,no description,-2000.0,DKK,online,False
-5b312c1d78d94c14b19f91ca7516dbb0,ac7a2d64f01d4638a1534bd543f7a8bc,Other,2025-10-10,Overføring,no description,2000.0,NOK,online,False
+785eff11655247718d95b1f7a2f5cb8c,e012264a41a44d28b32f66f40200bb8e,Other,2025-10-10,Overforsel,no description,2000.0,DKK,online,False
+c09aa783e4354aaf9e9d18e78793e042,fb9a593b6b0c448d968616bb8aae9a60,Other,2025-10-10,Overforing,no description,-2000.0,NOK,online,False
+321e09d9cfc74c0f954f026c6b9d67ba,7f516dc6ddf5450f86f30b9fe0ba67ea,Other,2025-10-10,Overforsel,no description,-2000.0,DKK,online,False
+5b312c1d78d94c14b19f91ca7516dbb0,ac7a2d64f01d4638a1534bd543f7a8bc,Other,2025-10-10,Overforing,no description,2000.0,NOK,online,False
 66c644db4b4043369120e11dfd3bf323,7f516dc6ddf5450f86f30b9fe0ba67ea,Food and Dining,2025-10-10,Starbucks,no description,-37.9,DKK,online,False
 57ecb1e3887d40e3a32bf4d3a5d3960d,2901b5ccd9d84760926e25640dbb70cd,Other,2025-10-10,Espresso House,no description,-3.79,EUR,online,False
 b3a0b6b6e01c40c1b7b2ddc0da9bb26a,5078c8ead42c4f0c90ec882910bcc75c,Other,2025-10-10,Giroconto,no description,200.0,EUR,online,False
@@ -22010,15 +22010,15 @@ b08717dd98d84f8682304f71b3761c71,f37690212445419c9e5d0fbbda82abc2,Other,2025-10-
 d977193ba23e445da01eddc0c85634ef,f37690212445419c9e5d0fbbda82abc2,Other,2025-10-10,De Laatste Kruimel,no description,-5.57,EUR,online,False
 ef298cd589e24109857b6ec16ba5fc5a,725cf38790664fdb925d23618ee24518,Shopping,2025-10-10,Tilisiirto,no description,200.0,EUR,online,False
 16b1c9e9c9bc4467b335a8e2591951b9,00140a6c17ce4d3a9dd455073c5cac0a,Other,2025-10-10,Kohvik August,no description,-4.97,EUR,online,False
-1e93110ab7a6482a89b8a875b0cf8b61,38fdaceb6f364a50b21ba31b9a80306b,Other,2025-10-10,Säästud Ülekanne,no description,200.0,EUR,online,False
-b695d65c30b1446cb0eb40c81e1c3c31,00140a6c17ce4d3a9dd455073c5cac0a,Other,2025-10-10,Säästud Ülekanne,no description,-200.0,EUR,online,False
+1e93110ab7a6482a89b8a875b0cf8b61,38fdaceb6f364a50b21ba31b9a80306b,Other,2025-10-10,Saastud Ülekanne,no description,200.0,EUR,online,False
+b695d65c30b1446cb0eb40c81e1c3c31,00140a6c17ce4d3a9dd455073c5cac0a,Other,2025-10-10,Saastud Ülekanne,no description,-200.0,EUR,online,False
 a9fc3c2732db49c381dc48b8647d0f06,0c47e3c72eec4c2286f2d2f04c5e8433,Food and Dining,2025-10-10,Starbucks,no description,-3.79,EUR,online,False
-45e4c9e3a81d4ebf9f890100cdfa6d21,084611e2c55c45a0a153ff24e2b5cb50,Other,2025-10-10,Übertrag,no description,200.0,EUR,online,False
-03636da8f2d349ab9329e4778ebd9d30,fb9a593b6b0c448d968616bb8aae9a60,Other,2025-10-10,Godt Brød,no description,-37.9,NOK,online,False
+45e4c9e3a81d4ebf9f890100cdfa6d21,084611e2c55c45a0a153ff24e2b5cb50,Other,2025-10-10,Ubertrag,no description,200.0,EUR,online,False
+03636da8f2d349ab9329e4778ebd9d30,fb9a593b6b0c448d968616bb8aae9a60,Other,2025-10-10,Godt Brod,no description,-37.9,NOK,online,False
 4a67665c381a489db6ae7c177f6ce8d4,ca93c6e29cd64c288aa462e85c634c88,Other,2025-10-10,Spaarrekening Overboeking,no description,230.0,EUR,online,False
-44348921fe7d418084f73fc5d1445d23,0c47e3c72eec4c2286f2d2f04c5e8433,Other,2025-10-10,Übertrag,no description,-200.0,EUR,online,False
+44348921fe7d418084f73fc5d1445d23,0c47e3c72eec4c2286f2d2f04c5e8433,Other,2025-10-10,Ubertrag,no description,-200.0,EUR,online,False
 a16e02b7c3034a78aa1f44e21e5f51d3,2901b5ccd9d84760926e25640dbb70cd,Shopping,2025-10-10,Tilisiirto,no description,-200.0,EUR,online,False
-1eab81f4486b413c8b03e6ebc00e5f27,9a0ba5d9c1f649dfbfaf18adec749a6a,Other,2025-10-10,Överföring,no description,2000.0,SEK,online,False
+1eab81f4486b413c8b03e6ebc00e5f27,9a0ba5d9c1f649dfbfaf18adec749a6a,Other,2025-10-10,Overforing,no description,2000.0,SEK,online,False
 8be33196c9af488eb9e876cc6da8cb21,4fd04cb6bfc247ddb3f42419a347e9bc,Finance,2025-10-10,Transferencia,no description,-200.0,EUR,online,False
 418e696ea7ec42ca966216c698eb3eb8,c933b12ce50c48dcb4208e2d5fe59c4e,Food and Dining,2025-10-10,Starbucks,no description,-37.9,SEK,online,False
 368ae5608cca424a9a93e3ee8836b5aa,41e035480df54e979ecd6234c2010921,Finance,2025-10-10,Savings Transfer,no description,-200.0,EUR,online,False
@@ -22027,22 +22027,22 @@ fa123b7b42154855b584d4b5d61ea27c,6729b669f9e2456a9fbdee4e94d641c8,Finance,2025-1
 d1e206a2e44446c3be09b534be795a35,d6cc56bc402a4685829f0de347af4c63,Food and Dining,2025-10-10,Starbucks,no description,-1.87,GBP,online,False
 6a2ea9b737be4fd6a722efadc70120c1,ca0e28e500584f8ba9a0197c04959318,Other,2025-10-10,Chleb I Wino,no description,-24.95,PLN,online,False
 05e0a56575264796813fef69cb1e6a32,8c1950bbf34d4de6adcf81d97399d701,Other,2025-10-10,Taupymo Pervedimas,no description,-230.0,EUR,online,False
-689a859203ee4bc7856f70408e5bb298,c933b12ce50c48dcb4208e2d5fe59c4e,Other,2025-10-10,Överföring,no description,-2000.0,SEK,online,False
-c899dafe89e04d09b17c0dcf177dc02a,82e4bce631ce4afcace0ca4d36cc4958,Other,2025-10-10,Krājumu Pārskaitījums,no description,230.0,EUR,online,False
+689a859203ee4bc7856f70408e5bb298,c933b12ce50c48dcb4208e2d5fe59c4e,Other,2025-10-10,Overforing,no description,-2000.0,SEK,online,False
+c899dafe89e04d09b17c0dcf177dc02a,82e4bce631ce4afcace0ca4d36cc4958,Other,2025-10-10,Krajumu Parskaitijums,no description,230.0,EUR,online,False
 d02a70200d2c4f15b709d4936fe52b90,7372a72bc03c4ab49492a481c2cfc7f5,Finance,2025-10-10,Double Coffee,no description,-5.57,EUR,online,False
-0751752d2654453db6704963b91fce9a,c52dcb1d472c4252b1be25e1e35826fd,Other,2025-10-10,Przelew Na Konto Oszczędnościowe,no description,1000.0,PLN,online,False
-02d9054c970f4dd083580e4f70948205,ca0e28e500584f8ba9a0197c04959318,Other,2025-10-10,Przelew Na Konto Oszczędnościowe,no description,-1000.0,PLN,online,False
+0751752d2654453db6704963b91fce9a,c52dcb1d472c4252b1be25e1e35826fd,Other,2025-10-10,Przelew Na Konto Oszczednosciowe,no description,1000.0,PLN,online,False
+02d9054c970f4dd083580e4f70948205,ca0e28e500584f8ba9a0197c04959318,Other,2025-10-10,Przelew Na Konto Oszczędnosciowe,no description,-1000.0,PLN,online,False
 7e18420a075d439fb46eb85ed823532e,193ffb34e92f4926a2b1f166dd9c3ac8,Finance,2025-10-10,Savings Transfer,no description,200.0,GBP,online,False
 9688f0628a8941baa7a4f8de1ba29233,d8e85133189140ceb38926ca37c44c8d,Finance,2025-10-10,Savings Transfer,no description,-200.0,GBP,online,False
 d75b2d0023dc4849bc1ea266ee060285,d8e85133189140ceb38926ca37c44c8d,Food and Dining,2025-10-10,Bridge Cafe,no description,-4.97,GBP,online,False
-92d86482c41d4c398319ddae169eee37,7372a72bc03c4ab49492a481c2cfc7f5,Other,2025-10-10,Krājumu Pārskaitījums,no description,-230.0,EUR,online,False
+92d86482c41d4c398319ddae169eee37,7372a72bc03c4ab49492a481c2cfc7f5,Other,2025-10-10,Krajumu Parskaitijums,no description,-230.0,EUR,online,False
 603a16d5e4304fb29fd16364d6b4ac5f,b4b23f035a9f4b6193e1664c1d4ed782,Other,2025-10-10,Taupymo Pervedimas,no description,230.0,EUR,online,False
 1413041785e846bda7ec9fa4bdcc07fc,3288ff86901143b4a34e39d56b72f0c9,Food and Dining,2025-10-10,Starbucks,no description,-3.79,EUR,online,False
 26a704994a3b4e00b1f08e88f3138f93,ada3d0f52c0848b985022952fef7031f,Other,2025-10-10,Segafredo,no description,-3.79,EUR,online,False
 2192c90a5dac457c943b3740b83383db,3288ff86901143b4a34e39d56b72f0c9,Finance,2025-10-10,Transferência,no description,-200.0,EUR,online,False
 1dd3a18e0298422196cccebf89e5cec5,0b938997d88247d69ef5234ff5bf653b,Other,2025-10-10,Virement,no description,200.0,EUR,online,False
-b28c4b1fc71a4e9381ab3e5875e381b7,e446f1818301472a926013ba98cc8c5c,Finance,2025-10-10,Transferência,no description,200.0,EUR,online,False
-f378be06f65d4450aee945053560ba83,4fd04cb6bfc247ddb3f42419a347e9bc,Food and Dining,2025-10-10,Cafetería,no description,-3.79,EUR,online,False
+b28c4b1fc71a4e9381ab3e5875e381b7,e446f1818301472a926013ba98cc8c5c,Finance,2025-10-10,Transferencia,no description,200.0,EUR,online,False
+f378be06f65d4450aee945053560ba83,4fd04cb6bfc247ddb3f42419a347e9bc,Food and Dining,2025-10-10,Cafeteria,no description,-3.79,EUR,online,False
 db29ecd193f145b5b7ccc93526e177ec,8c1950bbf34d4de6adcf81d97399d701,Food and Dining,2025-10-10,Vero Cafe,no description,-5.57,EUR,online,False
 b6e36b8d224549028f3d9856a56ef22e,fb2d93d065bd45c9893f58d31839cde8,Other,2025-10-10,Virement,no description,200.0,EUR,online,False
 2f5f1a8fcfc5408bb025d2fd9ac3afd7,ff109f0c99a146e9bb9e30ccfac01582,Other,2025-10-10,Neuhaus,no description,-3.79,EUR,online,False
@@ -22067,7 +22067,7 @@ a5196410b7754dd685e8232095a45552,0c47e3c72eec4c2286f2d2f04c5e8433,Food and Dinin
 c915cefd434649ac8529bc5816528f89,c933b12ce50c48dcb4208e2d5fe59c4e,Other,2025-10-12,Uttag,no description,-200.0,SEK,online,False
 2acb2b2db65e45f7a0d76547d8115667,c933b12ce50c48dcb4208e2d5fe59c4e,Other,2025-10-12,Telia,no description,-229.9,SEK,online,False
 e8db5c3565e64e21a9e53883edf66270,8c1950bbf34d4de6adcf81d97399d701,Shopping,2025-10-12,iTunes,no description,-20.15,EUR,online,False
-f62378841a17421d9f84016b5df8a125,8c1950bbf34d4de6adcf81d97399d701,Other,2025-10-12,Grynųjų Išėmimas,no description,-20.0,EUR,online,False
+f62378841a17421d9f84016b5df8a125,8c1950bbf34d4de6adcf81d97399d701,Other,2025-10-12,Grynuju Isemimas,no description,-20.0,EUR,online,False
 ed763d81c1a54a029c75125489b0ec5d,ad3b198a7f624730a942384dd064f051,Other,2025-10-12,Vodafone,no description,-22.99,EUR,online,False
 20053ba758a7454b9f48eb786f572fba,c933b12ce50c48dcb4208e2d5fe59c4e,Entertainment,2025-10-12,Spotify,no description,-159.9,SEK,online,False
 c1246265b2cb40bc8a9604ced5889a07,ada3d0f52c0848b985022952fef7031f,Housing and Utilities,2025-10-12,Bouygues Telecom,no description,-22.99,EUR,online,False
@@ -22082,21 +22082,21 @@ c80f25488ac148748512dd6256e83024,f37690212445419c9e5d0fbbda82abc2,Other,2025-10-
 9f1faf4f68c743b7a73a023d57eef246,f37690212445419c9e5d0fbbda82abc2,Other,2025-10-12,Geldopname,no description,-22.4,EUR,online,False
 8f9ef982850f47e4964806bbf76b0409,f37690212445419c9e5d0fbbda82abc2,Shopping,2025-10-12,iTunes,no description,-20.15,EUR,online,False
 820d666b60f24c598be68e3e7a72cc1b,ada3d0f52c0848b985022952fef7031f,Entertainment,2025-10-12,Netflix,no description,-15.99,EUR,online,False
-8a1db47bc356496a85c964e25a318bd7,ada3d0f52c0848b985022952fef7031f,Other,2025-10-12,Retrait D'espèces,no description,-20.0,EUR,online,False
-7c8da1b648bf476bac15bcfc9f17bfd6,ff109f0c99a146e9bb9e30ccfac01582,Other,2025-10-12,Retrait D'espèces,no description,-20.0,EUR,online,False
+8a1db47bc356496a85c964e25a318bd7,ada3d0f52c0848b985022952fef7031f,Other,2025-10-12,Retrait D'especes,no description,-20.0,EUR,online,False
+7c8da1b648bf476bac15bcfc9f17bfd6,ff109f0c99a146e9bb9e30ccfac01582,Other,2025-10-12,Retrait D'especes,no description,-20.0,EUR,online,False
 52ff8940e6cf46c1af29668e4fae989b,ff109f0c99a146e9bb9e30ccfac01582,Entertainment,2025-10-12,Netflix,no description,-15.99,EUR,online,False
 088773de43d34afeb2d4b93d8e8a7a32,ff109f0c99a146e9bb9e30ccfac01582,Other,2025-10-12,Tele2 Belgium,no description,-22.99,EUR,online,False
 ce5bd2284cef4d01a4f6fe4a1392ff41,4fd04cb6bfc247ddb3f42419a347e9bc,Entertainment,2025-10-12,Netflix,no description,-15.99,EUR,online,False
 883803d2f7544033ba29e0459baec22b,00140a6c17ce4d3a9dd455073c5cac0a,Shopping,2025-10-12,iTunes,no description,-17.990000000000002,EUR,online,False
-9dea3e5a571c4bd58cd2a76ebaf055ea,00140a6c17ce4d3a9dd455073c5cac0a,Other,2025-10-12,Sularaha Väljavõtmine,no description,-20.0,EUR,online,False
+9dea3e5a571c4bd58cd2a76ebaf055ea,00140a6c17ce4d3a9dd455073c5cac0a,Other,2025-10-12,Sularaha Valjavotmine,no description,-20.0,EUR,online,False
 265425eb27c946128fbf8fae3c0e7dca,4fd04cb6bfc247ddb3f42419a347e9bc,Other,2025-10-12,Retirada Efectivo,no description,-20.0,EUR,online,False
 f0ae86cba26d40fba357f3a2aa36041b,7372a72bc03c4ab49492a481c2cfc7f5,Other,2025-10-12,Lmt,no description,-25.75,EUR,online,False
 00cffbd3f3554d1da458305fbb52c9c3,7f516dc6ddf5450f86f30b9fe0ba67ea,Other,2025-10-12,Telia,no description,-229.9,DKK,online,False
-3faea5e781c7400ca08920d173af226d,7372a72bc03c4ab49492a481c2cfc7f5,Other,2025-10-12,Skaidras Naudas Izņemšana,no description,-20.0,EUR,online,False
+3faea5e781c7400ca08920d173af226d,7372a72bc03c4ab49492a481c2cfc7f5,Other,2025-10-12,Skaidras Naudas Iznemsana,no description,-20.0,EUR,online,False
 7421d2095bf5464bbf762e3cef7bf656,2901b5ccd9d84760926e25640dbb70cd,Entertainment,2025-10-12,Netflix,no description,-15.99,EUR,online,False
 55b18388a46b470aad281ea2e90275e1,ca0e28e500584f8ba9a0197c04959318,Other,2025-10-12,Play,no description,-115.35,PLN,online,False
-6173a58cfcec40a194f34a366d9c8349,7f516dc6ddf5450f86f30b9fe0ba67ea,Other,2025-10-12,Kontanthævning,no description,-200.0,DKK,online,False
-6e59a01f25fe4f50a87e4b639112a914,ca0e28e500584f8ba9a0197c04959318,Other,2025-10-12,Wypłata Gotówki Z Bankomatu,no description,-100.4,PLN,online,False
+6173a58cfcec40a194f34a366d9c8349,7f516dc6ddf5450f86f30b9fe0ba67ea,Other,2025-10-12,Kontanthevning,no description,-200.0,DKK,online,False
+6e59a01f25fe4f50a87e4b639112a914,ca0e28e500584f8ba9a0197c04959318,Other,2025-10-12,Wyplata Gotowki Z Bankomatu,no description,-100.4,PLN,online,False
 517c61f78eac480dbcb7fd6078b444b6,2901b5ccd9d84760926e25640dbb70cd,Shopping,2025-10-12,Automaattinosto,no description,-20.0,EUR,online,False
 9bd71540f4c44e39ad06ba51a120880f,ca0e28e500584f8ba9a0197c04959318,Shopping,2025-10-12,iTunes,no description,-90.28,PLN,online,False
 5a68170eac384bee990cfbe4ae66354e,2901b5ccd9d84760926e25640dbb70cd,Other,2025-10-12,Elisa,no description,-22.99,EUR,online,False
@@ -22116,7 +22116,7 @@ e3ffac3667c5490b97f76ca756ca2c81,41e035480df54e979ecd6234c2010921,Other,2025-10-
 104daf8f038648d8a2d4f45d01e3e1ae,d8e85133189140ceb38926ca37c44c8d,Other,2025-10-13,Hello Fresh,no description,-29.99,GBP,online,False
 100f0674f7964e6fae3e874c7abbde43,d8e85133189140ceb38926ca37c44c8d,Other,2025-10-13,Texaco,no description,-40.0,GBP,online,False
 b63cbab5f9fa4db389cac158df5d3f19,7372a72bc03c4ab49492a481c2cfc7f5,Other,2025-10-13,Wolt,no description,-33.58,EUR,online,False
-68e89804612f433f910ac3235670b2e2,7372a72bc03c4ab49492a481c2cfc7f5,Shopping,2025-10-13,Pasažieru Vilciens,no description,-31.24,EUR,online,False
+68e89804612f433f910ac3235670b2e2,7372a72bc03c4ab49492a481c2cfc7f5,Shopping,2025-10-13,Pasazieru Vilciens,no description,-31.24,EUR,online,False
 a06fd01e78be4282b7256588a168f257,7372a72bc03c4ab49492a481c2cfc7f5,Shopping,2025-10-13,Circle K,no description,-44.8,EUR,online,False
 9fbfbb042d534f1ba46b18aaf396853f,fb9a593b6b0c448d968616bb8aae9a60,Shopping,2025-10-13,Shell,no description,-400.0,NOK,online,False
 3323a9dcaf0545d689fa36f425960191,fb9a593b6b0c448d968616bb8aae9a60,Other,2025-10-13,Rema 1000,no description,-299.90000000000003,NOK,online,False
@@ -22150,17 +22150,17 @@ bce54493e90447efae6ff391ee73bec9,8c1950bbf34d4de6adcf81d97399d701,Other,2025-10-
 79e56ac8ee8e4c189fecaa78d0ba4e14,f37690212445419c9e5d0fbbda82abc2,Shopping,2025-10-13,Shell,no description,-44.8,EUR,online,False
 cc553e2ac05e486c835e50a4c2dbe3be,f37690212445419c9e5d0fbbda82abc2,Other,2025-10-13,Ns Treinen,no description,-31.24,EUR,online,False
 1619c94c1cc5498e99aade7b4180823f,00140a6c17ce4d3a9dd455073c5cac0a,Other,2025-10-13,Alexela,no description,-40.0,EUR,online,False
-3e677113437f4520abdbad857c2c822d,c933b12ce50c48dcb4208e2d5fe59c4e,Other,2025-10-15,Hemköp,no description,-173.3,SEK,online,False
+3e677113437f4520abdbad857c2c822d,c933b12ce50c48dcb4208e2d5fe59c4e,Other,2025-10-15,Hemkop,no description,-173.3,SEK,online,False
 73f26f967b384c4da74e4abc8d800922,4fd04cb6bfc247ddb3f42419a347e9bc,Groceries,2025-10-15,Aldi,no description,-17.330000000000002,EUR,online,False
 2b09770b58c44037bc1d07cf6e4e31cf,0c47e3c72eec4c2286f2d2f04c5e8433,Transportation,2025-10-15,Rewe,no description,-17.330000000000002,EUR,online,False
 64f6089d197242788161a2b375ae6923,8c1950bbf34d4de6adcf81d97399d701,Other,2025-10-15,Iki,no description,-19.45,EUR,online,False
-1c0a03e1ced04529bac5531675cbf696,ada3d0f52c0848b985022952fef7031f,Other,2025-10-15,Intermarché,no description,-17.330000000000002,EUR,online,False
+1c0a03e1ced04529bac5531675cbf696,ada3d0f52c0848b985022952fef7031f,Other,2025-10-15,Intermarche,no description,-17.330000000000002,EUR,online,False
 f2ff555749d9411e97121aadd16cf2e2,3288ff86901143b4a34e39d56b72f0c9,Other,2025-10-15,Pingo Doce,no description,-17.330000000000002,EUR,online,False
-cd5323e00d484df6a75c882145522139,00140a6c17ce4d3a9dd455073c5cac0a,Other,2025-10-15,Säästumarket,no description,-17.330000000000002,EUR,online,False
+cd5323e00d484df6a75c882145522139,00140a6c17ce4d3a9dd455073c5cac0a,Other,2025-10-15,Saastumarket,no description,-17.330000000000002,EUR,online,False
 f2cc53035e03405f954114e8ce876edf,ad3b198a7f624730a942384dd064f051,Other,2025-10-15,Coop,no description,-17.330000000000002,EUR,online,False
 3eae4d1559884c819f9dbb877795f2e0,2901b5ccd9d84760926e25640dbb70cd,Other,2025-10-15,S-Market,no description,-17.330000000000002,EUR,online,False
 071d9136b9fc4ea2ba6d36e80a4de117,7372a72bc03c4ab49492a481c2cfc7f5,Other,2025-10-15,Rimi,no description,-19.45,EUR,online,False
-ee0e86ca51c14c539b79409ddeb7648f,ca0e28e500584f8ba9a0197c04959318,Other,2025-10-15,Żabka,no description,-87.05,PLN,online,False
+ee0e86ca51c14c539b79409ddeb7648f,ca0e28e500584f8ba9a0197c04959318,Other,2025-10-15,Zabka,no description,-87.05,PLN,online,False
 9144d685bb6546e697ccfbbdbdbbdc99,d8e85133189140ceb38926ca37c44c8d,Groceries,2025-10-15,Sainsburys,no description,-17.330000000000002,GBP,online,False
 6de7b46f07524ebbac51cd600474205f,ff109f0c99a146e9bb9e30ccfac01582,Groceries,2025-10-15,Spar,no description,-17.330000000000002,EUR,online,False
 3817ecbf97fd40d9816b1343e551dc36,7f516dc6ddf5450f86f30b9fe0ba67ea,Other,2025-10-15,Superbrugsen,no description,-173.3,DKK,online,False
@@ -22173,7 +22173,7 @@ e9a691b3c65c489f97125859e7f9c47a,41e035480df54e979ecd6234c2010921,Food and Dinin
 576a043796694c12b9d1cc1bf0a45711,2901b5ccd9d84760926e25640dbb70cd,Other,2025-10-16,Molly Malone's,no description,-8.68,EUR,online,False
 55b8cb1b3f404a5e8f546413c40c2382,2901b5ccd9d84760926e25640dbb70cd,Food and Dining,2025-10-16,Starbucks,no description,-2.49,EUR,online,False
 f00a4cd1d67743d18d7f3d5725a40e10,7372a72bc03c4ab49492a481c2cfc7f5,Other,2025-10-16,Folkklubs Ala Pagrabs,no description,-9.72,EUR,online,False
-ec86e52bcb33430b9b442f3a9fd63e7d,00140a6c17ce4d3a9dd455073c5cac0a,Food and Dining,2025-10-16,Põrgu Pub,no description,-8.68,EUR,online,False
+ec86e52bcb33430b9b442f3a9fd63e7d,00140a6c17ce4d3a9dd455073c5cac0a,Food and Dining,2025-10-16,Porgu Pub,no description,-8.68,EUR,online,False
 0b840afa73b24e00983f055efd7a9eae,f37690212445419c9e5d0fbbda82abc2,Other,2025-10-16,Broodje Van Dootje,no description,-1.67,EUR,online,False
 4658013fa4a348c7b1809aaf7ec85dc7,f37690212445419c9e5d0fbbda82abc2,Other,2025-10-16,Mediamarkt,no description,-145.59,EUR,online,False
 4db3305d39fc455d8ea4486e2a178a91,f37690212445419c9e5d0fbbda82abc2,Other,2025-10-16,De Drie Gezusters,no description,-9.72,EUR,online,False
@@ -22187,8 +22187,8 @@ f8597e342cdc4ad58aa39ef0816f68e7,41e035480df54e979ecd6234c2010921,Food and Dinin
 c0e11160045041ff84c218aec5f189b5,ada3d0f52c0848b985022952fef7031f,Other,2025-10-16,Darty,no description,-129.99,EUR,online,False
 44b9eff835b845aa9540eab48e0839c3,fb9a593b6b0c448d968616bb8aae9a60,Other,2025-10-16,Egon,no description,-86.80000000000001,NOK,online,False
 782713ad651548079c9f71fa3cbd75ae,fb9a593b6b0c448d968616bb8aae9a60,Other,2025-10-16,Kaffebrenneriet,no description,-24.9,NOK,online,False
-b74cc51477964918add55b8c5d400bfa,fb9a593b6b0c448d968616bb8aae9a60,Other,2025-10-16,Elkjøp,no description,-1299.9,NOK,online,False
-e6dee421388d4c8c9c274566c33b7d03,3288ff86901143b4a34e39d56b72f0c9,Other,2025-10-16,Clube Ferroviário,no description,-8.68,EUR,online,False
+b74cc51477964918add55b8c5d400bfa,fb9a593b6b0c448d968616bb8aae9a60,Other,2025-10-16,Elkjop,no description,-1299.9,NOK,online,False
+e6dee421388d4c8c9c274566c33b7d03,3288ff86901143b4a34e39d56b72f0c9,Other,2025-10-16,Clube Ferroviario,no description,-8.68,EUR,online,False
 15bedcd05cd24843b015dc30c08b97c5,3288ff86901143b4a34e39d56b72f0c9,Transportation,2025-10-16,Padaria Portuguesa,no description,-2.49,EUR,online,False
 0bbee580dfa041508f8c0cabb88c5e97,3288ff86901143b4a34e39d56b72f0c9,Other,2025-10-16,Worten,no description,-129.99,EUR,online,False
 7718f58ddffc4345b7dbee95fd5d88e8,ff109f0c99a146e9bb9e30ccfac01582,Food and Dining,2025-10-16,Starbucks,no description,-2.49,EUR,online,False
@@ -22431,13 +22431,13 @@ f9e243648aeb4fa885ddd4f7e0ea4a7a,f37690212445419c9e5d0fbbda82abc2,Other,2025-10-
 a871429f1c934204b4c4f257a04d955e,ad3b198a7f624730a942384dd064f051,Other,2025-10-26,Zalando,no description,-97.71,EUR,online,False
 d0bc71af53cc4c32a4d318138ceb6315,fb9a593b6b0c448d968616bb8aae9a60,Food and Dining,2025-10-26,Tibber,no description,-340.0,NOK,online,False
 9116e6636d024b7189197a8e3e1e9449,41e035480df54e979ecd6234c2010921,Other,2025-10-26,Zolando,no description,-97.71,EUR,online,False
-3ff391d9fab34f2f96b762f5d058ad01,ada3d0f52c0848b985022952fef7031f,Other,2025-10-26,Décathlon,no description,-97.71,EUR,online,False
-2d6c8553bc04422488f0493365e28617,41e035480df54e979ecd6234c2010921,Other,2025-10-26,Bord Gáis Energy,no description,-34.0,EUR,online,False
+3ff391d9fab34f2f96b762f5d058ad01,ada3d0f52c0848b985022952fef7031f,Other,2025-10-26,Decathlon,no description,-97.71,EUR,online,False
+2d6c8553bc04422488f0493365e28617,41e035480df54e979ecd6234c2010921,Other,2025-10-26,Bord Gais Energy,no description,-34.0,EUR,online,False
 0f50ee11d65740e6842482794fbcba0d,fb9a593b6b0c448d968616bb8aae9a60,Other,2025-10-26,Dustin.no,no description,-977.1,NOK,online,False
 93b03e9dd23b499a9315f24a44affd32,2901b5ccd9d84760926e25640dbb70cd,Other,2025-10-26,Fortum,no description,-34.0,EUR,online,False
 4ced78ed57334fbe9e6707a1667f205e,2901b5ccd9d84760926e25640dbb70cd,Transportation,2025-10-26,Xxl Sports & Outdoor,no description,-97.71,EUR,online,False
 c2c93518c0fa48a2a287ec02385ec951,ca0e28e500584f8ba9a0197c04959318,Other,2025-10-26,Pgnig,no description,-170.68,PLN,online,False
-ee23379b156e405899ffeb2b1e4d8550,7372a72bc03c4ab49492a481c2cfc7f5,Other,2025-10-26,Latvijas Gāze,no description,-38.08,EUR,online,False
+ee23379b156e405899ffeb2b1e4d8550,7372a72bc03c4ab49492a481c2cfc7f5,Other,2025-10-26,Latvijas Gaze,no description,-38.08,EUR,online,False
 7f521f7f914a4ae09d6834f8f726cc02,ad3b198a7f624730a942384dd064f051,Other,2025-10-26,Enel,no description,-34.0,EUR,online,False
 a6845416d7394e418740102a86886a1f,c933b12ce50c48dcb4208e2d5fe59c4e,Other,2025-10-26,Fortum,no description,-340.0,SEK,online,False
 e5eb6d34548e4d05a37005e007ca2e56,8c1950bbf34d4de6adcf81d97399d701,Other,2025-10-26,Ignitis,no description,-38.08,EUR,online,False
@@ -22471,7 +22471,7 @@ d1fb44992f6e4c9ca3d7f9a6911f1327,8c1950bbf34d4de6adcf81d97399d701,Other,2025-10-
 6803f19a2f9c49df9b2c9fd62e2ae2e1,7372a72bc03c4ab49492a481c2cfc7f5,Other,2025-10-27,Wolt,no description,-33.58,EUR,online,False
 8e1fb3de745c4869910342e399f02926,7372a72bc03c4ab49492a481c2cfc7f5,Shopping,2025-10-27,Circle K,no description,-44.8,EUR,online,False
 72319fbd391b467c84b6c80c6962ff54,41e035480df54e979ecd6234c2010921,Transportation,2025-10-27,Irish Rail,no description,-27.9,EUR,online,False
-f8de65be2d6d44a5883a31120d8e0c7b,8c1950bbf34d4de6adcf81d97399d701,Other,2025-10-27,Lietuvos Geležinkeliai,no description,-31.24,EUR,online,False
+f8de65be2d6d44a5883a31120d8e0c7b,8c1950bbf34d4de6adcf81d97399d701,Other,2025-10-27,Lietuvos Gelezinkeliai,no description,-31.24,EUR,online,False
 6f70cb02986c46698533ddde7395c8cc,f37690212445419c9e5d0fbbda82abc2,Shopping,2025-10-27,Shell,no description,-44.8,EUR,online,False
 b3fc5617d7bc45e0b0c5000ba61f9da6,ada3d0f52c0848b985022952fef7031f,Other,2025-10-27,Eurostar,no description,-27.9,EUR,online,False
 18b330d3fd944f229307c29e3340fc12,ada3d0f52c0848b985022952fef7031f,Groceries,2025-10-27,Carrefour,no description,-29.99,EUR,online,False
@@ -22502,7 +22502,7 @@ f9d0c3eead994f30abcf5fbda0869bba,00140a6c17ce4d3a9dd455073c5cac0a,Other,2025-10-
 c5b16652907949399a8cc0708c25ed03,ff109f0c99a146e9bb9e30ccfac01582,Shopping,2025-10-28,Orange Belgium,no description,-23.99,EUR,online,False
 95a37cd9e97b4efc91472170616a4fe7,ff109f0c99a146e9bb9e30ccfac01582,Food and Dining,2025-10-28,Mcdonalds,no description,-5.69,EUR,online,False
 94626d5eab184d1ea03d707047007b6f,8c1950bbf34d4de6adcf81d97399d701,Food and Dining,2025-10-28,Mcdonald's,no description,-6.37,EUR,online,False
-e241f96041dc4deabb93e59ad661ed39,3288ff86901143b4a34e39d56b72f0c9,Other,2025-10-28,Cabovisão,no description,-23.99,EUR,online,False
+e241f96041dc4deabb93e59ad661ed39,3288ff86901143b4a34e39d56b72f0c9,Other,2025-10-28,Cabovisao,no description,-23.99,EUR,online,False
 de7a71971f8e4680b40212f88e314ab2,ca0e28e500584f8ba9a0197c04959318,Shopping,2025-10-28,Orange,no description,-120.44,PLN,online,False
 eca80ff27e1940a3bc5224dd7bdcbecf,ca0e28e500584f8ba9a0197c04959318,Food and Dining,2025-10-28,Mcdonald's,no description,-28.55,PLN,online,False
 18bcad177caa40ae82fa8b3da094f2d8,3288ff86901143b4a34e39d56b72f0c9,Food and Dining,2025-10-28,Mcdonalds,no description,-5.69,EUR,online,False
@@ -22566,19 +22566,19 @@ b08f07d50acb42df8b11470df28fdcdb,ff109f0c99a146e9bb9e30ccfac01582,Food and Dinin
 8efd032af3aa4109a35df9298fe32265,2901b5ccd9d84760926e25640dbb70cd,Food and Dining,2025-10-30,Starbucks,no description,-2.49,EUR,online,False
 8e7401f1c4c24a3e95ae34357ed456a4,ada3d0f52c0848b985022952fef7031f,Food and Dining,2025-10-30,Starbucks,no description,-2.49,EUR,online,False
 61d0f51852cf4066879a5c72177a8b81,d6cc56bc402a4685829f0de347af4c63,Food and Dining,2025-10-31,Starbucks,no description,-1.87,GBP,online,False
-79f55de6f3ad4ffa9a8ae5fd83a254fb,4fd04cb6bfc247ddb3f42419a347e9bc,Other,2025-11-01,Liquidación Interés,no description,3.72,EUR,online,False
+79f55de6f3ad4ffa9a8ae5fd83a254fb,4fd04cb6bfc247ddb3f42419a347e9bc,Other,2025-11-01,Liquidacion Interes,no description,3.72,EUR,online,False
 a3c5e1d22a984133b9ec7dcaa17f7a33,00140a6c17ce4d3a9dd455073c5cac0a,Food and Dining,2025-11-01,Dodo Pizza,no description,-17.990000000000002,EUR,online,False
-4548e6f7a78d4709ac35b90cb6b751a5,ff109f0c99a146e9bb9e30ccfac01582,Other,2025-11-01,Versement D'intérêts,no description,3.72,EUR,online,False
+4548e6f7a78d4709ac35b90cb6b751a5,ff109f0c99a146e9bb9e30ccfac01582,Other,2025-11-01,Versement D'interets,no description,3.72,EUR,online,False
 20fe3202b0ff4e728f182576a448d482,d8e85133189140ceb38926ca37c44c8d,Finance,2025-11-01,Interest Earned,no description,3.72,GBP,online,False
 1d11fdd93d5641bb8b37d9d1d9b6d9e1,ad3b198a7f624730a942384dd064f051,Other,2025-11-01,Rosso Pomodoro,no description,-17.990000000000002,EUR,online,False
 6c314e887dbb4958af9471f06f76b4ba,00140a6c17ce4d3a9dd455073c5cac0a,Other,2025-11-01,Intressitulu,no description,3.72,EUR,online,False
 cef60add77e34c878b1afd319260a9be,ad3b198a7f624730a942384dd064f051,Other,2025-11-01,Interessi Attivi,no description,3.72,EUR,online,False
 333229dd28594e409d125ad3ceb26037,d8e85133189140ceb38926ca37c44c8d,Food and Dining,2025-11-01,Dominos Pizza,no description,-17.990000000000002,GBP,online,False
 0a9436f27df340aaa546b9a5ffe73295,ff109f0c99a146e9bb9e30ccfac01582,Food and Dining,2025-11-01,Kaffabar,no description,-17.990000000000002,EUR,online,False
-b1a12f7fea6f4eb19723ec4777595a6f,ada3d0f52c0848b985022952fef7031f,Other,2025-11-01,Café Du Commerce,no description,-17.990000000000002,EUR,online,False
+b1a12f7fea6f4eb19723ec4777595a6f,ada3d0f52c0848b985022952fef7031f,Other,2025-11-01,Cafe Du Commerce,no description,-17.990000000000002,EUR,online,False
 658f717e595d4e4b8905cb716fcadb5c,fb9a593b6b0c448d968616bb8aae9a60,Housing and Utilities,2025-11-01,Opptjente Renter,no description,37.2,NOK,online,False
 c1f8acea840e4a569c4e2747f14088a9,7372a72bc03c4ab49492a481c2cfc7f5,Other,2025-11-01,Procenti,no description,4.17,EUR,online,False
-67e7ce217ede4923bff07af40eb3b408,7372a72bc03c4ab49492a481c2cfc7f5,Food and Dining,2025-11-01,Pica Lulū,no description,-20.15,EUR,online,False
+67e7ce217ede4923bff07af40eb3b408,7372a72bc03c4ab49492a481c2cfc7f5,Food and Dining,2025-11-01,Pica Lulu,no description,-20.15,EUR,online,False
 a8707ea72a584f1b85888b61497de21d,3288ff86901143b4a34e39d56b72f0c9,Other,2025-11-01,Juros Recebidos,no description,3.72,EUR,online,False
 ce37f0179ca148c9b754d4bb199f080e,3288ff86901143b4a34e39d56b72f0c9,Food and Dining,2025-11-01,Pizza Hut,no description,-17.990000000000002,EUR,online,False
 4c8c6fff263f4a9ca4ede5d445be388f,ca0e28e500584f8ba9a0197c04959318,Other,2025-11-01,Da Grasso,no description,-90.28,PLN,online,False
@@ -22592,7 +22592,7 @@ c59c5698b5c74e6ea6238eca01e92697,41e035480df54e979ecd6234c2010921,Food and Dinin
 0cef61c27c964cae8097ca27a30a28c0,f37690212445419c9e5d0fbbda82abc2,Food and Dining,2025-11-01,New York Pizza,no description,-20.15,EUR,online,False
 2cae6a4c0024437c896657ce5237e74a,7f516dc6ddf5450f86f30b9fe0ba67ea,Food and Dining,2025-11-01,Domino's Pizza,no description,-179.9,DKK,online,False
 5fdf5c31246d4b8b956b201ddbfc6ae6,7f516dc6ddf5450f86f30b9fe0ba67ea,Finance,2025-11-01,Renteindægter,no description,37.2,DKK,online,False
-27caf43692bf4a49bfdfd174263b295e,8c1950bbf34d4de6adcf81d97399d701,Shopping,2025-11-01,Čili Pica,no description,-20.15,EUR,online,False
+27caf43692bf4a49bfdfd174263b295e,8c1950bbf34d4de6adcf81d97399d701,Shopping,2025-11-01,Cili Pica,no description,-20.15,EUR,online,False
 31a1254e2a604087be9a504a77eab0fe,ada3d0f52c0848b985022952fef7031f,Other,2025-11-01,Versement D'intérêts,no description,3.72,EUR,online,False
 b3b252fa057c4a1492bd3cdb8cfc5d23,c933b12ce50c48dcb4208e2d5fe59c4e,Other,2025-11-01,Ränta,no description,-37.2,SEK,online,False
 003dbddd1fe24282a881e5ae0422acd6,4bb60c8682f543e8939a659d14a20124,Finance,2025-11-01,Amazon Salary,no description,5000.0,EUR,online,False
