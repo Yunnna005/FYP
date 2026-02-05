@@ -2,8 +2,10 @@
 import { useEffect, useState } from "react";
 import Template from "../templates/Template";
 
+
 export default function Dashboard() {
     const [accounts, setAccounts] = useState([]);
+    const [transactions, setTransactions] = useState<any[]>([]);
     const [loading, setLoading] = useState(true);
     const [identity, setIdentity] = useState([]);
 
@@ -16,7 +18,27 @@ export default function Dashboard() {
 
             const idRes = await fetch("http://localhost:8000/identity");
             const idData = await idRes.json();
+            const identityData = idData.identity || [];
             setIdentity(idData.identity || []);
+
+            let email = "";
+            let phone = "";
+
+            if (identityData.length > 0) {
+            const owners = identityData[0].owners || [];
+            if (owners.length > 0) {
+                email = owners[0].emails?.[0]?.data || "";
+                phone = owners[0].phone_numbers?.[0]?.data || "";
+            }
+            }
+
+            if (email && phone) {
+                const txRes = await fetch(
+                    `http://localhost:8000/transactions/owner?email=${encodeURIComponent(email)}&phone=${encodeURIComponent(phone)}`
+                );
+                const txData = await txRes.json();
+                setTransactions(txData.transactions || []);
+            }
 
             setLoading(false);
         } catch (error) {
@@ -86,9 +108,26 @@ export default function Dashboard() {
                     ) : (
                         <p>No identity information found</p>
                     )}
+                    </div>
+                    {/* Transactions */}
+                    <div className="mb-10 bg-white shadow-lg p-6 rounded-lg">
+                        <h2 className="text-xl font-bold mb-1">Your Transactions</h2>
+                        {loading ? (
+                        <p>Loading transactions...</p>
+                        ) : transactions.length > 0 ? (
+                        transactions.map((tx: any) => (
+                            <div key={tx.transaction_id} className="border p-2 mb-2 rounded">
+                            <p><strong>{tx.name}</strong> - €{tx.amount}</p>
+                            <p>{tx.date} | {tx.category}</p>
                             </div>
-                        </>
+                        ))
+                        ) : (
+                        <p>No transactions found for you.</p>
+                        )}
+                    </div>
+                    </>
                     )}
+
                 </div>
             </div>
         </Template>
