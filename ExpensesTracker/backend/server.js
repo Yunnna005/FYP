@@ -2,7 +2,8 @@ import express from "express";
 import cors from "cors";
 import dotenv from "dotenv";
 import { Configuration, PlaidApi, PlaidEnvironments } from "plaid";
-
+import {getTransactionsByOwner} from "./db_utils.js"
+ 
 dotenv.config();
 
 const app = express();
@@ -82,6 +83,22 @@ app.get("/identity", async (req, res) => {
   } catch (error) {
     console.error("Error fetching identity:", error.response?.data || error);
     res.status(500).json({ error: "Failed to fetch identity" });
+  }
+});
+
+app.get("/transactions/owner", async (req, res) => {
+  const { email, phone } = req.query;
+
+  if (!email || !phone) {
+    return res.status(400).json({ error: "Email and phone are required" });
+  }
+
+  try {
+    const transactions = await getTransactionsByOwner(email, phone);
+    res.json({ transactions });
+  } catch (err) {
+    console.error(err);
+    res.status(500).json({ error: "Failed to fetch transactions" });
   }
 });
 
