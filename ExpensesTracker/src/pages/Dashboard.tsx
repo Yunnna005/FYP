@@ -1,6 +1,7 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import { useEffect, useState } from "react";
 import Template from "../templates/Template";
+import Table from "../componenets/Table.tsx";
 
 
 export default function Dashboard() {
@@ -113,21 +114,13 @@ export default function Dashboard() {
                     <div className="mb-10 bg-white shadow-lg p-6 rounded-lg">
                         <h2 className="text-xl font-bold mb-1">Your Transactions</h2>
                         {loading ? (
-                        <p>Loading transactions...</p>
-                        ) : transactions.length > 0 ? (
-                        transactions.map((tx: any) => (
-                            <div key={tx.transaction_id} className="border p-2 mb-2 rounded">
-                            <p><strong>{tx.name}</strong> - €{tx.amount}</p>
-                            <p>{tx.date} | {tx.category}</p>
-                            </div>
-                        ))
+                            <p>Loading transactions...</p>
                         ) : (
-                        <p>No transactions found for you.</p>
+                            <Table transactions={transactions} />
                         )}
                     </div>
                     </>
                     )}
-
                 </div>
             </div>
         </Template>
