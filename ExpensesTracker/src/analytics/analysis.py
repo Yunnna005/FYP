@@ -12,6 +12,23 @@ for _, account in accounts.iterrows():
 
     account_transactions = transactions[transactions['account_id'] == account_id]
 
+    #All Time Analysis
+    if not account_transactions.empty:
+        all_amounts = account_transactions['amount']
+
+        total_transactions_all = len(all_amounts)
+        avg_transaction_all = round(all_amounts.mean(), 2)
+        largest_transaction_all = round(all_amounts.max(), 2)
+
+        print("ALL TIME SUMMARY")
+        print(f"Total Transactions: {total_transactions_all}")
+        print(f"Average Transaction Value: {avg_transaction_all}")
+        print(f"Largest Transaction: {largest_transaction_all}")
+    else:
+        print("No transactions found.")
+        continue
+
+    #Monthly Analysis
     print(f"\nUser: {user_id} | Account: {account_id}")
     print("Month | Total | Transactions | Total Spent | Total Received | Avg | Largest | Largest (Abs) | Category")
 
