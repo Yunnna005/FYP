@@ -7,7 +7,7 @@ transactions_df['date'] = pd.to_datetime(transactions_df['date'])
 
 for _, account in accounts_df.iterrows():
     account_user = account['user_id']
-    account_id = 'CUST_0159'
+    account_id = account['account_id']
 
     total_spending_per_month = {}
 
@@ -22,5 +22,6 @@ for _, account in accounts_df.iterrows():
         else:
             total_spending_per_month[month] = round(amount, 2)
 
-for month in sorted(total_spending_per_month.keys()):
-    print(f"{month}: {total_spending_per_month[month]}")
+    for month in sorted(total_spending_per_month.keys()):
+            total = total_spending_per_month[month]
+            print(f"{account_user} | {account_id} | {month} | {total}")
