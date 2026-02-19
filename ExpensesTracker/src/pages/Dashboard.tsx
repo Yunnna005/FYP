@@ -46,6 +46,11 @@ export default function Dashboard() {
                         <p className="text-lg">Loading your financial data...</p>
                     ) : (
                     <>
+                        {/*Stats Linear*/}
+                        <div>
+                            
+                        </div>
+
                         {/* Transactions */}
                         <div className="mb-10 bg-white shadow-lg p-6 rounded-lg">
                             <h2 className="text-xl font-bold mb-1">Your Transactions</h2>
