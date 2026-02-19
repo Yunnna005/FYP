@@ -7,7 +7,12 @@ import {getTransactionsByOwner} from "./db_utils.js"
 dotenv.config();
 
 const app = express();
-app.use(cors());
+app.use(cors({
+  origin: "http://localhost:3000",
+  methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
+  allowedHeaders: ["Content-Type"],
+  credentials: true
+}));
 app.use(express.json());
 
 let ACCESS_TOKEN = null;
