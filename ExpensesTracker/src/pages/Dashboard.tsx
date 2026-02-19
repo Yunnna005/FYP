@@ -5,45 +5,25 @@ import Table from "../componenets/Table.tsx";
 
 
 export default function Dashboard() {
-    const [accounts, setAccounts] = useState([]);
     const [transactions, setTransactions] = useState<any[]>([]);
     const [loading, setLoading] = useState(true);
-    const [identity, setIdentity] = useState([]);
 
     useEffect(() => {
     async function loadData() {
         try {
-            const accRes = await fetch("/api/accounts");
-            const accData = await accRes.json();
-            setAccounts(accData.accounts || []);
+            const res = await fetch("/api/identity/login");
+            const { email, phone } = await res.json();
 
-            const idRes = await fetch("/api/identity");
-            const idData = await idRes.json();
-            const identityData = idData.identity || [];
-            setIdentity(idData.identity || []);
+            if (!email || !phone) return;
 
-            let email = "";
-            let phone = "";
-
-            if (identityData.length > 0) {
-            const owners = identityData[0].owners || [];
-            if (owners.length > 0) {
-                email = owners[0].emails?.[0]?.data || "";
-                phone = owners[0].phone_numbers?.[0]?.data || "";
-            }
-            }
-
-            if (email && phone) {
-                const txRes = await fetch(
-                    `/api/transactions/owner?email=${encodeURIComponent(email)}&phone=${encodeURIComponent(phone)}`
-                );
-                const txData = await txRes.json();
-                setTransactions(txData.transactions || []);
-            }
-
+            const txRes = await fetch(
+                `/api/transactions/owner?email=${encodeURIComponent(email)}&phone=${encodeURIComponent(phone)}`
+            );
+            const txData = await txRes.json();
+            setTransactions(txData.transactions || []);
             setLoading(false);
         } catch (error) {
-            console.error("Error loading Plaid data:", error);
+            console.error(error);
         }
     }
 
@@ -65,60 +45,16 @@ export default function Dashboard() {
                     {loading ? (
                         <p className="text-lg">Loading your financial data...</p>
                     ) : (
-                        <>
-                            <div className="mb-10 bg-white shadow-lg p-6 rounded-lg">
-                                <h2 className="text-xl font-bold mb-1">Account Details</h2>
-                                {accounts?.length > 0 ? (
-                                    <>
-                                        {accounts.map((acc: any) => (
-                                            <div key={acc.account_id} className="mb-4 p-4 border rounded-lg">
-                                                <p><strong>Name:</strong> {acc.name}</p>
-                                                <p><strong>Type:</strong> {acc.type}</p>
-                                                <p><strong>Subtype:</strong> {acc.subtype}</p>
-                                                <p><strong>Balance:</strong> €{acc.balances.current}</p>
-                                            </div>
-                                        ))}
-                                    </>
-                                ) : (
-                                    <p>No accounts found</p>
-                                )}
-                            </div>
-
-                            <div className="mb-10 bg-white shadow-lg p-6 rounded-lg">
-                                <h2 className="text-xl font-bold mb-1">Identity Details</h2>
-
-                    {identity.length > 0 ? (
-                        identity.map((acc: any) => (
-                            <div key={acc.account_id} className="mb-4 p-4 border rounded-lg">
-                                {acc.owners?.map((owner: any, i: number) => (
-                                    <div key={i} className="mt-3">
-                                        <p><strong>Full Name:</strong> {owner.names?.join(", ")}</p>
-                                        <p><strong>Emails:</strong> {owner.emails?.map((e: { data: any; }) => e.data).join(", ")}</p>
-                                        <p><strong>Phone Numbers:</strong> {owner.phone_numbers?.map((p: { data: any; }) => p.data).join(", ")}</p>
-                                        <p><strong>Addresses:</strong></p>
-                                        {owner.addresses?.map((a: any, j: number) => (
-                                            <div key={j} className="ml-4">
-                                                <p>{a.data.street} {a.data.city} {a.data.region}</p>
-                                                <p>{a.data.postal_code}</p>
-                                            </div>
-                                        ))}
-                                    </div>
-                                ))}
-                            </div>
-                        ))
-                    ) : (
-                        <p>No identity information found</p>
-                    )}
-                    </div>
-                    {/* Transactions */}
-                    <div className="mb-10 bg-white shadow-lg p-6 rounded-lg">
-                        <h2 className="text-xl font-bold mb-1">Your Transactions</h2>
-                        {loading ? (
-                            <p>Loading transactions...</p>
-                        ) : (
-                            <Table transactions={transactions} />
-                        )}
-                    </div>
+                    <>
+                        {/* Transactions */}
+                        <div className="mb-10 bg-white shadow-lg p-6 rounded-lg">
+                            <h2 className="text-xl font-bold mb-1">Your Transactions</h2>
+                            {loading ? (
+                                <p>Loading transactions...</p>
+                            ) : (
+                                <Table transactions={transactions} />
+                            )}
+                        </div>
                     </>
                     )}
                 </div>

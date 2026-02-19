@@ -91,6 +91,28 @@ app.get("/api/identity", async (req, res) => {
   }
 });
 
+app.get("/api/identity/login", async (req, res) => {
+  try{
+    if(!ACCESS_TOKEN){
+      return res.status(400).json({ error: "No access token saved" });
+    }
+
+    const response = await client.identityGet({
+      access_token: ACCESS_TOKEN,
+    })
+    const identityData = response.data.accounts || [];
+    const firstOwner = identityData[0]?.owners?.[0];
+
+    const email = firstOwner?.emails?.[0]?.data || "";
+    const phone = firstOwner?.phone_numbers?.[0]?.data || "";
+
+    res.json({ email, phone });
+  }catch (error){
+    console.error("Error fetching identity:", error.response?.data || error);
+    res.status(500).json({ error: "Failed to fetch identity" });
+  }
+})
+
 app.get("/api/transactions/owner", async (req, res) => {
   const { email, phone } = req.query;
 
