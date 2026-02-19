@@ -8,5 +8,12 @@ export default defineConfig({
   server: {
     host: "127.0.0.1",
     port: 3000,
+    proxy:{
+      '/link': 'http://localhost:8000',
+      '/item': 'http://localhost:8000',
+      '/accounts': 'http://localhost:8000',
+      '/identity': 'http://localhost:8000',
+      '/transactions': 'http://localhost:8000'
+    }
   },
 })

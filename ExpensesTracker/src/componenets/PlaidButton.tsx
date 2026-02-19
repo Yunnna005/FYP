@@ -4,11 +4,11 @@ import { useNavigate } from "react-router-dom";
 
 export default function Card() {
   const [linkToken, setLinkToken] = useState(null);
-  const [loading, setLoading] = useState(false); // New state for loading overlay
+  const [loading, setLoading] = useState(false); 
   const navigate = useNavigate();
 
   useEffect(() => {
-    fetch("http://localhost:8000/link/token/create", {
+    fetch("/link/token/create", {
       method: "POST",
     })
       .then((res) => res.json())
@@ -19,7 +19,7 @@ export default function Card() {
     token: linkToken,
     onSuccess: (public_token) => {
       setLoading(true); 
-      fetch("http://localhost:8000/item/public_token/exchange", {
+      fetch("/item/public_token/exchange", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ public_token }),
