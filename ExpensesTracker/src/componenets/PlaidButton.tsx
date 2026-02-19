@@ -8,7 +8,7 @@ export default function Card() {
   const navigate = useNavigate();
 
   useEffect(() => {
-    fetch("/link/token/create", {
+    fetch("/api/link/token/create", {
       method: "POST",
     })
       .then((res) => res.json())
@@ -19,7 +19,7 @@ export default function Card() {
     token: linkToken,
     onSuccess: (public_token) => {
       setLoading(true); 
-      fetch("/item/public_token/exchange", {
+      fetch("/api/item/public_token/exchange", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ public_token }),
