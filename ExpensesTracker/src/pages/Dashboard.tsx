@@ -13,11 +13,11 @@ export default function Dashboard() {
     useEffect(() => {
     async function loadData() {
         try {
-            const accRes = await fetch("/accounts");
+            const accRes = await fetch("/api/accounts");
             const accData = await accRes.json();
             setAccounts(accData.accounts || []);
 
-            const idRes = await fetch("/identity");
+            const idRes = await fetch("/api/identity");
             const idData = await idRes.json();
             const identityData = idData.identity || [];
             setIdentity(idData.identity || []);
@@ -35,7 +35,7 @@ export default function Dashboard() {
 
             if (email && phone) {
                 const txRes = await fetch(
-                    `/transactions/owner?email=${encodeURIComponent(email)}&phone=${encodeURIComponent(phone)}`
+                    `/api/transactions/owner?email=${encodeURIComponent(email)}&phone=${encodeURIComponent(phone)}`
                 );
                 const txData = await txRes.json();
                 setTransactions(txData.transactions || []);

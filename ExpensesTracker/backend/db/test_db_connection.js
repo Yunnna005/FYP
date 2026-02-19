@@ -1,7 +1,4 @@
-import dotenv from 'dotenv';
 import pool from './db_connection.js';
-
-dotenv.config();
 
 async function testConnection() {
   try {

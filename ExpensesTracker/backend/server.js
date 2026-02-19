@@ -2,7 +2,7 @@ import express from "express";
 import cors from "cors";
 import dotenv from "dotenv";
 import { Configuration, PlaidApi, PlaidEnvironments } from "plaid";
-import {getTransactionsByOwner} from "./db_utils.js"
+import {getTransactionsByOwner} from "./db/db_utils.js"
  
 dotenv.config();
 
@@ -28,7 +28,7 @@ const config = new Configuration({
 });
 const client = new PlaidApi(config);
 
-app.post("/link/token/create", async (req, res) => {
+app.post("/api/link/token/create", async (req, res) => {
   try {
     const response = await client.linkTokenCreate({
       user: { client_user_id: "userTest" },
@@ -46,7 +46,7 @@ app.post("/link/token/create", async (req, res) => {
   }
 });
 
-app.post("/item/public_token/exchange", async (req, res) => {
+app.post("/api/item/public_token/exchange", async (req, res) => {
   const { public_token } = req.body;
   
   const response = await client.itemPublicTokenExchange({ public_token });
@@ -57,7 +57,7 @@ app.post("/item/public_token/exchange", async (req, res) => {
   res.json({ access_token: ACCESS_TOKEN });
 });
 
-app.get("/accounts", async (req, res) => {
+app.get("/api/accounts", async (req, res) => {
   try {
     if (!ACCESS_TOKEN) {
       return res.status(400).json({ error: "No access token saved" });
@@ -74,7 +74,7 @@ app.get("/accounts", async (req, res) => {
   }
 });
 
-app.get("/identity", async (req, res) => {
+app.get("/api/identity", async (req, res) => {
   try {
     if (!ACCESS_TOKEN) {
       return res.status(400).json({ error: "No access token saved" });
@@ -91,7 +91,7 @@ app.get("/identity", async (req, res) => {
   }
 });
 
-app.get("/transactions/owner", async (req, res) => {
+app.get("/api/transactions/owner", async (req, res) => {
   const { email, phone } = req.query;
 
   if (!email || !phone) {
@@ -102,7 +102,7 @@ app.get("/transactions/owner", async (req, res) => {
     const transactions = await getTransactionsByOwner(email, phone);
     res.json({ transactions });
   } catch (err) {
-    console.error(err);
+    console.error("Error in /api/transactions/owner:", err);
     res.status(500).json({ error: "Failed to fetch transactions" });
   }
 });
