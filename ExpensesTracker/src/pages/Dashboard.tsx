@@ -69,7 +69,7 @@ export default function Dashboard() {
                         <p className="text-lg">Loading your financial data...</p>
                     ) : (
                     <>
-                        {/*Stats Linear*/}
+                        {/*Stats Linear*/} 
                         <div className="flex flex-wrap gap-4 mb-8">
                             {monthlyStats && DashboardStats.map((s) => (
                                 <Stat
