@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 import Template from "../templates/Template";
 import Table from "../componenets/Table.tsx";
 import Stat from "../componenets/Stat.tsx";
-import { DashboardStats } from "FYP/ExpensesTracker/src/config/DashboardStats.js";
+import { DashboardStats } from "../config/DashboardStats.ts";
 
 
 export default function Dashboard() {
