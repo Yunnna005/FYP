@@ -17,3 +17,19 @@ export async function getTransactionsByOwner(email, phone) {
     throw new Error("Failed to fetch transactions");
   }
 }
+
+export async function getUserByEmailAndPhone(email, phone) {
+  try {
+    const query = `
+      SELECT user_id
+      FROM users
+      WHERE u.email = $1
+      AND u.phone_number = $2`;
+
+    const { rows } = await pool.query(query, [email, phone]);
+    return rows;
+  } catch (error) {
+    console.error("Database query error:", error.message);
+    throw new Error("Failed to fetch userID");
+  }
+}

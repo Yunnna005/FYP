@@ -113,7 +113,24 @@ app.get("/api/identity/login", async (req, res) => {
   }
 })
 
-app.get("/api/transactions/owner", async (req, res) => {
+app.get("/api/account/user", async (req, res) => {
+  const { email, phone } = req.query;
+
+  if (!email || !phone) return res.status(400).json({ error: "Email and phone are required" });
+
+  try {
+    const user = await getUserByEmailAndPhone(email, phone);
+    
+    if (!user) return res.status(404).json({ error: "User not found" });
+
+    res.json(user);
+  } catch (err) {
+    console.error("Error fetching user:", err);
+    res.status(500).json({ error: "Failed to fetch user" });
+  }
+})
+
+app.get("/api/account/transactions", async (req, res) => {
   const { email, phone } = req.query;
 
   if (!email || !phone) {
