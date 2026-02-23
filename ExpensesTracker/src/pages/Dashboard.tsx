@@ -41,7 +41,8 @@ export default function Dashboard() {
             //Get Stats
             const statsRes = await fetch(`/api/account/monthly_stats?user_id=${encodeURIComponent(user_id)}&account_number=${encodeURIComponent(accountNumber)}`);
             const statsData = await statsRes.json();
-            setMonthlyStats(statsData);
+            setMonthlyStats(statsData.stats[0] ?? {});
+            console.log("Using monthlyStats[0]:", statsData.stats[0]);
 
             setLoading(false);
         } catch (error) {
@@ -74,7 +75,7 @@ export default function Dashboard() {
                                 <Stat
                                 key={s.title}
                                 title={s.title}
-                                value={s.format ? s.format(monthlyStats[s.field]) : `${monthlyStats[s.field]}`}
+                                value={(monthlyStats[s.field] ?? 0).toString()}
                                 desc={s.desc}
                                 />
                             ))}

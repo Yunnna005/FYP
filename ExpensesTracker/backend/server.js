@@ -169,9 +169,8 @@ app.get("/api/account/transactions", async (req, res) => {
   }
 });
 
-app.get("/app/account/monthly_stats", async (req, res) => {
-  const {user_id} = req.query;
-  const {account_number} = req.query;
+app.get("/api/account/monthly_stats", async (req, res) => {
+  const {user_id, account_number} = req.query;
 
   if (!user_id) {
     return res.status(400).json({ error: "User ID is required" });
