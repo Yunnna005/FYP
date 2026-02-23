@@ -4,6 +4,7 @@ import Template from "../templates/Template";
 import Table from "../componenets/Table.tsx";
 import Stat from "../componenets/Stat.tsx";
 import { DashboardStats } from "../config/DashboardStats.ts";import CategoryPie from "../componenets/CategoryPie.tsx";
+import MonthlyTrend from "../componenets/MonthlyTrend.tsx";
 ;
 
 
@@ -12,6 +13,7 @@ export default function Dashboard() {
     const [loading, setLoading] = useState(true);
     const [monthlyStats, setMonthlyStats] = useState<any>(null);
     const [categoryData, setCategoryData] = useState<any[]>([]);
+    const [monthlyTrendData, setMonthlyTrendData] = useState<any[]>([]);
 
 
     useEffect(() => {
@@ -43,12 +45,13 @@ export default function Dashboard() {
             //Get Stats
             const statsRes = await fetch(`/api/account/monthly_stats?user_id=${encodeURIComponent(user_id)}&account_number=${encodeURIComponent(accountNumber)}`);
             const statsData = await statsRes.json();
-            const row = statsData.stats[0] ?? {};
-            console.log("Monthly Stats:", row);
-            setMonthlyStats(row);
+            const rows = statsData.stats ?? {};
 
-            if (row.spending_by_category) {
-                const categoryData = Object.entries(row.spending_by_category).map(
+            const latest = rows[0] ?? {};
+            setMonthlyStats(latest);
+
+            if (rows.spending_by_category) {
+                const categoryData = Object.entries(rows.spending_by_category).map(
                     ([category, total]) => ({
                         category,
                         total: Number(total),
@@ -58,6 +61,19 @@ export default function Dashboard() {
                 setCategoryData(categoryData);
             } else {
                 setCategoryData([]);
+            }
+
+            if (!rows || rows.length === 0) {
+                const trendData = rows.map((row: any) => ({
+                    month: new Date(row.month_start_date).toLocaleString("default", {
+                        month: "short",
+                        year: "2-digit",
+                }),
+                monthly_spend: row.total_spent,
+                monthly_received: row.total_received,
+                }));
+
+                setMonthlyTrendData(trendData);
             }
             
             setLoading(false);
@@ -104,6 +120,16 @@ export default function Dashboard() {
                                 <CategoryPie data={categoryData} />
                             ) : (
                                 <p>No category data available.</p>
+                            )}
+                        </div>
+
+                        {/* Monthly Trend Chart */}
+                        <div className="mb-10 bg-white shadow-lg p-6 rounded-lg">
+                            <h2 className="text-xl font-bold mb-4">Monthly Spending vs Income</h2>
+                            {monthlyTrendData.length > 0 ? (
+                                <MonthlyTrend data={monthlyTrendData} />
+                            ) : (
+                                <p>No monthly trend data available.</p>
                             )}
                         </div>
 
