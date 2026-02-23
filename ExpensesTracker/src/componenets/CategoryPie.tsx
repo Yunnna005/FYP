@@ -6,6 +6,7 @@ interface CategoryData {
 }
 
 export default function CategoryPie({ data }: { data: CategoryData[] }) {
+    const COLORS = ['#0088FE', '#00C49F', '#FFBB28', '#FF8042'];
   return (
     <div className="w-full h-80">
       <ResponsiveContainer>
@@ -18,7 +19,7 @@ export default function CategoryPie({ data }: { data: CategoryData[] }) {
             label
           >
             {data.map((entry, index) => (
-              <Cell key={index} />
+              <Cell key={index} fill={COLORS[index % COLORS.length]} />
             ))}
           </Pie>
           <Tooltip />

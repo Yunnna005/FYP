@@ -3,13 +3,15 @@ import { useEffect, useState } from "react";
 import Template from "../templates/Template";
 import Table from "../componenets/Table.tsx";
 import Stat from "../componenets/Stat.tsx";
-import { DashboardStats } from "../config/DashboardStats.ts";
+import { DashboardStats } from "../config/DashboardStats.ts";import CategoryPie from "../componenets/CategoryPie.tsx";
+;
 
 
 export default function Dashboard() {
     const [transactions, setTransactions] = useState<any[]>([]);
     const [loading, setLoading] = useState(true);
     const [monthlyStats, setMonthlyStats] = useState<any>(null);
+    const [categoryData, setCategoryData] = useState<any[]>([]);
 
 
     useEffect(() => {
@@ -41,9 +43,23 @@ export default function Dashboard() {
             //Get Stats
             const statsRes = await fetch(`/api/account/monthly_stats?user_id=${encodeURIComponent(user_id)}&account_number=${encodeURIComponent(accountNumber)}`);
             const statsData = await statsRes.json();
-            setMonthlyStats(statsData.stats[0] ?? {});
-            console.log("Using monthlyStats[0]:", statsData.stats[0]);
+            const row = statsData.stats[0] ?? {};
+            console.log("Monthly Stats:", row);
+            setMonthlyStats(row);
 
+            if (row.spending_by_category) {
+                const categoryData = Object.entries(row.spending_by_category).map(
+                    ([category, total]) => ({
+                        category,
+                        total: Number(total),
+                    })
+                );
+                console.log("Category Data:", categoryData);
+                setCategoryData(categoryData);
+            } else {
+                setCategoryData([]);
+            }
+            
             setLoading(false);
         } catch (error) {
             console.error(error);
@@ -79,6 +95,16 @@ export default function Dashboard() {
                                 desc={s.desc}
                                 />
                             ))}
+                        </div>
+
+                        {/* Category Pie Chart */}
+                        <div className="mb-10 bg-white shadow-lg p-6 rounded-lg">
+                            <h2 className="text-xl font-bold mb-4">Spending by Category</h2>
+                            {categoryData.length > 0 ? (
+                                <CategoryPie data={categoryData} />
+                            ) : (
+                                <p>No category data available.</p>
+                            )}
                         </div>
 
                         {/* Transactions */}
