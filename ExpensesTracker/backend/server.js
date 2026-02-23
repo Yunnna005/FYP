@@ -57,6 +57,26 @@ app.post("/api/item/public_token/exchange", async (req, res) => {
   res.json({ access_token: ACCESS_TOKEN });
 });
 
+app.get("/api/auth", async (req, res) => {
+  try {
+    if (!ACCESS_TOKEN) {
+      return res.status(400).json({ error: "No access token saved" });
+    }
+
+    const response = await client.authGet({
+      access_token: ACCESS_TOKEN,
+    });
+
+    const accountNumber = response.data.numbers.ach.map(item => item.account) || [];
+
+    res.json({ accountNumber });
+  } catch (error) {
+    console.error("Error fetching auth data:", error.response?.data || error);
+    res.status(500).json({ error: "Failed to fetch auth data" });
+  }
+});
+
+//Get account info (type, subtype, starting_balance, currency, meta: name, official_name, mask)
 app.get("/api/accounts", async (req, res) => {
   try {
     if (!ACCESS_TOKEN) {
@@ -74,6 +94,7 @@ app.get("/api/accounts", async (req, res) => {
   }
 });
 
+//Get identity info (names, phone numbers, emails, addresses)
 app.get("/api/identity", async (req, res) => {
   try {
     if (!ACCESS_TOKEN) {
@@ -143,6 +164,23 @@ app.get("/api/account/transactions", async (req, res) => {
   } catch (err) {
     console.error("Error in /api/transactions/owner:", err);
     res.status(500).json({ error: "Failed to fetch transactions" });
+  }
+});
+
+app.get("/app/account/monthly_stats", async (req, res) => {
+  const {user_id} = req.query;
+  const {account_number} = req.query;
+
+  if (!user_id) {
+    return res.status(400).json({ error: "User ID is required" });
+  }
+
+  try {
+    const stats = await getMonthlyStatsByUserId(user_id, account_number);
+    res.json({ stats });
+  } catch (err) {
+    console.error("Error in /api/account/monthly_stats:", err);
+    res.status(500).json({ error: "Failed to fetch monthly stats" });
   }
 });
 

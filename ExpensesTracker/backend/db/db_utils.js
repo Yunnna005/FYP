@@ -33,3 +33,18 @@ export async function getUserByEmailAndPhone(email, phone) {
     throw new Error("Failed to fetch userID");
   }
 }
+
+export async function getMonthlyStatsByUserId(user_id, account_id) {
+  try {
+    const query = `
+      SELECT * 
+     FROM monthly_stats 
+     WHERE user_id = $1 AND account_id = $2 AND month = DATE_TRUNC('month', NOW());`;
+
+    const { rows } = await pool.query(query, [user_id, account_id]);
+    return rows;
+  } catch (error) {
+    console.error("Database query error:", error.message);
+    throw new Error("Failed to fetch monthly stats");
+  }
+}

@@ -15,13 +15,18 @@ export default function Dashboard() {
     useEffect(() => {
     async function loadData() {
         try {
+            //Get Account Number
+            const accountRes = await fetch("/api/auth");
+            const { accountNumber } = await accountRes.json();
+
+            //Get Email and Phone Number
             const res = await fetch("/api/identity/login");
             const { email, phone } = await res.json();
             if (!email || !phone) return;
 
             //Get UserID
             const userRes = await fetch(
-                `/api/user?email=${encodeURIComponent(email)}&phone=${encodeURIComponent(phone)}`
+                `/api/account/user?email=${encodeURIComponent(email)}&phone=${encodeURIComponent(phone)}`
             );
             const { user_id } = await userRes.json();
             if (!user_id) return;
@@ -34,7 +39,7 @@ export default function Dashboard() {
             setTransactions(txData.transactions || []);
 
             //Get Stats
-            const statsRes = await fetch(`/api/account/monthly_stats?user_id=${user_id}`);
+            const statsRes = await fetch(`/api/account/monthly_stats?user_id=${encodeURIComponent(user_id)}&account_number=${encodeURIComponent(accountNumber)}`);
             const statsData = await statsRes.json();
             setMonthlyStats(statsData);
 
