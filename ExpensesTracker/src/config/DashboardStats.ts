@@ -8,7 +8,7 @@ export interface DashboardStat {
 export const DashboardStats: DashboardStat[] = [
   {
     title: "Total Income",
-    field: "total_receive",
+    field: "total_received",
     desc: "All credited transactions",
     format: (v: number) => `$${v.toFixed(2)}`,
   },
