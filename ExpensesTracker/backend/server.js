@@ -2,7 +2,9 @@ import express from "express";
 import cors from "cors";
 import dotenv from "dotenv";
 import { Configuration, PlaidApi, PlaidEnvironments } from "plaid";
-import {getTransactionsByOwner} from "./db/db_utils.js"
+import {getTransactionsByOwner} from "./db/db_utils.js";
+import {getUserByEmailAndPhone} from "./db/db_utils.js";
+import {getMonthlyStatsByUserId} from "./db/db_utils.js";
  
 dotenv.config();
 
@@ -33,7 +35,7 @@ app.post("/api/link/token/create", async (req, res) => {
     const response = await client.linkTokenCreate({
       user: { client_user_id: "userTest" },
       client_name: "Your App",
-      products: ["transactions", "identity"],
+      products: ["auth", "identity"],
       language: "en",
       redirect_uri: null,
       country_codes: ["US"],
