@@ -11,8 +11,8 @@ import {
 
 interface MonthlyData {
   month: string;
-  monthly_spend: string | number;
-  monthly_received: number | string;
+  monthly_spend: number;
+  monthly_received: number;
 }
 
 export default function MonthlyTrend({ data }: { data: MonthlyData[] }) {

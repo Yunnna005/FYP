@@ -5,7 +5,6 @@ import Table from "../componenets/Table.tsx";
 import Stat from "../componenets/Stat.tsx";
 import { DashboardStats } from "../config/DashboardStats.ts";import CategoryPie from "../componenets/CategoryPie.tsx";
 import MonthlyTrend from "../componenets/MonthlyTrend.tsx";
-;
 
 
 export default function Dashboard() {
@@ -50,8 +49,8 @@ export default function Dashboard() {
             const latest = rows[0] ?? {};
             setMonthlyStats(latest);
 
-            if (rows.spending_by_category) {
-                const categoryData = Object.entries(rows.spending_by_category).map(
+            if (latest.spending_by_category) {
+                const categoryData = Object.entries(latest.spending_by_category).map(
                     ([category, total]) => ({
                         category,
                         total: Number(total),
@@ -63,16 +62,20 @@ export default function Dashboard() {
                 setCategoryData([]);
             }
 
-            if (!rows || rows.length === 0) {
-                const trendData = rows.map((row: any) => ({
+            if (rows.length > 0) {
+                const sortedRows = rows.sort((a: any, b: any) => 
+                    new Date(a.month_start_date).getTime() - new Date(b.month_start_date).getTime()
+                );
+
+                const trendData = sortedRows.map((row: any) => ({
                     month: new Date(row.month_start_date).toLocaleString("default", {
                         month: "short",
                         year: "2-digit",
                 }),
-                monthly_spend: row.total_spent,
-                monthly_received: row.total_received,
+                monthly_spend: parseFloat(row.total_spent),
+                monthly_received: parseFloat(row.total_received),
                 }));
-
+                console.log("Trend Data:", trendData);
                 setMonthlyTrendData(trendData);
             }
             
@@ -102,7 +105,7 @@ export default function Dashboard() {
                     ) : (
                     <>
                         {/*Stats Linear*/} 
-                        <div className="flex flex-wrap gap-4 mb-8">
+                        <div className="flex flex-wrap justify-between gap-4 mb-8">
                             {monthlyStats && DashboardStats.map((s) => (
                                 <Stat
                                 key={s.title}
@@ -112,25 +115,26 @@ export default function Dashboard() {
                                 />
                             ))}
                         </div>
+                        <div className="flex flex-wrap justify-evenly gap-5">
+                            {/* Category Pie Chart */}
+                            <div className="flex-1 min-w-[400px] mb-10 bg-white shadow-lg p-6 rounded-lg">
+                                <h2 className="text-xl font-bold mb-4">Spending by Category</h2>
+                                {categoryData.length > 0 ? (
+                                    <CategoryPie data={categoryData} />
+                                ) : (
+                                    <p>No category data available.</p>
+                                )}
+                            </div>
 
-                        {/* Category Pie Chart */}
-                        <div className="mb-10 bg-white shadow-lg p-6 rounded-lg">
-                            <h2 className="text-xl font-bold mb-4">Spending by Category</h2>
-                            {categoryData.length > 0 ? (
-                                <CategoryPie data={categoryData} />
-                            ) : (
-                                <p>No category data available.</p>
-                            )}
-                        </div>
-
-                        {/* Monthly Trend Chart */}
-                        <div className="mb-10 bg-white shadow-lg p-6 rounded-lg">
-                            <h2 className="text-xl font-bold mb-4">Monthly Spending vs Income</h2>
-                            {monthlyTrendData.length > 0 ? (
-                                <MonthlyTrend data={monthlyTrendData} />
-                            ) : (
-                                <p>No monthly trend data available.</p>
-                            )}
+                            {/* Monthly Trend Chart */}
+                            <div className="flex-1 min-w-[400px] mb-10 bg-white shadow-lg p-6 rounded-lg">
+                                <h2 className="text-xl font-bold mb-4">Monthly Spending vs Income</h2>
+                                {monthlyTrendData.length > 0 ? (
+                                    <MonthlyTrend data={monthlyTrendData} />
+                                ) : (
+                                    <p>No monthly trend data available.</p>
+                                )}
+                            </div>
                         </div>
 
                         {/* Transactions */}
