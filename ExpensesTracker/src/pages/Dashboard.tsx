@@ -115,6 +115,7 @@ export default function Dashboard() {
                                 />
                             ))}
                         </div>
+                        
                         <div className="flex flex-wrap justify-evenly gap-5">
                             {/* Category Pie Chart */}
                             <div className="flex-1 min-w-[400px] mb-10 bg-white shadow-lg p-6 rounded-lg">
