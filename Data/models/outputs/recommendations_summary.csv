@@ -1,0 +1,389 @@
+user_id,segment,total_recommendations,high_priority_count,top_rec_type,top_rec_priority,top_rec_message,top_rec_action,is_anomaly,anomaly_score
+USR601Ie,Single-Tasker,5,2,spending_warning,high,Your average transaction amount this month ($52655) is 847% above your usual average ($5562).,Review your recent transactions to identify what changed.,False,20.28
+USR784ar,Healthy Active User,2,0,budget_advice,medium,You spend 527% more than similar users on Gifts ($0 vs peer avg $0/month).,Setting a monthly budget for Gifts could bring your spend in line with peers.,False,10.3
+USR821Id,Single-Tasker,3,1,spending_warning,high,You have 5 unusually large transactions compared to your own average.,Check these transactions — they are significantly larger than your typical spend.,False,1.21
+USR559Pi,Single-Tasker,3,0,spending_warning,medium,Your recent average spend ($759/txn) is 280% higher than similar users ($200/txn).,Consider whether your spending aligns with your financial goals.,False,2.07
+USR200Qr,Single-Tasker,3,0,spending_warning,medium,Your recent average spend ($419/txn) is 109% higher than similar users ($200/txn).,Consider whether your spending aligns with your financial goals.,False,3.08
+USR674rM,Consistent Weekly,2,0,budget_advice,medium,You spend 50% more than similar users on Medical/Dental ($0 vs peer avg $0/month).,Setting a monthly budget for Medical/Dental could bring your spend in line with peers.,False,3.63
+USR240hY,Consistent Weekly,2,0,budget_advice,medium,You spend 160% more than similar users on Housing and Utilities ($0 vs peer avg $0/month).,Setting a monthly budget for Housing and Utilities could bring your spend in line with peers.,False,3.88
+USR778Dk,Consistent Weekly,4,0,spending_warning,medium,Your recent average spend ($2335/txn) is 730% higher than similar users ($281/txn).,Consider whether your spending aligns with your financial goals.,False,3.27
+USR546jz,Consistent Weekly,3,1,spending_warning,high,You have 4 unusually large transactions compared to your own average.,Check these transactions — they are significantly larger than your typical spend.,False,1.69
+USR663xt,Consistent Weekly,4,1,spending_warning,high,You have 4 unusually large transactions compared to your own average.,Check these transactions — they are significantly larger than your typical spend.,False,10.54
+USR661vO,Single-Tasker,3,0,budget_advice,medium,You spend 234% more than similar users on Hobbies ($0 vs peer avg $0/month).,Setting a monthly budget for Hobbies could bring your spend in line with peers.,False,3.25
+USR451OQ,Single-Tasker,6,2,spending_warning,high,Your average transaction amount this month ($111678) is 1967% above your usual average ($5404).,Review your recent transactions to identify what changed.,True,40.26
+USR691Fc,Single-Tasker,3,1,spending_warning,high,You have 3 unusually large transactions compared to your own average.,Check these transactions — they are significantly larger than your typical spend.,False,1.99
+USR479Ei,Single-Tasker,2,0,budget_advice,medium,You spend 150% more than similar users on Gifts ($0 vs peer avg $0/month).,Setting a monthly budget for Gifts could bring your spend in line with peers.,False,3.4
+USR581oW,Single-Tasker,3,0,budget_advice,medium,You spend 200% more than similar users on Fitness ($0 vs peer avg $0/month).,Setting a monthly budget for Fitness could bring your spend in line with peers.,False,6.15
+USR847gv,Single-Tasker,2,0,budget_advice,medium,You spend 320% more than similar users on Gifts ($0 vs peer avg $0/month).,Setting a monthly budget for Gifts could bring your spend in line with peers.,False,2.56
+USR759Fr,Single-Tasker,2,0,budget_advice,medium,You spend 157% more than similar users on Food ($0 vs peer avg $0/month).,Setting a monthly budget for Food could bring your spend in line with peers.,False,8.71
+USR689zf,Consistent Weekly,3,0,spending_warning,medium,Your recent average spend ($464/txn) is 65% higher than similar users ($281/txn).,Consider whether your spending aligns with your financial goals.,False,4.49
+USR007mU,Single-Tasker,3,1,spending_warning,high,You have 4 unusually large transactions compared to your own average.,Check these transactions — they are significantly larger than your typical spend.,False,2.24
+USR491Th,Single-Tasker,4,0,spending_warning,medium,Your recent average spend ($349/txn) is 74% higher than similar users ($200/txn).,Consider whether your spending aligns with your financial goals.,False,6.18
+USR813QZ,Single-Tasker,5,2,spending_warning,high,Your average transaction amount this month ($7470) is 719% above your usual average ($912).,Review your recent transactions to identify what changed.,False,9.29
+USR343dk,Single-Tasker,3,0,spending_warning,medium,Your recent average spend ($2619/txn) is 1210% higher than similar users ($200/txn).,Consider whether your spending aligns with your financial goals.,False,15.44
+USR291BJ,Single-Tasker,3,1,spending_warning,high,You have 4 unusually large transactions compared to your own average.,Check these transactions — they are significantly larger than your typical spend.,False,16.47
+USR335Sx,Single-Tasker,5,2,spending_warning,high,Your average transaction amount this month ($1445) is 339% above your usual average ($329).,Review your recent transactions to identify what changed.,False,1.59
+USR818nO,Healthy Active User,4,1,spending_warning,high,Your average transaction amount this month ($4216) is 60% above your usual average ($2640).,Review your recent transactions to identify what changed.,False,14.67
+USR375sC,Single-Tasker,2,0,budget_advice,medium,You spend 138% more than similar users on Housing and Utilities ($0 vs peer avg $0/month).,Setting a monthly budget for Housing and Utilities could bring your spend in line with peers.,False,15.95
+USR271eY,Single-Tasker,3,0,spending_warning,medium,Your recent average spend ($2587/txn) is 1194% higher than similar users ($200/txn).,Consider whether your spending aligns with your financial goals.,False,8.64
+USR253Hy,Consistent Weekly,3,1,spending_warning,high,You have 4 unusually large transactions compared to your own average.,Check these transactions — they are significantly larger than your typical spend.,False,1.41
+USR944dh,Single-Tasker,4,0,spending_warning,medium,Your recent average spend ($708/txn) is 254% higher than similar users ($200/txn).,Consider whether your spending aligns with your financial goals.,False,12.31
+USR418ju,Single-Tasker,4,0,spending_warning,medium,Your recent average spend ($783/txn) is 291% higher than similar users ($200/txn).,Consider whether your spending aligns with your financial goals.,False,4.37
+USR896kh,Single-Tasker,3,1,spending_warning,high,You have 6 unusually large transactions compared to your own average.,Check these transactions — they are significantly larger than your typical spend.,False,0.02
+USR961UU,Single-Tasker,2,0,budget_advice,medium,You spend 234% more than similar users on Friend Activities ($0 vs peer avg $0/month).,Setting a monthly budget for Friend Activities could bring your spend in line with peers.,False,1.87
+USR324Nf,Single-Tasker,2,0,budget_advice,medium,You spend 425% more than similar users on Personal Hygiene ($0 vs peer avg $0/month).,Setting a monthly budget for Personal Hygiene could bring your spend in line with peers.,False,2.81
+USR500hm,Consistent Weekly,1,0,budget_advice,medium,Your Personal Hygiene spending spiked to 22.0x your usual amount in your highest month.,Consider a monthly cap on Personal Hygiene to avoid these irregular spikes.,False,11.84
+USR539EC,Single-Tasker,4,1,spending_warning,high,You have 3 unusually large transactions compared to your own average.,Check these transactions — they are significantly larger than your typical spend.,False,10.77
+USR053xd,Consistent Weekly,3,1,spending_warning,high,You have 5 unusually large transactions compared to your own average.,Check these transactions — they are significantly larger than your typical spend.,False,1.64
+USR082ip,Consistent Weekly,2,0,budget_advice,medium,You spend 175% more than similar users on Gifts ($0 vs peer avg $0/month).,Setting a monthly budget for Gifts could bring your spend in line with peers.,False,9.47
+USR721Xc,Single-Tasker,3,0,budget_advice,medium,You spend 200% more than similar users on Personal Hygiene ($0 vs peer avg $0/month).,Setting a monthly budget for Personal Hygiene could bring your spend in line with peers.,False,1.28
+USR242VN,Healthy Active User,2,0,budget_advice,medium,You spend 38% more than similar users on Transportation ($0 vs peer avg $0/month).,Setting a monthly budget for Transportation could bring your spend in line with peers.,False,15.1
+USR598GE,Single-Tasker,3,0,spending_warning,medium,Your recent average spend ($2056/txn) is 928% higher than similar users ($200/txn).,Consider whether your spending aligns with your financial goals.,False,5.27
+USR511YG,Consistent Weekly,4,1,spending_warning,high,Your average transaction amount this month ($15893) is 1107% above your usual average ($1317).,Review your recent transactions to identify what changed.,False,15.81
+USR360hy,Single-Tasker,4,1,spending_warning,high,You have 4 unusually large transactions compared to your own average.,Check these transactions — they are significantly larger than your typical spend.,False,0.35
+USR430vt,Single-Tasker,5,2,spending_warning,high,Your average transaction amount this month ($1933) is 339% above your usual average ($440).,Review your recent transactions to identify what changed.,False,1.34
+USR244Uu,Single-Tasker,4,1,spending_warning,high,You have 5 unusually large transactions compared to your own average.,Check these transactions — they are significantly larger than your typical spend.,False,0.77
+USR478AY,Single-Tasker,3,0,spending_warning,medium,Your recent average spend ($1653/txn) is 727% higher than similar users ($200/txn).,Consider whether your spending aligns with your financial goals.,False,3.62
+USR215xz,Single-Tasker,3,1,spending_warning,high,You have 3 unusually large transactions compared to your own average.,Check these transactions — they are significantly larger than your typical spend.,False,0.21
+USR247kd,Single-Tasker,2,0,budget_advice,medium,You spend 206% more than similar users on Hobbies ($0 vs peer avg $0/month).,Setting a monthly budget for Hobbies could bring your spend in line with peers.,False,2.46
+USR207DW,Single-Tasker,4,1,spending_warning,high,Your average transaction amount this month ($8947) is 817% above your usual average ($976).,Review your recent transactions to identify what changed.,False,11.87
+USR258us,Single-Tasker,3,1,spending_warning,high,You have 4 unusually large transactions compared to your own average.,Check these transactions — they are significantly larger than your typical spend.,False,1.05
+USR534tr,Consistent Weekly,3,0,spending_warning,medium,Your recent average spend ($1507/txn) is 436% higher than similar users ($281/txn).,Consider whether your spending aligns with your financial goals.,False,2.59
+USR139BK,Consistent Weekly,3,0,spending_warning,medium,Your recent average spend ($1143/txn) is 306% higher than similar users ($281/txn).,Consider whether your spending aligns with your financial goals.,False,11.87
+USR465GL,Consistent Weekly,3,1,spending_warning,high,You have 5 unusually large transactions compared to your own average.,Check these transactions — they are significantly larger than your typical spend.,False,2.2
+USR628KZ,Consistent Weekly,3,1,spending_warning,high,You have 3 unusually large transactions compared to your own average.,Check these transactions — they are significantly larger than your typical spend.,False,1.55
+USR726Lh,Consistent Weekly,5,2,spending_warning,high,Your average transaction amount this month ($504) is 147% above your usual average ($204).,Review your recent transactions to identify what changed.,False,11.51
+USR423EB,Single-Tasker,3,1,spending_warning,high,You have 3 unusually large transactions compared to your own average.,Check these transactions — they are significantly larger than your typical spend.,False,2.05
+USR380Yw,Healthy Active User,3,1,spending_warning,high,You have 5 unusually large transactions compared to your own average.,Check these transactions — they are significantly larger than your typical spend.,False,3.61
+USR653TK,Single-Tasker,2,0,budget_advice,medium,You spend 342% more than similar users on Hobbies ($0 vs peer avg $0/month).,Setting a monthly budget for Hobbies could bring your spend in line with peers.,False,4.82
+USR271Yo,Single-Tasker,3,1,spending_warning,high,You have 3 unusually large transactions compared to your own average.,Check these transactions — they are significantly larger than your typical spend.,False,1.65
+USR574tK,Single-Tasker,3,1,spending_warning,high,You have 3 unusually large transactions compared to your own average.,Check these transactions — they are significantly larger than your typical spend.,False,1.36
+USR572qw,Single-Tasker,3,1,spending_warning,high,You have 3 unusually large transactions compared to your own average.,Check these transactions — they are significantly larger than your typical spend.,False,9.07
+USR925Mf,Consistent Weekly,5,2,spending_warning,high,Your average transaction amount this month ($1177) is 170% above your usual average ($435).,Review your recent transactions to identify what changed.,False,2.81
+USR201Zu,Consistent Weekly,3,1,spending_warning,high,You have 3 unusually large transactions compared to your own average.,Check these transactions — they are significantly larger than your typical spend.,False,2.29
+USR425DX,Single-Tasker,3,1,spending_warning,high,You have 4 unusually large transactions compared to your own average.,Check these transactions — they are significantly larger than your typical spend.,False,0.94
+USR388wJ,Consistent Weekly,3,0,spending_warning,medium,Your recent average spend ($502/txn) is 78% higher than similar users ($281/txn).,Consider whether your spending aligns with your financial goals.,False,8.18
+USR068Xr,Single-Tasker,3,1,spending_warning,high,You have 3 unusually large transactions compared to your own average.,Check these transactions — they are significantly larger than your typical spend.,False,22.61
+USR223cE,Single-Tasker,3,0,budget_advice,medium,You spend 161% more than similar users on Medical/Dental ($0 vs peer avg $0/month).,Setting a monthly budget for Medical/Dental could bring your spend in line with peers.,False,3.8
+USR031uI,Consistent Weekly,3,0,budget_advice,medium,You spend 156% more than similar users on Travel ($0 vs peer avg $0/month).,Setting a monthly budget for Travel could bring your spend in line with peers.,False,2.02
+USR151Xg,Single-Tasker,4,1,spending_warning,high,You have 3 unusually large transactions compared to your own average.,Check these transactions — they are significantly larger than your typical spend.,False,2.25
+USR013pA,Single-Tasker,3,0,budget_advice,medium,You spend 248% more than similar users on Travel ($0 vs peer avg $0/month).,Setting a monthly budget for Travel could bring your spend in line with peers.,False,7.1
+USR579jO,Consistent Weekly,2,0,budget_advice,medium,You spend 116% more than similar users on Food ($0 vs peer avg $0/month).,Setting a monthly budget for Food could bring your spend in line with peers.,False,14.35
+USR621BM,Single-Tasker,3,0,spending_warning,medium,Your recent average spend ($552/txn) is 176% higher than similar users ($200/txn).,Consider whether your spending aligns with your financial goals.,False,1.16
+USR592gD,Single-Tasker,2,0,budget_advice,medium,You spend 186% more than similar users on Medical/Dental ($0 vs peer avg $0/month).,Setting a monthly budget for Medical/Dental could bring your spend in line with peers.,False,1.15
+USR140si,Single-Tasker,4,1,savings_suggestion,high,Your current balance is low ($185.36).,Consider reducing discretionary spending this month to build a buffer.,False,2.67
+USR596jh,Healthy Active User,1,0,budget_advice,medium,Your Friend Activities spending spiked to 11.0x your usual amount in your highest month.,Consider a monthly cap on Friend Activities to avoid these irregular spikes.,False,3.7
+USR691El,Consistent Weekly,2,0,budget_advice,medium,You spend 63% more than similar users on Fitness ($0 vs peer avg $0/month).,Setting a monthly budget for Fitness could bring your spend in line with peers.,False,9.4
+USR062rU,Consistent Weekly,3,1,spending_warning,high,You have 3 unusually large transactions compared to your own average.,Check these transactions — they are significantly larger than your typical spend.,False,1.09
+USR628kq,Consistent Weekly,3,0,spending_warning,medium,Your recent average spend ($666/txn) is 137% higher than similar users ($281/txn).,Consider whether your spending aligns with your financial goals.,False,6.57
+USR421bB,Single-Tasker,5,1,spending_warning,high,Your average transaction amount this month ($609) is 58% above your usual average ($385).,Review your recent transactions to identify what changed.,False,1.17
+USR376hP,Single-Tasker,5,2,spending_warning,high,Your average transaction amount this month ($640) is 100% above your usual average ($321).,Review your recent transactions to identify what changed.,False,0.63
+USR001YL,Consistent Weekly,4,0,spending_warning,medium,Your recent average spend ($435/txn) is 55% higher than similar users ($281/txn).,Consider whether your spending aligns with your financial goals.,False,4.4
+USR756hT,Single-Tasker,2,0,budget_advice,medium,You spend 233% more than similar users on Travel ($0 vs peer avg $0/month).,Setting a monthly budget for Travel could bring your spend in line with peers.,False,10.56
+USR148zM,Single-Tasker,3,1,spending_warning,high,You have 4 unusually large transactions compared to your own average.,Check these transactions — they are significantly larger than your typical spend.,False,0.64
+USR496UB,Consistent Weekly,5,2,spending_warning,high,Your average transaction amount this month ($1193) is 149% above your usual average ($479).,Review your recent transactions to identify what changed.,False,5.91
+USR739ei,Single-Tasker,4,1,spending_warning,high,You have 4 unusually large transactions compared to your own average.,Check these transactions — they are significantly larger than your typical spend.,False,3.71
+USR461nX,Single-Tasker,3,0,spending_warning,medium,Your recent average spend ($1236/txn) is 518% higher than similar users ($200/txn).,Consider whether your spending aligns with your financial goals.,False,6.35
+USR313nW,Single-Tasker,5,2,spending_warning,high,Your average transaction amount this month ($712) is 108% above your usual average ($342).,Review your recent transactions to identify what changed.,False,1.69
+USR626gZ,Single-Tasker,3,0,spending_warning,medium,Your recent average spend ($347/txn) is 74% higher than similar users ($200/txn).,Consider whether your spending aligns with your financial goals.,False,1.96
+USR746kv,Consistent Weekly,3,1,spending_warning,high,You have 3 unusually large transactions compared to your own average.,Check these transactions — they are significantly larger than your typical spend.,False,1.57
+USR632NW,Single-Tasker,3,0,spending_warning,medium,Your recent average spend ($322/txn) is 61% higher than similar users ($200/txn).,Consider whether your spending aligns with your financial goals.,False,3.45
+USR765RD,Healthy Active User,3,1,spending_warning,high,You have 4 unusually large transactions compared to your own average.,Check these transactions — they are significantly larger than your typical spend.,False,4.85
+USR756uA,Single-Tasker,3,1,spending_warning,high,You have 4 unusually large transactions compared to your own average.,Check these transactions — they are significantly larger than your typical spend.,False,0.56
+USR619km,Healthy Active User,2,0,budget_advice,medium,You spend 424% more than similar users on Food ($0 vs peer avg $0/month).,Setting a monthly budget for Food could bring your spend in line with peers.,False,4.8
+USR040Ko,Single-Tasker,3,1,spending_warning,high,You have 4 unusually large transactions compared to your own average.,Check these transactions — they are significantly larger than your typical spend.,False,0.4
+USR268Dy,Single-Tasker,3,0,budget_advice,medium,You spend 250% more than similar users on Travel ($0 vs peer avg $0/month).,Setting a monthly budget for Travel could bring your spend in line with peers.,False,5.23
+USR708ic,Single-Tasker,5,2,spending_warning,high,Your average transaction amount this month ($1046) is 142% above your usual average ($432).,Review your recent transactions to identify what changed.,False,1.89
+USR737zJ,Single-Tasker,2,0,budget_advice,medium,You spend 264% more than similar users on Housing and Utilities ($0 vs peer avg $0/month).,Setting a monthly budget for Housing and Utilities could bring your spend in line with peers.,False,0.23
+USR074qk,Single-Tasker,3,0,budget_advice,medium,You spend 75% more than similar users on Food ($0 vs peer avg $0/month).,Setting a monthly budget for Food could bring your spend in line with peers.,False,1.13
+USR552iz,Single-Tasker,3,0,budget_advice,medium,You spend 157% more than similar users on Food ($0 vs peer avg $0/month).,Setting a monthly budget for Food could bring your spend in line with peers.,False,2.44
+USR383GT,Single-Tasker,3,1,spending_warning,high,You have 4 unusually large transactions compared to your own average.,Check these transactions — they are significantly larger than your typical spend.,False,1.44
+USR605Px,Consistent Weekly,2,0,budget_advice,medium,You spend 150% more than similar users on Personal Hygiene ($0 vs peer avg $0/month).,Setting a monthly budget for Personal Hygiene could bring your spend in line with peers.,False,3.76
+USR494kt,Single-Tasker,3,0,budget_advice,medium,You spend 89% more than similar users on Fitness ($0 vs peer avg $0/month).,Setting a monthly budget for Fitness could bring your spend in line with peers.,False,16.89
+USR774PR,Single-Tasker,3,1,spending_warning,high,You have 3 unusually large transactions compared to your own average.,Check these transactions — they are significantly larger than your typical spend.,False,3.38
+USR990MJ,Healthy Active User,2,0,budget_advice,medium,You spend 49% more than similar users on Fitness ($0 vs peer avg $0/month).,Setting a monthly budget for Fitness could bring your spend in line with peers.,False,11.53
+USR651Yc,Single-Tasker,3,1,spending_warning,high,You have 3 unusually large transactions compared to your own average.,Check these transactions — they are significantly larger than your typical spend.,False,1.74
+USR996DQ,Healthy Active User,3,1,spending_warning,high,You have 5 unusually large transactions compared to your own average.,Check these transactions — they are significantly larger than your typical spend.,False,4.92
+USR270YP,Single-Tasker,3,0,spending_warning,medium,Your recent average spend ($603/txn) is 201% higher than similar users ($200/txn).,Consider whether your spending aligns with your financial goals.,False,20.0
+USR605nX,Consistent Weekly,3,1,spending_warning,high,You have 4 unusually large transactions compared to your own average.,Check these transactions — they are significantly larger than your typical spend.,False,1.68
+USR793Ca,Healthy Active User,2,0,budget_advice,medium,Your Medical/Dental spending spiked to 19.0x your usual amount in your highest month.,Consider a monthly cap on Medical/Dental to avoid these irregular spikes.,False,13.7
+USR100df,Consistent Weekly,3,0,budget_advice,medium,You spend 92% more than similar users on Gifts ($0 vs peer avg $0/month).,Setting a monthly budget for Gifts could bring your spend in line with peers.,False,10.56
+USR840Fs,Healthy Active User,3,1,spending_warning,high,You have 4 unusually large transactions compared to your own average.,Check these transactions — they are significantly larger than your typical spend.,False,2.23
+USR472to,Single-Tasker,2,0,budget_advice,medium,You spend 215% more than similar users on Friend Activities ($0 vs peer avg $0/month).,Setting a monthly budget for Friend Activities could bring your spend in line with peers.,False,4.88
+USR847Vu,Single-Tasker,4,1,spending_warning,high,You have 4 unusually large transactions compared to your own average.,Check these transactions — they are significantly larger than your typical spend.,False,0.14
+USR932HS,Single-Tasker,3,0,spending_warning,medium,Your recent average spend ($511/txn) is 156% higher than similar users ($200/txn).,Consider whether your spending aligns with your financial goals.,False,4.38
+USR646Eg,Consistent Weekly,4,1,spending_warning,high,Your average transaction amount this month ($56534) is 1373% above your usual average ($3838).,Review your recent transactions to identify what changed.,False,30.24
+USR258SD,Healthy Active User,3,0,budget_advice,medium,You spend 283% more than similar users on Housing and Utilities ($0 vs peer avg $0/month).,Setting a monthly budget for Housing and Utilities could bring your spend in line with peers.,False,6.26
+USR465Of,Consistent Weekly,3,1,spending_warning,high,You have 5 unusually large transactions compared to your own average.,Check these transactions — they are significantly larger than your typical spend.,False,1.16
+USR556jk,Single-Tasker,3,1,spending_warning,high,You have 4 unusually large transactions compared to your own average.,Check these transactions — they are significantly larger than your typical spend.,False,1.0
+USR886vk,Consistent Weekly,2,0,budget_advice,medium,You spend 63% more than similar users on Travel ($0 vs peer avg $0/month).,Setting a monthly budget for Travel could bring your spend in line with peers.,False,9.39
+USR372Mt,Single-Tasker,2,0,budget_advice,medium,You spend 157% more than similar users on Food ($0 vs peer avg $0/month).,Setting a monthly budget for Food could bring your spend in line with peers.,False,2.68
+USR834PN,Consistent Weekly,2,0,budget_advice,medium,You spend 95% more than similar users on Housing and Utilities ($0 vs peer avg $0/month).,Setting a monthly budget for Housing and Utilities could bring your spend in line with peers.,False,15.07
+USR129NG,Single-Tasker,2,0,budget_advice,medium,You spend 265% more than similar users on Hobbies ($0 vs peer avg $0/month).,Setting a monthly budget for Hobbies could bring your spend in line with peers.,False,3.11
+USR401fn,Single-Tasker,3,1,spending_warning,high,You have 4 unusually large transactions compared to your own average.,Check these transactions — they are significantly larger than your typical spend.,False,0.87
+USR297tJ,Single-Tasker,2,0,budget_advice,medium,You spend 209% more than similar users on Food ($0 vs peer avg $0/month).,Setting a monthly budget for Food could bring your spend in line with peers.,False,1.56
+USR993dr,Consistent Weekly,3,1,spending_warning,high,You have 3 unusually large transactions compared to your own average.,Check these transactions — they are significantly larger than your typical spend.,False,11.32
+USR249de,Single-Tasker,3,1,spending_warning,high,You have 4 unusually large transactions compared to your own average.,Check these transactions — they are significantly larger than your typical spend.,False,0.15
+USR862eI,Single-Tasker,2,0,budget_advice,medium,You spend 350% more than similar users on Personal Hygiene ($0 vs peer avg $0/month).,Setting a monthly budget for Personal Hygiene could bring your spend in line with peers.,False,2.5
+USR489ka,Single-Tasker,5,1,spending_warning,high,Your average transaction amount this month ($14859) is 1013% above your usual average ($1335).,Review your recent transactions to identify what changed.,False,16.05
+USR936rw,Healthy Active User,3,0,budget_advice,medium,You spend 660% more than similar users on Medical/Dental ($0 vs peer avg $0/month).,Setting a monthly budget for Medical/Dental could bring your spend in line with peers.,False,4.18
+USR981Is,Single-Tasker,4,1,spending_warning,high,Your average transaction amount this month ($2371) is 91% above your usual average ($1244).,Review your recent transactions to identify what changed.,False,2.06
+USR169XO,Single-Tasker,3,1,spending_warning,high,You have 4 unusually large transactions compared to your own average.,Check these transactions — they are significantly larger than your typical spend.,False,0.39
+USR885xH,Single-Tasker,4,1,spending_warning,high,Your average transaction amount this month ($649) is 110% above your usual average ($308).,Review your recent transactions to identify what changed.,False,0.76
+USR104NK,Consistent Weekly,3,0,budget_advice,medium,You spend 198% more than similar users on Travel ($0 vs peer avg $0/month).,Setting a monthly budget for Travel could bring your spend in line with peers.,False,3.81
+USR828eU,Healthy Active User,2,0,budget_advice,medium,You spend 445% more than similar users on Friend Activities ($0 vs peer avg $0/month).,Setting a monthly budget for Friend Activities could bring your spend in line with peers.,False,6.68
+USR689HM,Single-Tasker,3,0,spending_warning,medium,Your recent average spend ($1233/txn) is 517% higher than similar users ($200/txn).,Consider whether your spending aligns with your financial goals.,False,4.98
+USR654ba,Healthy Active User,1,0,budget_advice,medium,Your Gifts spending spiked to 23.0x your usual amount in your highest month.,Consider a monthly cap on Gifts to avoid these irregular spikes.,False,20.44
+USR725fj,Single-Tasker,4,1,spending_warning,high,You have 3 unusually large transactions compared to your own average.,Check these transactions — they are significantly larger than your typical spend.,False,4.26
+USR703am,Consistent Weekly,4,1,spending_warning,high,Your average transaction amount this month ($467) is 67% above your usual average ($280).,Review your recent transactions to identify what changed.,False,2.02
+USR704Np,Consistent Weekly,3,0,spending_warning,medium,Your recent average spend ($875/txn) is 211% higher than similar users ($281/txn).,Consider whether your spending aligns with your financial goals.,False,3.27
+USR990wn,Consistent Weekly,4,1,spending_warning,high,Your average transaction amount this month ($29043) is 1415% above your usual average ($1917).,Review your recent transactions to identify what changed.,False,22.05
+USR557yC,Consistent Weekly,4,2,spending_warning,high,Your average transaction amount this month ($389) is 61% above your usual average ($242).,Review your recent transactions to identify what changed.,False,0.8
+USR165jr,Single-Tasker,5,2,spending_warning,high,Your average transaction amount this month ($433) is 71% above your usual average ($254).,Review your recent transactions to identify what changed.,False,0.16
+USR203qJ,Single-Tasker,2,0,budget_advice,medium,You spend 311% more than similar users on Hobbies ($0 vs peer avg $0/month).,Setting a monthly budget for Hobbies could bring your spend in line with peers.,False,1.91
+USR677Eb,Single-Tasker,3,0,spending_warning,medium,Your recent average spend ($673/txn) is 236% higher than similar users ($200/txn).,Consider whether your spending aligns with your financial goals.,False,2.95
+USR848ei,Single-Tasker,3,0,budget_advice,medium,You spend 250% more than similar users on Hobbies ($0 vs peer avg $0/month).,Setting a monthly budget for Hobbies could bring your spend in line with peers.,False,2.19
+USR718eU,Consistent Weekly,3,1,spending_warning,high,You have 3 unusually large transactions compared to your own average.,Check these transactions — they are significantly larger than your typical spend.,False,0.99
+USR162th,Healthy Active User,2,0,budget_advice,medium,You spend 776% more than similar users on Gifts ($0 vs peer avg $0/month).,Setting a monthly budget for Gifts could bring your spend in line with peers.,False,4.5
+USR279gH,Single-Tasker,3,1,spending_warning,high,You have 4 unusually large transactions compared to your own average.,Check these transactions — they are significantly larger than your typical spend.,False,0.35
+USR066Hw,Consistent Weekly,3,0,budget_advice,medium,You spend 84% more than similar users on Medical/Dental ($0 vs peer avg $0/month).,Setting a monthly budget for Medical/Dental could bring your spend in line with peers.,False,7.4
+USR139QE,Consistent Weekly,3,1,spending_warning,high,You have 5 unusually large transactions compared to your own average.,Check these transactions — they are significantly larger than your typical spend.,False,2.08
+USR317Xw,Consistent Weekly,3,1,spending_warning,high,You have 3 unusually large transactions compared to your own average.,Check these transactions — they are significantly larger than your typical spend.,False,11.15
+USR866Vy,Single-Tasker,3,0,budget_advice,medium,You spend 40% more than similar users on Food ($0 vs peer avg $0/month).,Setting a monthly budget for Food could bring your spend in line with peers.,False,3.0
+USR672oM,Single-Tasker,3,0,spending_warning,medium,Your recent average spend ($715/txn) is 258% higher than similar users ($200/txn).,Consider whether your spending aligns with your financial goals.,False,2.83
+USR437KX,Single-Tasker,2,0,budget_advice,medium,You spend 338% more than similar users on Gifts ($0 vs peer avg $0/month).,Setting a monthly budget for Gifts could bring your spend in line with peers.,False,3.81
+USR415QQ,Single-Tasker,3,1,spending_warning,high,You have 4 unusually large transactions compared to your own average.,Check these transactions — they are significantly larger than your typical spend.,False,0.09
+USR332Yp,Consistent Weekly,2,0,budget_advice,medium,You spend 67% more than similar users on Friend Activities ($0 vs peer avg $0/month).,Setting a monthly budget for Friend Activities could bring your spend in line with peers.,False,2.23
+USR598Hk,Single-Tasker,3,0,spending_warning,medium,Your recent average spend ($1029/txn) is 414% higher than similar users ($200/txn).,Consider whether your spending aligns with your financial goals.,False,2.41
+USR726VM,Single-Tasker,3,0,budget_advice,medium,You spend 204% more than similar users on Travel ($0 vs peer avg $0/month).,Setting a monthly budget for Travel could bring your spend in line with peers.,False,2.1
+USR059hG,Single-Tasker,3,1,spending_warning,high,You have 3 unusually large transactions compared to your own average.,Check these transactions — they are significantly larger than your typical spend.,False,0.17
+USR843Yq,Single-Tasker,2,0,budget_advice,medium,You spend 233% more than similar users on Medical/Dental ($0 vs peer avg $0/month).,Setting a monthly budget for Medical/Dental could bring your spend in line with peers.,False,0.27
+USR473tw,Single-Tasker,2,0,budget_advice,medium,You spend 275% more than similar users on Housing and Utilities ($0 vs peer avg $0/month).,Setting a monthly budget for Housing and Utilities could bring your spend in line with peers.,False,4.63
+USR146jK,Single-Tasker,2,0,budget_advice,medium,You spend 150% more than similar users on Medical/Dental ($0 vs peer avg $0/month).,Setting a monthly budget for Medical/Dental could bring your spend in line with peers.,False,0.49
+USR785nU,Single-Tasker,6,2,spending_warning,high,Your average transaction amount this month ($736) is 136% above your usual average ($312).,Review your recent transactions to identify what changed.,False,0.18
+USR102Ib,Consistent Weekly,3,1,spending_warning,high,You have 3 unusually large transactions compared to your own average.,Check these transactions — they are significantly larger than your typical spend.,False,13.24
+USR350bh,Single-Tasker,3,1,spending_warning,high,You have 4 unusually large transactions compared to your own average.,Check these transactions — they are significantly larger than your typical spend.,False,2.19
+USR331Xb,Single-Tasker,3,0,spending_warning,medium,Your recent average spend ($571/txn) is 186% higher than similar users ($200/txn).,Consider whether your spending aligns with your financial goals.,False,1.4
+USR723TN,Single-Tasker,3,1,spending_warning,high,You have 4 unusually large transactions compared to your own average.,Check these transactions — they are significantly larger than your typical spend.,False,0.07
+USR395Ke,Single-Tasker,2,0,budget_advice,medium,You spend 291% more than similar users on Travel ($0 vs peer avg $0/month).,Setting a monthly budget for Travel could bring your spend in line with peers.,False,9.42
+USR421oQ,Consistent Weekly,5,2,spending_warning,high,Your average transaction amount this month ($48544) is 503% above your usual average ($8055).,Review your recent transactions to identify what changed.,False,31.28
+USR698Vo,Single-Tasker,3,0,budget_advice,medium,You spend 120% more than similar users on Food ($0 vs peer avg $0/month).,Setting a monthly budget for Food could bring your spend in line with peers.,False,1.32
+USR951HI,Consistent Weekly,4,1,spending_warning,high,You have 5 unusually large transactions compared to your own average.,Check these transactions — they are significantly larger than your typical spend.,False,3.0
+USR495Vi,Single-Tasker,2,0,budget_advice,medium,You spend 227% more than similar users on Fitness ($0 vs peer avg $0/month).,Setting a monthly budget for Fitness could bring your spend in line with peers.,False,11.15
+USR466ol,Single-Tasker,3,0,spending_warning,medium,Your recent average spend ($693/txn) is 247% higher than similar users ($200/txn).,Consider whether your spending aligns with your financial goals.,False,2.7
+USR298ko,Consistent Weekly,2,0,budget_advice,medium,You spend 173% more than similar users on Food ($0 vs peer avg $0/month).,Setting a monthly budget for Food could bring your spend in line with peers.,False,4.74
+USR914Gc,Healthy Active User,5,1,spending_warning,high,Your average transaction amount this month ($29544) is 1424% above your usual average ($1939).,Review your recent transactions to identify what changed.,False,24.49
+USR310Wm,Consistent Weekly,2,0,budget_advice,medium,You spend 112% more than similar users on Friend Activities ($0 vs peer avg $0/month).,Setting a monthly budget for Friend Activities could bring your spend in line with peers.,False,9.18
+USR199CW,Consistent Weekly,3,1,spending_warning,high,You have 3 unusually large transactions compared to your own average.,Check these transactions — they are significantly larger than your typical spend.,False,3.07
+USR538ia,Consistent Weekly,5,2,spending_warning,high,Your average transaction amount this month ($695) is 134% above your usual average ($298).,Review your recent transactions to identify what changed.,False,12.34
+USR272Ng,Single-Tasker,3,1,spending_warning,high,You have 3 unusually large transactions compared to your own average.,Check these transactions — they are significantly larger than your typical spend.,False,2.87
+USR757AI,Consistent Weekly,2,0,budget_advice,medium,You spend 53% more than similar users on Personal Hygiene ($0 vs peer avg $0/month).,Setting a monthly budget for Personal Hygiene could bring your spend in line with peers.,False,3.95
+USR895fU,Consistent Weekly,2,0,budget_advice,medium,You spend 37% more than similar users on Subscriptions ($0 vs peer avg $0/month).,Setting a monthly budget for Subscriptions could bring your spend in line with peers.,False,13.03
+USR009qR,Single-Tasker,3,1,spending_warning,high,You have 4 unusually large transactions compared to your own average.,Check these transactions — they are significantly larger than your typical spend.,False,1.41
+USR197Mx,Consistent Weekly,3,0,budget_advice,medium,You spend 95% more than similar users on Personal Hygiene ($0 vs peer avg $0/month).,Setting a monthly budget for Personal Hygiene could bring your spend in line with peers.,False,3.85
+USR926hk,Consistent Weekly,5,2,spending_warning,high,Your average transaction amount this month ($2381) is 388% above your usual average ($488).,Review your recent transactions to identify what changed.,False,2.1
+USR832EJ,Consistent Weekly,4,0,spending_warning,medium,Your recent average spend ($449/txn) is 60% higher than similar users ($281/txn).,Consider whether your spending aligns with your financial goals.,False,3.58
+USR803YO,Consistent Weekly,4,0,spending_warning,medium,Your recent average spend ($431/txn) is 53% higher than similar users ($281/txn).,Consider whether your spending aligns with your financial goals.,False,3.67
+USR489hA,Consistent Weekly,3,0,budget_advice,medium,You spend 123% more than similar users on Transportation ($0 vs peer avg $0/month).,Setting a monthly budget for Transportation could bring your spend in line with peers.,False,10.38
+USR587rm,Consistent Weekly,3,1,spending_warning,high,You have 4 unusually large transactions compared to your own average.,Check these transactions — they are significantly larger than your typical spend.,False,1.69
+USR103fp,Healthy Active User,2,0,budget_advice,medium,You spend 567% more than similar users on Friend Activities ($0 vs peer avg $0/month).,Setting a monthly budget for Friend Activities could bring your spend in line with peers.,False,15.19
+USR710BJ,Single-Tasker,3,0,spending_warning,medium,Your recent average spend ($449/txn) is 125% higher than similar users ($200/txn).,Consider whether your spending aligns with your financial goals.,False,10.93
+USR964lF,Single-Tasker,6,2,spending_warning,high,Your average transaction amount this month ($1320) is 183% above your usual average ($466).,Review your recent transactions to identify what changed.,False,4.15
+USR901Hl,Single-Tasker,3,0,budget_advice,medium,You spend 400% more than similar users on Travel ($0 vs peer avg $0/month).,Setting a monthly budget for Travel could bring your spend in line with peers.,False,4.44
+USR157Ok,Single-Tasker,2,0,budget_advice,medium,You spend 179% more than similar users on Food ($0 vs peer avg $0/month).,Setting a monthly budget for Food could bring your spend in line with peers.,False,3.39
+USR640RH,Consistent Weekly,3,0,spending_warning,medium,Your recent average spend ($984/txn) is 250% higher than similar users ($281/txn).,Consider whether your spending aligns with your financial goals.,False,12.69
+USR953VW,Single-Tasker,3,0,budget_advice,medium,You spend 200% more than similar users on Friend Activities ($0 vs peer avg $0/month).,Setting a monthly budget for Friend Activities could bring your spend in line with peers.,False,3.24
+USR155Ld,Consistent Weekly,5,1,spending_warning,high,Your average transaction amount this month ($11535) is 131% above your usual average ($5003).,Review your recent transactions to identify what changed.,False,10.62
+USR979Po,Single-Tasker,5,2,spending_warning,high,Your average transaction amount this month ($870) is 252% above your usual average ($247).,Review your recent transactions to identify what changed.,False,1.25
+USR977PC,Single-Tasker,2,0,budget_advice,medium,You spend 144% more than similar users on Food ($0 vs peer avg $0/month).,Setting a monthly budget for Food could bring your spend in line with peers.,False,4.04
+USR985cj,Single-Tasker,3,0,spending_warning,medium,Your recent average spend ($702/txn) is 251% higher than similar users ($200/txn).,Consider whether your spending aligns with your financial goals.,False,6.63
+USR548Uw,Single-Tasker,3,0,spending_warning,medium,Your recent average spend ($593/txn) is 196% higher than similar users ($200/txn).,Consider whether your spending aligns with your financial goals.,False,3.97
+USR321bf,Single-Tasker,3,1,spending_warning,high,You have 6 unusually large transactions compared to your own average.,Check these transactions — they are significantly larger than your typical spend.,False,1.08
+USR329IV,Single-Tasker,3,2,spending_warning,high,You have 24 unusually large transactions compared to your own average.,Check these transactions — they are significantly larger than your typical spend.,False,23.25
+USR470Uv,Single-Tasker,1,0,behavioral_nudge,low,You shop at 0 unique merchants — similar users visit 0 on average.,You may be overly concentrated with a few merchants. Exploring alternatives could save money.,False,6.19
+USR557Nb,Single-Tasker,1,0,spending_warning,medium,Your recent average spend ($1000/txn) is 400% higher than similar users ($200/txn).,Consider whether your spending aligns with your financial goals.,False,3.04
+USR888CC,Healthy Active User,2,0,budget_advice,medium,You spend 630% more than similar users on Fitness ($2 vs peer avg $0/month).,Setting a monthly budget for Fitness could bring your spend in line with peers.,False,12.11
+USR101Ec,Single-Tasker,1,0,spending_warning,medium,Your recent average spend ($5850/txn) is 2825% higher than similar users ($200/txn).,Consider whether your spending aligns with your financial goals.,False,17.04
+USR277yT,Low Activity/Trial,0,0,,,,,False,12.5
+USR890mz,Low Activity/Trial,0,0,,,,,False,8.1
+USR346Lq,Low Activity/Trial,0,0,,,,,False,9.42
+USR587Gv,Low Activity/Trial,0,0,,,,,False,8.56
+USR542bK,Low Activity/Trial,0,0,,,,,False,4.67
+USR037Lk,Low Activity/Trial,0,0,,,,,False,14.23
+USR076aO,Low Activity/Trial,0,0,,,,,False,4.71
+USR542rd,Single-Tasker,3,2,spending_warning,high,You have 24 unusually large transactions compared to your own average.,Check these transactions — they are significantly larger than your typical spend.,False,22.49
+USR628FF,Single-Tasker,1,0,behavioral_nudge,low,You shop at 0 unique merchants — similar users visit 0 on average.,You may be overly concentrated with a few merchants. Exploring alternatives could save money.,False,6.19
+USR981sU,Single-Tasker,1,0,spending_warning,medium,Your recent average spend ($1000/txn) is 400% higher than similar users ($200/txn).,Consider whether your spending aligns with your financial goals.,False,3.04
+USR138nO,Healthy Active User,2,0,budget_advice,medium,You spend 630% more than similar users on Fitness ($2 vs peer avg $0/month).,Setting a monthly budget for Fitness could bring your spend in line with peers.,False,12.11
+USR352dx,Single-Tasker,1,0,spending_warning,medium,Your recent average spend ($5850/txn) is 2825% higher than similar users ($200/txn).,Consider whether your spending aligns with your financial goals.,False,17.04
+USR465JE,Low Activity/Trial,0,0,,,,,False,12.5
+USR637Ps,Low Activity/Trial,0,0,,,,,False,8.1
+USR958Ub,Low Activity/Trial,0,0,,,,,False,9.42
+USR432HO,Low Activity/Trial,0,0,,,,,False,8.56
+USR600iP,Low Activity/Trial,0,0,,,,,False,4.67
+USR702jw,Low Activity/Trial,0,0,,,,,False,14.23
+USR967NT,Low Activity/Trial,0,0,,,,,False,4.71
+USR761gu,Single-Tasker,3,2,spending_warning,high,You have 24 unusually large transactions compared to your own average.,Check these transactions — they are significantly larger than your typical spend.,False,22.49
+USR940yP,Single-Tasker,1,0,behavioral_nudge,low,You shop at 0 unique merchants — similar users visit 0 on average.,You may be overly concentrated with a few merchants. Exploring alternatives could save money.,False,6.19
+USR721Sq,Single-Tasker,1,0,spending_warning,medium,Your recent average spend ($1000/txn) is 400% higher than similar users ($200/txn).,Consider whether your spending aligns with your financial goals.,False,3.04
+USR051Ap,Healthy Active User,2,0,budget_advice,medium,You spend 630% more than similar users on Fitness ($2 vs peer avg $0/month).,Setting a monthly budget for Fitness could bring your spend in line with peers.,False,12.11
+USR525bL,Single-Tasker,1,0,spending_warning,medium,Your recent average spend ($5850/txn) is 2825% higher than similar users ($200/txn).,Consider whether your spending aligns with your financial goals.,False,17.04
+USR981TN,Low Activity/Trial,0,0,,,,,False,12.5
+USR375UA,Low Activity/Trial,0,0,,,,,False,8.1
+USR668BV,Low Activity/Trial,0,0,,,,,False,9.42
+USR056dz,Low Activity/Trial,0,0,,,,,False,8.56
+USR678Jt,Low Activity/Trial,0,0,,,,,False,4.67
+USR745Bz,Low Activity/Trial,0,0,,,,,False,14.23
+USR625kR,Low Activity/Trial,0,0,,,,,False,4.71
+USR398kh,Single-Tasker,3,2,spending_warning,high,You have 24 unusually large transactions compared to your own average.,Check these transactions — they are significantly larger than your typical spend.,False,22.49
+USR986Sg,Single-Tasker,1,0,behavioral_nudge,low,You shop at 0 unique merchants — similar users visit 0 on average.,You may be overly concentrated with a few merchants. Exploring alternatives could save money.,False,6.19
+USR272FG,Single-Tasker,1,0,spending_warning,medium,Your recent average spend ($1000/txn) is 400% higher than similar users ($200/txn).,Consider whether your spending aligns with your financial goals.,False,3.04
+USR907oy,Healthy Active User,2,0,budget_advice,medium,You spend 630% more than similar users on Fitness ($2 vs peer avg $0/month).,Setting a monthly budget for Fitness could bring your spend in line with peers.,False,12.11
+USR678LY,Single-Tasker,1,0,spending_warning,medium,Your recent average spend ($5850/txn) is 2825% higher than similar users ($200/txn).,Consider whether your spending aligns with your financial goals.,False,17.04
+USR626bp,Low Activity/Trial,0,0,,,,,False,12.5
+USR030tI,Low Activity/Trial,0,0,,,,,False,8.1
+USR703hK,Low Activity/Trial,0,0,,,,,False,9.42
+USR401gL,Low Activity/Trial,0,0,,,,,False,8.56
+USR277dW,Low Activity/Trial,0,0,,,,,False,4.67
+USR514qc,Low Activity/Trial,0,0,,,,,False,14.23
+USR259ou,Low Activity/Trial,0,0,,,,,False,4.71
+USR340wo,High-Intensity User,2,2,spending_warning,high,You have 14 unusually large transactions compared to your own average.,Check these transactions — they are significantly larger than your typical spend.,False,48.96
+USR471zI,Single-Tasker,1,0,behavioral_nudge,low,100% of your total spend happens on weekends.,Weekend spending patterns often include more impulse purchases. Planning ahead could reduce costs.,False,15.81
+USR514Mj,Single-Tasker,1,0,spending_warning,medium,Your recent average spend ($1000/txn) is 400% higher than similar users ($200/txn).,Consider whether your spending aligns with your financial goals.,False,14.0
+USR486wN,Healthy Active User,1,0,budget_advice,medium,You spend 280% more than similar users on Transportation ($1 vs peer avg $0/month).,Setting a monthly budget for Transportation could bring your spend in line with peers.,False,17.09
+USR707cn,Low Activity/Trial,0,0,,,,,False,8.56
+USR229Pm,Low Activity/Trial,0,0,,,,,False,4.71
+USR844Zm,Single-Tasker,3,2,spending_warning,high,You have 24 unusually large transactions compared to your own average.,Check these transactions — they are significantly larger than your typical spend.,False,23.25
+USR001ul,Single-Tasker,1,0,behavioral_nudge,low,You shop at 0 unique merchants — similar users visit 0 on average.,You may be overly concentrated with a few merchants. Exploring alternatives could save money.,False,6.19
+USR333eC,Single-Tasker,1,0,spending_warning,medium,Your recent average spend ($1000/txn) is 400% higher than similar users ($200/txn).,Consider whether your spending aligns with your financial goals.,False,3.04
+USR964ub,Healthy Active User,2,0,budget_advice,medium,You spend 630% more than similar users on Fitness ($2 vs peer avg $0/month).,Setting a monthly budget for Fitness could bring your spend in line with peers.,False,12.11
+USR827NH,Single-Tasker,1,0,spending_warning,medium,Your recent average spend ($5850/txn) is 2825% higher than similar users ($200/txn).,Consider whether your spending aligns with your financial goals.,False,17.04
+USR871gH,Low Activity/Trial,0,0,,,,,False,12.5
+USR704Hs,Low Activity/Trial,0,0,,,,,False,8.1
+USR566Ig,Low Activity/Trial,0,0,,,,,False,9.42
+USR272eU,Low Activity/Trial,0,0,,,,,False,8.56
+USR971nl,Low Activity/Trial,0,0,,,,,False,4.67
+USR575ro,Low Activity/Trial,0,0,,,,,False,14.23
+USR464Az,Low Activity/Trial,0,0,,,,,False,4.71
+USR264Ys,Single-Tasker,3,2,spending_warning,high,You have 24 unusually large transactions compared to your own average.,Check these transactions — they are significantly larger than your typical spend.,False,22.49
+USR263pz,Single-Tasker,1,0,behavioral_nudge,low,You shop at 0 unique merchants — similar users visit 0 on average.,You may be overly concentrated with a few merchants. Exploring alternatives could save money.,False,6.19
+USR840Il,Single-Tasker,1,0,spending_warning,medium,Your recent average spend ($1000/txn) is 400% higher than similar users ($200/txn).,Consider whether your spending aligns with your financial goals.,False,3.04
+USR950fn,Healthy Active User,2,0,budget_advice,medium,You spend 630% more than similar users on Fitness ($2 vs peer avg $0/month).,Setting a monthly budget for Fitness could bring your spend in line with peers.,False,12.11
+USR562FO,Single-Tasker,1,0,spending_warning,medium,Your recent average spend ($5850/txn) is 2825% higher than similar users ($200/txn).,Consider whether your spending aligns with your financial goals.,False,17.04
+USR214bO,Low Activity/Trial,0,0,,,,,False,12.5
+USR355WP,Low Activity/Trial,0,0,,,,,False,8.1
+USR707rn,Low Activity/Trial,0,0,,,,,False,9.42
+USR229Dn,Low Activity/Trial,0,0,,,,,False,8.56
+USR194uB,Low Activity/Trial,0,0,,,,,False,4.67
+USR071ef,Low Activity/Trial,0,0,,,,,False,14.23
+USR998yq,Low Activity/Trial,0,0,,,,,False,4.71
+USR869qe,High-Intensity User,2,2,spending_warning,high,You have 14 unusually large transactions compared to your own average.,Check these transactions — they are significantly larger than your typical spend.,False,48.96
+USR024KD,Single-Tasker,1,0,behavioral_nudge,low,100% of your total spend happens on weekends.,Weekend spending patterns often include more impulse purchases. Planning ahead could reduce costs.,False,15.81
+USR661QD,Single-Tasker,1,0,spending_warning,medium,Your recent average spend ($1000/txn) is 400% higher than similar users ($200/txn).,Consider whether your spending aligns with your financial goals.,False,14.0
+USR006To,Healthy Active User,1,0,budget_advice,medium,You spend 280% more than similar users on Transportation ($1 vs peer avg $0/month).,Setting a monthly budget for Transportation could bring your spend in line with peers.,False,17.09
+USR785BT,Low Activity/Trial,0,0,,,,,False,8.56
+USR154xS,Low Activity/Trial,0,0,,,,,False,4.71
+USR273gg,Single-Tasker,3,2,spending_warning,high,You have 24 unusually large transactions compared to your own average.,Check these transactions — they are significantly larger than your typical spend.,False,23.25
+USR507pL,Single-Tasker,1,0,behavioral_nudge,low,You shop at 0 unique merchants — similar users visit 0 on average.,You may be overly concentrated with a few merchants. Exploring alternatives could save money.,False,6.19
+USR305BD,Single-Tasker,1,0,spending_warning,medium,Your recent average spend ($1000/txn) is 400% higher than similar users ($200/txn).,Consider whether your spending aligns with your financial goals.,False,3.04
+USR002SI,Healthy Active User,2,0,budget_advice,medium,You spend 630% more than similar users on Fitness ($2 vs peer avg $0/month).,Setting a monthly budget for Fitness could bring your spend in line with peers.,False,12.11
+USR718AA,Single-Tasker,1,0,spending_warning,medium,Your recent average spend ($5850/txn) is 2825% higher than similar users ($200/txn).,Consider whether your spending aligns with your financial goals.,False,17.04
+USR779vk,Low Activity/Trial,0,0,,,,,False,12.5
+USR738SY,Low Activity/Trial,0,0,,,,,False,8.1
+USR722lH,Low Activity/Trial,0,0,,,,,False,9.42
+USR525Mo,Low Activity/Trial,0,0,,,,,False,8.56
+USR664JN,Low Activity/Trial,0,0,,,,,False,4.67
+USR281jP,Low Activity/Trial,0,0,,,,,False,14.23
+USR143dp,Low Activity/Trial,0,0,,,,,False,4.71
+USR101Wd,Single-Tasker,3,2,spending_warning,high,You have 24 unusually large transactions compared to your own average.,Check these transactions — they are significantly larger than your typical spend.,False,23.25
+USR926eP,Single-Tasker,1,0,behavioral_nudge,low,You shop at 0 unique merchants — similar users visit 0 on average.,You may be overly concentrated with a few merchants. Exploring alternatives could save money.,False,6.19
+USR671AL,Single-Tasker,1,0,spending_warning,medium,Your recent average spend ($1000/txn) is 400% higher than similar users ($200/txn).,Consider whether your spending aligns with your financial goals.,False,3.04
+USR032gM,Healthy Active User,2,0,budget_advice,medium,You spend 630% more than similar users on Fitness ($2 vs peer avg $0/month).,Setting a monthly budget for Fitness could bring your spend in line with peers.,False,12.11
+USR510PJ,Single-Tasker,1,0,spending_warning,medium,Your recent average spend ($5850/txn) is 2825% higher than similar users ($200/txn).,Consider whether your spending aligns with your financial goals.,False,17.04
+USR681MW,Low Activity/Trial,0,0,,,,,False,12.5
+USR550Li,Low Activity/Trial,0,0,,,,,False,8.1
+USR313wr,Low Activity/Trial,0,0,,,,,False,9.42
+USR103Aa,Low Activity/Trial,0,0,,,,,False,8.56
+USR905Io,Low Activity/Trial,0,0,,,,,False,4.67
+USR803MW,Low Activity/Trial,0,0,,,,,False,14.23
+USR739hH,Low Activity/Trial,0,0,,,,,False,4.71
+USR888gq,Single-Tasker,3,2,spending_warning,high,You have 24 unusually large transactions compared to your own average.,Check these transactions — they are significantly larger than your typical spend.,False,22.49
+USR594QR,Single-Tasker,1,0,behavioral_nudge,low,You shop at 0 unique merchants — similar users visit 0 on average.,You may be overly concentrated with a few merchants. Exploring alternatives could save money.,False,6.19
+USR724hb,Single-Tasker,1,0,spending_warning,medium,Your recent average spend ($1000/txn) is 400% higher than similar users ($200/txn).,Consider whether your spending aligns with your financial goals.,False,3.04
+USR298fI,Healthy Active User,2,0,budget_advice,medium,You spend 630% more than similar users on Fitness ($2 vs peer avg $0/month).,Setting a monthly budget for Fitness could bring your spend in line with peers.,False,12.11
+USR365gu,Single-Tasker,1,0,spending_warning,medium,Your recent average spend ($5850/txn) is 2825% higher than similar users ($200/txn).,Consider whether your spending aligns with your financial goals.,False,17.04
+USR896rm,Low Activity/Trial,0,0,,,,,False,12.5
+USR577jk,Low Activity/Trial,0,0,,,,,False,8.1
+USR331cF,Low Activity/Trial,0,0,,,,,False,9.42
+USR163SC,Low Activity/Trial,0,0,,,,,False,8.56
+USR899td,Low Activity/Trial,0,0,,,,,False,4.67
+USR465ID,Low Activity/Trial,0,0,,,,,False,14.23
+USR783VD,Low Activity/Trial,0,0,,,,,False,4.71
+USR174bk,Single-Tasker,3,2,spending_warning,high,You have 24 unusually large transactions compared to your own average.,Check these transactions — they are significantly larger than your typical spend.,False,22.49
+USR673Ud,Single-Tasker,1,0,behavioral_nudge,low,You shop at 0 unique merchants — similar users visit 0 on average.,You may be overly concentrated with a few merchants. Exploring alternatives could save money.,False,6.19
+USR554bC,Single-Tasker,1,0,spending_warning,medium,Your recent average spend ($1000/txn) is 400% higher than similar users ($200/txn).,Consider whether your spending aligns with your financial goals.,False,3.04
+USR530Nq,Healthy Active User,2,0,budget_advice,medium,You spend 630% more than similar users on Fitness ($2 vs peer avg $0/month).,Setting a monthly budget for Fitness could bring your spend in line with peers.,False,12.11
+USR451il,Single-Tasker,1,0,spending_warning,medium,Your recent average spend ($5850/txn) is 2825% higher than similar users ($200/txn).,Consider whether your spending aligns with your financial goals.,False,17.04
+USR974tj,Low Activity/Trial,0,0,,,,,False,12.5
+USR058Df,Low Activity/Trial,0,0,,,,,False,8.1
+USR971rW,Low Activity/Trial,0,0,,,,,False,9.42
+USR853pE,Low Activity/Trial,0,0,,,,,False,8.56
+USR530od,Low Activity/Trial,0,0,,,,,False,4.67
+USR797BB,Low Activity/Trial,0,0,,,,,False,14.23
+USR525OW,Low Activity/Trial,0,0,,,,,False,4.71
+USR017aL,Single-Tasker,3,2,spending_warning,high,You have 24 unusually large transactions compared to your own average.,Check these transactions — they are significantly larger than your typical spend.,False,22.49
+USR087Jg,Single-Tasker,1,0,behavioral_nudge,low,You shop at 0 unique merchants — similar users visit 0 on average.,You may be overly concentrated with a few merchants. Exploring alternatives could save money.,False,6.19
+USR116fM,Single-Tasker,1,0,spending_warning,medium,Your recent average spend ($1000/txn) is 400% higher than similar users ($200/txn).,Consider whether your spending aligns with your financial goals.,False,3.04
+USR104pB,Healthy Active User,2,0,budget_advice,medium,You spend 630% more than similar users on Fitness ($2 vs peer avg $0/month).,Setting a monthly budget for Fitness could bring your spend in line with peers.,False,12.11
+USR799Rk,Single-Tasker,1,0,spending_warning,medium,Your recent average spend ($5850/txn) is 2825% higher than similar users ($200/txn).,Consider whether your spending aligns with your financial goals.,False,17.04
+USR278dn,Low Activity/Trial,0,0,,,,,False,12.5
+USR239qk,Low Activity/Trial,0,0,,,,,False,8.1
+USR556Wi,Low Activity/Trial,0,0,,,,,False,9.42
+USR872Ih,Low Activity/Trial,0,0,,,,,False,8.56
+USR679Eq,Low Activity/Trial,0,0,,,,,False,4.67
+USR163rM,Low Activity/Trial,0,0,,,,,False,14.23
+USR857OT,Low Activity/Trial,0,0,,,,,False,4.71
+USR398Px,Healthy Active User,3,1,spending_warning,high,You have 120 unusually large transactions compared to your own average.,Check these transactions — they are significantly larger than your typical spend.,False,51.97
+USR149Et,High-Intensity User,2,1,spending_warning,high,You have 109 unusually large transactions compared to your own average.,Check these transactions — they are significantly larger than your typical spend.,False,53.54
+USR342cz,High-Intensity User,2,1,spending_warning,high,You have 73 unusually large transactions compared to your own average.,Check these transactions — they are significantly larger than your typical spend.,False,52.9
+USR739UP,High-Intensity User,3,1,spending_warning,high,You have 911 unusually large transactions compared to your own average.,Check these transactions — they are significantly larger than your typical spend.,False,57.32
+USR354Rs,Healthy Active User,2,1,spending_warning,high,Our anomaly detection model flagged your account (score: 42/100).,Review your recent transactions for any unusual or unrecognised activity.,True,41.73
+USR698Qr,Low Activity/Trial,1,1,spending_warning,high,You have 93 unusually large transactions compared to your own average.,Check these transactions — they are significantly larger than your typical spend.,False,24.47
+USR992ZI,Single-Tasker,0,0,,,,,False,11.79
+USR352pI,Single-Tasker,0,0,,,,,False,10.9
+USR227ai,Low Activity/Trial,2,1,spending_warning,high,You have 77 unusually large transactions compared to your own average.,Check these transactions — they are significantly larger than your typical spend.,False,22.82
+USR086qQ,Single-Tasker,0,0,,,,,False,10.9
+USR592MJ,Low Activity/Trial,1,1,spending_warning,high,You have 75 unusually large transactions compared to your own average.,Check these transactions — they are significantly larger than your typical spend.,False,25.51
+USR163vx,Single-Tasker,2,2,savings_suggestion,high,Your current balance is low ($100.02).,Consider reducing discretionary spending this month to build a buffer.,True,41.14
+USR970wx,Low Activity/Trial,1,1,spending_warning,high,Our anomaly detection model flagged your account (score: 75/100).,Review your recent transactions for any unusual or unrecognised activity.,True,74.58
+USR000Ux,Single-Tasker,1,0,spending_warning,medium,Your recent average spend ($2000/txn) is 900% higher than similar users ($200/txn).,Consider whether your spending aligns with your financial goals.,False,23.33
+USR149vb,Low Activity/Trial,2,1,spending_warning,high,You have 74 unusually large transactions compared to your own average.,Check these transactions — they are significantly larger than your typical spend.,False,54.13
+USR208yg,Low Activity/Trial,1,1,spending_warning,high,You have 76 unusually large transactions compared to your own average.,Check these transactions — they are significantly larger than your typical spend.,False,23.13
+USR463UE,Single-Tasker,0,0,,,,,False,10.9
+USR980UY,Consistent Weekly,3,1,spending_warning,high,You have 19 unusually large transactions compared to your own average.,Check these transactions — they are significantly larger than your typical spend.,False,32.12
+USR673YB,Single-Tasker,0,0,,,,,False,10.9
+USR829qO,Low Activity/Trial,2,1,spending_warning,high,You have 74 unusually large transactions compared to your own average.,Check these transactions — they are significantly larger than your typical spend.,False,23.66
+USR989QU,Single-Tasker,0,0,,,,,False,11.78
+USR844Xx,Low Activity/Trial,1,1,spending_warning,high,You have 83 unusually large transactions compared to your own average.,Check these transactions — they are significantly larger than your typical spend.,False,25.02
+USR338ns,Single-Tasker,0,0,,,,,False,10.9
+USR526MW,Low Activity/Trial,1,1,spending_warning,high,You have 77 unusually large transactions compared to your own average.,Check these transactions — they are significantly larger than your typical spend.,False,24.22
+USR667ih,Low Activity/Trial,1,1,spending_warning,high,You have 77 unusually large transactions compared to your own average.,Check these transactions — they are significantly larger than your typical spend.,False,46.62
+USR310Mk,Single-Tasker,1,0,spending_warning,medium,Your recent average spend ($2000/txn) is 900% higher than similar users ($200/txn).,Consider whether your spending aligns with your financial goals.,False,23.22
+USR235aH,Single-Tasker,2,1,spending_warning,high,Our anomaly detection model flagged your account (score: 68/100).,Review your recent transactions for any unusual or unrecognised activity.,True,68.4
+USR218kF,Consistent Weekly,2,1,spending_warning,high,You have 48 unusually large transactions compared to your own average.,Check these transactions — they are significantly larger than your typical spend.,False,21.16
+USR900TT,Single-Tasker,0,0,,,,,False,11.78
+USR978oc,Low Activity/Trial,1,1,spending_warning,high,You have 93 unusually large transactions compared to your own average.,Check these transactions — they are significantly larger than your typical spend.,False,25.89
+USR841fP,Single-Tasker,0,0,,,,,False,11.54
+USR526Ci,Low Activity/Trial,1,1,spending_warning,high,You have 76 unusually large transactions compared to your own average.,Check these transactions — they are significantly larger than your typical spend.,False,22.97
+USR257qy,Low Activity/Trial,2,1,spending_warning,high,You have 77 unusually large transactions compared to your own average.,Check these transactions — they are significantly larger than your typical spend.,False,23.75
+USR748ZE,Single-Tasker,0,0,,,,,False,11.16
+USR755DK,Single-Tasker,0,0,,,,,False,11.78
+USR495mL,Low Activity/Trial,1,1,spending_warning,high,You have 93 unusually large transactions compared to your own average.,Check these transactions — they are significantly larger than your typical spend.,False,24.91
+USR170FQ,Single-Tasker,1,0,spending_warning,medium,Your recent average spend ($1000/txn) is 400% higher than similar users ($200/txn).,Consider whether your spending aligns with your financial goals.,False,17.27
+USR614yH,Low Activity/Trial,1,1,spending_warning,high,You have 93 unusually large transactions compared to your own average.,Check these transactions — they are significantly larger than your typical spend.,False,37.31
+USR885po,Single-Tasker,0,0,,,,,False,10.9
+USR733gw,Low Activity/Trial,2,1,spending_warning,high,You have 93 unusually large transactions compared to your own average.,Check these transactions — they are significantly larger than your typical spend.,False,24.87
+USR329uU,Low Activity/Trial,2,2,spending_warning,high,Your average transaction amount this month ($19) is 216% above your usual average ($6).,Review your recent transactions to identify what changed.,False,47.27
+USR747HD,Single-Tasker,1,0,spending_warning,medium,Your recent average spend ($2000/txn) is 900% higher than similar users ($200/txn).,Consider whether your spending aligns with your financial goals.,False,46.7
+USR831lM,Single-Tasker,0,0,,,,,False,11.79
+USR493ow,Low Activity/Trial,1,1,spending_warning,high,You have 73 unusually large transactions compared to your own average.,Check these transactions — they are significantly larger than your typical spend.,False,25.27
