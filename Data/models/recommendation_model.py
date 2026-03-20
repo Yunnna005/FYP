@@ -8,7 +8,7 @@ from xgboost import XGBClassifier
 from sklearn.preprocessing import StandardScaler
 from sklearn.model_selection import cross_val_score
 
-from db.config import get_engine, write_table
+from dbconfig import get_engine, write_table
 
 PEER_BENCHMARK_COLS = [
     'vel_7d','vel_30d','avg_amt_30d','count_30d',
