@@ -9,70 +9,56 @@ warnings.filterwarnings('ignore')
 from db.config import get_engine, read_query, write_table
 from sqlalchemy.dialects.postgresql import insert
 
-
-def expand_json_categories(df, column_name):
-    json_as_df = (
-        df[column_name]
-        .apply(lambda x: json.loads(x.replace("'", '"')) if isinstance(x, str) else x)
-        .apply(pd.Series)
-        .fillna(0)
-    )
-    return pd.concat([df.drop(columns=[column_name]), json_as_df], axis=1)
-
-
 def load_raw_data(engine, user_id=None):
-    uid_filter = f"WHERE user_id = {user_id}" if user_id else ""
-    acc_filter = ""
-
     if user_id:
-        acc_df = read_query(
+        acc_row = read_query(
             f"SELECT account_id FROM users WHERE user_id = {user_id}", engine
         )
-        if acc_df.empty:
+        if acc_row.empty:
             raise ValueError(f"User {user_id} not found in database")
-        acc_ids = tuple(acc_df['account_id'].tolist())
-        acc_filter = f"WHERE account_id IN {acc_ids}" if len(acc_ids) > 1 \
-                     else f"WHERE account_id = {acc_ids[0]}"
 
-    users_df = read_query(f"SELECT * FROM users {uid_filter}", engine)
-    accounts_df = read_query(f"SELECT * FROM accounts {acc_filter}", engine)
-    transactions_df = read_query(f"SELECT * FROM transactions {acc_filter}", engine)
-    monthly_stats_df = read_query(f"SELECT * FROM user_monthly_stats {acc_filter}", engine)
-    all_time_stats_df = read_query(f"SELECT * FROM user_all_time_stats {acc_filter}", engine)
+        acc_ids = acc_row['account_id'].tolist()
+        acc_placeholder = ', '.join(str(a) for a in acc_ids)
 
-    return users_df, accounts_df, transactions_df, monthly_stats_df, all_time_stats_df
+        users_df = read_query(f"SELECT * FROM users WHERE user_id = {user_id}", engine)
+        accounts_df = read_query(f"SELECT * FROM accounts WHERE account_id IN ({acc_placeholder})", engine)
+        transactions_df = read_query(f"SELECT * FROM transactions WHERE account_id IN ({acc_placeholder})", engine)
 
+    else:
+        users_df = read_query("SELECT * FROM users", engine)
+        accounts_df = read_query(
+            "SELECT a.* FROM accounts a "
+            "JOIN users u ON u.account_id = a.account_id", engine
+        )
+        transactions_df = read_query(
+            "SELECT t.* FROM transactions t "
+            "JOIN users u ON u.account_id = t.account_id", engine
+        )
+
+    return users_df, accounts_df, transactions_df
 
 def run_feature_engineering(user_id=None):
     engine = get_engine()
     print(f"[features] Loading data {'for user ' + str(user_id) if user_id else 'for all users'}...")
 
-    users_df, accounts_df, transactions_df, monthly_stats_df, all_time_stats_df = load_raw_data(engine, user_id)
+    users_df, accounts_df, transactions_df = load_raw_data(engine, user_id)
 
-    # Parse dates
     transactions_df['date'] = pd.to_datetime(transactions_df['date'])
-    monthly_stats_df['month_start_date'] = pd.to_datetime(monthly_stats_df['month_start_date'])
 
-    if 'spending_by_category' in monthly_stats_df.columns:
-        monthly_stats_df = expand_json_categories(monthly_stats_df, 'spending_by_category')
+    account_to_user = users_df.set_index('account_id')['user_id'].to_dict()
+    transactions_df['user_id'] = transactions_df['account_id'].map(account_to_user)
 
-    #Featuretools setup
-    print("[features] Building Setup...")
+    print("[features] Building EntitySet...")
     es = ft.EntitySet(id="financial_system")
     es.add_dataframe(dataframe_name="users", dataframe=users_df, index="user_id")
     es.add_dataframe(dataframe_name="accounts", dataframe=accounts_df, index="account_id")
     es.add_dataframe(dataframe_name="transactions", dataframe=transactions_df, index="transaction_id", time_index="date")
-    es.add_dataframe(dataframe_name="monthly_stats", dataframe=monthly_stats_df, index="stats_id", time_index="month_start_date")
-    es.add_dataframe(dataframe_name="all_time_stats", dataframe=all_time_stats_df, index="stats_id")
-
     es.add_relationship("accounts", "account_id", "users", "account_id")
     es.add_relationship("accounts", "account_id", "transactions", "account_id")
-    es.add_relationship("accounts", "account_id", "monthly_stats","account_id")
-    es.add_relationship("accounts", "account_id", "all_time_stats","account_id")
 
-    # DFS
+    #DFS
     print("[features] Running DFS...")
-    last_date = transactions_df['date'].max()
+    last_date   = transactions_df['date'].max()
     cutoff_times = pd.DataFrame({'user_id': users_df['user_id'], 'time': last_date})
 
     feature_matrix, feature_defs = ft.dfs(
@@ -88,14 +74,14 @@ def run_feature_engineering(user_id=None):
     numeric_cols = feature_matrix.select_dtypes(include=[np.number]).columns
     feature_matrix[numeric_cols] = feature_matrix[numeric_cols].fillna(0)
 
-    #Correlation filter
+    # Correlation filter
     corr_matrix = feature_matrix.corr(numeric_only=True).abs()
     upper = corr_matrix.where(np.triu(np.ones(corr_matrix.shape), k=1).astype(bool))
     protected = ['TIME_SINCE', 'COUNT(transactions)']
     to_drop = [c for c in upper.columns if any(upper[c] > 0.95) and not any(k in c for k in protected)]
     feature_matrix = feature_matrix.drop(columns=to_drop)
 
-    # Encode 
+    #Encode
     remaining = [f for f in feature_defs if any(n in feature_matrix.columns for n in f.get_feature_names())]
     feature_matrix.ww.init()
     fm_encoded, _ = ft.encode_features(feature_matrix, remaining, top_n=10)
@@ -104,10 +90,7 @@ def run_feature_engineering(user_id=None):
     print("[features] Computing custom metrics...")
     recency_col = [c for c in fm_encoded.columns if 'TIME_SINCE_LAST' in c][0]
     fm_encoded['days_since_last'] = fm_encoded[recency_col] / 86400
-
-    account_to_user = users_df.set_index('account_id')['user_id'].to_dict()
-    transactions_df['user_id'] = transactions_df['account_id'].map(account_to_user)
-
+    
     # Velocity metrics
     def calc_velocity(uid, trans_df):
         ut = trans_df[trans_df['user_id'] == uid].sort_values('date')
