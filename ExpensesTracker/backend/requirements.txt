@@ -1,0 +1,20 @@
+# Core data
+pandas
+numpy
+
+# Machine learning
+scikit-learn
+xgboost
+
+# Time series forecasting
+prophet
+
+# Feature engineering
+featuretools
+
+# Database
+sqlalchemy
+psycopg2-binary
+
+# Environment
+python-dotenv
