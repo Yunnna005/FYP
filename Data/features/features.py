@@ -6,34 +6,35 @@ from featuretools.primitives import Day, Weekday, IsWeekend, Mean, Sum, Count, M
 import warnings
 warnings.filterwarnings('ignore')
 
-from db.config import get_engine, read_query, write_table
-from sqlalchemy.dialects.postgresql import insert
+from db.config import get_engine, read_query, write_data, DB_AVAILABLE, CSV_DIR
 
 def load_raw_data(engine, user_id=None):
-    if user_id:
-        acc_row = read_query(
-            f"SELECT account_id FROM users WHERE user_id = {user_id}", engine
-        )
-        if acc_row.empty:
-            raise ValueError(f"User {user_id} not found in database")
+    if DB_AVAILABLE:
+        if user_id:
+            acc_row = read_query(f"SELECT account_id FROM users WHERE user_id = {user_id}", engine)
+            if acc_row.empty:
+                raise ValueError(f"User {user_id} not found in database")
+            acc_ids = acc_row['account_id'].tolist()
+            acc_placeholder = ', '.join(str(a) for a in acc_ids)
 
-        acc_ids = acc_row['account_id'].tolist()
-        acc_placeholder = ', '.join(str(a) for a in acc_ids)
-
-        users_df = read_query(f"SELECT * FROM users WHERE user_id = {user_id}", engine)
-        accounts_df = read_query(f"SELECT * FROM accounts WHERE account_id IN ({acc_placeholder})", engine)
-        transactions_df = read_query(f"SELECT * FROM transactions WHERE account_id IN ({acc_placeholder})", engine)
-
+            users_df = read_query(f"SELECT * FROM users WHERE user_id = {user_id}", engine)
+            accounts_df = read_query(f"SELECT * FROM accounts WHERE account_id IN ({acc_placeholder})", engine)
+            transactions_df = read_query(f"SELECT * FROM transactions WHERE account_id IN ({acc_placeholder})", engine)
+        else:
+            users_df = read_query("SELECT * FROM users", engine)
+            accounts_df = read_query("SELECT a.* FROM accounts a JOIN users u ON u.account_id = a.account_id", engine)
+            transactions_df = read_query("SELECT t.* FROM transactions t JOIN users u ON u.account_id = t.account_id", engine)
     else:
-        users_df = read_query("SELECT * FROM users", engine)
-        accounts_df = read_query(
-            "SELECT a.* FROM accounts a "
-            "JOIN users u ON u.account_id = a.account_id", engine
-        )
-        transactions_df = read_query(
-            "SELECT t.* FROM transactions t "
-            "JOIN users u ON u.account_id = t.account_id", engine
-        )
+        users_df = pd.read_csv(CSV_DIR / "users.csv")
+        accounts_df = pd.read_csv(CSV_DIR / "accounts.csv")
+        transactions_df = pd.read_csv(CSV_DIR / "transactions.csv")
+
+        if user_id:
+            users_df        = users_df[users_df["user_id"] == user_id]
+            acc_ids         = users_df["account_id"].tolist()
+            accounts_df     = accounts_df[accounts_df["account_id"].isin(acc_ids)]
+            transactions_df = transactions_df[transactions_df["account_id"].isin(acc_ids)]
+
 
     return users_df, accounts_df, transactions_df
 
@@ -90,7 +91,7 @@ def run_feature_engineering(user_id=None):
     print("[features] Computing custom metrics...")
     recency_col = [c for c in fm_encoded.columns if 'TIME_SINCE_LAST' in c][0]
     fm_encoded['days_since_last'] = fm_encoded[recency_col] / 86400
-    
+
     # Velocity metrics
     def calc_velocity(uid, trans_df):
         ut = trans_df[trans_df['user_id'] == uid].sort_values('date')
@@ -188,28 +189,14 @@ def run_feature_engineering(user_id=None):
     fm_encoded['account_count']      = fm_encoded.index.to_series().apply(lambda uid: len(_acc_ids(uid)))
 
     #PostgreSQL
-    print("[features] Writing to database...")
+    print("  [features] Writing to database...")
 
     if user_id:
-        upsert_fm_encoded(fm_encoded, engine)
-        upsert_transactions(transactions_df, engine)
+        write_data(fm_encoded,      'fm_encoded',             if_exists='append')
+        write_data(transactions_df, 'transactions_enriched',  if_exists='append', index=False)
     else:
-        write_table(fm_encoded, 'fm_encoded', if_exists='replace', engine=engine)
-        write_table(transactions_df, 'transactions_enriched', if_exists='replace', engine=engine)
+        write_data(fm_encoded,      'fm_encoded',             if_exists='replace')
+        write_data(transactions_df, 'transactions_enriched',  if_exists='replace', index=False)
 
-    print(f"[features] Done — {len(fm_encoded)} users in fm_encoded")
+    print(f"  [features] ✅ Done — {len(fm_encoded)} users in fm_encoded")
     return fm_encoded, transactions_df
-
-
-def upsert_fm_encoded(fm_encoded, engine):
-    fm_encoded.reset_index().to_sql(
-        'fm_encoded', engine, if_exists='append', index=False,
-        method='multi', chunksize=100
-    )
-
-
-def upsert_transactions(transactions_df, engine):
-    transactions_df.to_sql(
-        'transactions_enriched', engine, if_exists='append',
-        index=False, method='multi', chunksize=500
-    )
