@@ -8,7 +8,7 @@ from sklearn.ensemble import IsolationForest
 from sklearn.neighbors import LocalOutlierFactor
 from sklearn.preprocessing import StandardScaler
 
-from db.config import get_engine, read_query, write_table
+from dbconfig import get_engine, read_query, write_table
 
 VELOCITY_FEATURES = [
     'vel_1d', 'vel_7d', 'vel_30d', 'count_30d', 'accounts.COUNT(transactions)',
