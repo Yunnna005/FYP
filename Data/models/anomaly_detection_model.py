@@ -1,14 +1,17 @@
+import json
+
 import pandas as pd
 import numpy as np
 import pickle
 import warnings
+import os
 warnings.filterwarnings('ignore')
 
 from sklearn.ensemble import IsolationForest
 from sklearn.neighbors import LocalOutlierFactor
 from sklearn.preprocessing import StandardScaler
 
-from dbconfig import get_engine, read_query, write_table
+from db.config import get_engine,read_data,read_data, write_data, DB_AVAILABLE, CSV_DIR, get_user_accounts
 
 VELOCITY_FEATURES = [
     'vel_1d', 'vel_7d', 'vel_30d', 'count_30d', 'accounts.COUNT(transactions)',
@@ -47,7 +50,7 @@ FEATURE_LABELS = {
     'new_merchant_count': 'New merchants explored',
 }
 
-MODEL_PATH = 'anomaly_models.pkl'
+MODEL_PATH = os.path.join(os.path.dirname(__file__), '..', 'anomaly_models.pkl')
 
 
 def get_severity(is_anomaly, score):
@@ -56,6 +59,45 @@ def get_severity(is_anomaly, score):
     if score >= 65: return 'High'
     return 'Medium'
 
+def per_account_anomaly_summary(user_id: int, transactions_df: pd.DataFrame, accounts_info: dict) -> list:
+    summary = []
+    for acc in accounts_info.get("accounts", []):
+        acc_id = acc["account_id"]
+        acc_trans = transactions_df[transactions_df["account_id"] == acc_id]
+
+        if acc_trans.empty:
+            summary.append({
+                "account_id": acc_id,
+                "account_name": acc.get("name", ""),
+                "account_type": acc.get("type", ""),
+                "currency_code": acc.get("currency_code", ""),
+                "transaction_count": 0,
+                "unusually_large_count": 0,
+                "unusually_small_count": 0,
+                "avg_transaction_amount": 0.0,
+                "top_merchant": None,
+            })
+            continue
+
+        top_merch = (
+            acc_trans.groupby("merchant_name")["amount"]
+            .sum().abs().idxmax()
+            if "merchant_name" in acc_trans.columns else None
+        )
+        summary.append({
+            "account_id": acc_id,
+            "account_name": acc.get("name", ""),
+            "account_type": acc.get("type", ""),
+            "currency_code": acc.get("currency_code", ""),
+            "transaction_count": int(len(acc_trans)),
+            "unusually_large_count": int((acc_trans["spend_anomaly_type"] == "Unusually Large").sum())
+                if "spend_anomaly_type" in acc_trans.columns else 0,
+            "unusually_small_count": int((acc_trans["spend_anomaly_type"] == "Unusually Small").sum())
+                if "spend_anomaly_type" in acc_trans.columns else 0,
+            "avg_transaction_amount": round(float(acc_trans["amount"].abs().mean()), 2),
+            "top_merchant": str(top_merch) if top_merch else None,
+        })
+    return summary
 
 def identify_drivers(user_row, X, population_medians, available_features, top_n=3):
     deviations = {}
@@ -79,10 +121,10 @@ def identify_drivers(user_row, X, population_medians, available_features, top_n=
 
 
 def run_anomaly_detection(user_id=None):
-    engine = get_engine()
+    engine = get_engine() if DB_AVAILABLE else None
 
-    fm_encoded = pd.read_sql("SELECT * FROM fm_encoded", engine).set_index('user_id')
-    transactions_df = pd.read_sql("SELECT * FROM transactions_enriched", engine)
+    fm_encoded = read_data('fm_encoded').set_index('user_id')
+    transactions_df = read_data('transactions_enriched')
     transactions_df['date'] = pd.to_datetime(transactions_df['date'])
 
     available_features = [f for f in ALL_ANOMALY_FEATURES if f in fm_encoded.columns]
@@ -108,7 +150,7 @@ def run_anomaly_detection(user_id=None):
                 (bundle['iso_score_max'] - bundle['iso_score_min'])
             )
             anomaly_score = round(iso_norm * 100, 2)
-            is_anomaly    = iso_label == -1
+            is_anomaly = iso_label == -1
 
             population_medians = X[saved_feat].median()
             drivers = identify_drivers(
@@ -176,6 +218,30 @@ def run_anomaly_detection(user_id=None):
         lambda uid: identify_drivers(X.loc[uid], X, population_medians, available_features)
     )
 
+    if DB_AVAILABLE:
+        users_accounts = pd.read_sql(
+            "SELECT u.user_id, a.account_id, a.name, a.type, a.currency_code "
+            "FROM accounts a JOIN users u ON u.account_id = a.account_id",
+            engine
+        )
+    else:
+        users_csv    = pd.read_csv(CSV_DIR / "users.csv")
+        accounts_csv = pd.read_csv(CSV_DIR / "accounts.csv")
+        users_accounts = users_csv[['user_id', 'account_id']].merge(
+            accounts_csv[['account_id', 'name', 'type', 'currency_code']],
+            on='account_id', how='left'
+        )
+    acc_grouped = users_accounts.groupby("user_id")
+
+    def account_ids_for(uid):
+        if uid in acc_grouped.groups:
+            return acc_grouped.get_group(uid)["account_id"].tolist()
+        return []
+
+    anomaly_df["account_ids"] = anomaly_df.index.to_series().apply(lambda uid: json.dumps(account_ids_for(uid)))
+    anomaly_df["primary_account_id"] = anomaly_df.index.to_series().apply(lambda uid: (account_ids_for(uid) or [None])[0])
+    anomaly_df["account_count"] = anomaly_df.index.to_series().apply(lambda uid: len(account_ids_for(uid)))
+    
     # Save model bundle
     bundle = {
         'iso_forest': iso_forest,
@@ -186,38 +252,63 @@ def run_anomaly_detection(user_id=None):
     }
     with open(MODEL_PATH, 'wb') as f:
         pickle.dump(bundle, f)
+    print(f"[anomaly] Model saved: {MODEL_PATH}")
 
     # Write to DB
-    write_table(anomaly_df.drop(columns=['anomaly_drivers']),'anomaly_scores', if_exists='replace', engine=engine)
+    write_data(anomaly_df.drop(columns=['anomaly_drivers']),'anomaly_scores', if_exists='replace')
+
+    flagged = anomaly_df['is_anomaly'].sum()
+    print(f"[anomaly] Done — {flagged}/{len(anomaly_df)} users flagged")
     return anomaly_df
 
 
 def run_anomaly_check(user_id):
-    engine = get_engine()
-    row_df = pd.read_sql(f"SELECT * FROM anomaly_scores WHERE user_id = {user_id}", engine)
+    engine = get_engine() if DB_AVAILABLE else None
+    row_df = read_data(
+        'anomaly_scores',
+        query=f"SELECT * FROM anomaly_scores WHERE user_id = {user_id}" if DB_AVAILABLE else None,
+        engine=engine
+    )
+    if DB_AVAILABLE:
+        pass  
+    else:
+        row_df = row_df[row_df['user_id'] == user_id]
+
     if row_df.empty:
         return {'error': f'User {user_id} not found', 'is_anomaly': False, 'anomaly_score': 0}
 
-    row  = row_df.iloc[0]
-    trans_df = pd.read_sql(f"SELECT * FROM transactions_enriched WHERE user_id = {user_id}", engine)
+    row = row_df.iloc[0]
+    trans_df = read_data(
+        'transactions_enriched',
+        query=f"SELECT * FROM transactions_enriched WHERE user_id = {user_id}" if DB_AVAILABLE else None,
+        engine=engine
+    )
+    if not DB_AVAILABLE:
+        trans_df = trans_df[trans_df['user_id'] == user_id]
     trans_df['date'] = pd.to_datetime(trans_df['date'])
+
+    accounts_info = get_user_accounts(user_id, engine)
 
     # Suspicious transactions
     if not trans_df.empty:
         pmap = {'Unusually Large': 0, 'Unusually Small': 1, 'Normal': 2}
         trans_df['_p'] = trans_df['spend_anomaly_type'].map(pmap).fillna(2)
         suspicious = (
-            trans_df.sort_values(['_p','deviation_ratio'], ascending=[True,False])
-            .head(5)[['date','amount','merchant_name','category_id','deviation_ratio','spend_anomaly_type']]
+            trans_df.sort_values(['_p','deviation_ratio'], ascending=[True, False])
+            .head(5)[['date','amount','merchant_name','category_id',
+                       'account_id','deviation_ratio','spend_anomaly_type']]
             .to_dict('records')
         )
         anomaly_summary = trans_df['spend_anomaly_type'].value_counts().to_dict()
     else:
-        suspicious = []
+        suspicious    = []
         anomaly_summary = {}
 
+    # Per-account breakdown
+    per_account = per_account_anomaly_summary(user_id, trans_df, accounts_info)
+
     return {
-        'user_id': int(row['user_id']),
+        'user_id': str(user_id),
         'is_anomaly': bool(row['is_anomaly']),
         'anomaly_score': float(row['anomaly_score']),
         'severity': str(row['severity']),
@@ -234,4 +325,8 @@ def run_anomaly_check(user_id):
         'spending_trend': str(row.get('primary_spending_trend', '')),
         'suspicious_transactions': suspicious,
         'transaction_anomaly_summary': anomaly_summary,
+        'primary_account_id': accounts_info['primary_account_id'],
+        'account_ids': accounts_info['account_ids'],
+        'account_count': accounts_info['account_count'],
+        'per_account': per_account,
     }
