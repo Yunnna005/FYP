@@ -1,17 +1,16 @@
 import os
+from dotenv import load_dotenv
 import pandas as pd
 from pathlib import Path
 import sqlalchemy
 import psycopg2
 
-
+load_dotenv(Path(__file__).parent / ".env")
 ROOT_DIR = Path(__file__).parent
 
-CSV_DIR = Path("FYP/Data/Final")
-CSV_DIR.mkdir(exist_ok=True)
+CSV_DIR = Path(__file__).parents[2] / "Final"
+CSV_DIR.mkdir(parents=True, exist_ok=True)
 
-OUTPUT_DIR = ROOT_DIR / "outputs"
-OUTPUT_DIR.mkdir(exist_ok=True)
 
 DB_CONFIG = {
     "host": os.getenv("DB_HOST", "localhost"),
@@ -35,7 +34,6 @@ def check_db():
         return True
     except Exception as e:
         print(f"[db] PostgreSQL unavailable ({e})")
-        print(f"[db] Falling back to CSV files in: {CSV_DIR}")
         return False
 
 DB_AVAILABLE = check_db()
@@ -77,8 +75,8 @@ def write_data(df: pd.DataFrame, table: str, if_exists: str = "replace", index: 
             combined = pd.concat([existing, df_reset], ignore_index=True)
             combined.to_csv(path, index=False)
         else:
-            df.to_csv(OUTPUT_DIR / f"{table}.csv", index=index)
-        print(f"[db] Saved → {OUTPUT_DIR / f'{table}.csv'}")
+            df.to_csv(CSV_DIR / f"{table}.csv", index=index)
+        print(f"[db] Saved → {CSV_DIR / f'{table}.csv'}")
 
 def write_table(df: pd.DataFrame, table: str, if_exists: str = "replace", engine=None):
     write_data(df, table, if_exists=if_exists, index=True, engine=engine)

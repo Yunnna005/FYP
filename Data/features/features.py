@@ -6,7 +6,7 @@ from featuretools.primitives import Day, Weekday, IsWeekend, Mean, Sum, Count, M
 import warnings
 warnings.filterwarnings('ignore')
 
-from db.config import get_engine, read_query, write_data, DB_AVAILABLE, CSV_DIR
+from models.db.dbconfig import get_engine, read_query, write_data, DB_AVAILABLE, CSV_DIR
 
 def load_raw_data(engine, user_id=None):
     if DB_AVAILABLE:
@@ -30,9 +30,9 @@ def load_raw_data(engine, user_id=None):
         transactions_df = pd.read_csv(CSV_DIR / "transactions.csv")
 
         if user_id:
-            users_df        = users_df[users_df["user_id"] == user_id]
-            acc_ids         = users_df["account_id"].tolist()
-            accounts_df     = accounts_df[accounts_df["account_id"].isin(acc_ids)]
+            users_df = users_df[users_df["user_id"] == user_id]
+            acc_ids = users_df["account_id"].tolist()
+            accounts_df = accounts_df[accounts_df["account_id"].isin(acc_ids)]
             transactions_df = transactions_df[transactions_df["account_id"].isin(acc_ids)]
 
 
@@ -48,6 +48,7 @@ def run_feature_engineering(user_id=None):
 
     account_to_user = users_df.set_index('account_id')['user_id'].to_dict()
     transactions_df['user_id'] = transactions_df['account_id'].map(account_to_user)
+    accounts_df['user_id'] = accounts_df['account_id'].map(account_to_user)
 
     print("[features] Building EntitySet...")
     es = ft.EntitySet(id="financial_system")
@@ -186,17 +187,17 @@ def run_feature_engineering(user_id=None):
 
     fm_encoded['account_ids'] = fm_encoded.index.to_series().apply(lambda uid: json.dumps(_acc_ids(uid)))
     fm_encoded['primary_account_id'] = fm_encoded.index.to_series().apply(lambda uid: (_acc_ids(uid) or [None])[0])
-    fm_encoded['account_count']      = fm_encoded.index.to_series().apply(lambda uid: len(_acc_ids(uid)))
+    fm_encoded['account_count'] = fm_encoded.index.to_series().apply(lambda uid: len(_acc_ids(uid)))
 
     #PostgreSQL
-    print("  [features] Writing to database...")
+    print("[features] Writing to database...")
 
     if user_id:
-        write_data(fm_encoded,      'fm_encoded',             if_exists='append')
-        write_data(transactions_df, 'transactions_enriched',  if_exists='append', index=False)
+        write_data(fm_encoded,'fm_encoded', if_exists='append')
+        write_data(transactions_df, 'transactions_enriched', if_exists='append', index=False)
     else:
-        write_data(fm_encoded,      'fm_encoded',             if_exists='replace')
+        write_data(fm_encoded, 'fm_encoded', if_exists='replace')
         write_data(transactions_df, 'transactions_enriched',  if_exists='replace', index=False)
 
-    print(f"  [features] ✅ Done — {len(fm_encoded)} users in fm_encoded")
+    print(f"[features] Done — {len(fm_encoded)} users in fm_encoded")
     return fm_encoded, transactions_df

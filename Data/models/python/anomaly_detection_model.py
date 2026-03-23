@@ -10,7 +10,7 @@ warnings.filterwarnings('ignore')
 from sklearn.ensemble import IsolationForest
 from sklearn.neighbors import LocalOutlierFactor
 from sklearn.preprocessing import StandardScaler
-from db.dbconfig import get_engine,read_data,read_data, write_data, DB_AVAILABLE, CSV_DIR, get_user_accounts
+from models.db.dbconfig import get_engine,read_data, write_data, DB_AVAILABLE,CSV_DIR, get_user_accounts
 
 VELOCITY_FEATURES = [
     'vel_1d', 'vel_7d', 'vel_30d', 'count_30d', 'accounts.COUNT(transactions)',
@@ -58,7 +58,7 @@ def get_severity(is_anomaly, score):
     if score >= 65: return 'High'
     return 'Medium'
 
-def per_account_anomaly_summary(user_id: int, transactions_df: pd.DataFrame, accounts_info: dict) -> list:
+def per_account_anomaly_summary(user_id: str, transactions_df: pd.DataFrame, accounts_info: dict) -> list:
     summary = []
     for acc in accounts_info.get("accounts", []):
         acc_id = acc["account_id"]
@@ -224,7 +224,7 @@ def run_anomaly_detection(user_id=None):
             engine
         )
     else:
-        users_csv    = pd.read_csv(CSV_DIR / "users.csv")
+        users_csv = pd.read_csv(CSV_DIR / "users.csv")
         accounts_csv = pd.read_csv(CSV_DIR / "accounts.csv")
         users_accounts = users_csv[['user_id', 'account_id']].merge(
             accounts_csv[['account_id', 'name', 'type', 'currency_code']],

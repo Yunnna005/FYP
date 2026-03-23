@@ -7,7 +7,7 @@ warnings.filterwarnings('ignore')
 from xgboost import XGBClassifier
 from sklearn.preprocessing import StandardScaler
 
-from db.dbconfig import get_engine, write_data, get_user_accounts, DB_AVAILABLE, CSV_DIR, read_data
+from models.db.dbconfig import get_engine, write_data, get_user_accounts, DB_AVAILABLE, CSV_DIR, read_data
 
 PEER_BENCHMARK_COLS = [
     'vel_7d','vel_30d','avg_amt_30d','count_30d',
@@ -269,13 +269,13 @@ def run_recommendation_engine(user_id=None):
 
         recs = generate_user_recommendations(uid, fm_row, peer_row, transactions_df, category_cols, anomaly_row)
         top_rec = recs[0] if recs else None
-        acc_ids = acc_ids(uid)
+        user_acc_ids = acc_ids(uid)
 
         summary_rows.append({
             'user_id': uid,
-            'primary_account_id': (acc_ids or [None])[0],
-            'account_ids': json.dumps(acc_ids),
-            'account_count': len(acc_ids),
+            'primary_account_id': (user_acc_ids or [None])[0],
+            'account_ids': json.dumps(user_acc_ids),
+            'account_count': len(user_acc_ids),
             'segment': str(fm_row.get('task_segment', 'Unknown')),
             'total_recommendations': len(recs),
             'high_priority_count': sum(1 for r in recs if r['priority'] == 'high'),
@@ -346,7 +346,7 @@ def run_recommendation(user_id):
         })
 
     return {
-        'user_id': int(row['user_id']),
+        'user_id': str(row['user_id']),
         'segment': str(row['segment']),
         'total_recommendations': int(row['total_recommendations']),
         'high_priority_count': int(row['high_priority_count']),

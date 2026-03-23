@@ -2,10 +2,13 @@ import pandas as pd
 import numpy as np
 import json
 import warnings
+import logging
 warnings.filterwarnings('ignore')
+logging.getLogger('prophet').setLevel(logging.ERROR)
+logging.getLogger('cmdstanpy').setLevel(logging.ERROR)
 
 from prophet import Prophet
-from db.dbconfig import get_engine,read_data, write_data, get_user_accounts, DB_AVAILABLE, CSV_DIR
+from models.db.dbconfig import get_engine,read_data, write_data, get_user_accounts, DB_AVAILABLE, CSV_DIR
 
 
 def forecast_with_prophet(series_df, target_col, periods=1):
@@ -157,7 +160,7 @@ def run_sequential_forecasting(user_id=None):
             engine
         )
     else:
-        users_csv    = pd.read_csv(CSV_DIR / "users.csv")
+        users_csv = pd.read_csv(CSV_DIR / "users.csv")
         accounts_csv = pd.read_csv(CSV_DIR / "accounts.csv")
         all_accounts = users_csv[['user_id', 'account_id']].merge(
             accounts_csv[['account_id', 'name', 'type', 'currency_code']],
@@ -183,7 +186,7 @@ def run_sequential_forecasting(user_id=None):
         segment = segment_map.get(uid, None)
 
         try:
-            rec = build_forecast_record(uid, user_monthly, segment, monthly_category, segment_medians, global_medians)
+            rec = build_forecast_record(uid, user_monthly, segment, segment_medians, global_medians)
             rec['top_category_forecasts'] = json.dumps(forecast_categories(uid, monthly_category))
             pct = abs(rec['spend_pct_change_vs_hist'])
             direct = rec['spend_direction']
@@ -200,10 +203,10 @@ def run_sequential_forecasting(user_id=None):
             rec['forecast_month'] = rec['forecast_month'].strftime('%Y-%m')
 
             #Account info 
-            acc_ids = acc_ids(uid)
-            rec['account_ids'] = json.dumps(acc_ids)
-            rec['primary_account_id'] = (acc_ids or [None])[0]
-            rec['account_count'] = len(acc_ids)
+            user_acc_ids = acc_ids(uid)
+            rec['account_ids'] = json.dumps(user_acc_ids)
+            rec['primary_account_id'] = (user_acc_ids or [None])[0]
+            rec['account_count'] = len(user_acc_ids)
 
             #Per-account forecasts (WMA on each account's monthly spend)
             per_acc_forecasts = []
