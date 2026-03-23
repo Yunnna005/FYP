@@ -7,6 +7,7 @@ import warnings
 warnings.filterwarnings('ignore')
 
 from db.config import get_engine, read_query, write_table
+from sqlalchemy.dialects.postgresql import insert
 
 
 def expand_json_categories(df, column_name):
@@ -46,8 +47,7 @@ def run_feature_engineering(user_id=None):
     engine = get_engine()
     print(f"[features] Loading data {'for user ' + str(user_id) if user_id else 'for all users'}...")
 
-    users_df, accounts_df, transactions_df, monthly_stats_df, all_time_stats_df = \
-        load_raw_data(engine, user_id)
+    users_df, accounts_df, transactions_df, monthly_stats_df, all_time_stats_df = load_raw_data(engine, user_id)
 
     # Parse dates
     transactions_df['date'] = pd.to_datetime(transactions_df['date'])
@@ -92,13 +92,11 @@ def run_feature_engineering(user_id=None):
     corr_matrix = feature_matrix.corr(numeric_only=True).abs()
     upper = corr_matrix.where(np.triu(np.ones(corr_matrix.shape), k=1).astype(bool))
     protected = ['TIME_SINCE', 'COUNT(transactions)']
-    to_drop = [c for c in upper.columns
-            if any(upper[c] > 0.95) and not any(k in c for k in protected)]
+    to_drop = [c for c in upper.columns if any(upper[c] > 0.95) and not any(k in c for k in protected)]
     feature_matrix = feature_matrix.drop(columns=to_drop)
 
     # Encode 
-    remaining = [f for f in feature_defs
-                 if any(n in feature_matrix.columns for n in f.get_feature_names())]
+    remaining = [f for f in feature_defs if any(n in feature_matrix.columns for n in f.get_feature_names())]
     feature_matrix.ww.init()
     fm_encoded, _ = ft.encode_features(feature_matrix, remaining, top_n=10)
 
@@ -171,8 +169,7 @@ def run_feature_engineering(user_id=None):
     merch_stats['merchant_diversity'] = (merch_stats['merchant_name'] / merch_stats['transaction_id']).round(2)
     fm_encoded['merchant_diversity'] = merch_stats['merchant_diversity']
     fm_encoded['new_merchant_count'] = merch_stats['is_new_merchant']
-    fm_encoded[['merchant_diversity','new_merchant_count']] = \
-        fm_encoded[['merchant_diversity','new_merchant_count']].fillna(0)
+    fm_encoded[['merchant_diversity','new_merchant_count']] = fm_encoded[['merchant_diversity','new_merchant_count']].fillna(0)
 
     # Deviation ratio on transactions
     user_baselines = transactions_df.groupby('user_id')['amount'].mean().to_dict()
@@ -196,7 +193,18 @@ def run_feature_engineering(user_id=None):
     b30 = fm_encoded.index.to_series().apply(lambda x: behavior_30d(x, transactions_df))
     fm_encoded[['avg_amt_30d','count_30d']] = b30
 
-    # PostgreSQL
+    acc_grouped = accounts_df.groupby('user_id')
+
+    def _acc_ids(uid):
+            if uid in acc_grouped.groups:
+                return acc_grouped.get_group(uid)['account_id'].tolist()
+            return []
+
+    fm_encoded['account_ids'] = fm_encoded.index.to_series().apply(lambda uid: json.dumps(_acc_ids(uid)))
+    fm_encoded['primary_account_id'] = fm_encoded.index.to_series().apply(lambda uid: (_acc_ids(uid) or [None])[0])
+    fm_encoded['account_count']      = fm_encoded.index.to_series().apply(lambda uid: len(_acc_ids(uid)))
+
+    #PostgreSQL
     print("[features] Writing to database...")
 
     if user_id:
@@ -211,7 +219,6 @@ def run_feature_engineering(user_id=None):
 
 
 def upsert_fm_encoded(fm_encoded, engine):
-    from sqlalchemy.dialects.postgresql import insert
     fm_encoded.reset_index().to_sql(
         'fm_encoded', engine, if_exists='append', index=False,
         method='multi', chunksize=100
