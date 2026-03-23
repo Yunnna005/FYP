@@ -6,9 +6,8 @@ warnings.filterwarnings('ignore')
 
 from xgboost import XGBClassifier
 from sklearn.preprocessing import StandardScaler
-from sklearn.model_selection import cross_val_score
 
-from dbconfig import get_engine, write_table
+from dbconfig import get_engine, write_data, get_user_accounts, DB_AVAILABLE, CSV_DIR, read_data
 
 PEER_BENCHMARK_COLS = [
     'vel_7d','vel_30d','avg_amt_30d','count_30d',
@@ -197,11 +196,12 @@ def generate_user_recommendations(user_id, fm_row, peer_row, transactions_df, ca
 
 
 def run_recommendation_engine(user_id=None):
-    engine = get_engine()
+    engine = get_engine() if DB_AVAILABLE else None
+    print(f"[recommendation] Loading data...")
 
-    fm_encoded = pd.read_sql("SELECT * FROM fm_encoded", engine).set_index('user_id')
-    transactions_df = pd.read_sql("SELECT * FROM transactions_enriched",engine)
-    anomaly_df = pd.read_sql("SELECT * FROM anomaly_scores", engine).set_index('user_id')
+    fm_encoded = read_data('fm_encoded', engine=engine).set_index('user_id')
+    transactions_df = read_data('transactions_enriched', engine=engine)
+    anomaly_df = read_data('anomaly_scores', engine=engine).set_index('user_id')
     transactions_df['date'] = pd.to_datetime(transactions_df['date'])
 
     available_benchmark = [c for c in PEER_BENCHMARK_COLS if c in fm_encoded.columns]
@@ -212,6 +212,7 @@ def run_recommendation_engine(user_id=None):
     peer_benchmarks = fm_encoded.groupby('task_segment')[available_benchmark + category_cols].median()
 
     # XGBoost feature importance
+    print("[recommendation] Training XGBoost for feature importance...")
     health_df = fm_encoded[available_benchmark].fillna(0).copy()
     health_df['anomaly_score'] = anomaly_df['anomaly_score'].reindex(health_df.index).fillna(50)
 
@@ -237,6 +238,26 @@ def run_recommendation_engine(user_id=None):
 
     target_users = [user_id] if user_id else fm_encoded.index.tolist()
 
+    if DB_AVAILABLE:
+        all_accounts = pd.read_sql(
+            "SELECT u.user_id, a.account_id, a.name, a.type, a.currency_code "
+            "FROM accounts a JOIN users u ON u.account_id = a.account_id",
+            engine
+        )
+    else:
+        users_csv = pd.read_csv(CSV_DIR / "users.csv")
+        accounts_csv = pd.read_csv(CSV_DIR / "accounts.csv")
+        all_accounts = users_csv[['user_id', 'account_id']].merge(
+            accounts_csv[['account_id', 'name', 'type', 'currency_code']],
+            on='account_id', how='left'
+        )
+    acc_grouped = all_accounts.groupby("user_id")
+
+    def acc_ids(uid):
+        if uid in acc_grouped.groups:
+            return acc_grouped.get_group(uid)["account_id"].tolist()
+        return []
+
     summary_rows = []
     for uid in target_users:
         if uid not in fm_encoded.index:
@@ -248,28 +269,43 @@ def run_recommendation_engine(user_id=None):
 
         recs = generate_user_recommendations(uid, fm_row, peer_row, transactions_df, category_cols, anomaly_row)
         top_rec = recs[0] if recs else None
+        acc_ids = acc_ids(uid)
+
         summary_rows.append({
             'user_id': uid,
+            'primary_account_id': (acc_ids or [None])[0],
+            'account_ids': json.dumps(acc_ids),
+            'account_count': len(acc_ids),
             'segment': str(fm_row.get('task_segment', 'Unknown')),
             'total_recommendations': len(recs),
             'high_priority_count': sum(1 for r in recs if r['priority'] == 'high'),
             'top_rec_type': top_rec['type'] if top_rec else None,
             'top_rec_priority': top_rec['priority'] if top_rec else None,
-            'top_rec_message': top_rec['message'] if top_rec else None,
-            'top_rec_action': top_rec['action'] if top_rec else None,
+            'top_rec_message': top_rec['message']  if top_rec else None,
+            'top_rec_action': top_rec['action']   if top_rec else None,
             'all_recommendations': json.dumps(recs),
             'is_anomaly': bool(anomaly_row.get('is_anomaly', False)) if anomaly_row else False,
             'anomaly_score': float(anomaly_row.get('anomaly_score', 0)) if anomaly_row else 0,
         })
 
     result_df = pd.DataFrame(summary_rows).set_index('user_id')
-    write_table(result_df, 'recommendations', if_exists='replace' if not user_id else 'append', engine=engine)
+    write_data(result_df, 'recommendations',
+               if_exists='replace' if not user_id else 'append')
+
+    print(f"[recommendation] Done — {len(result_df)} users processed")
     return result_df
 
 
 def run_recommendation(user_id):
-    engine = get_engine()
-    row_df = pd.read_sql(f"SELECT * FROM recommendations WHERE user_id = {user_id}", engine)
+    engine = get_engine() if DB_AVAILABLE else None
+    row_df = read_data(
+        'recommendations',
+        query=f"SELECT * FROM recommendations WHERE user_id = {user_id}" if DB_AVAILABLE else None,
+        engine=engine
+    )
+    if not DB_AVAILABLE:
+        row_df = row_df[row_df['user_id'] == user_id]
+
     if row_df.empty:
         return {'error': f'User {user_id} not found', 'recommendations': []}
 
@@ -281,6 +317,34 @@ def run_recommendation(user_id):
         grouped[r['type']].append(r)
 
     top_rec = recs[0] if recs else {}
+    accounts_info = get_user_accounts(user_id, engine)
+
+    trans_df = read_data(
+        'transactions_enriched',
+        query=f"SELECT account_id, amount, category_id, merchant_name "
+              f"FROM transactions_enriched WHERE user_id = {user_id}" if DB_AVAILABLE else None,
+        engine=engine
+    )
+    if not DB_AVAILABLE:
+        trans_df = trans_df[trans_df['user_id'] == user_id][['account_id', 'amount', 'category_id', 'merchant_name']]
+    per_account_spend = []
+    for acc in accounts_info.get("accounts", []):
+        acc_id = acc["account_id"]
+        acc_trans = trans_df[trans_df["account_id"] == acc_id]
+        per_account_spend.append({
+            "account_id": acc_id,
+            "account_name": acc.get("name", ""),
+            "account_type": acc.get("type", ""),
+            "currency_code": acc.get("currency_code", ""),
+            "total_spend": round(float(acc_trans["amount"].abs().sum()), 2) if not acc_trans.empty else 0.0,
+            "transaction_count": int(len(acc_trans)),
+            "avg_amount": round(float(acc_trans["amount"].abs().mean()), 2) if not acc_trans.empty else 0.0,
+            "top_category":  (
+                acc_trans.groupby("category_id")["amount"].sum().abs().idxmax()
+                if not acc_trans.empty and "category_id" in acc_trans.columns else None
+            ),
+        })
+
     return {
         'user_id': int(row['user_id']),
         'segment': str(row['segment']),
@@ -298,4 +362,8 @@ def run_recommendation(user_id):
         'behavioral_nudges': grouped['behavioral_nudge'],
         'is_anomaly': bool(row['is_anomaly']),
         'anomaly_score': float(row['anomaly_score']),
+        'primary_account_id': accounts_info['primary_account_id'],
+        'account_ids': accounts_info['account_ids'],
+        'account_count': accounts_info['account_count'],
+        'per_account': per_account_spend,
     }
