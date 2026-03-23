@@ -5,7 +5,7 @@ import warnings
 warnings.filterwarnings('ignore')
 
 from prophet import Prophet
-from dbconfig import get_engine,read_data, write_data, get_user_accounts, DB_AVAILABLE, CSV_DIR
+from db.dbconfig import get_engine,read_data, write_data, get_user_accounts, DB_AVAILABLE, CSV_DIR
 
 
 def forecast_with_prophet(series_df, target_col, periods=1):

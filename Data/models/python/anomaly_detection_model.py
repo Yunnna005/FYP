@@ -10,8 +10,7 @@ warnings.filterwarnings('ignore')
 from sklearn.ensemble import IsolationForest
 from sklearn.neighbors import LocalOutlierFactor
 from sklearn.preprocessing import StandardScaler
-
-from db.config import get_engine,read_data,read_data, write_data, DB_AVAILABLE, CSV_DIR, get_user_accounts
+from db.dbconfig import get_engine,read_data,read_data, write_data, DB_AVAILABLE, CSV_DIR, get_user_accounts
 
 VELOCITY_FEATURES = [
     'vel_1d', 'vel_7d', 'vel_30d', 'count_30d', 'accounts.COUNT(transactions)',
