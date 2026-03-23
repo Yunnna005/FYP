@@ -7,7 +7,7 @@ warnings.filterwarnings('ignore')
 from xgboost import XGBClassifier
 from sklearn.preprocessing import StandardScaler
 
-from dbconfig import get_engine, write_data, get_user_accounts, DB_AVAILABLE, CSV_DIR, read_data
+from db.dbconfig import get_engine, write_data, get_user_accounts, DB_AVAILABLE, CSV_DIR, read_data
 
 PEER_BENCHMARK_COLS = [
     'vel_7d','vel_30d','avg_amt_30d','count_30d',
