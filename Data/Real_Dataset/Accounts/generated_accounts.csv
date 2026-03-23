@@ -1,5 +1,0 @@
-account_id,user_id,name,type,mask,balances_current,balances_available,currency_code
-000000 - 00000111,USR398Px,JCB 16 digit,Savings,1947,3325.67,3325.67,USD
-000000 - 00000001,USR149Et,VISA 19 digit,Savings,1484,5937.15,5937.15,USD
-000000 - 00000011,USR342cz,Mastercard,Checking,1565,6396.63,6396.63,USD
-11111111,USR739UP,Mastercard,Savings,0274,1556.0,1556.0,USD
