@@ -9,6 +9,7 @@ from models.python.features  import run_feature_engineering
 from models.python.anomaly_detection_model import run_anomaly_detection
 from models.python.recommendation_model import run_recommendation_engine
 from models.python.forecasting_model import run_sequential_forecasting
+from analytics.user_stats import run_user_stats
 
 logging.basicConfig(
     level=logging.INFO,
@@ -18,6 +19,7 @@ logging.basicConfig(
 log = logging.getLogger(__name__)
 
 STEPS = [
+    ("User Stats", run_user_stats),
     ("Feature Engineering", run_feature_engineering),
     ("Anomaly Detection", run_anomaly_detection),
     ("Recommendation Engine", run_recommendation_engine),
