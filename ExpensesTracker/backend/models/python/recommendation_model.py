@@ -11,8 +11,6 @@ from models.db.dbconfig import get_engine, write_data, get_user_accounts, DB_AVA
 
 PEER_BENCHMARK_COLS = [
     'vel_7d','vel_30d','avg_amt_30d','count_30d',
-    'accounts.MEAN(transactions.amount)',
-    'accounts.MAX(transactions.amount)',
     'accounts.MEAN(monthly_stats.total_spend)',
     'accounts.MAX(monthly_stats.total_spend)',
     'accounts.SUM(monthly_stats.total_spend)',
@@ -28,22 +26,32 @@ def safe_get(row, col, default=0):
 def check_spending_warnings(user_row, peer_row, user_id, transactions_df):
     warnings_out = []
     avg_30d = safe_get(user_row, 'avg_amt_30d')
-    all_time_avg = safe_get(user_row, 'accounts.MEAN(transactions.amount)')
-    peer_avg = safe_get(peer_row, 'avg_amt_30d') if peer_row is not None else None
+    all_time_avg = safe_get(user_row, 'accounts.MEAN(monthly_stats.total_spend)')
+    peer_avg = safe_get(peer_row, 'accounts.MEAN(monthly_stats.total_spend)') if peer_row is not None else None
 
-    if all_time_avg > 0 and avg_30d > all_time_avg * 1.4:
+    MIN_MEANINGFUL_AVG = 50
+
+    if (all_time_avg >= MIN_MEANINGFUL_AVG and avg_30d >= MIN_MEANINGFUL_AVG and avg_30d > all_time_avg * 1.4):
         pct = round((avg_30d / all_time_avg - 1) * 100)
-        warnings_out.append({'type':'spending_warning','comparison':'personal','priority':'high',
+        warnings_out.append({
+            'type': 'spending_warning',
+            'comparison': 'personal',
+            'priority': 'high',
             'message': f'Your avg transaction amount this month (${avg_30d:.0f}) is {pct}% above your usual average (${all_time_avg:.0f}).',
             'action': 'Review your recent transactions to identify what changed.',
-            'metric': {'avg_amt_30d': avg_30d, 'all_time_avg': all_time_avg, 'pct_above': pct}})
-
-    if peer_avg and peer_avg > 0 and avg_30d > peer_avg * 1.5:
+            'metric': {'avg_amt_30d': avg_30d, 'all_time_avg': all_time_avg, 'pct_above': pct},
+    })
+        
+    if (peer_avg and peer_avg >= MIN_MEANINGFUL_AVG and avg_30d >= MIN_MEANINGFUL_AVG and avg_30d > peer_avg * 1.5):
         pct = round((avg_30d / peer_avg - 1) * 100)
-        warnings_out.append({'type':'spending_warning','comparison':'peer','priority':'medium',
+        warnings_out.append({
+            'type': 'spending_warning',
+            'comparison': 'peer',
+            'priority': 'medium',
             'message': f'Your recent avg spend (${avg_30d:.0f}/txn) is {pct}% higher than similar users (${peer_avg:.0f}/txn).',
             'action': 'Consider whether your spending aligns with your financial goals.',
-            'metric': {'avg_amt_30d': avg_30d, 'peer_avg': peer_avg, 'pct_above': pct}})
+            'metric': {'avg_amt_30d': avg_30d, 'peer_avg': peer_avg, 'pct_above': pct},
+    })
 
     user_trans = transactions_df[transactions_df['user_id'] == user_id]
     if not user_trans.empty:
