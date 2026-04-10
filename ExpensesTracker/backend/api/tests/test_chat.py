@@ -5,7 +5,7 @@ from api.chat.narrator import narrate
 
 logging.basicConfig(level=logging.INFO)
 
-USER_ID = "USR601Ie" 
+USER_ID = "USR342cz" 
 
 QUESTIONS = [
     "How much did I spend last month?",
