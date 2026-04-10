@@ -1,6 +1,6 @@
 import re
 from typing import Optional
-from datetime import datetime, timedelta
+from datetime import date, datetime, timedelta
 
 MONTH_NAMES = {
     "january": 1, "february": 2, "march": 3, "april": 4,
@@ -78,22 +78,22 @@ CATEGORY_KEYWORDS = {
 }
 
 
-def extract_month(question: str) -> Optional[str]:
+def extract_month(question: str, reference_date: Optional[date] = None) -> Optional[str]:
     q = question.lower()
-    today = datetime.today()
+    ref = reference_date or datetime.today().date()
 
     if "this month" in q:
-        return today.strftime("%Y-%m")
+        return ref.strftime("%Y-%m")
 
     if "last month" in q or "previous month" in q:
-        first_of_this_month = today.replace(day=1)
+        first_of_this_month = ref.replace(day=1)
         last_month = first_of_this_month - timedelta(days=1)
         return last_month.strftime("%Y-%m")
 
     for name, num in MONTH_NAMES.items():
         if name in q:
-            year = today.year
-            if num > today.month:
+            year = ref.year
+            if num > ref.month:
                 year -= 1
             return f"{year}-{num:02d}"
 

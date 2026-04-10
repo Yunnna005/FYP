@@ -1,11 +1,13 @@
 from api.chat.collectors import (
-    get_stats, get_recommendations, get_forecast,
+    get_latest_month, get_stats, get_recommendations, get_forecast,
     get_anomalies, get_flagged_transactions
 )
 import json
 
 user = 'USR601Ie'
-print('Stats:\n')
+print('Latest Month:\n')
+print(get_latest_month('USR601Ie'))
+print('\nStats:\n')
 print(json.dumps(get_stats(user), indent=2, default=str)[:500])
 print('\nRecommendations:\n')
 print(json.dumps(get_recommendations(user), indent=2, default=str)[:500])

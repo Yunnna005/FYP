@@ -1,5 +1,7 @@
 from dataclasses import dataclass, field
 from .extractors import extract_month, extract_category
+from . import collectors
+from datetime import datetime
 
 
 @dataclass
@@ -8,12 +10,17 @@ class QuestionIntent:
     params: dict = field(default_factory=dict)
 
 
-def classify(question: str) -> QuestionIntent:
+def classify(question: str, user_id: str) -> QuestionIntent:
     q = question.lower()
     intent = QuestionIntent()
 
+    latest_str = collectors.get_latest_month(user_id)
+    reference_date = None
+    if latest_str:
+        reference_date = datetime.strptime(f"{latest_str}-01", "%Y-%m-%d").date()
+
     intent.params["category"] = extract_category(q)
-    intent.params["month"] = extract_month(q)
+    intent.params["month"] = extract_month(q, reference_date=reference_date)
 
     if any(w in q for w in ["how much", "total", "spent", "spend on", "earned", "income", "expenses", "cost", 
                             "pay", "paid", "money in", "money out"]):

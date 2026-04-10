@@ -2,6 +2,18 @@ import json
 from typing import Optional
 from models.db.dbconfig import read_query
 
+def get_latest_month(user_id: str) -> Optional[str]:
+    """Return the most recent month (YYYY-MM) the user has stats for."""
+    df = read_query(
+        """SELECT MAX(month_start_date) AS latest
+           FROM user_monthly_stats
+           WHERE user_id = :uid""",
+        params={"uid": user_id},
+    )
+    if df.empty or df.iloc[0]["latest"] is None:
+        return None
+    latest = df.iloc[0]["latest"]
+    return latest.strftime("%Y-%m")
 
 def get_stats(user_id: str, month: Optional[str] = None) -> dict:
     all_time_df = read_query(
