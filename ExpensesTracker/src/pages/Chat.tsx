@@ -1,19 +1,19 @@
 import { useState } from 'react';
 import Template from '../templates/Template';
-
-interface ChatProps {
-  userId: string;
-}
+import { Navigate } from 'react-router-dom';
 
 interface Message {
   role: 'user' | 'assistant';
   content: string;
 }
 
-export default function Chat({ userId }: ChatProps) {
+export default function Chat() {
+  const userId = localStorage.getItem("user_id");
   const [messages, setMessages] = useState<Message[]>([]);
   const [input, setInput] = useState('');
   const [loading, setLoading] = useState(false);
+
+    if (!userId) return <Navigate to="/" replace />;
 
   async function handleSubmit(e: React.FormEvent) {
     e.preventDefault();

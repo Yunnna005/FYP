@@ -18,18 +18,35 @@ export default function Card() {
   const { open, ready } = usePlaidLink({
     token: linkToken,
     onSuccess: (public_token) => {
-      setLoading(true); 
-      fetch("/api/item/public_token/exchange", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ public_token }),
-      })
-        .then((res) => res.json())
-        .then((data) => {
-          console.log("access_token:", data.access_token);
+      setLoading(true);
+      (async () => {
+        try {
+          // Exchange public token
+          await fetch("/api/item/public_token/exchange", {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({ public_token }),
+          });
+
+          // Get email/phone from Plaid identity
+          const idRes = await fetch("/api/identity/login");
+          const { email, phone } = await idRes.json();
+
+          // Look up the user_id in your DB
+          const userRes = await fetch(
+            `/api/account/user?email=${encodeURIComponent(email)}&phone=${encodeURIComponent(phone)}`
+          );
+          const user = await userRes.json();
+
+          if (user?.user_id) {
+            localStorage.setItem("user_id", user.user_id);
+          }
+
           navigate("/dashboard");
-        })
-        .finally(() => setLoading(false));
+        } finally {
+          setLoading(false);
+        }
+      })();
     },
   });
 
