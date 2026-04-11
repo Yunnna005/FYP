@@ -4,10 +4,13 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "dev": "vite",
+    "dev": "concurrently \"npm run dev:web\" \"npm run dev:express\" \"npm run dev:fastapi\"",
     "build": "tsc -b && vite build",
     "lint": "eslint .",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "dev:web": "vite",
+    "dev:express": "node backend/server.js",
+    "dev:fastapi": "uvicorn api.main:app --port 8001 --reload --app-dir backend" 
   },
   "dependencies": {
     "@tailwindcss/postcss": "^4.1.17",
@@ -32,6 +35,7 @@
     "@types/react-dom": "^19.2.3",
     "@vitejs/plugin-react": "^5.1.1",
     "autoprefixer": "^10.4.22",
+    "concurrently": "^9.2.1",
     "eslint": "^9.39.1",
     "eslint-plugin-react-hooks": "^7.0.1",
     "eslint-plugin-react-refresh": "^0.4.24",
