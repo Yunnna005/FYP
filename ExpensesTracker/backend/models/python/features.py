@@ -2,6 +2,7 @@ import pandas as pd
 import numpy as np
 import json
 import featuretools as ft
+from sqlalchemy import text
 from featuretools.primitives import Day, Weekday, IsWeekend, Mean, Sum, Count, Max, Std, TimeSincePrevious, TimeSinceLast
 import warnings
 warnings.filterwarnings('ignore')
@@ -11,31 +12,49 @@ from models.db.dbconfig import get_engine, read_query, write_data, DB_AVAILABLE,
 def load_raw_data(engine, user_id=None):
     if DB_AVAILABLE:
         if user_id:
-            acc_row = read_query(f"SELECT account_id FROM users WHERE user_id = {user_id}", engine)
+            acc_row = read_query(
+                "SELECT account_id FROM users WHERE user_id = :uid",
+                engine,
+                params={"uid": user_id},
+            )
             if acc_row.empty:
                 raise ValueError(f"User {user_id} not found in database")
             acc_ids = acc_row['account_id'].tolist()
-            acc_placeholder = ', '.join(str(a) for a in acc_ids)
 
-            users_df = read_query(f"SELECT * FROM users WHERE user_id = {user_id}", engine)
-            accounts_df = read_query(f"SELECT * FROM accounts WHERE account_id IN ({acc_placeholder})", engine)
-            transactions_df = read_query(f"SELECT * FROM transactions WHERE account_id IN ({acc_placeholder})", engine)
+            users_df = read_query(
+                "SELECT * FROM users WHERE user_id = :uid",
+                engine,
+                params={"uid": user_id},
+            )
+            accounts_df = read_query(
+                "SELECT * FROM accounts WHERE account_id = ANY(:acc_ids)",
+                engine,
+                params={"acc_ids": acc_ids},
+            )
+            transactions_df = read_query(
+                "SELECT * FROM transactions WHERE account_id = ANY(:acc_ids)",
+                engine,
+                params={"acc_ids": acc_ids},
+            )
         else:
             users_df = read_query("SELECT * FROM users", engine)
-            accounts_df = read_query("SELECT a.* FROM accounts a JOIN users u ON u.account_id = a.account_id", engine)
-            transactions_df = read_query("SELECT t.* FROM transactions t JOIN users u ON u.account_id = t.account_id", engine)
+            accounts_df = read_query(
+                "SELECT a.* FROM accounts a JOIN users u ON u.account_id = a.account_id",
+                engine,
+            )
+            transactions_df = read_query(
+                "SELECT t.* FROM transactions t JOIN users u ON u.account_id = t.account_id",
+                engine,
+            )
     else:
         users_df = pd.read_csv(CSV_DIR / "users.csv")
         accounts_df = pd.read_csv(CSV_DIR / "accounts.csv")
         transactions_df = pd.read_csv(CSV_DIR / "transactions.csv")
-
         if user_id:
             users_df = users_df[users_df["user_id"] == user_id]
             acc_ids = users_df["account_id"].tolist()
             accounts_df = accounts_df[accounts_df["account_id"].isin(acc_ids)]
             transactions_df = transactions_df[transactions_df["account_id"].isin(acc_ids)]
-
-
     return users_df, accounts_df, transactions_df
 
 def run_feature_engineering(user_id=None):
@@ -224,11 +243,14 @@ def run_feature_engineering(user_id=None):
     print("[features] Writing to database...")
 
     if user_id:
-        write_data(fm_encoded,'fm_encoded', if_exists='append')
+        with engine.begin() as conn:
+            conn.execute(text("DELETE FROM fm_encoded WHERE user_id = :uid"), {"uid": user_id})
+            conn.execute(text("DELETE FROM transactions_enriched WHERE user_id = :uid"), {"uid": user_id})
+        write_data(fm_encoded, 'fm_encoded', if_exists='append')
         write_data(transactions_df, 'transactions_enriched', if_exists='append', index=False)
     else:
         write_data(fm_encoded, 'fm_encoded', if_exists='replace')
-        write_data(transactions_df, 'transactions_enriched',  if_exists='replace', index=False)
+        write_data(transactions_df, 'transactions_enriched', if_exists='replace', index=False)
 
     print(f"[features] Done — {len(fm_encoded)} users in fm_encoded")
     return fm_encoded, transactions_df

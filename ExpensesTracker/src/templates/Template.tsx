@@ -1,5 +1,6 @@
 import NavBar from "../componenets/NavBar";
 
+
 export default function Template({ children }: { children: React.ReactNode }) {
     return (
         <div className="drawer lg:drawer-open">

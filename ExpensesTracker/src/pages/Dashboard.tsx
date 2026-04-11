@@ -6,6 +6,7 @@ import Stat from "../componenets/Stat.tsx";
 import { DashboardStats } from "../config/DashboardStats.ts";import CategoryPie from "../componenets/CategoryPie.tsx";
 import MonthlyTrend from "../componenets/MonthlyTrend.tsx";
 import { Navigate } from "react-router-dom";
+import PipelineIndicator from "../componenets/PipelineIndicator.tsx";
 
 
 export default function Dashboard() {
@@ -89,14 +90,17 @@ export default function Dashboard() {
 if (!userId) return <Navigate to="/" replace />;
 
     return (
-        <Template>
+        <Template >
             <div className="min-h-screen bg-base-200">
                 
                 {/* Header */}
-                <div className="p-2 border-b-2 border-sky-900">
+                <div className="p-2 border-b-2 border-sky-900 flex justify-between items-center">
                     <h1 className="text-2xl font-bold text-sky-950 mb-3 mt-3 ml-7">
                         Dashboard
                     </h1>
+                    <div className="mr-7 text-sky-950">
+                        <PipelineIndicator />
+                    </div>
                 </div>
 
                 <div className="p-10 w-auto">

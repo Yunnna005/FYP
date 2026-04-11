@@ -44,7 +44,7 @@ export default function Chat() {
   }
 
   return (
-    <Template>
+    <Template >
       <div className="flex flex-col h-[calc(100vh-2rem)] mx-auto p-4">
         <div className="flex flex-col h-full p-4">
           <div className="flex-1 overflow-y-auto space-y-4 mb-4">
