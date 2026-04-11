@@ -9,7 +9,14 @@ export default defineConfig({
     host: "127.0.0.1",
     port: 3000,
     proxy:{
-      '/api': 'http://localhost:8000'
+      '/api/ask': {
+        target: 'http://localhost:8001',  
+        changeOrigin: true,
+      },
+      '/api': {
+        target: 'http://localhost:8000',
+        changeOrigin: true,
+      },
     }
   },
 })
