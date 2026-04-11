@@ -6,6 +6,7 @@ warnings.filterwarnings('ignore')
 
 from xgboost import XGBClassifier
 from sklearn.preprocessing import StandardScaler
+from sqlalchemy import text
 
 from models.db.dbconfig import get_engine, write_data, get_user_accounts, DB_AVAILABLE, CSV_DIR, read_data
 
@@ -207,9 +208,14 @@ def run_recommendation_engine(user_id=None):
     engine = get_engine() if DB_AVAILABLE else None
     print(f"[recommendation] Loading data...")
 
-    fm_encoded = read_data('fm_encoded', engine=engine).set_index('user_id')
+    fm_encoded = read_data('fm_encoded', engine=engine)
+    fm_encoded = fm_encoded.drop_duplicates(subset='user_id', keep='last').set_index('user_id')
+
     transactions_df = read_data('transactions_enriched', engine=engine)
-    anomaly_df = read_data('anomaly_scores', engine=engine).set_index('user_id')
+
+    anomaly_df = read_data('anomaly_scores', engine=engine)
+    anomaly_df = anomaly_df.drop_duplicates(subset='user_id', keep='last').set_index('user_id')
+
     transactions_df['date'] = pd.to_datetime(transactions_df['date'])
 
     available_benchmark = [c for c in PEER_BENCHMARK_COLS if c in fm_encoded.columns]
@@ -297,8 +303,13 @@ def run_recommendation_engine(user_id=None):
         })
 
     result_df = pd.DataFrame(summary_rows).set_index('user_id')
-    write_data(result_df, 'recommendations',
-               if_exists='replace' if not user_id else 'append')
+
+    if user_id:
+        with engine.begin() as conn:
+            conn.execute(text("DELETE FROM recommendations WHERE user_id = :uid"), {"uid": user_id})
+        write_data(result_df, 'recommendations', if_exists='append')
+    else:
+        write_data(result_df, 'recommendations', if_exists='replace')
 
     print(f"[recommendation] Done — {len(result_df)} users processed")
     return result_df

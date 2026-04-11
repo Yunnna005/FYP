@@ -1,5 +1,6 @@
 import json
 
+from sqlalchemy import text
 import pandas as pd
 import numpy as np
 import pickle
@@ -289,7 +290,12 @@ def run_anomaly_detection(user_id=None):
 
     # Write to DB
     anomaly_df['anomaly_drivers_json'] = anomaly_df['anomaly_drivers'].apply(lambda drivers: json.dumps(drivers) if drivers else '[]')
-    write_data(anomaly_df.drop(columns=['anomaly_drivers']),'anomaly_scores',if_exists='replace',)
+    if user_id:
+        with engine.begin() as conn:
+            conn.execute(text("DELETE FROM anomaly_scores WHERE user_id = :uid"), {"uid": user_id})
+        write_data(anomaly_df, 'anomaly_scores', if_exists='append')
+    else:
+        write_data(anomaly_df, 'anomaly_scores', if_exists='replace')
 
     flagged = anomaly_df['is_anomaly'].sum()
     print(f"[anomaly] Done — {flagged}/{len(anomaly_df)} users flagged")
