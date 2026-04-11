@@ -48,7 +48,8 @@ def get_connection():
 
 def read_query(query: str, engine=None, params=None) -> pd.DataFrame:
     eng = engine or get_engine()
-    return pd.read_sql(query, eng, params=params)
+    sql = sqlalchemy.text(query) if params else query
+    return pd.read_sql(sql, eng, params=params)
 
 def read_data(table: str, query: str = None, engine=None) -> pd.DataFrame:
     if DB_AVAILABLE:

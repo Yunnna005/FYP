@@ -157,23 +157,54 @@ def run_feature_engineering(user_id=None):
     fm_encoded[['merchant_diversity','new_merchant_count']] = fm_encoded[['merchant_diversity','new_merchant_count']].fillna(0)
 
     # Deviation ratio on transactions
-    user_baselines = transactions_df.groupby('user_id')['amount'].mean().to_dict()
-    transactions_df['user_avg_amount'] = transactions_df['user_id'].map(user_baselines)
-    transactions_df['deviation_ratio'] = transactions_df['amount'] / transactions_df['user_avg_amount']
+    spending_only = transactions_df[transactions_df['amount'] < 0].copy()
+    user_spending_baselines = (
+        spending_only.groupby('user_id')['amount']
+        .apply(lambda s: s.abs().mean())
+        .to_dict()
+    )
+    transactions_df['user_avg_amount'] = transactions_df['user_id'].map(user_spending_baselines)
 
-    def classify_deviation(d):
-        if d > 3.0: return 'Unusually Large'
-        if d < 0.5: return 'Unusually Small'
+
+    def classify_deviation(row):
+        baseline = row['user_avg_amount']
+        if pd.isna(baseline) or baseline <= 0:
+            return 'Normal'
+        if row['amount'] >= 0:
+            return 'Normal'  # income is never classified as unusual spending
+        magnitude = abs(row['amount'])
+        ratio = magnitude / baseline
+        if ratio > 3.0:
+            return 'Unusually Large'
+        if ratio < 0.3:
+            return 'Unusually Small'
         return 'Normal'
 
-    transactions_df['spend_anomaly_type'] = transactions_df['deviation_ratio'].apply(classify_deviation)
+
+    transactions_df['spend_anomaly_type'] = transactions_df.apply(classify_deviation, axis=1)
+
+    transactions_df['deviation_ratio'] = transactions_df.apply(
+        lambda r: (abs(r['amount']) / r['user_avg_amount'])
+        if (r['amount'] < 0 and pd.notna(r['user_avg_amount']) and r['user_avg_amount'] > 0)
+        else 0.0,
+        axis=1,
+    )
 
     # 30d behaviour
     def behavior_30d(uid, trans_df):
         ut = trans_df[trans_df['user_id'] == uid]
-        if ut.empty: return pd.Series([0, 0], index=['avg_amt_30d','count_30d'])
+        if ut.empty:
+            return pd.Series([0, 0], index=['avg_amt_30d', 'count_30d'])
         last30 = ut[ut['date'] >= ut['date'].max() - pd.Timedelta(days=30)]
-        return pd.Series([last30['amount'].mean(), len(last30)], index=['avg_amt_30d','count_30d'])
+
+        spending_only = last30[last30['amount'] < 0]
+        if spending_only.empty:
+            return pd.Series([0, len(last30)], index=['avg_amt_30d', 'count_30d'])
+
+        return pd.Series(
+            [spending_only['amount'].abs().mean(), len(last30)],
+            index=['avg_amt_30d', 'count_30d'],
+        )
 
     b30 = fm_encoded.index.to_series().apply(lambda x: behavior_30d(x, transactions_df))
     fm_encoded[['avg_amt_30d','count_30d']] = b30

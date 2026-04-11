@@ -16,8 +16,7 @@ VELOCITY_FEATURES = [
     'vel_1d', 'vel_7d', 'vel_30d', 'count_30d', 'accounts.COUNT(transactions)',
 ]
 AMOUNT_FEATURES = [
-    'avg_amt_30d', 'accounts.MEAN(transactions.amount)',
-    'accounts.MAX(transactions.amount)',
+    'avg_amt_30d',
     'accounts.MEAN(monthly_stats.total_spend)',
     'accounts.MAX(monthly_stats.total_spend)',
     'accounts.SUM(monthly_stats.total_spend)',
@@ -98,11 +97,19 @@ def per_account_anomaly_summary(user_id: str, transactions_df: pd.DataFrame, acc
         })
     return summary
 
-def identify_drivers(user_row, X, population_medians, available_features, top_n=3):
+def identify_drivers(user_row, user_segment, segment_medians, overall_medians,available_features, top_n=3):
+    if user_segment in segment_medians.index:
+        reference = segment_medians.loc[user_segment]
+        reference_label = f"{user_segment} segment"
+    else:
+        reference = overall_medians
+        reference_label = "all users"
+
     deviations = {}
     for col in available_features:
-        if col not in X.columns: continue
-        m = population_medians[col]
+        if col not in reference.index:
+            continue
+        m = reference[col]
         v = user_row[col]
         deviations[col] = abs(v - m) / (abs(m) + 1e-9)
 
@@ -110,11 +117,12 @@ def identify_drivers(user_row, X, population_medians, available_features, top_n=
     results = []
     for feat, dev in top:
         uv = round(float(user_row[feat]), 2)
-        mv = round(float(population_medians[feat]), 2)
+        mv = round(float(reference[feat]), 2)
         direction = 'above' if uv > mv else 'below'
         label = FEATURE_LABELS.get(feat, feat)
         results.append(
-            f"{label}: {uv} (median is {mv} — you are {direction} average by {round(dev,1)}x)"
+            f"{label}: {uv} ({reference_label} median is {mv} — "
+            f"you are {direction} average by {round(dev, 1)}x)"
         )
     return results
 
@@ -137,6 +145,8 @@ def run_anomaly_detection(user_id=None):
             iso_forest = bundle['iso_forest']
             scaler = bundle['scaler']
             saved_feat = bundle['feature_cols']
+            segment_medians = bundle.get('segment_medians', pd.DataFrame())
+            overall_medians = bundle.get('overall_medians', pd.Series(dtype=float))
 
             X_user = X.loc[[user_id], saved_feat].fillna(0)
             X_scaled = scaler.transform(X_user)
@@ -151,10 +161,13 @@ def run_anomaly_detection(user_id=None):
             anomaly_score = round(iso_norm * 100, 2)
             is_anomaly = iso_label == -1
 
-            population_medians = X[saved_feat].median()
+            user_segment = fm_encoded.loc[user_id].get('task_segment', None)
             drivers = identify_drivers(
-                X.loc[user_id, saved_feat], X[saved_feat],
-                population_medians, saved_feat
+                X.loc[user_id, saved_feat],
+                user_segment,
+                segment_medians,
+                overall_medians,
+                saved_feat,
             )
 
             row = fm_encoded.loc[user_id]
@@ -212,10 +225,29 @@ def run_anomaly_detection(user_id=None):
         if col in fm_encoded.columns:
             anomaly_df[col] = fm_encoded[col]
 
-    population_medians = X.median()
-    anomaly_df['anomaly_drivers'] = anomaly_df.index.to_series().apply(
-        lambda uid: identify_drivers(X.loc[uid], X, population_medians, available_features)
-    )
+    if 'task_segment' in fm_encoded.columns:
+        segments = fm_encoded.loc[X.index, 'task_segment']
+        segment_medians = X.groupby(segments).median()
+    else:
+        segment_medians = pd.DataFrame()
+
+    overall_medians = X.median()
+
+    def _drivers_for(uid):
+        user_segment = (
+            fm_encoded.loc[uid].get('task_segment', None)
+            if 'task_segment' in fm_encoded.columns
+            else None
+        )
+        return identify_drivers(
+            X.loc[uid],
+            user_segment,
+            segment_medians,
+            overall_medians,
+            available_features,
+        )
+
+    anomaly_df['anomaly_drivers'] = anomaly_df.index.to_series().apply(_drivers_for)
 
     if DB_AVAILABLE:
         users_accounts = pd.read_sql(
@@ -248,13 +280,16 @@ def run_anomaly_detection(user_id=None):
         'feature_cols': available_features,
         'iso_score_min': float(iso_scores.min()),
         'iso_score_max': float(iso_scores.max()),
+        'segment_medians': segment_medians,
+        'overall_medians': overall_medians,
     }
     with open(MODEL_PATH, 'wb') as f:
         pickle.dump(bundle, f)
     print(f"[anomaly] Model saved: {MODEL_PATH}")
 
     # Write to DB
-    write_data(anomaly_df.drop(columns=['anomaly_drivers']),'anomaly_scores', if_exists='replace')
+    anomaly_df['anomaly_drivers_json'] = anomaly_df['anomaly_drivers'].apply(lambda drivers: json.dumps(drivers) if drivers else '[]')
+    write_data(anomaly_df.drop(columns=['anomaly_drivers']),'anomaly_scores',if_exists='replace',)
 
     flagged = anomaly_df['is_anomaly'].sum()
     print(f"[anomaly] Done — {flagged}/{len(anomaly_df)} users flagged")

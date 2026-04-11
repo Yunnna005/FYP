@@ -2,7 +2,7 @@ import sys
 from unittest.mock import patch, MagicMock, call
 import pytest
 
-import pipeline
+from pipelines import pipeline
 
 @pytest.fixture
 def mock_steps():
