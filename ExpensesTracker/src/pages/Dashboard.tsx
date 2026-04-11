@@ -5,9 +5,11 @@ import Table from "../componenets/Table.tsx";
 import Stat from "../componenets/Stat.tsx";
 import { DashboardStats } from "../config/DashboardStats.ts";import CategoryPie from "../componenets/CategoryPie.tsx";
 import MonthlyTrend from "../componenets/MonthlyTrend.tsx";
+import { Navigate } from "react-router-dom";
 
 
 export default function Dashboard() {
+    const userId = localStorage.getItem("user_id");
     const [transactions, setTransactions] = useState<any[]>([]);
     const [loading, setLoading] = useState(true);
     const [monthlyStats, setMonthlyStats] = useState<any>(null);
@@ -16,6 +18,7 @@ export default function Dashboard() {
 
 
     useEffect(() => {
+        if (!userId) return;
     async function loadData() {
         try {
             //Get Account Number
@@ -27,13 +30,6 @@ export default function Dashboard() {
             const { email, phone } = await res.json();
             if (!email || !phone) return;
 
-            //Get UserID
-            const userRes = await fetch(
-                `/api/account/user?email=${encodeURIComponent(email)}&phone=${encodeURIComponent(phone)}`
-            );
-            const { user_id } = await userRes.json();
-            if (!user_id) return;
-
             //Get Transactions
             const txRes = await fetch(
                 `/api/account/transactions?email=${encodeURIComponent(email)}&phone=${encodeURIComponent(phone)}`
@@ -42,7 +38,9 @@ export default function Dashboard() {
             setTransactions(txData.transactions || []);
 
             //Get Stats
-            const statsRes = await fetch(`/api/account/monthly_stats?user_id=${encodeURIComponent(user_id)}&account_number=${encodeURIComponent(accountNumber)}`);
+            const statsRes = await fetch(
+                `/api/account/monthly_stats?user_id=${encodeURIComponent(userId!)}&account_number=${encodeURIComponent(accountNumber)}`
+            );
             const statsData = await statsRes.json();
             const rows = statsData.stats ?? {};
 
@@ -50,7 +48,7 @@ export default function Dashboard() {
             setMonthlyStats(latest);
 
             if (latest.spending_by_category) {
-                const categoryData = Object.entries(latest.spending_by_category).map(
+                const categoryData = Object.    entries(latest.spending_by_category).map(
                     ([category, total]) => ({
                         category,
                         total: Number(total),
@@ -86,7 +84,9 @@ export default function Dashboard() {
     }
 
     loadData();
-}, []);
+}, [userId]);
+
+if (!userId) return <Navigate to="/" replace />;
 
     return (
         <Template>
