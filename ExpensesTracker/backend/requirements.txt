@@ -19,5 +19,6 @@ psycopg2-binary
 # Environment
 python-dotenv
 
-passlib[bcrypt]==1.7.4
+argon2-cffi
 python-multipart
+lxml

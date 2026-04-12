@@ -61,25 +61,36 @@ def run_feature_engineering(user_id=None):
     engine = get_engine()
     print(f"[features] Loading data {'for user ' + str(user_id) if user_id else 'for all users'}...")
 
-    users_df, accounts_df, transactions_df = load_raw_data(engine, user_id)
-
+    users_df, accounts_df, transactions_df = load_raw_data(engine, user_id=None)
+    
+    if users_df.empty:
+        print("[features] No users in database, skipping")
+        return None, None
+    
     transactions_df['date'] = pd.to_datetime(transactions_df['date'])
+
+    PII_COLS = ['email', 'password', 'plaid_access_token', 'plaid_item_id', 'full_name', 'phone_number', 'is_active']
+    users_df = users_df.drop(columns=[c for c in PII_COLS if c in users_df.columns])
+
+    NOISE_ACCOUNT_COLS = ['name', 'mask', 'type', 'currency_code']
+    accounts_df_clean = accounts_df.drop(columns=[c for c in NOISE_ACCOUNT_COLS if c in accounts_df.columns])
 
     account_to_user = users_df.set_index('account_id')['user_id'].to_dict()
     transactions_df['user_id'] = transactions_df['account_id'].map(account_to_user)
+    accounts_df_clean['user_id'] = accounts_df_clean['account_id'].map(account_to_user)
     accounts_df['user_id'] = accounts_df['account_id'].map(account_to_user)
 
     print("[features] Building EntitySet...")
     es = ft.EntitySet(id="financial_system")
     es.add_dataframe(dataframe_name="users", dataframe=users_df, index="user_id")
-    es.add_dataframe(dataframe_name="accounts", dataframe=accounts_df, index="account_id")
+    es.add_dataframe(dataframe_name="accounts", dataframe=accounts_df_clean, index="account_id")
     es.add_dataframe(dataframe_name="transactions", dataframe=transactions_df, index="transaction_id", time_index="date")
     es.add_relationship("accounts", "account_id", "users", "account_id")
     es.add_relationship("accounts", "account_id", "transactions", "account_id")
 
     #DFS
     print("[features] Running DFS...")
-    last_date   = transactions_df['date'].max()
+    last_date = transactions_df['date'].max()
     cutoff_times = pd.DataFrame({'user_id': users_df['user_id'], 'time': last_date})
 
     feature_matrix, feature_defs = ft.dfs(
@@ -98,19 +109,24 @@ def run_feature_engineering(user_id=None):
     # Correlation filter
     corr_matrix = feature_matrix.corr(numeric_only=True).abs()
     upper = corr_matrix.where(np.triu(np.ones(corr_matrix.shape), k=1).astype(bool))
-    protected = ['TIME_SINCE', 'COUNT(transactions)']
+    protected = ['TIME_SINCE', 'COUNT(transactions)', 'monthly_stats', 'balances_current']
     to_drop = [c for c in upper.columns if any(upper[c] > 0.95) and not any(k in c for k in protected)]
     feature_matrix = feature_matrix.drop(columns=to_drop)
 
+    fm_encoded = feature_matrix.copy()
+
     #Encode
-    remaining = [f for f in feature_defs if any(n in feature_matrix.columns for n in f.get_feature_names())]
-    feature_matrix.ww.init()
-    fm_encoded, _ = ft.encode_features(feature_matrix, remaining, top_n=10)
+    #remaining = [f for f in feature_defs if any(n in feature_matrix.columns for n in f.get_feature_names())]
+    #feature_matrix.ww.init()
+    #fm_encoded, _ = ft.encode_features(feature_matrix, remaining, top_n=10)
 
     #Custom metrics
     print("[features] Computing custom metrics...")
-    recency_col = [c for c in fm_encoded.columns if 'TIME_SINCE_LAST' in c][0]
-    fm_encoded['days_since_last'] = fm_encoded[recency_col] / 86400
+    recency_col = [c for c in fm_encoded.columns if 'TIME_SINCE_LAST' in c and 'transactions.date' in c]
+    if recency_col:
+        fm_encoded['days_since_last'] = fm_encoded[recency_col[0]] / 86400
+    else:
+        fm_encoded['days_since_last'] = 0
 
     # Velocity metrics
     def calc_velocity(uid, trans_df):
@@ -241,16 +257,9 @@ def run_feature_engineering(user_id=None):
 
     #PostgreSQL
     print("[features] Writing to database...")
-
-    if user_id:
-        with engine.begin() as conn:
-            conn.execute(text("DELETE FROM fm_encoded WHERE user_id = :uid"), {"uid": user_id})
-            conn.execute(text("DELETE FROM transactions_enriched WHERE user_id = :uid"), {"uid": user_id})
-        write_data(fm_encoded, 'fm_encoded', if_exists='append')
-        write_data(transactions_df, 'transactions_enriched', if_exists='append', index=False)
-    else:
-        write_data(fm_encoded, 'fm_encoded', if_exists='replace')
-        write_data(transactions_df, 'transactions_enriched', if_exists='replace', index=False)
+    print("[features] Writing to database...")
+    write_data(fm_encoded, 'fm_encoded', if_exists='replace')
+    write_data(transactions_df, 'transactions_enriched', if_exists='replace', index=False)
 
     print(f"[features] Done — {len(fm_encoded)} users in fm_encoded")
     return fm_encoded, transactions_df

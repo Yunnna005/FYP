@@ -49,3 +49,18 @@ export async function getMonthlyStatsByUserId(user_id, account_id) {
     throw new Error("Failed to fetch monthly stats");
   }
 }
+export async function getUserById(user_id) {
+  try {
+    const query = `
+      SELECT u.user_id, u.email, u.phone_number, u.full_name, u.account_id,
+             a.name AS account_name, a.balances_current, a.currency_code
+      FROM users u
+      LEFT JOIN accounts a ON a.account_id = u.account_id
+      WHERE u.user_id = $1`;
+    const { rows } = await pool.query(query, [user_id]);
+    return rows[0] || null;
+  } catch (error) {
+    console.error("Database query error:", error.message);
+    throw new Error("Failed to fetch user");
+  }
+}

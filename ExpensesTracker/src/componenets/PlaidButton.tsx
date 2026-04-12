@@ -40,7 +40,8 @@ export default function Card() {
 
           if (user?.user_id) {
             localStorage.setItem("user_id", user.user_id);
-          }
+            localStorage.setItem("login_method", "plaid");
+          }         
 
           navigate("/dashboard");
         } finally {
