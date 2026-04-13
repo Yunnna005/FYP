@@ -140,6 +140,18 @@ export default function UploadAuth() {
           <button className="btn btn-ghost btn-sm mt-4" onClick={() => navigate("/")}>
             ← Back to Plaid login
           </button>
+          <div className="mt-3 text-xs text-gray-500 text-left border-t pt-4">
+              <p className="font-semibold mb-1">Terms & Data Notice</p>
+              <p>
+                  This is a student project for demo purposes. By using this app, you acknowledge that:
+              </p>
+              <ul className="list-disc list-inside space-y-1">
+                  <li>You upload your data at your own responsibility.</li>
+                  <li>Your data is stored to enable analysis and AI features.</li>
+                  <li>You can delete all your data at any time using the "Delete my data" button on the Dashboard.</li>
+                  <li>Please do not upload data you wouldn't be comfortable sharing.</li>
+              </ul>
+          </div>
         </div>
       </div>
     </div>
