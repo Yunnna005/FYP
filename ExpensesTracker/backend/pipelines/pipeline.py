@@ -26,6 +26,15 @@ STEPS = [
     ("Sequential Forecasting", run_sequential_forecasting),
 ]
 
+REQUIRED_PIPELINE_TABLES = [
+    "fm_encoded",
+    "transactions_enriched",
+    "anomaly_scores",
+    "recommendations",
+    "user_monthly_stats",
+    "user_all_time_stats",
+]
+
 REQUIRED_CSVS = ["users.csv", "accounts.csv", "transactions.csv"]
 
 def check_data_sources():
@@ -36,9 +45,29 @@ def check_data_sources():
         log.error(f"DB unavailable and missing CSV files in {CSV_DIR}: {missing}")
         sys.exit(1)
 
+def all_pipeline_tables_exist() -> bool:
+    if not DB_AVAILABLE:
+        return False
+    try:
+        engine = get_engine()
+        inspector = inspect(engine)
+        existing = set(inspector.get_table_names())
+        missing = [t for t in REQUIRED_PIPELINE_TABLES if t not in existing]
+        if missing:
+            log.info(f"Pipeline tables missing: {missing} — will run full pipeline")
+            return False
+        return True
+    except Exception as e:
+        log.warning(f"Could not check pipeline tables ({e}) — defaulting to full run")
+        return False
 
 def run_pipeline(user_id=None):
     check_data_sources()
+
+    if user_id is not None and not all_pipeline_tables_exist():
+        log.info(f"Tables not ready — promoting user {user_id} run to full pipeline")
+        user_id = None
+
     label = f"user {user_id}" if user_id else "ALL users"
     start = time.time()
     log.info(f"Pipeline starting — {label}")
@@ -58,7 +87,7 @@ def run_pipeline(user_id=None):
         log.info(f"  [{status}]  {name}")
     return results
 
-def add_new_user(user_id: int):
+def add_new_user(user_id):
     log.info(f"New user {user_id} — starting pipeline...")
     return run_pipeline(user_id=user_id)
 
