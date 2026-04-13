@@ -67,6 +67,7 @@ export default function UploadAuth() {
       const data = await res.json();
       if (res.ok) {
         localStorage.setItem("user_id", data.user_id);
+        localStorage.setItem("login_method", "csv");
         navigate("/dashboard");
       } else {
         setError(data.detail || "Login failed");
