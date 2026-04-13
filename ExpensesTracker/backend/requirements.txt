@@ -22,3 +22,4 @@ python-dotenv
 argon2-cffi
 python-multipart
 lxml
+openpyxl

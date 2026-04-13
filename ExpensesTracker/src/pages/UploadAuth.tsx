@@ -112,7 +112,8 @@ export default function UploadAuth() {
                 <option value="aib">AIB</option>
                 <option value="revolut">Revolut</option>
               </select>
-              <input type="file" accept=".csv,.html,.csv.html" className="file-input file-input-bordered w-full"
+              <input type="file" accept=".csv,.xlsx,.xls,.html,application/vnd.openxmlformats-officedocument.spreadsheetml.sheet,application/vnd.ms-excel,text/csv,text/html"
+                className="file-input file-input-bordered w-full"
                 onChange={(e) => setFile(e.target.files?.[0] || null)} required />
 
               {error && <p className="text-red-500 text-sm">{error}</p>}

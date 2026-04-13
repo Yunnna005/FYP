@@ -44,6 +44,11 @@ def run_user_stats(user_id=None):
         log.warning("No transactions, accounts, or users data — skipping user stats")
         return
 
+    if "transaction_class" not in transactions.columns:
+        transactions["transaction_class"] = "card_payment"
+    else:
+        transactions["transaction_class"] = transactions["transaction_class"].fillna("card_payment")
+
     accounts = accounts.merge(
         users[["user_id", "account_id"]],
         on="account_id",
@@ -84,19 +89,26 @@ def run_user_stats(user_id=None):
             amounts = group['amount']
             total = round(float(amounts.sum()), 2)
             count = int(len(amounts))
+
+            SPEND_CLASSES = {"card_payment", "atm", "fee"}
+            spending_mask = group["transaction_class"].isin(SPEND_CLASSES) & (amounts < 0)
+            total_spent = round(float(amounts[spending_mask].sum()), 2)
+
+            INCOME_CLASSES = {"topup", "reward", "refund"}
+            income_mask = group["transaction_class"].isin(INCOME_CLASSES) & (amounts > 0)
+            total_received = round(float(amounts[income_mask].sum()), 2)
+
             monthly_rows.append({
                 "user_id": uid,
                 "account_id": account_id,
                 "month_start_date": f"{month}-01",
                 "total_amount": total,
                 "total_transactions": count,
-                "total_spent": round(float(amounts[amounts < 0].sum()), 2),
-                "total_received": round(float(amounts[amounts > 0].sum()), 2),
-                "avg_transaction": round(total / count, 2),
+                "total_spent": total_spent,
+                "total_received": total_received,
+                "avg_transaction": round(total / count, 2) if count else 0,
                 "largest": round(float(amounts.max()), 2),
-                "largest_abs": round(
-                    float(amounts.loc[amounts.abs().idxmax()]), 2
-                ),
+                "largest_abs": round(float(amounts.loc[amounts.abs().idxmax()]), 2),
                 "spending_by_category": json.dumps(
                     group['category_id'].value_counts().to_dict()
                 ),
@@ -109,13 +121,13 @@ def run_user_stats(user_id=None):
         log.warning("No stats generated")
         return
 
-    all_time_result = _sync_table(
+    all_time_result = sync_table(
         new_df=new_all_time,
         table=ALL_TIME_TABLE,
         key_cols=ALL_TIME_KEYS,
         value_cols=ALL_TIME_VALUES,
     )
-    monthly_result = _sync_table(
+    monthly_result = sync_table(
         new_df=new_monthly,
         table=MONTHLY_TABLE,
         key_cols=MONTHLY_KEYS,
@@ -134,21 +146,16 @@ def run_user_stats(user_id=None):
     )
 
 
-def _sync_table(new_df, table, key_cols, value_cols):
-    """
-    Compare new_df against what's already in the table.
-    Insert rows that don't exist, update rows whose values changed,
-    skip rows that match exactly.
-    """
+def sync_table(new_df, table, key_cols, value_cols):
     result = {"inserted": 0, "updated": 0, "unchanged": 0}
 
     if new_df.empty:
         return result
 
-    existing_df = _load_existing(table)
+    existing_df = load_existing(table)
 
     if existing_df.empty:
-        _insert_rows(new_df, table)
+        insert_rows(new_df, table)
         result["inserted"] = len(new_df)
         return result
 
@@ -172,24 +179,23 @@ def _sync_table(new_df, table, key_cols, value_cols):
         if isinstance(existing_row, pd.DataFrame):
             existing_row = existing_row.iloc[0]
 
-        if _rows_match(new_row, existing_row, value_cols):
+        if rows_match(new_row, existing_row, value_cols):
             result["unchanged"] += 1
         else:
             to_update.append(new_row)
 
     if to_insert:
-        _insert_rows(pd.DataFrame(to_insert), table)
+        insert_rows(pd.DataFrame(to_insert), table)
         result["inserted"] = len(to_insert)
 
     if to_update:
-        _update_rows(pd.DataFrame(to_update), table, key_cols, value_cols)
+        update_rows(pd.DataFrame(to_update), table, key_cols, value_cols)
         result["updated"] = len(to_update)
 
     return result
 
 
-def _load_existing(table):
-    """Load current contents of a stats table. Returns empty DF if missing."""
+def load_existing(table):
     try:
         df = read_data(table)
         return df if not df.empty else pd.DataFrame()
@@ -198,13 +204,12 @@ def _load_existing(table):
         return pd.DataFrame()
 
 
-def _rows_match(row_a, row_b, value_cols):
-    """Return True if two rows have identical values across value_cols."""
+def rows_match(row_a, row_b, value_cols):
     for col in value_cols:
         a, b = row_a[col], row_b[col]
 
         if col == "spending_by_category":
-            if _normalize_json(a) != _normalize_json(b):
+            if normalize_json(a) != normalize_json(b):
                 return False
             continue
 
@@ -218,8 +223,7 @@ def _rows_match(row_a, row_b, value_cols):
     return True
 
 
-def _normalize_json(value):
-    """Parse a JSON string/dict into a stable canonical form for comparison."""
+def normalize_json(value):
     if value is None or (isinstance(value, float) and pd.isna(value)):
         return None
     if isinstance(value, dict):
@@ -230,20 +234,18 @@ def _normalize_json(value):
         return str(value)
 
 
-def _insert_rows(df, table):
-    """Insert new rows via the existing write_data helper."""
+def insert_rows(df, table):
     write_data(df, table, if_exists="append", index=False)
 
 
-def _update_rows(df, table, key_cols, value_cols):
-    """Update rows in place, matching on key_cols."""
+def update_rows(df, table, key_cols, value_cols):
     if DB_AVAILABLE:
-        _update_rows_db(df, table, key_cols, value_cols)
+        update_rows_db(df, table, key_cols, value_cols)
     else:
-        _update_rows_csv(df, table, key_cols, value_cols)
+        update_rows_csv(df, table, key_cols, value_cols)
 
 
-def _update_rows_db(df, table, key_cols, value_cols):
+def update_rows_db(df, table, key_cols, value_cols):
     engine = get_engine()
     set_clause = ", ".join(f"{c} = :{c}" for c in value_cols)
     where_clause = " AND ".join(f"{c} = :{c}" for c in key_cols)
@@ -255,8 +257,7 @@ def _update_rows_db(df, table, key_cols, value_cols):
             params = {c: row[c] for c in set(value_cols) | set(key_cols)}
             conn.execute(sql, params)
 
-
-def _update_rows_csv(df, table, key_cols, value_cols):
+def update_rows_csv(df, table, key_cols, value_cols):
     path = CSV_DIR / f"{table}.csv"
     if not path.exists():
         write_data(df, table, if_exists="append", index=False)

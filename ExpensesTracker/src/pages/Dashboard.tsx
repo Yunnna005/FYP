@@ -32,7 +32,6 @@ export default function Dashboard() {
             let accountId: string;
 
             if (loginMethod === "plaid") {
-                // Plaid path: get account/identity from Plaid via Express
                 const accountRes = await fetch("/api/auth");
                 const { accountNumber } = await accountRes.json();
                 accountId = accountNumber;
@@ -42,7 +41,6 @@ export default function Dashboard() {
                 email = id.email;
                 phone = id.phone;
             } else {
-                // CSV path: get everything from our DB by user_id
                 const userRes = await fetch(`/api/account/by_user?user_id=${encodeURIComponent(userId!)}`);
                 if (!userRes.ok) {
                     console.error("Failed to load user info");
@@ -68,6 +66,9 @@ export default function Dashboard() {
             const rows = statsData.stats ?? {};
 
             const latest = rows[0] ?? {};
+            if (latest && Object.keys(latest).length > 0) {
+                latest.net_cashflow = (parseFloat(latest.total_received) || 0) + (parseFloat(latest.total_spent) || 0);
+            }
             setMonthlyStats(latest);
 
             if (latest.spending_by_category) {

@@ -30,4 +30,8 @@ export const DashboardStats: DashboardStat[] = [
     field: "largest_abs",
     desc: "Biggest single transaction this month",
   },
+  { title: "Net Cashflow", 
+    field: "net_cashflow", 
+    desc: "Received minus spent" 
+  }
 ];

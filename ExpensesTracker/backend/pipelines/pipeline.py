@@ -4,12 +4,13 @@ import logging
 import argparse
 import traceback
 
-from models.db.dbconfig import DB_AVAILABLE, CSV_DIR
+from models.db.dbconfig import DB_AVAILABLE, CSV_DIR, get_engine
 from models.python.features  import run_feature_engineering
 from models.python.anomaly_detection_model import run_anomaly_detection
 from models.python.recommendation_model import run_recommendation_engine
 from models.python.forecasting_model import run_sequential_forecasting
 from analytics.user_stats import run_user_stats
+from sqlalchemy import inspect
 
 logging.basicConfig(
     level=logging.INFO,
