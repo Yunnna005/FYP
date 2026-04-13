@@ -19,28 +19,47 @@ export default function Dashboard() {
 
 
     useEffect(() => {
-        if (!userId) return;
+    if (!userId) return;
+    const loginMethod = localStorage.getItem("login_method") || "csv";
+
     async function loadData() {
         try {
-            //Get Account Number
-            const accountRes = await fetch("/api/auth");
-            const { accountNumber } = await accountRes.json();
+            let email: string;
+            let phone: string;
+            let accountId: string;
 
-            //Get Email and Phone Number
-            const res = await fetch("/api/identity/login");
-            const { email, phone } = await res.json();
-            if (!email || !phone) return;
+            if (loginMethod === "plaid") {
+                // Plaid path: get account/identity from Plaid via Express
+                const accountRes = await fetch("/api/auth");
+                const { accountNumber } = await accountRes.json();
+                accountId = accountNumber;
 
-            //Get Transactions
+                const idRes = await fetch("/api/identity/login");
+                const id = await idRes.json();
+                email = id.email;
+                phone = id.phone;
+            } else {
+                // CSV path: get everything from our DB by user_id
+                const userRes = await fetch(`/api/account/by_user?user_id=${encodeURIComponent(userId!)}`);
+                if (!userRes.ok) {
+                    console.error("Failed to load user info");
+                    setLoading(false);
+                    return;
+                }
+                const userInfo = await userRes.json();
+                email = userInfo.email;
+                phone = userInfo.phone_number;
+                accountId = userInfo.account_id;
+            }
+            
             const txRes = await fetch(
                 `/api/account/transactions?email=${encodeURIComponent(email)}&phone=${encodeURIComponent(phone)}`
             );
             const txData = await txRes.json();
             setTransactions(txData.transactions || []);
 
-            //Get Stats
             const statsRes = await fetch(
-                `/api/account/monthly_stats?user_id=${encodeURIComponent(userId!)}&account_number=${encodeURIComponent(accountNumber)}`
+                `/api/account/monthly_stats?user_id=${encodeURIComponent(userId!)}&account_number=${encodeURIComponent(accountId)}`
             );
             const statsData = await statsRes.json();
             const rows = statsData.stats ?? {};
@@ -49,38 +68,32 @@ export default function Dashboard() {
             setMonthlyStats(latest);
 
             if (latest.spending_by_category) {
-                const categoryData = Object.    entries(latest.spending_by_category).map(
-                    ([category, total]) => ({
-                        category,
-                        total: Number(total),
-                    })
+                const categoryData = Object.entries(latest.spending_by_category).map(
+                    ([category, total]) => ({ category, total: Number(total) })
                 );
-                console.log("Category Data:", categoryData);
                 setCategoryData(categoryData);
             } else {
                 setCategoryData([]);
             }
 
             if (rows.length > 0) {
-                const sortedRows = rows.sort((a: any, b: any) => 
+                const sortedRows = rows.sort((a: any, b: any) =>
                     new Date(a.month_start_date).getTime() - new Date(b.month_start_date).getTime()
                 );
-
                 const trendData = sortedRows.map((row: any) => ({
                     month: new Date(row.month_start_date).toLocaleString("default", {
                         month: "short",
                         year: "2-digit",
-                }),
-                monthly_spend: parseFloat(row.total_spent),
-                monthly_received: parseFloat(row.total_received),
+                    }),
+                    monthly_spend: parseFloat(row.total_spent),
+                    monthly_received: parseFloat(row.total_received),
                 }));
-                console.log("Trend Data:", trendData);
                 setMonthlyTrendData(trendData);
             }
-            
-            setLoading(false);
         } catch (error) {
             console.error(error);
+        } finally {
+            setLoading(false);
         }
     }
 

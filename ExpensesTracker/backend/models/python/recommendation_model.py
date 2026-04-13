@@ -305,14 +305,14 @@ def run_recommendation_engine(user_id=None):
     result_df = pd.DataFrame(summary_rows).set_index('user_id')
 
     if user_id:
-        with engine.begin() as conn:
-            conn.execute(text("DELETE FROM recommendations WHERE user_id = :uid"), {"uid": user_id})
+        try:
+            with engine.begin() as conn:
+                conn.execute(text("DELETE FROM recommendations WHERE user_id = :uid"), {"uid": user_id})
+        except Exception:
+            pass  # Table doesn't exist yet — first run will create it
         write_data(result_df, 'recommendations', if_exists='append')
     else:
         write_data(result_df, 'recommendations', if_exists='replace')
-
-    print(f"[recommendation] Done — {len(result_df)} users processed")
-    return result_df
 
 
 def run_recommendation(user_id):

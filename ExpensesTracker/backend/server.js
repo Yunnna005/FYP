@@ -5,6 +5,7 @@ import { Configuration, PlaidApi, PlaidEnvironments } from "plaid";
 import {getTransactionsByOwner} from "./db/db_utils.js";
 import {getUserByEmailAndPhone} from "./db/db_utils.js";
 import {getMonthlyStatsByUserId} from "./db/db_utils.js";
+import {getUserById} from "./db/db_utils.js";
  
 dotenv.config();
 
@@ -182,6 +183,21 @@ app.get("/api/account/monthly_stats", async (req, res) => {
   } catch (err) {
     console.error("Error in /api/account/monthly_stats:", err);
     res.status(500).json({ error: "Failed to fetch monthly stats" });
+  }
+});
+
+//not Plaid
+app.get("/api/account/by_user", async (req, res) => {
+  const { user_id } = req.query;
+  if (!user_id) return res.status(400).json({ error: "user_id required" });
+
+  try {
+    const user = await getUserById(user_id);
+    if (!user) return res.status(404).json({ error: "User not found" });
+    res.json(user);
+  } catch (err) {
+    console.error("Error fetching user account:", err);
+    res.status(500).json({ error: "Failed to fetch user" });
   }
 });
 
