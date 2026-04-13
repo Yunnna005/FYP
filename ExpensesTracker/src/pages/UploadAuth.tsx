@@ -67,6 +67,7 @@ export default function UploadAuth() {
       const data = await res.json();
       if (res.ok) {
         localStorage.setItem("user_id", data.user_id);
+        localStorage.setItem("login_method", "csv");
         navigate("/dashboard");
       } else {
         setError(data.detail || "Login failed");
@@ -111,7 +112,8 @@ export default function UploadAuth() {
                 <option value="aib">AIB</option>
                 <option value="revolut">Revolut</option>
               </select>
-              <input type="file" accept=".csv,.html,.csv.html" className="file-input file-input-bordered w-full"
+              <input type="file" accept=".csv,.xlsx,.xls,.html,application/vnd.openxmlformats-officedocument.spreadsheetml.sheet,application/vnd.ms-excel,text/csv,text/html"
+                className="file-input file-input-bordered w-full"
                 onChange={(e) => setFile(e.target.files?.[0] || null)} required />
 
               {error && <p className="text-red-500 text-sm">{error}</p>}
@@ -140,6 +142,18 @@ export default function UploadAuth() {
           <button className="btn btn-ghost btn-sm mt-4" onClick={() => navigate("/")}>
             ← Back to Plaid login
           </button>
+          <div className="mt-3 text-xs text-gray-500 text-left border-t pt-4">
+              <p className="font-semibold mb-1">Terms & Data Notice</p>
+              <p>
+                  This is a student project for demo purposes. By using this app, you acknowledge that:
+              </p>
+              <ul className="list-disc list-inside space-y-1">
+                  <li>You upload your data at your own responsibility.</li>
+                  <li>Your data is stored to enable analysis and AI features.</li>
+                  <li>You can delete all your data at any time using the "Delete my data" button on the Dashboard.</li>
+                  <li>Please do not upload data you wouldn't be comfortable sharing.</li>
+              </ul>
+          </div>
         </div>
       </div>
     </div>

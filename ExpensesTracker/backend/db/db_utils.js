@@ -49,6 +49,7 @@ export async function getMonthlyStatsByUserId(user_id, account_id) {
     throw new Error("Failed to fetch monthly stats");
   }
 }
+
 export async function getUserById(user_id) {
   try {
     const query = `
@@ -62,5 +63,41 @@ export async function getUserById(user_id) {
   } catch (error) {
     console.error("Database query error:", error.message);
     throw new Error("Failed to fetch user");
+  }
+}
+
+export async function deleteUserData(user_id) {
+  const client = await pool.connect();
+  try {
+    await client.query("BEGIN");
+
+    const userRes = await client.query(
+      "SELECT account_id FROM users WHERE user_id = $1",
+      [user_id]
+    );
+    if (userRes.rows.length === 0) {
+      await client.query("ROLLBACK");
+      return false;
+    }
+    const accountId = userRes.rows[0].account_id;
+
+    await client.query("DELETE FROM transactions WHERE account_id = $1", [accountId]);
+    await client.query("DELETE FROM transactions_enriched WHERE user_id = $1", [user_id]);
+    await client.query("DELETE FROM fm_encoded WHERE user_id = $1", [user_id]);
+    await client.query("DELETE FROM anomaly_scores WHERE user_id = $1", [user_id]);
+    await client.query("DELETE FROM recommendations WHERE user_id = $1", [user_id]);
+    await client.query("DELETE FROM user_monthly_stats WHERE user_id = $1", [user_id]);
+    await client.query("DELETE FROM user_all_time_stats WHERE user_id = $1", [user_id]);
+    await client.query("DELETE FROM users WHERE user_id = $1", [user_id]);
+    await client.query("DELETE FROM accounts WHERE account_id = $1", [accountId]);
+
+    await client.query("COMMIT");
+    return true;
+  } catch (err) {
+    await client.query("ROLLBACK");
+    console.error("Delete user data error:", err.message);
+    throw new Error("Failed to delete user data");
+  } finally {
+    client.release();
   }
 }

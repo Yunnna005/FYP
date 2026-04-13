@@ -5,12 +5,15 @@ import Table from "../componenets/Table.tsx";
 import Stat from "../componenets/Stat.tsx";
 import { DashboardStats } from "../config/DashboardStats.ts";import CategoryPie from "../componenets/CategoryPie.tsx";
 import MonthlyTrend from "../componenets/MonthlyTrend.tsx";
-import { Navigate } from "react-router-dom";
+import { Navigate, useNavigate } from "react-router-dom";
 import PipelineIndicator from "../componenets/PipelineIndicator.tsx";
 
 
 export default function Dashboard() {
     const userId = localStorage.getItem("user_id");
+    const loginMethod = localStorage.getItem("login_method");
+    const isCsvUser = loginMethod === "csv";
+    const navigate = useNavigate();
     const [transactions, setTransactions] = useState<any[]>([]);
     const [loading, setLoading] = useState(true);
     const [monthlyStats, setMonthlyStats] = useState<any>(null);
@@ -29,7 +32,6 @@ export default function Dashboard() {
             let accountId: string;
 
             if (loginMethod === "plaid") {
-                // Plaid path: get account/identity from Plaid via Express
                 const accountRes = await fetch("/api/auth");
                 const { accountNumber } = await accountRes.json();
                 accountId = accountNumber;
@@ -39,7 +41,6 @@ export default function Dashboard() {
                 email = id.email;
                 phone = id.phone;
             } else {
-                // CSV path: get everything from our DB by user_id
                 const userRes = await fetch(`/api/account/by_user?user_id=${encodeURIComponent(userId!)}`);
                 if (!userRes.ok) {
                     console.error("Failed to load user info");
@@ -65,6 +66,9 @@ export default function Dashboard() {
             const rows = statsData.stats ?? {};
 
             const latest = rows[0] ?? {};
+            if (latest && Object.keys(latest).length > 0) {
+                latest.net_cashflow = (parseFloat(latest.total_received) || 0) + (parseFloat(latest.total_spent) || 0);
+            }
             setMonthlyStats(latest);
 
             if (latest.spending_by_category) {
@@ -100,6 +104,37 @@ export default function Dashboard() {
     loadData();
 }, [userId]);
 
+async function handleDeleteData() {
+    if (!userId) return;
+
+    const loginMethod = localStorage.getItem("login_method");
+    if (loginMethod !== "csv") {
+        alert("Data deletion is only available for users who uploaded their own transactions.");
+        return;
+    }
+
+    const confirmed = window.confirm(
+        "Are you sure? This will permanently delete all your transactions, " +
+        "analysis, and account data. This cannot be undone."
+    );
+    if (!confirmed) return;
+
+    try {
+        const res = await fetch(`/api/account/by_user?user_id=${encodeURIComponent(userId)}`, {
+            method: "DELETE",
+        });
+        if (res.ok) {
+            localStorage.removeItem("user_id");
+            localStorage.removeItem("login_method");
+            navigate("/");
+        } else {
+            alert("Failed to delete data. Please try again.");
+        }
+    } catch (err) {
+        alert("Network error. Please try again.");
+    }
+}
+
 if (!userId) return <Navigate to="/" replace />;
 
     return (
@@ -111,10 +146,20 @@ if (!userId) return <Navigate to="/" replace />;
                     <h1 className="text-2xl font-bold text-sky-950 mb-3 mt-3 ml-7">
                         Dashboard
                     </h1>
-                    <div className="mr-7 text-sky-950">
-                        <PipelineIndicator />
+                    <div className="flex items-center"> 
+                        <div className="mr-7 text-sky-950">
+                            <PipelineIndicator />
+                        </div>
+                        {isCsvUser && (
+                            <button
+                                className="btn btn-sm btn-error btn-outline"
+                                onClick={handleDeleteData}
+                            >
+                                Delete my data
+                            </button>
+                        )}
+                        </div>
                     </div>
-                </div>
 
                 <div className="p-10 w-auto">
                     {loading ? (
