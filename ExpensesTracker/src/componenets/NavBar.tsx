@@ -52,9 +52,18 @@ export default function NavBar() {
       />
  
       {/* Logo area */}
-      <div className="relative px-5 pt-7 pb-6 flex flex-col items-center border-b border-violet-500/10">
-        <h1 className="text-[24px] font-bold text-violet-200 tracking-tight leading-snug text-center">
-          Expenses Tracker
+      <div className="relative px-5 pt-5 pb-5 flex flex-col items-center border-b border-violet-500/10">
+        <h1 className="tracking-tight leading-snug text-center"
+            style={{
+              fontFamily: "'Bagel Fat One', system-ui",
+              fontWeight: 400,
+              fontStyle: "normal",
+              fontSize: "24px",
+              color: "#c084fc",
+              letterSpacing: "2px",
+              textShadow: "0 0 40px rgba(192,132,252,0.5)",
+            }}>
+          BLOOM
         </h1>
       </div>
  
