@@ -7,6 +7,7 @@ import Dashboard from './pages/Dashboard.tsx'
 import Chat from './pages/Chat.tsx'
 import UploadAuth from './pages/UploadAuth.tsx'
 
+
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
     <BrowserRouter>
