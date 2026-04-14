@@ -17,7 +17,7 @@ export default function Template({ children }: { children: React.ReactNode }) {
                 </div>
 
                 {/* Page content */}
-                <div>{children}</div>
+                <div className="ml-64">{children}</div>
             </div>
 
             <div className="drawer-side">
