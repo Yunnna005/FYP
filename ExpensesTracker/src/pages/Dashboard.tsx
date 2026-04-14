@@ -8,6 +8,14 @@ import MonthlyTrend from "../componenets/MonthlyTrend.tsx";
 import { Navigate, useNavigate } from "react-router-dom";
 import PipelineIndicator from "../componenets/PipelineIndicator.tsx";
 
+const STAT_ACCENTS = [
+  "bg-emerald-400",
+  "bg-rose-400",
+  "bg-sky-400",
+  "bg-violet-400",
+  "bg-amber-400",
+  "bg-teal-400",
+];
 
 export default function Dashboard() {
     const userId = localStorage.getItem("user_id");
@@ -131,88 +139,102 @@ async function handleDeleteData() {
             alert("Failed to delete data. Please try again.");
         }
     } catch (err) {
-        alert("Network error. Please try again.");
+        alert("Network error. Please try again." + err);
     }
 }
 
 if (!userId) return <Navigate to="/" replace />;
 
-    return (
-        <Template >
-            <div className="min-h-screen bg-base-200">
-                
-                {/* Header */}
-                <div className="p-2 border-b-2 border-sky-900 flex justify-between items-center">
-                    <h1 className="text-2xl font-bold text-sky-950 mb-3 mt-3 ml-7">
-                        Dashboard
-                    </h1>
-                    <div className="flex items-center"> 
-                        <div className="mr-7 text-sky-950">
-                            <PipelineIndicator />
-                        </div>
-                        {isCsvUser && (
-                            <button
-                                className="btn btn-sm btn-error btn-outline"
-                                onClick={handleDeleteData}
-                            >
-                                Delete my data
-                            </button>
-                        )}
-                        </div>
-                    </div>
-
-                <div className="p-10 w-auto">
-                    {loading ? (
-                        <p className="text-lg">Loading your financial data...</p>
-                    ) : (
-                    <>
-                        {/*Stats Linear*/} 
-                        <div className="flex flex-wrap justify-between gap-4 mb-8">
-                            {monthlyStats && DashboardStats.map((s) => (
-                                <Stat
-                                key={s.title}
-                                title={s.title}
-                                value={(monthlyStats[s.field] ?? 0).toString()}
-                                desc={s.desc}
-                                />
-                            ))}
-                        </div>
-                        
-                        <div className="flex flex-wrap justify-evenly gap-5">
-                            {/* Category Pie Chart */}
-                            <div className="flex-1 min-w-[400px] mb-10 bg-white shadow-lg p-6 rounded-lg">
-                                <h2 className="text-xl font-bold mb-4">Spending by Category</h2>
-                                {categoryData.length > 0 ? (
-                                    <CategoryPie data={categoryData} />
-                                ) : (
-                                    <p>No category data available.</p>
-                                )}
-                            </div>
-
-                            {/* Monthly Trend Chart */}
-                            <div className="flex-1 min-w-[400px] mb-10 bg-white shadow-lg p-6 rounded-lg">
-                                <h2 className="text-xl font-bold mb-4">Monthly Spending vs Income</h2>
-                                {monthlyTrendData.length > 0 ? (
-                                    <MonthlyTrend data={monthlyTrendData} />
-                                ) : (
-                                    <p>No monthly trend data available.</p>
-                                )}
-                            </div>
-                        </div>
-
-                        {/* Transactions */}
-                        <div className="mb-10 bg-white shadow-lg p-6 rounded-lg">
-                            <h2 className="text-xl font-bold mb-1">Your Transactions</h2>
-                            {loading ? (
-                                <p>Loading transactions...</p>
-                            ) : (
-                                <Table transactions={transactions} />
-                            )}
-                        </div>
-                    </>
-                    )}
-                </div>
+      return (
+    <Template>
+      <div className="min-h-screen bg-slate-50">
+ 
+        {/* ── Header ── */}
+        <div className="bg-white border-b border-slate-200 px-8 py-4 flex justify-between items-center sticky top-0 z-10">
+          <div>
+            <h1 className="text-xl font-bold text-slate-800 leading-none">Dashboard</h1>
+            <p className="text-xs text-slate-400 mt-0.5">Your financial overview</p>
+          </div>
+          <div className="flex items-center gap-3">
+            <div className="text-slate-600">
+              <PipelineIndicator />
             </div>
-        </Template>
-    );
+            {isCsvUser && (
+              <button
+                onClick={handleDeleteData}
+                className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-semibold text-rose-600 border border-rose-200 bg-rose-50 hover:bg-rose-100 transition-colors duration-150"
+              >
+                <svg xmlns="http://www.w3.org/2000/svg" className="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16" />
+                </svg>
+                Delete my data
+              </button>
+            )}
+          </div>
+        </div>
+ 
+        {/* ── Body ── */}
+        <div className="px-8 py-7 space-y-7">
+          {loading ? (
+            <div className="flex flex-col items-center justify-center py-32 gap-4">
+              <svg className="animate-spin w-8 h-8 text-sky-400" fill="none" viewBox="0 0 24 24">
+                <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4" />
+                <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8v8z" />
+              </svg>
+              <p className="text-slate-400 text-sm">Loading your financial data...</p>
+            </div>
+          ) : (
+            <>
+              {/* ── Stat cards ── */}
+              <div className="flex flex-wrap gap-4">
+                {monthlyStats &&
+                  DashboardStats.map((s, i) => (
+                    <Stat
+                      key={s.title}
+                      title={s.title}
+                      value={(monthlyStats[s.field] ?? 0).toString()}
+                      desc={s.desc}
+                      accent={STAT_ACCENTS[i % STAT_ACCENTS.length]}
+                    />
+                  ))}
+              </div>
+ 
+              {/* ── Charts ── */}
+              <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+                <div className="bg-white rounded-2xl shadow-sm border border-slate-100 p-6">
+                  <h2 className="text-sm font-semibold text-slate-700 mb-4 uppercase tracking-wide">
+                    Spending by Category
+                  </h2>
+                  {categoryData.length > 0 ? (
+                    <CategoryPie data={categoryData} />
+                  ) : (
+                    <p className="text-slate-400 text-sm">No category data available.</p>
+                  )}
+                </div>
+ 
+                <div className="bg-white rounded-2xl shadow-sm border border-slate-100 p-6">
+                  <h2 className="text-sm font-semibold text-slate-700 mb-4 uppercase tracking-wide">
+                    Monthly Spending vs Income
+                  </h2>
+                  {monthlyTrendData.length > 0 ? (
+                    <MonthlyTrend data={monthlyTrendData} />
+                  ) : (
+                    <p className="text-slate-400 text-sm">No monthly trend data available.</p>
+                  )}
+                </div>
+              </div>
+ 
+              {/* ── Transactions table ── */}
+              <div className="bg-white rounded-2xl shadow-sm border border-slate-100 p-6">
+                <h2 className="text-sm font-semibold text-slate-700 mb-4 uppercase tracking-wide">
+                  Your Transactions
+                </h2>
+                <Table transactions={transactions} />
+              </div>
+            </>
+          )}
+        </div>
+      </div>
+    </Template>
+  );
 }
