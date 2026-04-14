@@ -132,7 +132,7 @@ export default function Login() {
           <img
             src={BloomLogo}
             alt="Bloom"
-            className="w-48 h-48 object-contain mb-1 drop-shadow-[0_8px_30px_rgba(167,139,250,0.35)]"
+            className="w-48 h-48 object-contain mb-1"
           />
 
           <p
