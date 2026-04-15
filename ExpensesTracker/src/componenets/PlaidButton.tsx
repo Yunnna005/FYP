@@ -29,12 +29,12 @@ export default function Card() {
           });
 
           // Get email/phone from Plaid identity
-          const idRes = await fetch("/api/identity/login");
+          const idRes = await fetch("/api/plaid/identity/login");
           const { email, phone } = await idRes.json();
 
           // Look up the user_id in your DB
           const userRes = await fetch(
-            `/api/account/user?email=${encodeURIComponent(email)}&phone=${encodeURIComponent(phone)}`
+            `/api/plaid/account/user?email=${encodeURIComponent(email)}&phone=${encodeURIComponent(phone)}`
           );
           const user = await userRes.json();
 

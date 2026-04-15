@@ -2,11 +2,7 @@ import express from "express";
 import cors from "cors";
 import dotenv from "dotenv";
 import { Configuration, PlaidApi, PlaidEnvironments } from "plaid";
-import {getTransactionsByOwner} from "./db/db_utils.js";
-import {getUserByEmailAndPhone} from "./db/db_utils.js";
-import {getMonthlyStatsByUserId} from "./db/db_utils.js";
-import {getUserById} from "./db/db_utils.js";
-import {deleteUserData} from "./db/db_utils.js"
+import {getTransactionsByOwner, getTransactionsByAccountId, getUserByEmailAndPhone, getMonthlyStatsByUserId, getUserById, deleteUserData} from "./db/db_utils.js";
  
 dotenv.config();
 
@@ -80,43 +76,7 @@ app.get("/api/auth", async (req, res) => {
   }
 });
 
-//Get account info (type, subtype, starting_balance, currency, meta: name, official_name, mask)
-app.get("/api/accounts", async (req, res) => {
-  try {
-    if (!ACCESS_TOKEN) {
-      return res.status(400).json({ error: "No access token saved" });
-    }
-
-    const response = await client.accountsGet({
-      access_token: ACCESS_TOKEN,
-    });
-
-    res.json({ accounts: response.data.accounts });
-  } catch (error) {
-    console.error("Error fetching accounts:", error.response?.data);
-    res.status(500).json({ error: "Failed to fetch accounts" });
-  }
-});
-
-//Get identity info (names, phone numbers, emails, addresses)
-app.get("/api/identity", async (req, res) => {
-  try {
-    if (!ACCESS_TOKEN) {
-      return res.status(400).json({ error: "No access token saved" });
-    }
-
-    const response = await client.identityGet({
-      access_token: ACCESS_TOKEN,
-    });
-
-    res.json({ identity: response.data.accounts });
-  } catch (error) {
-    console.error("Error fetching identity:", error.response?.data || error);
-    res.status(500).json({ error: "Failed to fetch identity" });
-  }
-});
-
-app.get("/api/identity/login", async (req, res) => {
+app.get("/api/plaid/identity/login", async (req, res) => {
   try{
     if(!ACCESS_TOKEN){
       return res.status(400).json({ error: "No access token saved" });
@@ -138,7 +98,7 @@ app.get("/api/identity/login", async (req, res) => {
   }
 })
 
-app.get("/api/account/user", async (req, res) => {
+app.get("/api/plaid/account/user", async (req, res) => {
   const { email, phone } = req.query;
 
   if (!email || !phone) return res.status(400).json({ error: "Email and phone are required" });
@@ -155,7 +115,7 @@ app.get("/api/account/user", async (req, res) => {
   }
 })
 
-app.get("/api/account/transactions", async (req, res) => {
+app.get("/api/plaid/account/transactions", async (req, res) => {
   const { email, phone } = req.query;
 
   if (!email || !phone) {
@@ -171,23 +131,7 @@ app.get("/api/account/transactions", async (req, res) => {
   }
 });
 
-app.get("/api/account/monthly_stats", async (req, res) => {
-  const {user_id, account_number} = req.query;
-
-  if (!user_id) {
-    return res.status(400).json({ error: "User ID is required" });
-  }
-
-  try {
-    const stats = await getMonthlyStatsByUserId(user_id, account_number);
-    res.json({ stats });
-  } catch (err) {
-    console.error("Error in /api/account/monthly_stats:", err);
-    res.status(500).json({ error: "Failed to fetch monthly stats" });
-  }
-});
-
-//not Plaid
+//Upload CSV
 app.get("/api/account/by_user", async (req, res) => {
   const { user_id } = req.query;
   if (!user_id) return res.status(400).json({ error: "user_id required" });
@@ -218,6 +162,38 @@ app.delete("/api/account/by_user", async (req, res) => {
   } catch (err) {
     console.error("Error deleting user:", err);
     res.status(500).json({ error: "Failed to delete user data" });
+  }
+});
+
+app.get("/api/account/transactions", async (req, res) => {
+  const { account_id } = req.query;
+
+  if (!account_id) {
+    return res.status(400).json({ error: "Account ID is required" });
+  }
+
+  try {
+    const transactions = await getTransactionsByAccountId(account_id);
+    res.json({ transactions });
+  } catch (err) {
+    console.error("Error in /api/transactions/owner:", err);
+    res.status(500).json({ error: "Failed to fetch transactions" });
+  }
+});
+
+app.get("/api/account/monthly_stats", async (req, res) => {
+  const {user_id, account_number} = req.query;
+
+  if (!user_id) {
+    return res.status(400).json({ error: "User ID is required" });
+  }
+
+  try {
+    const stats = await getMonthlyStatsByUserId(user_id, account_number);
+    res.json({ stats });
+  } catch (err) {
+    console.error("Error in /api/account/monthly_stats:", err);
+    res.status(500).json({ error: "Failed to fetch monthly stats" });
   }
 });
 

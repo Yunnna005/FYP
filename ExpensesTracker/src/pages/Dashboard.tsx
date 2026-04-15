@@ -44,10 +44,16 @@ export default function Dashboard() {
                 const { accountNumber } = await accountRes.json();
                 accountId = accountNumber;
 
-                const idRes = await fetch("/api/identity/login");
+                const idRes = await fetch("/api/plaid/identity/login");
                 const id = await idRes.json();
                 email = id.email;
                 phone = id.phone;
+
+                const txRes = await fetch(
+                `/api/plaid/account/transactions?email=${encodeURIComponent(email)}&phone=${encodeURIComponent(phone)}`
+                );
+                const txData = await txRes.json();
+                setTransactions(txData.transactions || []);
             } else {
                 const userRes = await fetch(`/api/account/by_user?user_id=${encodeURIComponent(userId!)}`);
                 if (!userRes.ok) {
@@ -59,13 +65,13 @@ export default function Dashboard() {
                 email = userInfo.email;
                 phone = userInfo.phone_number;
                 accountId = userInfo.account_id;
+
+                const txRes = await fetch(
+                `/api/account/transactions?account_id=${encodeURIComponent(accountId)}`
+                );
+                const txData = await txRes.json();
+                setTransactions(txData.transactions || []);
             }
-            
-            const txRes = await fetch(
-                `/api/account/transactions?email=${encodeURIComponent(email)}&phone=${encodeURIComponent(phone)}`
-            );
-            const txData = await txRes.json();
-            setTransactions(txData.transactions || []);
 
             const statsRes = await fetch(
                 `/api/account/monthly_stats?user_id=${encodeURIComponent(userId!)}&account_number=${encodeURIComponent(accountId)}`
