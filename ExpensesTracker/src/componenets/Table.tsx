@@ -3,6 +3,8 @@ import { useState } from "react";
 interface Transaction {
   date: Date;
   description: string;
+  merchant_name: string;
+  category_id: string;
   amount: number;
   currency_code: string;
   pending: boolean;
@@ -30,8 +32,8 @@ export default function Table({ transactions }: TableProps) {
               <th className="text-left px-4 py-3 text-xs font-semibold text-slate-400 uppercase tracking-wider w-10">#</th>
               <th className="text-left px-4 py-3 text-xs font-semibold text-slate-400 uppercase tracking-wider">Merchant</th>
               <th className="text-left px-4 py-3 text-xs font-semibold text-slate-400 uppercase tracking-wider">Date</th>
+              <th className="text-center px-4 py-3 text-xs font-semibold text-slate-400 uppercase tracking-wider">Category</th>
               <th className="text-right px-4 py-3 text-xs font-semibold text-slate-400 uppercase tracking-wider">Amount</th>
-              <th className="text-center px-4 py-3 text-xs font-semibold text-slate-400 uppercase tracking-wider">Currency</th>
               <th className="text-center px-4 py-3 text-xs font-semibold text-slate-400 uppercase tracking-wider">Status</th>
             </tr>
           </thead>
@@ -46,7 +48,7 @@ export default function Table({ transactions }: TableProps) {
                     <td className="px-4 py-3.5 text-slate-300 font-medium text-xs">{globalIndex}</td>
                     <td className="px-4 py-3.5">
                       <span className="font-medium text-slate-700 truncate max-w-[220px] block">
-                        {tx.description}
+                        {tx.description?.trim() === "none" || tx.description?.trim() === "no description" ? tx.merchant_name : tx.description}
                       </span>
                     </td>
                     <td className="px-4 py-3.5 text-slate-500 whitespace-nowrap">
@@ -55,6 +57,11 @@ export default function Table({ transactions }: TableProps) {
                         month: "short",
                         year: "numeric",
                       })}
+                    </td>
+                    <td className="px-4 py-3.5 text-center">
+                      <span className="text-xs font-medium text-slate-400 bg-slate-100 px-2 py-0.5 rounded-md">
+                        {tx.category_id || "Uncategorized"}
+                      </span>
                     </td>
                     <td className="px-4 py-3.5 text-right">
                       <span
@@ -65,11 +72,6 @@ export default function Table({ transactions }: TableProps) {
                         {isPositive ? "+" : ""}
                         {tx.currency_code === "EUR" ? "€" : tx.currency_code + " "}
                         {Math.abs(amount).toFixed(2)}
-                      </span>
-                    </td>
-                    <td className="px-4 py-3.5 text-center">
-                      <span className="text-xs font-medium text-slate-400 bg-slate-100 px-2 py-0.5 rounded-md">
-                        {tx.currency_code}
                       </span>
                     </td>
                     <td className="px-4 py-3.5 text-center">

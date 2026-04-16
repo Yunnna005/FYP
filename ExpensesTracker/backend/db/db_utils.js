@@ -3,7 +3,7 @@ import pool from "./db_connection.js";
 export async function getTransactionsByOwner(email, phone) {
   try {
     const query = `
-      SELECT t.*
+      SELECT t.category_id, t.date, t.description, t.amount, t.merchant_name, t.pending, t.currency_code
       FROM users u
       JOIN transactions t ON u.account_id = t.account_id
       WHERE u.email = $1
@@ -11,6 +11,22 @@ export async function getTransactionsByOwner(email, phone) {
       ORDER BY t.date DESC;`;
 
     const { rows } = await pool.query(query, [email, phone]);
+    return rows;
+  } catch (error) {
+    console.error("Database query error:", error.message);
+    throw new Error("Failed to fetch transactions");
+  }
+}
+
+export async function getTransactionsByAccountId(account_id) {
+  try {
+    const query = `
+      SELECT category_id, date, description, amount, merchant_name, pending, currency_code
+      FROM transactions
+      WHERE account_id = $1
+      ORDER BY date DESC;`;
+
+    const { rows } = await pool.query(query, [account_id]);
     return rows;
   } catch (error) {
     console.error("Database query error:", error.message);
