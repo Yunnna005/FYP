@@ -12,7 +12,7 @@ export const DashboardStats: DashboardStat[] = [
   },
   {
     title: "Total Spent",
-    field: "total_spend",
+    field: "total_spent",
     desc: "All debited transactions",
   },
   {
@@ -22,7 +22,7 @@ export const DashboardStats: DashboardStat[] = [
   },
   {
     title: "Avg. Transaction",
-    field: "avg_transaction_value",
+    field: "avg_transaction",
     desc: "Mean value across all transactions",
   },
   {

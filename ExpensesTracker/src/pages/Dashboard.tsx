@@ -82,6 +82,7 @@ export default function Dashboard() {
             const latest = rows[0] ?? {};
             if (latest && Object.keys(latest).length > 0) {
                 latest.net_cashflow = (parseFloat(latest.total_received) || 0) + (parseFloat(latest.total_spent) || 0);
+                latest.net_cashflow = latest.net_cashflow.toFixed(2);
             }
             setMonthlyStats(latest);
 
@@ -155,7 +156,7 @@ if (!userId) return <Navigate to="/" replace />;
     <Template>
       <div className="min-h-screen bg-slate-50">
  
-        {/* ── Header ── */}
+        {/*Header*/}
         <div className="bg-white border-b border-slate-200 px-8 py-4 flex justify-between items-center sticky top-0 z-10">
           <div>
             <h1 className="text-xl font-bold text-slate-800 leading-none">Dashboard</h1>
@@ -179,7 +180,7 @@ if (!userId) return <Navigate to="/" replace />;
           </div>
         </div>
  
-        {/* ── Body ── */}
+        {/*Body*/}
         <div className="px-8 py-7 space-y-7">
           {loading ? (
             <div className="flex flex-col items-center justify-center py-32 gap-4">
@@ -191,7 +192,7 @@ if (!userId) return <Navigate to="/" replace />;
             </div>
           ) : (
             <>
-              {/* ── Stat cards ── */}
+              {/*Stat cards*/}
               <div className="flex flex-wrap gap-4">
                 {monthlyStats &&
                   DashboardStats.map((s, i) => (
@@ -205,7 +206,7 @@ if (!userId) return <Navigate to="/" replace />;
                   ))}
               </div>
  
-              {/* ── Charts ── */}
+              {/*Charts*/}
               <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
                 <div className="bg-white rounded-2xl shadow-sm border border-slate-100 p-6">
                   <h2 className="text-sm font-semibold text-slate-700 mb-4 uppercase tracking-wide">
@@ -230,7 +231,7 @@ if (!userId) return <Navigate to="/" replace />;
                 </div>
               </div>
  
-              {/* ── Transactions table ── */}
+              {/*Transactions table*/}
               <div className="bg-white rounded-2xl shadow-sm border border-slate-100 p-6">
                 <h2 className="text-sm font-semibold text-slate-700 mb-4 uppercase tracking-wide">
                   Your Transactions
