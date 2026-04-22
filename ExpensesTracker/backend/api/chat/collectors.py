@@ -3,7 +3,6 @@ from typing import Optional
 from models.db.dbconfig import read_query
 
 def get_latest_month(user_id: str) -> Optional[str]:
-    """Return the most recent month (YYYY-MM) the user has stats for."""
     df = read_query(
         """SELECT MAX(month_start_date) AS latest
            FROM user_monthly_stats

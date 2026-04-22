@@ -74,21 +74,27 @@ def _pick_prompt(intent_needs: Set[str]) -> str:
         return ANOMALY_PROMPT
     return LOOKUP_PROMPT
 
-
-def narrate(question: str, context: dict, intent_needs: Optional[Set[str]] = None) -> str:
- 
+def build_prompt(question: str, context: dict, intent_needs: Optional[Set[str]] = None, last_transaction_date: Optional[str] = None,) -> list[dict]:
     intent_needs = intent_needs or set()
+    template = _pick_prompt(intent_needs)
  
-    prompt_template = _pick_prompt(intent_needs)
- 
-    prompt = prompt_template.format(
-        question=question,
-        context=f"{context}",
+    date_note = (
+        f"\nTEMPORAL CONTEXT:\n"
+        f"The user's most recent transaction was on {last_transaction_date}. "
+        f"Use this as the reference point when interpreting 'last month', "
+        f"'recently', 'this month', etc. Do NOT assume today's date.\n"
+        if last_transaction_date
+        else ""
     )
  
-    messages = [
-        {"role": "system", "content": SYSTEM_PROMPT},
-        {"role": "user", "content": prompt},
-    ]
+    prompt = template.format(
+        question=question,
+        context=json.dumps(context, indent=2, default=str),
+        rules=SYSTEM_PROMPT + date_note,
+    )
+    return [{"role": "user", "content": prompt}]
  
+def narrate(question: str, context: dict, intent_needs: Optional[Set[str]] = None, last_transaction_date: Optional[str] = None,) -> str:
+ 
+    messages = build_prompt(question, context, intent_needs, last_transaction_date)
     return chat(messages)
