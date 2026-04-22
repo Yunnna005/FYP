@@ -12,6 +12,8 @@ QUESTIONS = [
     "Anything weird in my spending?",
     "How can I save more money?",
     "How am I doing overall?",
+    "I am going to a concert next month, how much should I budget for it?",
+    "Im goint on a 3 days trip to Paris next month, how much should I budget for it?",
 ]
 
 for question in QUESTIONS:
