@@ -23,3 +23,6 @@ argon2-cffi
 python-multipart
 lxml
 openpyxl
+
+fastapi 
+google-genai
