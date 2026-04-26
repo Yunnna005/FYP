@@ -2,10 +2,6 @@ import json
 from typing import Optional, Set
 from api.chat.llm.client import chat
 
-
-# =========================
-# 🔒 GLOBAL RULES
-# =========================
 BASE_RULES = """RULES — STRICT AND NON-NEGOTIABLE:
 
 DATA GROUNDING:
@@ -35,10 +31,6 @@ OUTPUT:
 14. Be concise and clear. No filler.
 """
 
-
-# =========================
-# 💬 LOOKUP
-# =========================
 LOOKUP_PROMPT = """You are a helpful friend who is good with money.
 
 The user asked:
@@ -57,9 +49,6 @@ Answer simply and naturally:
 Your response:"""
 
 
-# =========================
-# 🚨 ANOMALY
-# =========================
 ANOMALY_PROMPT = """You are checking if anything looks unusual in a friendly way.
 
 The user asked:
@@ -81,9 +70,6 @@ Keep it short (2–3 sentences). No technical language.
 Your response:"""
 
 
-# =========================
-# 💡 ADVICE
-# =========================
 ADVICE_PROMPT = """You are a smart, practical friend who is good with money.
 
 The user asked:
@@ -123,9 +109,6 @@ Tone:
 Your response:"""
 
 
-# =========================
-# 📊 OVERALL
-# =========================
 OVERALL_PROMPT = """You are a friend giving a quick, honest overview of someone's finances.
 
 The user asked:
@@ -154,9 +137,6 @@ Keep it conversational and under 5 sentences.
 Your response:"""
 
 
-# =========================
-# 🎯 PROMPT PICKER
-# =========================
 def _pick_prompt(intent_needs: Set[str]) -> str:
     if len(intent_needs) >= 3:
         return OVERALL_PROMPT
