@@ -85,9 +85,10 @@ def health():
 def ask(request: AskRequest):
     intent = classify(request.question, request.user_id)
     context = collect_context(request.user_id, intent)
-    answer = narrate(request.question, context)
+    answers = narrate(request.question, context, intent.needs)
     return AskResponse(
-        answer=answer,
+        answer_local=answers.get("local", ""),
+        answer_gemini=answers.get("gemini", ""),
         intent={"needs": list(intent.needs), "params": intent.params},
         context_keys=list(context.keys()),
     )

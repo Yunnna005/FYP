@@ -5,6 +5,7 @@ class AskRequest(BaseModel):
     question: str
 
 class AskResponse(BaseModel):
-    answer: str
+    answer_local: str
+    answer_gemini: str
     intent: dict
     context_keys: list[str]
