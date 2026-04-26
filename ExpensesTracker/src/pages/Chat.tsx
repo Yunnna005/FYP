@@ -7,6 +7,8 @@ import Avatar from '../assets/logo-dark-only-removebg-preview.png';
 interface Message {
   role: 'user' | 'assistant';
   content: string;
+  local?: string;
+  gemini?: string;
 }
  
 const SUGGESTIONS = [
@@ -48,7 +50,15 @@ export default function Chat() {
         body: JSON.stringify({ user_id: userId, question: text }),
       });
       const data = await res.json();
-      setMessages((m) => [...m, { role: 'assistant', content: data.answer }]);
+      setMessages((m) => [
+        ...m,
+        {
+          role: 'assistant',
+          content: '',
+          local: data.answer_local,
+          gemini: data.answer_gemini,
+        },
+      ]);
     } catch {
       setMessages((m) => [
         ...m,
@@ -158,7 +168,17 @@ export default function Chat() {
                           }
                     }
                   >
-                    {msg.content}
+                    {msg.role === 'assistant' && msg.local != null ? (
+                      <>
+                        <p className="font-semibold text-violet-700 mb-1 text-[12px] uppercase tracking-wide">LLM</p>
+                        <p className="whitespace-pre-wrap">{msg.local}</p>
+                        <hr className="my-3 border-violet-200/60" />
+                        <p className="font-semibold text-blue-600 mb-1 text-[12px] uppercase tracking-wide">Gemini</p>
+                        <p className="whitespace-pre-wrap">{msg.gemini}</p>
+                      </>
+                    ) : (
+                      msg.content
+                    )}
                   </div>
                 </div>
               ))}
