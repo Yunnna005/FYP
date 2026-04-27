@@ -19,7 +19,7 @@ gemini_client = OpenAI(
     api_key=os.getenv("GEMINI_API_KEY"),
 )
 
-GEMINI_MODEL = os.getenv("GEMINI_MODEL", "gemini-2.5-flash-lite")
+GEMINI_MODEL = os.getenv("GEMINI_MODEL", "gemini-3.1-flash-lite-preview")
 GEMINI_MAX_TOKENS = int(os.getenv("GEMINI_MAX_TOKENS", "300"))
 
 
