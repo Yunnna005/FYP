@@ -1,3 +1,10 @@
+# Web framework
+fastapi
+uvicorn[standard]
+
+# LLM clients (Ollama + Gemini via OpenAI-compatible API)
+openai
+
 # Core data
 pandas
 numpy
@@ -19,7 +26,13 @@ psycopg2-binary
 # Environment
 python-dotenv
 
+# Auth / upload
 argon2-cffi
 python-multipart
+
+# File parsing
 lxml
 openpyxl
+
+# Evaluation / charts
+matplotlib
