@@ -95,7 +95,10 @@ def run_user_stats(user_id=None):
             total_spent = round(float(amounts[spending_mask].sum()), 2)
 
             INCOME_CLASSES = {"topup", "reward", "refund"}
-            income_mask = group["transaction_class"].isin(INCOME_CLASSES) & (amounts > 0)
+            income_mask = (
+                group["transaction_class"].isin(INCOME_CLASSES) |
+                ((group["transaction_class"] == "card_payment") & (amounts > 0))
+            ) 
             total_received = round(float(amounts[income_mask].sum()), 2)
 
             monthly_rows.append({

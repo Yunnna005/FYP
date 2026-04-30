@@ -40,14 +40,15 @@ export default function Dashboard() {
             let accountId: string;
 
             if (loginMethod === "plaid") {
-                const accountRes = await fetch("/api/auth");
-                const { accountNumber } = await accountRes.json();
-                accountId = accountNumber;
-
                 const idRes = await fetch("/api/plaid/identity/login");
                 const id = await idRes.json();
                 email = id.email;
                 phone = id.phone;
+
+                // Fetch the database account_id (not the ACH number from Plaid auth)
+                const userInfoRes = await fetch(`/api/account/by_user?user_id=${encodeURIComponent(userId!)}`);
+                const userInfo = await userInfoRes.json();
+                accountId = userInfo.account_id;
 
                 const txRes = await fetch(
                 `/api/plaid/account/transactions?email=${encodeURIComponent(email)}&phone=${encodeURIComponent(phone)}`

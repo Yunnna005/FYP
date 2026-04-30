@@ -10,7 +10,7 @@
     "preview": "vite preview",
     "dev:web": "vite",
     "dev:express": "node backend/server.js",
-    "dev:fastapi": "uvicorn api.main:app --port 8001 --reload --app-dir backend" 
+    "dev:fastapi": "/workspaces/python/env/featuretools-env/bin/uvicorn api.main:app --port 8001 --reload --app-dir backend"
   },
   "dependencies": {
     "@tailwindcss/postcss": "^4.1.17",
